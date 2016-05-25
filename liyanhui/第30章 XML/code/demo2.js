@@ -1,6 +1,3 @@
-
-
-
 function createXMLDOM() {
 	var version = [
 								'MSXML2.DOMDocument6.0',
@@ -28,16 +25,17 @@ alert(xmlDom.xml);
 
 //PS：在服务器端，默认使用的是异步加载。
 //两个原因：1.在服务器端，使用的异步加载，load()还没有加载完毕，就去打印xmlDom.xml序列化的字符串
+*/
 
-
-
+/*
 //使用同步加载
 var xmlDom = createXMLDOM();
 xmlDom.async = false;						//同步设置false，异步设置true，默认是异步
 xmlDom.load('demo.xml');
 alert(xmlDom.xml);
+*/
 
-
+/*
 //使用同步记载延迟的PHP文件
 var xmlDom = createXMLDOM();
 xmlDom.async = false;						//同步设置false，异步设置true，默认是异步
@@ -47,7 +45,7 @@ alert(xmlDom.xml);							//5秒后才执行的
 //PS：使用同步加载，如果延迟，那么整个浏览器就假死了。
 */
 
-
+/*
 //我们应该用异步
 var xmlDom = createXMLDOM();
 xmlDom.async = true;						//同步设置false，异步设置true，默认是异步
@@ -71,7 +69,7 @@ xmlDom.load('demo.xml');
 
 
 //onreadystatechange比较特殊，里面的this表示 window而不是执行的object
-
+*/
 
 
 

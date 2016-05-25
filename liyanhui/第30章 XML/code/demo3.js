@@ -46,8 +46,9 @@ xmlDom.load('demo.xml');										//ÔØÈëÍâ²¿XMLÎÄ¼ş
 alert(xmlDom.getElementsByTagName('user')[0].textContent);			//Ïàµ±ÓÚXHTML½ÚµãÖĞµÄinnerHTML
 
 //PS£ºDOM2¼¶ÊÇÃ»ÓĞ.xmlÊôĞÔÀ´ĞòÁĞ»¯XML×Ö·ûµÄ
+*/
 
-
+/*
 //Òì²½¼ÓÔØXMLÎÄ¼ş
 var xmlDom = document.implementation.createDocument('', 'root', null);		//´´½¨XMLDOM¶ÔÏó
 xmlDom.async = true;												//falseÊÇÍ¬²½£¬trueÊÇÒì²½£¬Òì²½trueÊÇÄ¬ÈÏ
@@ -55,14 +56,10 @@ xmlDom.onload = function () {								//Òì²½¼ÓÔØ£¬Í¨¹ıonload¼´¿É£¬ÀàËÆÓÚIEÖĞµÄ¾ÍĞ
 	alert(xmlDom.getElementsByTagName('user')[0].textContent);
 };
 xmlDom.load('demo.xml');
-
-
 //PS£ºload()·½·¨Ö»Ö§³ÖFirefoxä¯ÀÀÆ÷£¬ºÍĞÂ°æ±¾µÄOperaä¯ÀÀÆ÷£¬ÆäËûä¯ÀÀÆ÷²»Ö§³Ö
-
 */
 
-
-
+/*
 //1.²»ÄÜ¼òÒ×µÄÊ¹ÓÃ×Ö·û´®À´´´½¨XML£¬±ÈÈçÀàËÆÓëIEµÄloadXML()·½·¨
 //2.²»ÄÜ¹»ÏñIEÖĞÄÇÑù£¬Í¨¹ı.xmlĞòÁĞ»¯XML×Ö·û´®Êä³ö
 
@@ -78,7 +75,7 @@ var xmlDom = xmlParser.parseFromString(xmlStr, 'text/xml');		//XMLDocument XMLDO
 var serializer = new XMLSerializer();
 var xml = serializer.serializeToString(xmlDom);
 alert(xml);
-
+*/
 
 
 

@@ -2,7 +2,8 @@
 //array1.concat([item1[, item2[, . . . [, itemN]]]])
 //返回一个新数组，这个新数组是由两个或更多数组组合而成的。
 function ConcatArrayDemo(){
-	var a, b, c, d;   a = new Array(1,2,3);
+	var a, b, c, d;
+	a = new Array(1,2,3);
     b = "JScript";
     c = new Array(42, "VBScript");
     d = a.concat(b, c);
@@ -77,7 +78,7 @@ function SortDemo(){
 //toString
 //toLocaleString
 //valueOf
-*/
+
 
 var arr = ['a', 'b', 'c', 'd'];
 var a = arr.toString();
@@ -85,7 +86,7 @@ var b = arr.valueOf();
 
 console.log(a);
 console.log(b);
-
+*/
 
 
 

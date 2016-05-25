@@ -1,6 +1,4 @@
-
-
-
+/*
 function createXHR() {
 	if (typeof XMLHttpRequest != 'undefined') {
 		return new XMLHttpRequest();
@@ -21,20 +19,18 @@ function createXHR() {
 		throw new Error('您的系统或浏览器不支持XHR对象！');
 	}
 }
-
+*/
 
 addEvent(document, 'click', function () {
-	var xhr = createXHR();						//创建XHR对象
+	var xhr =  new XMLHttpRequest();									//创建XHR对象
 	xhr.open('get', 'demo.php?rand=' + Math.random(), false);	//准备发送请求，以get方式请求，url是demo.php，同步
-	xhr.send(null);									//发送请求，get不需要数据提交，则填写为null;
+	xhr.send(null);												//发送请求，get不需要数据提交，则填写为null;
 	if (xhr.status == 200) {
-		alert(xhr.responseText);					//打印服务器端返回回来的数据
+		alert(xhr.responseText);								//打印服务器端返回回来的数据
 	} else {
 		alert('获取数据错误！错误代号：' + xhr.status + '，错误信息：' + xhr.statusText);
 	}
 });
-
-
 
 
 

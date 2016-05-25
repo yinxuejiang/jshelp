@@ -1,29 +1,4 @@
 
-
-
-function createXHR() {
-	if (typeof XMLHttpRequest != 'undefined') {
-		return new XMLHttpRequest();
-	} else if (typeof ActiveXObject != 'undefined') {
-		var version = [
-									'MSXML2.XMLHttp.6.0',
-									'MSXML2.XMLHttp.3.0',
-									'MSXML2.XMLHttp'
-		];
-		for (var i = 0; version.length; i ++) {
-			try {
-				return new ActiveXObject(version[i]);
-			} catch (e) {
-				//跳过
-			}	
-		}
-	} else {
-		throw new Error('您的系统或浏览器不支持XHR对象！');
-	}
-}
-
-
-
 //在Web程序上，GET一般是URL提交请求，比如：demo.php?name=Lee&age=100
 //POST一般是Web表单提交：比如<form method="post"><input type="text" name="name" value="Lee"><input type="text" name="age" value="100">
 
@@ -34,7 +9,7 @@ function createXHR() {
 
 //JSON加载
 addEvent(document, 'click', function () {
-	var xhr = createXHR();		
+	var xhr = new XMLHttpRequest();	
 	var url = 'demo.json?rand=' + Math.random();
 	xhr.onreadystatechange = function () {
 		if (xhr.readyState == 4) {
@@ -55,7 +30,7 @@ addEvent(document, 'click', function () {
 /*
 //POST请求
 addEvent(document, 'click', function () {
-	var xhr = createXHR();		
+	var xhr = new XMLHttpRequest();	
 	var url = 'demo.php?rand=' + Math.random();
 	xhr.onreadystatechange = function () {
 		if (xhr.readyState == 4) {
@@ -77,7 +52,7 @@ addEvent(document, 'click', function () {
 /*
 //GET请求
 addEvent(document, 'click', function () {
-	var xhr = createXHR();		
+	var xhr = new XMLHttpRequest();	
 	var url = 'demo.php?rand=' + Math.random();
 	url = params(url, 'name', 'Lee');
 	url = params(url, 'age', 100);
@@ -111,7 +86,7 @@ function params(url, name, value) {
 /*
 //头信息
 addEvent(document, 'click', function () {
-	var xhr = createXHR();		
+	var xhr = new XMLHttpRequest();	
 	xhr.onreadystatechange = function () {
 		if (xhr.readyState == 4) {
 			if (xhr.status == 200) {
@@ -133,7 +108,7 @@ addEvent(document, 'click', function () {
 /*
 //使用异步方式
 addEvent(document, 'click', function () {
-	var xhr = createXHR();		
+	var xhr = new XMLHttpRequest();	
 	xhr.onreadystatechange = function () {
 		if (xhr.readyState == 4) {
 			if (xhr.status == 200) {
@@ -154,7 +129,7 @@ addEvent(document, 'click', function () {
 /*
 使用同步方式
 addEvent(document, 'click', function () {
-	var xhr = createXHR();						//创建XHR对象
+	var xhr = new XMLHttpRequest();					//创建XHR对象
 	xhr.open('get', 'demo.php?rand=' + Math.random(), false);	//准备发送请求，以get方式请求，url是demo.php，同步
 	xhr.send(null);									//发送请求，get不需要数据提交，则填写为null;
 	if (xhr.status == 200) {

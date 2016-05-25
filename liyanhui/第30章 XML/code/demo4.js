@@ -1,9 +1,3 @@
-
-
-
-
-
-
 //跨浏览器返回XML DOM对象
 function getXMLDOM(xmlStr) {
 	var xmlDom = null;
@@ -60,17 +54,7 @@ var xmlStr = '<root><user>Lee</user></root>';
 var xmlDom = getXMLDOM(xmlStr);
 alert(serializerXML(xmlDom));
 
-
-
-
-
 //PS：为了跨越所有浏览器兼容，我们放弃了从外部加载XML文件，而使用了字符串XML加载和序列化。
-
-
-
-
-
-
 
 /*
 //模拟loadXML()方法，可以简易的创建XML字符串

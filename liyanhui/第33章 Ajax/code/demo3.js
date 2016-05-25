@@ -1,32 +1,8 @@
 
-
-
-function createXHR() {
-	if (typeof XMLHttpRequest != 'undefined') {
-		return new XMLHttpRequest();
-	} else if (typeof ActiveXObject != 'undefined') {
-		var version = [
-									'MSXML2.XMLHttp.6.0',
-									'MSXML2.XMLHttp.3.0',
-									'MSXML2.XMLHttp'
-		];
-		for (var i = 0; version.length; i ++) {
-			try {
-				return new ActiveXObject(version[i]);
-			} catch (e) {
-				//跳过
-			}	
-		}
-	} else {
-		throw new Error('您的系统或浏览器不支持XHR对象！');
-	}
-}
-
-
 /*
 //POST请求
 addEvent(document, 'click', function () {
-	var xhr = createXHR();		
+	var xhr = new XMLHttpRequest();	
 	var url = 'demo.php?rand=' + Math.random();
 	xhr.onreadystatechange = function () {
 		if (xhr.readyState == 4) {
@@ -56,7 +32,7 @@ function params(data) {
 
 //封装ajax
 function ajax(obj) {
-	var xhr = createXHR();
+	var xhr = new XMLHttpRequest();
 	obj.url = obj.url + '?rand=' + Math.random();
 	obj.data = params(obj.data);
 	if (obj.method === 'get') obj.url += obj.url.indexOf('?') == -1 ? '?' + obj.data : '&' + obj.data;
