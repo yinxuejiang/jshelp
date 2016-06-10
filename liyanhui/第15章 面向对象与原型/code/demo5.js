@@ -78,7 +78,6 @@ function Box(name, age) {
 	return obj;
 }
 
-
 var box1 = new Box('Lee', 100);
 alert(box1.run());
 
@@ -102,8 +101,6 @@ alert(box1.run());
 var box2 = Box('Jack', 200);
 alert(box2.run());
 */
-
-
 
 
 

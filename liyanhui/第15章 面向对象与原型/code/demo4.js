@@ -18,22 +18,16 @@ var box = new Box();
 //alert(box.run());
 alert(box.constructor == Box);
 
-
-
 //重写了原型对象
 Box.prototype = {
 	age : 200					//这里不会保留之前原型的任何信息了。
 									//把原来的原型对象和构造函数对象实例之前的关系切断了
 };
 
-
 var box = new Box();
 alert(box.run());
 
-
 function Box() {}
-
-
 //使用字面量的方式创建原型对象，这里{}就是对象，是Object，new Object就相当于{}
 Box.prototype = {
 	constructor : Box,			//强制指向Box
@@ -62,8 +56,6 @@ String.prototype.addstring = function () {
 var box = 'Lee';
 alert(box.addstring());
 */
-
-
 
 
 

@@ -25,16 +25,13 @@ alert(box1.constructor);			//构造属性，可以获取构造函数本身
 									//其实就是对象实例对应的原型对象的作用
 //判断一个对象实例(对象引用)是不是指向了原型对象，基本上，只要实例化了，他自动指向的
 alert(Box.prototype.isPrototypeOf(box1));
-*/
-
-
-/*
 var obj = new Object();
 alert(Box.prototype.isPrototypeOf(obj));
+*/
 
+/*
 var box2 = new Box();
 alert(box2.name);								//实例属性不会共享，所以box2访问不到实例属性，就只能访问原型
-
 
 box1.name = 'Jack';								//实例属性，并没有重写原型属性
 alert(box1.name);								//就近原则

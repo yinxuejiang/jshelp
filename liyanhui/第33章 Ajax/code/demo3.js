@@ -27,8 +27,7 @@ function params(data) {
 		arr.push(encodeURIComponent(i) + '=' + encodeURIComponent(data[i]));
 	}
 	return arr.join('&');
-}
-
+};
 
 //封装ajax
 function ajax(obj) {
@@ -61,7 +60,6 @@ function ajax(obj) {
 		}	
 	}
 }
-
 
 //调用ajax
 addEvent(document, 'click', function () {

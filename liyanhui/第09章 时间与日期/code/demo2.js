@@ -6,6 +6,7 @@ alert('toLocaleString:' + box.toLocaleString());						//2007-11-15 17:22:45 PS¹È
 alert('valueOf:' + box.valueOf());										//1195118565015
 */
 
+
 /*
 var box = new Date(2007, 10, 15, 17, 22, 45, 15);
 alert(box.toDateString());
@@ -51,6 +52,7 @@ alert(box.getTimezoneOffset());
 var box = new Date();
 alert(box.getFullYear() + '-' + box.getMonth() + '-' + box.getDate() + ' ' + box.getHours() + ':' + box.getMinutes() + ':' + box.getSeconds());
 */
+
 
 
 
