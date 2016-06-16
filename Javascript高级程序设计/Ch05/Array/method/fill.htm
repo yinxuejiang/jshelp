@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fill 方法</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：使用指定值填充数组。
+		 * 语法：arrayObj.fill(value [ , start [ , end ] ]);
+		 */
+		
+		/**
+		 * 参数
+		 * arrayObj	必需。数组对象。
+		 * value  必需。用于填充数组的值。
+		 * start  可选。用于填充数组值的起始索引。默认值为 0。
+		 * end  可选。用于填充数组值的结束索引。默认值是 this 对象的 length 属性。
+		 */
+						
+		[0, 0, 0].fill(7, 1);
+		// Array contains [0,7,7]
+
+		[0, 0, 0].fill(7);
+		// Array contains [7,7,7] 
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

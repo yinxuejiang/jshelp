@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>some 方法</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：确定指定的回调函数是否为数组中的任何元素均返回 true。
+		 * 语法：array1.some(callbackfn[, thisArg])
+		 */
+		
+		/**
+		 * 参数
+		 * array1	必需。一个数组对象。
+		 * callbackfn	必需。一个接受最多三个参数的函数。 some 方法会为 array1 中的每个元素调用 callbackfn 函数，直到 callbackfn 返回 true，或直到到达数组的结尾。
+		 * thisArg 	可选。可在 callbackfn 函数中为其引用 this 关键字的对象。如果省略 thisArg，则 undefined 将用作 this 值。
+		 */
+						
+		// The callback function.
+		function CheckIfEven(value, index, ar) {
+		    if (value % 2 == 0)
+		        return true;
+		}
+
+		var numbers = [1, 15, 4, 10, 11, 22];
+
+		var evens = numbers.some(CheckIfEven);
+		console.log(evens);
+
+		// Output:
+		// true
+
+		/**
+		 * 下面的示例演示如何使用 thisArg 参数，该参数指定 this 关键字可引用的对象。它检查数组中是否有数字位于传递的对象所提供的范围之外。
+		 */
+		
+		// Create a function that returns true if the value is 
+		// outside the range.
+		var isOutsideRange = function (value) {
+		    return value < this.minimum || value > this.maximum;
+		}
+
+		// Create an array of numbers.
+		var numbers = [6, 12, 16, 22, -12];
+
+		// The range object is to be the 'this' object.
+		var range = { minimum: 10, maximum: 20 };
+
+		console.log(numbers.some(isOutsideRange, range));
+
+		// Output: true
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

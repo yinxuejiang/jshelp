@@ -70,7 +70,7 @@ alert(box[1].title);
 */
 
 /*
-var json = '[{"title" : "a", "num" : 1},{"title" : "b", "num" : 2}]';	
+var json = '[{"title" : "a", "num" : 1},{"title" : "b", "num" : 2}]';
 //alert(JSON);
 var box = JSON.parse(json);
 alert(box[0].title);

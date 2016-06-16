@@ -5,7 +5,6 @@ function Person(name){
 	};
 }
 
-
 function Employee(name,salary){
 	Person.call(this, name);
 	this.salary = salary;

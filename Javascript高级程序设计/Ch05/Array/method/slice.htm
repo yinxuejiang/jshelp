@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>slice 方法</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：返回一个数组中的一部分。
+		 * 语法：arrayObj.slice(start, [end]) 
+		 */
+		
+		/**
+		 * 参数
+		 * arrayObj  必选。一个数组对象。
+		 * start  必需。 arrayObj 的指定部分的开头。
+		 * end  可选。 arrayObj 的指定部分的结尾。
+		 */
+		
+		var origArray = [3, 5, 7, 9];
+		var newArray = origArray. slice(0, -1);
+		console.log(origArray);
+		console.log("<br/>");
+		newArray = origArray. slice(-2);
+		console.log(newArray);
+
+		// Output:
+		// 3,5,7,9
+		// 7,9
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

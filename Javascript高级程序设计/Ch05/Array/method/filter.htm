@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>filter 方法</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：返回数组中的满足回调函数中指定的条件的元素。
+		 * 语法：array1.filter(callbackfn[, thisArg])
+		 */
+		
+		/**
+		 * 参数
+		 * array1  必需。数组对象。
+		 * callbackfn  必需。一个接受最多三个参数的函数。对于数组中的每个元素，filter 方法都会调用 callbackfn 函数一次。
+		 * thisArg  可选。可在 callbackfn 函数中为其引用 this 关键字的对象。如果省略 thisArg，则 undefined 将用作 this 值。
+		 */
+		
+		/**
+		 * 下面的示例演示如何使用 filter 方法。
+		 */
+		
+		// Define a callback function.
+		function CheckIfPrime(value, index, ar) {
+		    high = Math.floor(Math.sqrt(value)) + 1;
+
+		    for (var div = 2; div <= high; div++) {
+		        if (value % div == 0) {
+		            return false;
+		        }
+		    } 
+		    return true;
+		}
+
+		// Create the original array.
+		var numbers = [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53];
+
+		// Get the prime numbers that are in the original array. 
+		var primes = numbers.filter(CheckIfPrime);
+
+		console.log(primes);
+		// Output: 31,37,41,43,47,53
+		
+		/**
+		 * 在下面的示例中，callbackfn 参数包含回调函数的代码。
+		 */
+
+		// Create the original array.
+		var arr = [5, "element", 10, "the", true];
+
+		// Create an array that contains the string
+		// values that are in the original array.
+		var result = arr.filter(
+		    function (value) {
+		        return (typeof value === 'string');
+		    }
+		);
+
+		console.log(result);
+		// Output: element, the
+		
+		/**
+		 *下面的示例显示 window DOM 对象中以字母“css”开头的属性名。
+		 */
+
+		 var filteredNames = Object.getOwnPropertyNames(window).filter(IsC);
+
+		     for (i in filteredNames){
+		         console.log(filteredNames[i] + "<br/>");
+		     }
+
+		 // Check whether the string starts with "css".
+		 function IsC(value) {
+		     var firstChar = value.substr(0, 3);
+		     if (firstChar.toLowerCase() == "css"){
+		         return true;
+		     }
+		     else{
+		         return false;
+		     }
+		}
+
+		 // Output:
+		 // CSSRule
+		 // CSSFontFaceRule
+		 // CSSImportRule
+		 // CSSMediaRule
+		 // CSSNamespaceRule
+		 // CSSPageRule
+		 // CSSRuleList
+		 // CSSStyleDeclaration
+		 // CSSStyleRule
+		 // CSSStyleSheet
+		 
+		 /**
+		  *下面的示例阐释 thisArg 参数的用法，该参数指定对其引用 this 关键字的对象。
+		  */
+
+		  var checkNumericRange = function(value) {
+		      if (typeof value !== 'number'){
+		          return false;
+		      }
+		      else {
+		          return value >= this.minimum && value <= this.maximum;
+		      }
+		  }
+
+		  var numbers = [6, 12, "15", 16, "the", -12];
+
+		  // The obj argument enables use of the this value
+		  // within the callback function.
+		  var obj = { minimum: 10, maximum: 20 }
+
+		  var result = numbers.filter(checkNumericRange, obj);
+
+		  console.log(result);
+		  // Output: 12,16
+		
+		/**
+		 *filter 方法可应用于字符串而不是数组。下面的示例演示如何执行此操作。
+		 */
+		
+		// Define a callback function that returns true
+		// if the current array element follows a space
+		// or is the first character.
+		function CheckValue(value, index, ar) {
+		    if (index == 0){
+		        return true;
+		    }
+		    else{
+		        return ar[index - 1] === " ";
+		    }
+		}
+
+		// Create a string.
+		var sentence = "The quick brown fox jumps over the lazy dog."; 
+
+		// Create an array that contains all characters that follow a space.
+		var subset = [].filter.call(sentence, CheckValue); 
+
+		// You can use this alternative syntax.
+		//var subset = Array.prototype.filter.call(sentence, CheckValue);
+
+		console.log(subset);
+		// Output: T,q,b,f,j,o,t,l,d
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

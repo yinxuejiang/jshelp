@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>forEach 方法</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：为数组中的每个元素执行指定操作。
+		 * 语法：array1.forEach(callbackfn[, thisArg])
+		 */
+		
+		/**
+		 * 参数
+		 * array1  必选。一个数组对象。
+		 * callbackfn  必选。最多可以接受三个参数的函数。对于数组中的每个元素，forEach 都会调用 callbackfn 函数一次。
+		 * thisArg  可选。 callbackfn 函数中的 this 关键字可引用的对象。如果省略 thisArg，则 undefined 将用作 this 值。
+		 */
+		
+		/**
+		 * 下面的示例阐释了 forEach 方法的用法。
+		 */
+		// Define the callback function.
+		function ShowResults(value, index, ar) {
+		    console.log("value: " + value);
+		    console.log(" index: " + index);
+		}
+
+		// Create an array.
+		var letters = ['ab', 'cd', 'ef'];
+
+		// Call the ShowResults callback function for each
+		// array element.
+		letters.forEach(ShowResults);
+
+		// Output:
+		//  value: ab index: 0 
+		//  value: cd index: 1 
+		//  value: ef index: 2 
+		
+		/**
+		 * 在下面的示例中，callbackfn 参数包含回调函数的代码。
+		 */
+		 // Create an array.
+		 var numbers = [10, 11, 12];
+
+		 // Call the addNumber callback function for each array element.
+		 var sum = 0;
+		 numbers.forEach(
+		     function addNumber(value) { sum += value; }
+		 );
+
+		 console.log(sum);
+		 // Output: 33
+
+		 /**
+		  * 下面的示例阐释了 thisArg 参数的用法，该参数指定可对其引用 this 关键字的对象。
+		  */
+		 
+		  // Define the object that contains the callback function.
+		  var obj = {
+		      showResults: function(value, index) {
+		          // Call calcSquare by using the this value.
+		          var squared = this.calcSquare(value);
+
+		          console.log("value: " + value);
+		          console.log(" index: " + index);
+		          console.log(" squared: " + squared);
+		      },
+		      calcSquare: function(x) { return x * x }
+		  };
+
+		  // Define an array.
+		  var numbers = [5, 6];
+
+		  // Call the showResults callback function for each array element.
+		  // The obj is the this value within the 
+		  // callback function.
+		  numbers.forEach(obj.showResults, obj);
+
+		  // Embed the callback function in the forEach statement.
+		  // The obj argument is the this value within the obj object.
+		  // The output is the same as for the previous statement.
+		  numbers.forEach(function(value, index) { this.showResults(value, index) }, obj);
+
+		  // Output:
+		  //  value: 5 index: 0 squared: 25
+		  //  value: 6 index: 1 squared: 36
+		  //  value: 5 index: 0 squared: 25
+		  //  value: 6 index: 1 squared: 36
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -74,4 +74,3 @@ function setCookieDate(day) {			//传递一个天数，比如传递7，就7天后失效
 
 
 
-

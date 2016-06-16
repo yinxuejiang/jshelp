@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>push 方法</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：将新元素追加到一个数组中，并返回新的数组长度。
+		 * 语法：arrayObj.push([item1 [item2 [. . . [itemN ]]]])
+		 */
+		
+		var number;
+		var my_array = new Array();
+
+		my_array.push (5, 6, 7);
+		my_array.push (8, 9);
+
+		number = my_array.pop();
+		while (number != undefined)
+		   {
+		   console.log (number);
+		   number = my_array.pop();
+		   }
+
+		// Output:
+		// 9 8 7 6 5
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

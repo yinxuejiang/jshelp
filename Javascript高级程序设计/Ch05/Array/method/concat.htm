@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>concat 方法</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：组合两个或两个以上的数组。
+		 * 语法：array1.concat([item1[, item2[, . . . [, itemN]]]])  
+		 */
+		
+		/**
+		 * 参数：
+		 * array1
+		 * 必需。其他数组连接到的 Array 对象。
+		 * item1,. . ., itemN
+		 * 可选。要添加到 array1 的末尾的附加项。
+		 */
+				
+		var a, b, c, d;
+		a = new Array(1,2,3);
+		b = "dog";
+		c = new Array(42, "cat");
+		d = a.concat(b, c);
+		console.log(d);
+
+		//Output: 
+		1, 2, 3, "dog", 42, "cat"
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

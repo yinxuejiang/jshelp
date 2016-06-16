@@ -1,8 +1,9 @@
+
 /*
 var box = new Date(2007, 10, 15, 17, 22, 45, 15);
 alert(box);																//Thu Nov 15 2007 17:22:45 GMT+0800
 alert('toString:' + box.toString());									//Thu Nov 15 2007 17:22:45 GMT+0800 
-alert('toLocaleString:' + box.toLocaleString());						//2007-11-15 17:22:45 PS¹È¸è·µ»ØµÄThu Nov 15 2007 17:22:45 GMT+0800 
+alert('toLocaleString:' + box.toLocaleString());						//2007-11-15 17:22:45 PSè°·æ­Œè¿”å›çš„Thu Nov 15 2007 17:22:45 GMT+0800 
 alert('valueOf:' + box.valueOf());										//1195118565015
 */
 
@@ -19,7 +20,7 @@ alert(box.toUTCString());
 /*
 box.setTime(100);
 alert(box.getTime());
-alert(box.getYear());//·ÏÆú
+alert(box.getYear());//åºŸå¼ƒ
 box.setFullYear(2009);
 alert(box.getFullYear());
 box.setMonth(5);
@@ -32,15 +33,15 @@ alert(box.getMonth() + 1);
 */
 
 /*
-alert(box.getMonth() + 1); //ÔÂ·İÒª¼Ó1²ÅÊÇ×îÖÕµÄÔÂ·İ
+alert(box.getMonth() + 1); //æœˆä»½è¦åŠ 1æ‰æ˜¯æœ€ç»ˆçš„æœˆä»½
 
 box.setUTCFullYear(2008);
 alert(box.getUTCFullYear());
 */
 
 /*
-alert(box.getUTCHours()); //¶«°ËÇøÓĞ8¸öĞ¡Ê±µÄ²î¾à
-ËùÓĞgetUTCHousºÍgetHousÏà²î8¸öĞ¡Ê±
+alert(box.getUTCHours()); //ä¸œå…«åŒºæœ‰8ä¸ªå°æ—¶çš„å·®è·
+æ‰€æœ‰getUTCHouså’ŒgetHousç›¸å·®8ä¸ªå°æ—¶
 */
 
 /*

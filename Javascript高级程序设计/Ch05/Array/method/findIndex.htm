@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>findIndex 方法</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：返回满足回调函数中指定的测试条件的第一个数组元素的索引值。
+		 * 语法：arrayObj.findIndex(callbackfn [, thisArg]);
+		 */
+		
+		/**
+		 * 参数
+		 * arrayObj  必需。数组对象。
+		 * callbackfn  必需。用于测试数组中的每个元素的回调函数。
+		 * thisArg  可选。指定回调函数中的 this 对象。如果未指定，则未定义 this 对象。
+		 */
+		
+		/**
+		 * 在下面的示例中，回调函数测试数组中的每个元素是否都等于 2。
+		 */
+		var arrIndex = [1,2,3].findIndex(function(x) { return x == 2; });
+		console.log(arrIndex);
+		// Returns an index value of 1.
+		
+		/**
+		 * 下面的示例使用箭头语法来测试每个元素。在此示例中，没有任何元素返回 true，findIndex 返回 -1。
+		 */
+		 var arrIndex = [1,2,3].findIndex(x => x == 4);
+		 console.log(arrIndex);
+		 // Returns an index value of -1. 
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

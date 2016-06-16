@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Array.isArray 函数</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：确定对象是否为数组。
+		 * 语法：Array.isArray(object) 
+		 */
+				
+		var ar = [];
+		var result = Array.isArray(ar);
+		console.log(result);
+		// Output: true
+
+		var ar = new Array();
+		var result = Array.isArray(ar);
+		console.log(result);
+		// Output: true
+
+		var ar = [1, 2, 3];
+		var result = Array.isArray(ar);
+		console.log(result);
+		// Output: true
+
+		var result = Array.isArray("an array");
+		console.log(result);
+		// Output: false
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
