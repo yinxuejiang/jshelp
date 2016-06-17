@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSON.parse 函数</title>
+    <script type="text/javascript">
+        /**
+         * 说明：将 JavaScript 对象表示法 (JSON) 字符串转换为对象。
+         * 语法：JSON.parse(text [, reviver])
+         */
+        
+        var jsontext = '{"firstname":"Jesper","surname":"Aaberg","phone":["555-0100","555-0120"]}';
+        var contact = JSON.parse(jsontext);
+        document.write(contact.surname + ", " + contact.firstname);
+        document.write(contact.phone[1]);
+        // Output:
+        // Aaberg, Jesper
+        // 555-0100
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

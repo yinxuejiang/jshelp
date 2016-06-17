@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>substr 方法</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：获取一个从指定位置开始并具有指定长度的子字符串。
+		 * 语法：stringvar.substr(start [, length ]) 
+		 */
+		
+		/**
+		 * 参数：
+		 * stringvar  必需。从中提取子字符串的字符串文本或 String 对象。
+		 * start  必需。所需的子字符串的起始位置。字符串中第一个字符的索引为 0。
+		 * length  可选。返回的子字符串中包含的字符数。
+		 */
+		
+		var s = "The quick brown fox jumps over the lazy dog.";
+		var ss = s.substr(10, 5);  
+		document.write("[" + ss + "] <br>");
+
+		ss = s.substr(10);
+		document.write("[" + ss + "] <br>");
+
+		ss = s.substr(10, -5);
+		document.write("[" + ss + "] <br>");
+
+		// Output:
+		// [brown] 
+		// [brown fox jumps over the lazy dog.] 
+		// []
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

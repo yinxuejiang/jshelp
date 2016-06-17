@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>substring 方法</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：获取一个从指定位置开始并具有指定长度的子字符串。
+		 * 语法：strVariable. substring(start [, end])
+		 * 语法："String Literal".substring(start [, end]) 
+		 */
+		
+		/**
+		 * 参数：
+		 * start  必需。从 0 开始的索引整数，指示子字符串的起始位置。
+		 * end  可选。从 0 开始的索引整数，指示子字符串的结束位置。子字符串包括 end 所指示的字符（不包括该字符）前面的字符。
+		 *      如果省略 end，将返回从 start 一直到原字符串末尾的字符。
+		 */
+		
+		var s = "The quick brown fox jumps over the lazy dog.";
+		var ss = s.substring(10, 15);
+		document.write(ss);
+
+		// Output:
+		// brown
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

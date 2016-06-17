@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>length 属性</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：为字符串的类返回原型的引用。
+		 * 语法：string.prototype
+		 */
+		
+		function string_last( ){
+		    return this.charAt(this.length - 1);
+		}
+		String.prototype.last = string_last;
+		var myString = new String("every good boy does fine");
+		document.write(myString.last());
+
+		// Output:
+		// e
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

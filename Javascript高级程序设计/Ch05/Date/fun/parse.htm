@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>parse 函数</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：分析一个包含日期的字符串，并返回该日期与 1970 年 1 月 1 日午夜之间相差的毫秒数。
+		 * 语法：Date.parse(dateVal) 
+		 */
+
+		var dateString = "November 1, 1997 10:15 AM";
+		var mSec = Date.parse(dateString);
+		document.write(mSec);
+		// Output: 878404500000
+
+		/**
+		 * 以下示例返回提供的日期与 1/1/1970 之间的差异。
+		 */
+		
+		var minMilli = 1000 * 60;
+		var hrMilli = minMilli * 60;
+		var dyMilli = hrMilli * 24;
+
+		var testDate = new Date("June 1, 1990");
+		var ms = Date.parse(testDate);
+		var days = Math.round(ms / dyMilli);
+
+		var dateStr = "";
+		dateStr += "There are " + days + " days ";
+		dateStr += "between 01/01/1970 and " + testDate;
+		document.write(dateStr);
+
+		// Output: There are 7456 days between 01/01/1970 and Fri Jun 1 00:00:00 PDT 1990
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

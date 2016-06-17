@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>replace 方法</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：使用正则表达式或搜索字符串替换字符串中的文本。
+		 * 语法：stringObj. replace(rgExp, replaceText)
+		 */
+		
+		/**
+		 * 参数：
+		 * stringObj  必需。要执行替换的 String 对象或字符串文本。 replace 方法不会修改此字符串。相反，此方法的返回值是替换所生成的字符串。
+		 * rgExp  必需。包含正则表达式模式和适用标志的正则表达式对象的实例。也可以是表示正则表达式的 String 对象或字符串文本。
+		 *        如果 rgExp不是正则表达式对象的实例，则将它转换为字符串，并对结果执行精确搜索；不会尝试将字符串转换为正则表达式。
+		 * replaceText  必需。一个 String 对象或字符串文本，其中包含用于替换 stringObj 中 rgExp 的每个成功匹配项的文本。
+		 */
+		
+		var s = "the batter hit the ball with the bat";
+
+		// Replace "the" with "a".
+		var re = /the/g;
+		var result = s.replace(re, "a");
+		document.write(result);
+		// Output: a batter hit a ball with a bat
+
+		/**
+		 * 另外，replace 方法也可以替换模式中的子表达式。下面的示例将字符串中的每对单词进行了交换：
+		 */
+
+		 var s = "The quick brown fox jumped over the lazy dog.";
+		 var re = /(\S+)(\s+)(\S+)/g;
+		 // Exchange each pair of words.
+		 var result = s.replace(re, "$3$2$1");
+		 document.write(result);
+
+		 // Output:  quick The fox brown over jumps lazy the dog.
+
+		 /**
+		  * 演示如何使用返回替换文本的函数。它将后跟“F”的任何数字实例替换为摄氏度转换值。
+		  */
+
+		  function f2c(s1) {
+		      // Initialize pattern.
+		      var test = /(\d+(\.\d*)?)F\b/g;
+
+		      // Use a function for the replacement.
+		      var s2 = s1.replace(test,
+		        function($0,$1,$2)
+		             { 
+		             return((($1-32) * 5/9) + "C");
+		             }
+		          )
+		      return s2;
+		  }
+		  document.write(f2c("Water freezes at 32F and boils at 212F."));
+
+		  // Output: Water freezes at 0C and boils at 100C.
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

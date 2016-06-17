@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>eval 函数</title>
+    <script type="text/javascript">
+        /**
+         * 说明：计算 JavaScript 代码并执行。
+         * 语法：eval(codeString) 
+         */
+        
+        var dateFn = "Date(1971,3,8)";
+        var myDate;
+        eval("myDate = new " + dateFn + ";");
+
+        document.write(myDate);
+
+        // Output: Thu Apr 8 00:00:00 PDT 1971
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

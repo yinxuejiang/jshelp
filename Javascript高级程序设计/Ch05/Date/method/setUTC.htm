@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>setUTC 方法</title>
+	<script type="text/javascript">
+		/**
+		 * 语法：dateObj.setUTCDate() 
+		 * 语法：dateObj.setUTCFullYear()
+		 * 语法：dateObj.setUTCHours() 
+		 * 语法：dateObj.setUTCMilliseconds () 
+		 * 语法：dateObj.setUTCMinutes () 
+		 * 语法：dateObj.setUTCMonth () 
+		 * 语法：dateObj.setUTCSeconds () 
+		 * 语法：dateObj.setUTCYear () 
+		 */
+		
+		/**
+		 * 参数:
+		 * dateObj 必需。任意 Date 对象。
+		 */
+		
+		var date = new Date();
+		date.setUTCFullYear(2020);
+		date.setUTCMonth(11);
+		date.setUTCDate(12);
+		date.setUTCHours(4);
+		date.setUTCMinutes(12);
+		date.setUTCSeconds(12);
+		document.write(date.toLocaleString());
+
+		// Output (for the PST time zone): Sun Dec 30 00:00:00 PST 1990
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

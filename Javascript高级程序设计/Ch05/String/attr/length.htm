@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>length 属性</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：返回 String 对象的长度。
+		 * 语法：strVariable.length
+		 */
+		
+		var str = "every good boy does fine";
+		        var start = 0;
+		        var end = str.length - 1;
+		        var tmp = "";
+		        var arr = new Array(end);
+
+		        while (end >= 0) {
+		            arr[start++] = str.charAt(end--);
+		        }
+
+		// Join the elements of the array with a 
+		        var str2 = arr.join('');
+		        document.write(str2);
+
+		// Output: enif seod yob doog yreve
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

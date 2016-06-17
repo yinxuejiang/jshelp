@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>localeCompare 方法</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：确定两个字符串在当前区域设置中是否相等。
+		 * 语法：stringVar.localeCompare(stringExp[, locales][, options]) 
+		 */
+		
+		/**
+		 * 参数：
+		 * stringVar  必需。要比较的第一个字符串。
+		 * stringExp  必需。要比较的第二个字符串。
+		 * locales  可选。包含一种或多种语言或区域设置标记的区域设置字符串数组。如果包含多个区域设置字符串
+		 * options  可选。包含指定比较选项的一个或多个特性的对象
+		 */
+		
+		var str1 = "def";
+		var str2 = "abc"
+
+		document.write(str1.localeCompare(str2) + "<br/>");
+
+		// Output: 1
+		var str3 = "ghi";
+
+		document.write(str1.localeCompare(str3)+ "<br/>");
+
+		// Output: -1
+		var str4 = "def";
+
+		document.write(str1.localeCompare(str4));
+
+		// Output: 0
+
+		/**
+		 * 下面的代码显示如何使用具有德语（德国）区域设置的 localeCompare。
+		 */
+
+		 var str1 = "a";
+		 var str2 = "b";
+
+		 document.write(str1.localeCompare(str2, "de-DE"));
+
+		 // Output
+		 // - 1
+
+		 /**
+		  * 下面的示例显示如何使用具有德语（德国）区域设置和指定德语电话簿排序顺序的区域设置特定扩展的 localeCompare。此示例演示了特定于区域设置的差异。
+		  */
+
+		  var arr = ["ä", "ad", "af", "a"];
+
+		  document.write(arr[0].localeCompare(arr[1], "de-DE-u-co-phonebk"));  // Returns 1
+		  document.write (arr[0].localeCompare(arr[2], "de-DE-u-co-phonebk"));  // Returns -1
+		  document.write (arr[0].localeCompare(arr[3], "de-DE-u-co-phonebk"));  // Returns 1
+
+		  document.write (arr[0].localeCompare(arr[1], "de-DE"));  // Returns -1
+		  document.write (arr[0].localeCompare(arr[2], "de-DE"));  // Returns -1
+		  document.write (arr[0].localeCompare(arr[3], "de-DE"));  // Returns 1
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

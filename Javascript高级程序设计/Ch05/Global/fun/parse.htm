@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>parse 函数</title>
+    <script type="text/javascript">
+        /**
+         * 说明：将字符串转换为浮点数。
+         * 语法：parseFloat(numString) 
+         */
+
+        parseFloat("abc")      // Returns NaN.
+        parseFloat("1.2abc")   // Returns 1.2.   
+
+
+        /**
+         * 说明：将字符串转换为整数。
+         * 语法：parseInt(numString, [radix]) 
+         */
+        /**
+         * 参数：
+         * numString  必需。要转换为数字的字符串。
+         * radix  可选。一个介于 2 和 36 之间的值，用于指定 numString 
+         *        所包含的数字的进制。如果未提供此参数，则前缀为“0x”的字符串将被视为是十六进制。所有其他字符串都被视为是十进制。
+         */     
+        parseInt("abc");     // Returns NaN.
+        parseInt("12abc");   // Returns 12.
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
