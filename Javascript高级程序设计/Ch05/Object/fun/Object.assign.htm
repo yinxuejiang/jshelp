@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object.assign 函数</title>
+    <script type="text/javascript">
+        /**
+         * 作用：将来自一个或多个源对象中的值复制到一个目标对象。
+         * 语法：Object.assign(target, ...sources );
+         */
+        
+        /**
+         * 参数：
+         * target  必需。可枚举属性复制到的对象。
+         * ...sources  必需。从其中复制可枚举属性的对象。
+         */
+        
+        /**
+         * 示例演示如何使用 Object.assign 合并对象。
+         */
+        
+        var first = { name: "Bob" };
+        var last = { lastName: "Smith" };
+
+        var person = Object.assign(first, last);
+        console.log(person);
+
+        // Output:
+        // { name: "Bob", lastName: "Smith" } 
+
+        /**
+         *  Object.assign 克隆对象。
+         */
+        var obj = { person: "Bob Smith"};
+        var clone = Object.assign({}, obj);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

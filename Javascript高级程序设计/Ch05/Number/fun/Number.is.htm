@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Number.is 函数</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：判断数字
+		 */
+		
+		/**
+		 * 函数		描述
+		 * Number.isFinite 函数		返回一个布尔值，该值指示值是否为有限数。
+		 * Number.isInteger 函数		返回一个布尔值，该值指示值是否为整数。
+		 * Number.isNaN 函数		返回一个布尔值，该值指示某个值是否为保留值 NaN（非数字）。
+		 * Number.isSafeInteger		返回一个布尔值，该值指示值是否可在 JavaScript 中安全表示。
+		 */
+		
+		// Returns true
+		Number.isFinite(100)
+		Number.isFinite(-100)
+		Number.isFinite(100 / 3)
+
+		// Returns false
+		Number.isFinite(Number.NaN)
+		Number.isFinite(Infinity)
+		Number.isFinite("100")
+		
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

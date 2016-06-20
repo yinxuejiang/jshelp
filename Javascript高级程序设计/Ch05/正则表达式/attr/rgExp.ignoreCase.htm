@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>rgExp.ignoreCase  属性</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：返回布尔值，该值指示在正则表达式中使用的 ignoreCase 标志 (i) 的状态。默认值为 false。只读。
+		 * 语法：rgExp.ignoreCase
+		 */
+	
+		function RegExpPropDemo(flag){
+		    // The flag parameter is a string that contains
+		    // g, i, or m. The flags can be combined.
+
+		    // Check flags for validity.
+		    if (flag.match(/[^gim]/))
+		        {
+		        return ("Flag specified is not valid");
+		        }
+
+		    // Create the string on which to perform the replacement.
+		    var orig = "The batter hit the ball with the bat ";
+		    orig += "and the fielder caught the ball with the glove.";
+
+		    // Replace "the" with "a".
+		    var re = new RegExp("the", flag);
+		    var r = orig.replace(re, "a");        
+
+		    // Output the resulting string and the values of the flags.
+		    var s = "";
+		    s += "global: " + re.global.toString();
+		    s += "<br />";
+		    s += "ignoreCase: " + re.ignoreCase.toString();
+		    s += "<br />";
+		    s += "multiline: " + re.multiline.toString();
+		    s += "<br />";
+		    s += "Resulting String: " + r;
+		    s += "<br />";
+		    s += "<br />";
+		    return (s);
+		}
+
+		document.write(RegExpPropDemo("gi"));
+		document.write(RegExpPropDemo("g"));
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

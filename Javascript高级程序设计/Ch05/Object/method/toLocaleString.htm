@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>toLocaleString 方法</title>
+    <script type="text/javascript">
+        /**
+         * 作用：返回使用当前区域设置转换为字符串的日期。
+         * 语法：dateObj.toLocaleString() 
+         */
+        
+        /**
+         * 参数：
+         * dateObj  必需。对象的实例。
+         */
+        
+        function toLocaleStrDemo(){   
+           var d, s;                      //Declare variables.
+           d = new Date();                //Create Date object.
+           s = "Current setting is ";
+           s += d.toLocaleString();       //Convert to current locale.
+           return(s);                     //Return converted date
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

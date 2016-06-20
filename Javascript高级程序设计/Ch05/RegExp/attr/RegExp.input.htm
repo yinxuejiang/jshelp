@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RegExp.input 属性</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：返回执行正则表达式搜索所针对的字符串。只读。
+		 * 语法：RegExp.input
+		 */
+	
+		function inputDemo(){
+		   var s;
+		   var re = new RegExp("d(b+)(d)","ig");
+		   var str = "cdbBdbsbdbdz";
+		   var arr = re.exec(str);
+		   s = "The string used for the match was " + RegExp.input; 
+		   return(s);
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object.defineProperties 函数</title>
+    <script type="text/javascript">
+        /**
+         * 作用：将一个或多个属性添加到对象，并/或修改现有属性的特性。
+         * 语法：object.defineProperties(object, descriptors)
+         */
+        
+        /**
+         * 参数：
+         * object  必需。  对其添加或修改属性的对象。  这可以是本机 JavaScript 对象或 DOM 对象。  
+         * descriptors  必需。  包含一个或多个描述符对象的 JavaScript 对象。  每个描述符对象描述一个数据属性或访问器属性。  
+         */
+        
+        /**
+         * 在下面的示例中，Object.defineProperties 函数将数据属性和访问器属性添加到用户定义的对象。
+         * 该示例使用对象文本来创建具有 newDataProperty 和 newAccessorProperty 描述符对象的 descriptors 对象。
+         */
+        
+        var newLine = "<br />";
+
+        var obj = {};
+        Object.defineProperties(obj, {
+            newDataProperty: {
+                value: 101,
+                writable: true,
+                enumerable: true,
+                configurable: true
+            },
+            newAccessorProperty: {
+                set: function (x) {
+                    document.write("in property set accessor" + newLine);
+                    this.newaccpropvalue = x;
+                },
+                get: function () {
+                    document.write("in property get accessor" + newLine);
+                    return this.newaccpropvalue;
+                },
+                enumerable: true,
+                configurable: true
+            }});
+
+        // Set the accessor property value.
+        obj.newAccessorProperty = 10;
+        document.write ("newAccessorProperty value: " + obj.newAccessorProperty + newLine);
+
+        // Output:
+        // in property set accessor
+        // in property get accessor
+        // newAccessorProperty value: 10
+
+        /**
+         * 创建一个具有与 Object 对象相同的内部原型的对象。  您会发现，该对象具有与使用对象文本创建的对象相同的原型。  
+         */
+        var firstLine = { x: undefined, y: undefined };
+
+        var secondLine = Object.create(Object.prototype, {
+                x: {
+                    value: undefined, 
+                    writable: true, 
+                    configurable: true, 
+                    enumerable: true
+                    },
+                y: {
+                    value: undefined, 
+                    writable: true, 
+                    configurable: true, 
+                    enumerable: true
+                }
+        });
+
+        document.write("first line prototype = " + Object.getPrototypeOf(firstLine));
+        document.write("<br/>");
+        document.write("second line prototype = " + Object.getPrototypeOf(secondLine));
+
+        // Output:
+        // first line prototype = [object Object]
+        // second line prototype = [object Object]
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

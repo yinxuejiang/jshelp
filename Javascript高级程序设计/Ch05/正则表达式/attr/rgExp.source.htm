@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>rgExp.source  属性</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：返回正则表达式模式的文本的一个副本。只读。 rgExp 参数是一个 Regular Expression 对象。它可以是变量名或文本。
+		 * 语法：rgExp.source
+		 */
+	
+		function SourceDemo(re, s){
+		   var s1;
+		   // Test string for existence of regular expression.
+		   if (re.test(s))
+		      s1 = " contains ";
+		   else
+		      s1 = " does not contain ";
+		   // Get the text of the regular expression itself.
+		   return(s + s1 + re.source);
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

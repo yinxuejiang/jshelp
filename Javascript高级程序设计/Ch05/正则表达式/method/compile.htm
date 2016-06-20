@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>compile  方法</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：将正则表达式编译为内部格式，从而更快地执行。
+		 * 语法：rgExp.compile(pattern, [flags]) 
+		 */
+		/**
+		 * 参数：
+		 * rgExp  必需。 Regular Expression 对象的一个实例。可以是变量名或文本。
+		 * pattern  必需。一个字符串表达式，包含要编译的正则表达式模式
+		 * flags  可选。可以组合使用的可用标志有： g（全局搜索出现的所有模式）  i（忽略大小写）  m（多行搜索）
+		 */
+	
+		function CompileDemo(){
+		   var rs;
+		   var s = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPp"
+		   // Create regular expression for uppercase only.
+		   var r = new RegExp("[A-Z]", "g");
+		   var a1 = s.match(r)              // Find matches.
+		   // Compile the regular expression for lowercase only.
+		   r.compile("[a-z]", "g");
+		// Find matches.
+		   var a2 = s.match(r)              
+		   return(a1 + "\n" + a2);
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

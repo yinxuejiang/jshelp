@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Number.to 方法</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：数字转换
+		 */
+		
+		/**
+		 * 方法		描述
+		 * toExponential 方法		返回一个字符串，其中包含一个以指数记数法表示的数字。
+		 * toFixed 方法		返回一个字符串，它表示定点表示法中的一个数字。
+		 * toPrecision 方法		返回一个字符串，其中包含一个以指数或定点表示法表示且具有指定位数的数字。
+		 */
+		/**
+		 * 方法：toExponential 方法
+		 * 作用：使用指数记数法表示数字。
+		 * 语法：numObj.toExponential([fractionDigits])
+		 * 参数：fractionDigits   可选。小数点后数字的位数。值必须介于 0 -20 之间（含 0 和 20）。
+		 */
+		var num = new Number(123);
+		var exp = num.toExponential();
+		document.write(exp);
+		document.write("<br/>");
+
+		num = new Number(123.456);
+		exp = num.toExponential(5);
+		document.write(exp);
+
+
+		// Output: 
+		// 1.23e+2
+		// 1.23456e+2
+		
+		/**
+		 * 方法：toFixed 方法
+		 * 作用：使用定点表示法表示数字。
+		 * 语法：numObj.toFixed([fractionDigits])
+		 * 参数：可选。小数点后的位数。值必须介于 0 -20 之间（含 1 和 21）。
+		 */
+		var num = new Number(123);
+		var fix = num.toFixed();
+		document.write(fix);
+		document.write("<br/>");
+
+		num = new Number(123.456);
+		fix = num.toFixed(5);
+		document.write(fix);
+
+		// Output:
+		// 123
+		123.45600
+
+		/**
+		 * 方法：toPrecision 方法
+		 * 作用：以指数记数法或定点记数法表示具有指定数字位数的数字。
+		 * 语法：numObj.toPrecision([precision])
+		 * 参数：可选。有效位数。必须介于 1 和 21 之间（含 1 和 21）。
+		 */
+		var num = new Number(123);
+		var prec = num.toPrecision();
+		document.write(prec);
+		document.write("<br/>");
+
+		num = new Number(123.456);
+		prec = num.toPrecision(5);
+		document.write(prec);
+
+		// Output:
+		// 123
+		// 123.46
+		
+		
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

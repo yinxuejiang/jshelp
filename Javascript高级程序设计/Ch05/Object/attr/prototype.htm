@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prototype 属性</title>
+    <script type="text/javascript">
+        /**
+         * 作用：指定创建一个对象的函数。
+         * 语法：objectName.prototype
+         */
+        
+        function array_max( ){
+            var i, max = this[0];
+            for (i = 1; i < this.length; i++)
+            {
+            if (max < this[i])
+            max = this[i];
+            }
+            return max;
+        }
+        Array.prototype.max = array_max;
+            var myArray = new Array(7, 1, 3, 11, 25, 9
+        );
+        document.write(myArray.max());
+
+        // Output:
+        // 25
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

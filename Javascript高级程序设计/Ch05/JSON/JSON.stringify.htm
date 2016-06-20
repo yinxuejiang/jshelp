@@ -74,10 +74,12 @@
             var replacement = new Object();
             for (var val in this)
             {
-                if (typeof (this[val]) === 'string')
+                if (typeof (this[val]) === 'string'){
                     replacement[val] = this[val].toUpperCase();
-                else
+                }
+                else{
                     replacement[val] = this[val]
+                }
             }
             return replacement;
         };

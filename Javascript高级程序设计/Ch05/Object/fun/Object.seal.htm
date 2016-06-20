@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object.seal 函数</title>
+    <script type="text/javascript">
+        /**
+         * 作用：阻止修改现有属性的特性，并阻止添加新属性。
+         * 语法：Object.seal(object)
+         */
+        
+        /**
+         * 函数        对象已设置为不可扩展的        为每个属性将 configurable 设置为 false        为每个属性将 writable 设置为 false
+         * Object.preventExtensions        是        否        否
+         * Object.seal        是        是        否
+         * Object.freeze        是        是        是 
+         */
+        
+        /**
+         * 函数    对象是否可扩展   为所有属性将 configurable 设置为 false    为所有数据属性将 writable 设置为 false
+         * Object.isExtensible 是 否 否 
+         * Object.isSealed 否 是 否 
+         * Object.isFrozen 否 是 是
+         */
+        
+        // Create an object that has two properties.
+        var obj = { pasta: "spaghetti", length: 10 };
+        // Seal the object.
+        Object.seal(obj);
+        document.write(Object.isSealed(obj));
+        document.write("<br/>");
+
+        // Try to add a new property, and then verify that it is not added. 
+        obj.newProp = 50;
+        document.write(obj.newProp);
+        document.write("<br/>");
+
+        // Try to delete a property, and then verify that it is still present. 
+        delete obj.length;
+        document.write(obj.length);
+
+        // Output:
+        // true
+        // undefined
+        // 10
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

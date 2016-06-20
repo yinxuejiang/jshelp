@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test 方法</title>
+	<script type="text/javascript">
+		/**
+		 * 作用：返回一个布尔值，该值指示在搜索字符串中是否存在一种模式。
+		 * 语法：rgExp.test(str) 
+		 */
+		/**
+		 * 参数：
+		 * rgExp  必需。包含正则表达式模式和适用标志的 Regular Expression 对象的实例。
+		 * str  必需。将对其执行搜索的字符串。
+		 */
+	
+		function TestDemo(re, teststring)
+		{
+		   // Test string for existence of regular expression.
+		   var found = re.test(teststring)
+
+		   // Format the output.
+		   var s = "";
+		   s += "'" + teststring + "'"
+
+		   if (found)
+		      s += " contains ";
+		   else
+		      s += " does not contain ";
+
+		   s += "'" + re.source + "'"
+		   return(s);
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
