@@ -47,11 +47,9 @@
 
 		      // Use a function for the replacement.
 		      var s2 = s1.replace(test,
-		        function($0,$1,$2)
-		             { 
-		             return((($1-32) * 5/9) + "C");
-		             }
-		          )
+		        function($0,$1,$2){ 
+		            return((($1-32) * 5/9) + "C");
+		        })
 		      return s2;
 		  }
 		  document.write(f2c("Water freezes at 32F and boils at 212F."));

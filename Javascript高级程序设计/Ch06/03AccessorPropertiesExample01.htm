@@ -14,7 +14,6 @@
                 return this._year;
             },
             set: function(newValue){
-            
                 if (newValue > 2004) {
                     this._year = newValue;
                     this.edition += newValue - 2004;
@@ -22,10 +21,6 @@
                 }
             }
         });
-        
-        book.year = 2005;
-        console.log(book.year);   //2
-
     </script>
 </head>
 <body>

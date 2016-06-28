@@ -9,10 +9,12 @@
          * 语法：[function.]arguments.callee
          */
         function factorial(n){
-          if (n <= 0)
+          if (n <= 0){
              return 1;
-          else
+          }
+          else{
              return n * arguments.callee(n - 1)
+          }
         }
         document.write(factorial(4));
         // 24

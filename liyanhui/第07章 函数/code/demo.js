@@ -7,6 +7,7 @@ function box() {											//函数的声明
 }															//必须调用才可以执行
 box();														//调用
 */
+
 /*
 function box(name, age) {
 	alert('你的姓名是：' + name + '，年龄为：' + age);
