@@ -1,37 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>RegExp.leftContext 属性</title>
-	<script type="text/javascript">
-		/**
-		 * 作用：返回从一个被搜索字符串的开头到最后一个匹配的开头之前的位置之间的字符。只读。
-		 * 语法：RegExp.leftContext
-		 */
-	
-		// Create the regular expression pattern.
-		var re = new RegExp("d(b+)(d)","ig");
-		var str = "cdbBdbsbdbdz";
+    <meta charset="UTF-8">
+    <title>RegExp.leftContext 属性</title>
+    <script type="text/javascript">
+    /**
+     * 作用：返回从一个被搜索字符串的开头到最后一个匹配的开头之前的位置之间的字符。只读。
+     * 语法：RegExp.leftContext
+     */
 
-		// Perform the search.
-		var arr = re.exec(str);
+    // Create the regular expression pattern.
+    var re = new RegExp("d(b+)(d)", "ig");
+    var str = "cdbBdbsbdbdz";
 
-		// Print the output.
-		var s = "" 
-		s += "$1: " + RegExp.$1 + "<br />";
-		s += "$2: " + RegExp.$2 + "<br />";
-		s += "$3: " + RegExp.$3 + "<br />";
-		s += "input: " + RegExp.input + "<br />";
-		s += "lastMatch: " + RegExp.lastMatch + "<br />";
-		s += "leftContext: " + RegExp.leftContext + "<br />";
-		s += "rightContext: " + RegExp.rightContext + "<br />"; 
-		s += "lastParen: " + RegExp.lastParen + "<br />";
+    // Perform the search.
+    var arr = re.exec(str);
 
-		document.write(s);
-		
-	</script>
+    // Print the output.
+    var s = ""
+    s += "$1: " + RegExp.$1 + "<br />";
+    s += "$2: " + RegExp.$2 + "<br />";
+    s += "$3: " + RegExp.$3 + "<br />";
+    s += "input: " + RegExp.input + "<br />";
+    s += "lastMatch: " + RegExp.lastMatch + "<br />";
+    s += "leftContext: " + RegExp.leftContext + "<br />";
+    s += "rightContext: " + RegExp.rightContext + "<br />";
+    s += "lastParen: " + RegExp.lastParen + "<br />";
+
+    document.write(s);
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

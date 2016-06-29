@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="utf-8">
     <title>ScriptEngine 函数</title>
     <script type="text/javascript">
-        /**
-         * 说明：获取正在使用的脚本语言的名称。
-         * 语法：ScriptEngine()
-         */
+    /**
+     * 说明：获取正在使用的脚本语言的名称。
+     * 语法：ScriptEngine()
+     */
 
-       if (window.ScriptEngine) {
-           document.write(window.ScriptEngine());
-       }
+    if (window.ScriptEngine) {
+        document.write(window.ScriptEngine());
+    }
 
-       // Output: JScript
+    // Output: JScript
 
-        /**
-         * 说明：获取正在使用的脚本引擎的内部版本号。
-         * 语法：ScriptEngineBuildVersion()
-         */
-        
-        if(window.ScriptEngineBuildVersion) {
-            document.write(window.ScriptEngineBuildVersion());
-        }
+    /**
+     * 说明：获取正在使用的脚本引擎的内部版本号。
+     * 语法：ScriptEngineBuildVersion()
+     */
 
-        // Output: <current build version>
+    if (window.ScriptEngineBuildVersion) {
+        document.write(window.ScriptEngineBuildVersion());
+    }
 
+    // Output: <current build version>
     </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>

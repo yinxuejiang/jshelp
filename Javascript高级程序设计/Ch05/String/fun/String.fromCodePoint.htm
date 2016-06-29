@@ -1,37 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>fromCodePoint 函数</title>
-	<script type="text/javascript">
-		/**
-		 * 作用：返回与 Unicode UTF-16 码位关联的字符串。
-		 * 语法：String.fromCodePoint(...codePoints);
-		 */
-		
-		/**
-		 * 参数
-		 * …codePoints  必需。 指定一个或多个 UTF-16 码位值的 rest 参数。
-		 */
-		
-		var str1 = String.fromCodePoint(0x20BB7);
-		var str2 = String.fromCodePoint(98);
-		var str3 = String.fromCodePoint(97, 98, 99);
+    <meta charset="UTF-8">
+    <title>fromCodePoint 函数</title>
+    <script type="text/javascript">
+    /**
+     * 作用：返回与 Unicode UTF-16 码位关联的字符串。
+     * 语法：String.fromCodePoint(...codePoints);
+     */
 
-		if(console && console.log) {
-		    console.log(str1);
-		    console.log(str2);
-		    console.log(str3);
-		}
+    /**
+     * 参数
+     * …codePoints  必需。 指定一个或多个 UTF-16 码位值的 rest 参数。
+     */
 
-		// Output:
-		// 𠮷
-		// b
-		// abc 
+    var str1 = String.fromCodePoint(0x20BB7);
+    var str2 = String.fromCodePoint(98);
+    var str3 = String.fromCodePoint(97, 98, 99);
 
-	</script>
+    if (console && console.log) {
+        console.log(str1);
+        console.log(str2);
+        console.log(str3);
+    }
+
+    // Output:
+    // 𠮷
+    // b
+    // abc
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

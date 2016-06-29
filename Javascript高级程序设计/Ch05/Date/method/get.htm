@@ -1,40 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>get 方法</title>
-	<script type="text/javascript">
-		/**
-		 * 语法：dateObj.getDate() 
-		 * 语法：dateObj.getFullYear()
-		 * 语法：dateObj.getHours() 
-		 * 语法：dateObj.getMilliseconds () 
-		 * 语法：dateObj.getMinutes () 
-		 * 语法：dateObj.getMonth () 
-		 * 语法：dateObj.getSeconds () 
-		 * 语法：dateObj.getYear () 
-		 */
-		
-		/**
-		 * 参数:
-		 * dateObj 必需。任意 Date 对象。
-		 */
-		
-		var date = new Date();
-		var str = "Today's date is: ";
-		    str += date.getFullYear() + "年";
-		    str += (date.getMonth() + 1) + "月";
-		    str += date.getDate() + "日 ";
-		    str += date.getHours() + "：";
-		    str += date.getMinutes() + "：";
-		    str += date.getSeconds();
-		document.write(str);
+<html>
 
-		// Output: Today's date is: 1/1/2001
-		
-	</script>
+<head>
+    <meta charset="UTF-8">
+    <title>get 方法</title>
+    <script type="text/javascript">
+    /**
+     * 语法：dateObj.getDate() 
+     * 语法：dateObj.getFullYear()
+     * 语法：dateObj.getHours() 
+     * 语法：dateObj.getMilliseconds () 
+     * 语法：dateObj.getMinutes () 
+     * 语法：dateObj.getMonth () 
+     * 语法：dateObj.getSeconds () 
+     * 语法：dateObj.getYear () 
+     */
+
+    /**
+     * 参数:
+     * dateObj 必需。任意 Date 对象。
+     */
+
+    var date = new Date();
+    var str = "Today's date is: ";
+    str += date.getFullYear() + "年";
+    str += (date.getMonth() + 1) + "月";
+    str += date.getDate() + "日 ";
+    str += date.getHours() + "：";
+    str += date.getMinutes() + "：";
+    str += date.getSeconds();
+    document.write(str);
+
+    // Output: Today's date is: 1/1/2001
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

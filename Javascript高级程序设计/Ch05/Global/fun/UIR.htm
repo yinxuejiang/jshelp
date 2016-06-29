@@ -1,35 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="utf-8">
     <title>UIR 方法</title>
     <script type="text/javascript">
-        /**
-         * decodeURI(URIstring)
-         * encodeURI(URIString)
-         * decodeURIComponent(encodedURIString)
-         * encodeURIComponent(encodedURIString)
-         */
-        
-        var uriEncode = encodeURI ("http://www.Not a URL.com");
-        document.write (uriEncode);
-        document.write ("<br/>");
-        var uriDecode = decodeURI(uriEncode);
-        document.write (uriDecode);
-        document.write ("<br/>");
-        var uriEncodeComponent = encodeURIComponent ("http://www.Not a URL.com");
-        document.write (uriEncodeComponent);
-        document.write ("<br/>");
-         var uriDecodeComponent = decodeURIComponent(uriEncode);
-         document.write (uriDecodeComponent);
-         document.write ("<br/>");
-        // Output:
-        // http://www.Not%20a%20URL.com
-        // http://www.Not a URL.com
+    /**
+     * decodeURI(URIstring)
+     * encodeURI(URIString)
+     * decodeURIComponent(encodedURIString)
+     * encodeURIComponent(encodedURIString)
+     */
 
+    var uriEncode = encodeURI("http://www.Not a URL.com");
+    document.write(uriEncode);
+    document.write("<br/>");
+    var uriDecode = decodeURI(uriEncode);
+    document.write(uriDecode);
+    document.write("<br/>");
+    var uriEncodeComponent = encodeURIComponent("http://www.Not a URL.com");
+    document.write(uriEncodeComponent);
+    document.write("<br/>");
+    var uriDecodeComponent = decodeURIComponent(uriEncode);
+    document.write(uriDecodeComponent);
+    document.write("<br/>");
+    // Output:
+    // http://www.Not%20a%20URL.com
+    // http://www.Not a URL.com
     </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>

@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>pop 方法</title>
-	<script type="text/javascript">
-		/**
-		 * 作用：从数组中移除最后一个元素并返回该元素。
-		 * 语法：arrayObj.pop( )
-		 */
-		
-		var number;
-		var my_array = new Array();
+    <meta charset="UTF-8">
+    <title>pop 方法</title>
+    <script type="text/javascript">
+    /**
+     * 作用：从数组中移除最后一个元素并返回该元素。
+     * 语法：arrayObj.pop( )
+     */
 
-		my_array.push (5, 6, 7);
-		my_array.push (8, 9);
+    var number;
+    var my_array = new Array();
 
-		number = my_array.pop();
-		while (number != undefined){
-		   console.log(number);
-		   number = my_array.pop();
-		}
+    my_array.push(5, 6, 7);
+    my_array.push(8, 9);
 
-		// Output: 9 8 7 6 5
+    number = my_array.pop();
+    while (number != undefined) {
+        console.log(number);
+        number = my_array.pop();
+    }
 
-	</script>
+    // Output: 9 8 7 6 5
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

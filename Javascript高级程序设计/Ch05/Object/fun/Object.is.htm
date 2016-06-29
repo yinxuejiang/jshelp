@@ -1,60 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <title>Object.is 函数</title>
     <script type="text/javascript">
-        /**
-         * 作用：返回一个值，该值指示两个值是否相同。
-         * 语法：Object.is(value1, value2)
-         */
+    /**
+     * 作用：返回一个值，该值指示两个值是否相同。
+     * 语法：Object.is(value1, value2)
+     */
 
-       // Create a constructor function.
-       function Pasta(grain, width) {
-           this.grain = grain;
-           this.width = width;
-       }
-       // Create an object from the pasta constructor.
-       var spaghetti = new Pasta("wheat", 0.2);
+    // Create a constructor function.
+    function Pasta(grain, width) {
+        this.grain = grain;
+        this.width = width;
+    }
+    // Create an object from the pasta constructor.
+    var spaghetti = new Pasta("wheat", 0.2);
 
-       // Obtain the prototype from the object.
-       var proto = Object.getPrototypeOf(spaghetti);
+    // Obtain the prototype from the object.
+    var proto = Object.getPrototypeOf(spaghetti);
 
-       // Add a property to the prototype and validate that
-       // the original object has the property.
-       proto.foodgroup = "carbohydrates";
-       document.write(spaghetti.foodgroup + " ");
+    // Add a property to the prototype and validate that
+    // the original object has the property.
+    proto.foodgroup = "carbohydrates";
+    document.write(spaghetti.foodgroup + " ");
 
-       // Verify that the prototype obtained from the object
-       // is the same as the prototype of the constructor.
-       var result = (proto === Pasta.prototype);
-       document.write(result + " ");
+    // Verify that the prototype obtained from the object
+    // is the same as the prototype of the constructor.
+    var result = (proto === Pasta.prototype);
+    document.write(result + " ");
 
-       // Verify that prototype obtained from the object
-       // is a prototype of the original object.
-       var result = proto.isPrototypeOf(spaghetti);
-       document.write(result);
+    // Verify that prototype obtained from the object
+    // is a prototype of the original object.
+    var result = proto.isPrototypeOf(spaghetti);
+    document.write(result);
 
-       // Output: carbohydrates true true
-       
-       /**
-        * 下面的示例使用 Object.getPrototypeOf 函数来验证数据类型。
-        */
-       
-       var reg = /a/;
-       var result = (Object.getPrototypeOf(reg) === RegExp.prototype);
-       document.write(result + " ");
+    // Output: carbohydrates true true
 
-       var err = new Error("an error");
-       var result = (Object.getPrototypeOf(err) === Error.prototype);
-       document.write(result);
+    /**
+     * 下面的示例使用 Object.getPrototypeOf 函数来验证数据类型。
+     */
 
-       // Output: true true
+    var reg = /a/;
+    var result = (Object.getPrototypeOf(reg) === RegExp.prototype);
+    document.write(result + " ");
 
+    var err = new Error("an error");
+    var result = (Object.getPrototypeOf(err) === Error.prototype);
+    document.write(result);
 
+    // Output: true true
     </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>

@@ -1,37 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>RegExp.lastParen 属性</title>
-	<script type="text/javascript">
-		/**
-		 * 作用：从任何正则表达式搜索中返回最后一个带括号的子匹配项（如果有）。只读。
-		 * 语法：RegExp.lastParen
-		 */
-	
-		// Create the regular expression pattern.
-		var re = new RegExp("d(b+)(d)","ig");
-		var str = "cdbBdbsbdbdz";
+    <meta charset="UTF-8">
+    <title>RegExp.lastParen 属性</title>
+    <script type="text/javascript">
+    /**
+     * 作用：从任何正则表达式搜索中返回最后一个带括号的子匹配项（如果有）。只读。
+     * 语法：RegExp.lastParen
+     */
 
-		// Perform the search.
-		var arr = re.exec(str);
+    // Create the regular expression pattern.
+    var re = new RegExp("d(b+)(d)", "ig");
+    var str = "cdbBdbsbdbdz";
 
-		// Print the output.
-		var s = "" 
-		s += "$1: " + RegExp.$1 + "<br />";
-		s += "$2: " + RegExp.$2 + "<br />";
-		s += "$3: " + RegExp.$3 + "<br />";
-		s += "input: " + RegExp.input + "<br />";
-		s += "lastMatch: " + RegExp.lastMatch + "<br />";
-		s += "leftContext: " + RegExp.leftContext + "<br />";
-		s += "rightContext: " + RegExp.rightContext + "<br />"; 
-		s += "lastParen: " + RegExp.lastParen + "<br />";
+    // Perform the search.
+    var arr = re.exec(str);
 
-		document.write(s);
-		
-	</script>
+    // Print the output.
+    var s = ""
+    s += "$1: " + RegExp.$1 + "<br />";
+    s += "$2: " + RegExp.$2 + "<br />";
+    s += "$3: " + RegExp.$3 + "<br />";
+    s += "input: " + RegExp.input + "<br />";
+    s += "lastMatch: " + RegExp.lastMatch + "<br />";
+    s += "leftContext: " + RegExp.leftContext + "<br />";
+    s += "rightContext: " + RegExp.rightContext + "<br />";
+    s += "lastParen: " + RegExp.lastParen + "<br />";
+
+    document.write(s);
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

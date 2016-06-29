@@ -1,41 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>getUTC 函数</title>
-	<script type="text/javascript">
-		/**
-		 * 语法：dateObj.getUTCDate() 
-		 * 语法：dateObj.getUTCFullYear()
-		 * 语法：dateObj.getUTCHours() 
-		 * 语法：dateObj.getUTCMilliseconds () 
-		 * 语法：dateObj.getUTCMinutes () 
-		 * 语法：dateObj.getUTCMonth () 
-		 * 语法：dateObj.getUTCSeconds () 
-		 * 语法：dateObj.getUTCYear () 
-		 */
-		
-		/**
-		 * 参数:
-		 * dateObj 必需。任意 Date 对象。
-		 */
-		
-		var date = new Date();
-		var str = "Today's date is: ";
-		    str += date.getUTCFullYear() + "年";
-		    str += (date.getUTCMonth() + 1) + "月";
-		    str += date.getUTCDate() + "日 ";
-		    str += date.getUTCHours() + "：";
-		    str += date.getUTCMinutes() + "：";
-		    str += date.getUTCSeconds();
-		document.write(str);
+<html>
 
-		// Output: 23
-		
-		
-	</script>
+<head>
+    <meta charset="UTF-8">
+    <title>getUTC 函数</title>
+    <script type="text/javascript">
+    /**
+     * 语法：dateObj.getUTCDate() 
+     * 语法：dateObj.getUTCFullYear()
+     * 语法：dateObj.getUTCHours() 
+     * 语法：dateObj.getUTCMilliseconds () 
+     * 语法：dateObj.getUTCMinutes () 
+     * 语法：dateObj.getUTCMonth () 
+     * 语法：dateObj.getUTCSeconds () 
+     * 语法：dateObj.getUTCYear () 
+     */
+
+    /**
+     * 参数:
+     * dateObj 必需。任意 Date 对象。
+     */
+
+    var date = new Date();
+    var str = "Today's date is: ";
+    str += date.getUTCFullYear() + "年";
+    str += (date.getUTCMonth() + 1) + "月";
+    str += date.getUTCDate() + "日 ";
+    str += date.getUTCHours() + "：";
+    str += date.getUTCMinutes() + "：";
+    str += date.getUTCSeconds();
+    document.write(str);
+
+    // Output: 23
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

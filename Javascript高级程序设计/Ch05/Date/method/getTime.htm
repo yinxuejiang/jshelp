@@ -1,33 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>getTime ·½·¨</title>
-	<script type="text/javascript">
-		/**
-		 * ×÷ÓÃ£º»ñÈ¡³¬Ê±Öµ£¨ÒÔºÁÃëÎªµ¥Î»£©¡£
-		 * Óï·¨£ºdateObj.getTime() 
-		 */
-		
-		/**
-		 * ²ÎÊı:
-		 * dateObj ±ØĞè¡£ÈÎÒâ Date ¶ÔÏó¡£
-		 */
-		
-		var minute = 1000 * 60;
-		var hour = minute * 60;
-		var day = hour * 24;
+    <meta charset="UTF-8">
+    <title>getTime æ–¹æ³•</title>
+    <script type="text/javascript">
+    /**
+     * ä½œç”¨ï¼šè·å–è¶…æ—¶å€¼ï¼ˆä»¥æ¯«ç§’ä¸ºå•ä½ï¼‰ã€‚
+     * è¯­æ³•ï¼šdateObj.getTime() 
+     */
+    var minute = 1000 * 60;
+    var hour = minute * 60;
+    var day = hour * 24;
 
-		date = new Date("1/1/2001");
-		var time = date.getTime();
+    date = new Date("1/1/2001");
+    var time = date.getTime();
 
-		document.write(Math.round(time / day) + " days from 1/1/1970 to 1/1/2001");
+    document.write(Math.round(time / day) + " days from 1/1/1970 to 1/1/2001");
 
-		// Output: 11323 days from 1/1/1970 to 1/1/2001
-		
-	</script>
+    // Output: 11323 days from 1/1/1970 to 1/1/2001
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

@@ -1,63 +1,60 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Offset Dimensions Example</title>
     <script type="text/javascript">
-    
-        function getElementLeft(element){
-            var actualLeft = element.offsetLeft;
-            var current = element.offsetParent;
-        
-            while (current !== null){        
-                actualLeft += current.offsetLeft;
-                current = current.offsetParent;
-            }
-        
-            return actualLeft;
-        }
-    
-        function getElementTop(element){
-            var actualTop = element.offsetTop;
-            var current = element.offsetParent;
-        
-            while (current !== null){        
-                actualTop += current.offsetTop;
-                current = current.offsetParent;
-            }
-        
-            return actualTop;
-        }
-    
-    
-        function getOffsetHeight(){
-            console.log(document.getElementById("myDiv").offsetHeight);
-        }
-    
-        function getOffsetWidth(){
-            console.log(document.getElementById("myDiv").offsetWidth);
-        }
-    
-        function getOffsetLeft(){
-            console.log(document.getElementById("myDiv").offsetLeft);
-        }
-    
-        function getOffsetTop(){
-            console.log(document.getElementById("myDiv").offsetTop);
-        }
-        
-        function getActualLeft(){
-            console.log(getElementLeft(document.getElementById("myDiv")));
-        }
-        
-        function getActualTop(){
-            console.log(getElementTop(document.getElementById("myDiv")));
-        }
-        
-        
-    
+    function getElementLeft(element) {
+        var actualLeft = element.offsetLeft;
+        var current = element.offsetParent;
 
+        while (current !== null) {
+            actualLeft += current.offsetLeft;
+            current = current.offsetParent;
+        }
+
+        return actualLeft;
+    }
+
+    function getElementTop(element) {
+        var actualTop = element.offsetTop;
+        var current = element.offsetParent;
+
+        while (current !== null) {
+            actualTop += current.offsetTop;
+            current = current.offsetParent;
+        }
+
+        return actualTop;
+    }
+
+
+    function getOffsetHeight() {
+        console.log(document.getElementById("myDiv").offsetHeight);
+    }
+
+    function getOffsetWidth() {
+        console.log(document.getElementById("myDiv").offsetWidth);
+    }
+
+    function getOffsetLeft() {
+        console.log(document.getElementById("myDiv").offsetLeft);
+    }
+
+    function getOffsetTop() {
+        console.log(document.getElementById("myDiv").offsetTop);
+    }
+
+    function getActualLeft() {
+        console.log(getElementLeft(document.getElementById("myDiv")));
+    }
+
+    function getActualTop() {
+        console.log(getElementTop(document.getElementById("myDiv")));
+    }
     </script>
 </head>
+
 <body>
     <div style="margin: 20px">
         <div style="padding: 20px">
@@ -71,6 +68,6 @@
     <br>
     <input type="button" value="Get Actual Left" onclick="getActualLeft()">
     <input type="button" value="Get Actual Top" onclick="getActualTop()">
-    
 </body>
+
 </html>

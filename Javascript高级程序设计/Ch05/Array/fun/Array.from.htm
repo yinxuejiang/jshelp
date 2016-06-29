@@ -1,46 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>Array.from 函数</title>
-	<script type="text/javascript">
-		/**
-		 * 作用：类似数组的对象或可迭代的对象返回一个数组。
-		 * 语法：Array.from (arrayLike [ , mapfn [ , thisArg ] ] );
-		 */
-		
-		/**
-		 * 参数
-		 * arrayLike
-		 * 必需。类似数组的对象或可迭代的对象。
-		 * mapfn
-		 * 可选。要对 arrayLike 中的每个元素调用的映射函数。
-		 * thisArg
-		 * 可选。指定映射函数中的 this 对象。
-		 */
-		
-		//下面的示例从 DOM 元素节点集合中返回一个数组。
-		var elemArr = Array.from(document.querySelectorAll('*'));
-		var elem = elemArr[0]; // elem contains a reference to the first DOM element
+    <meta charset="UTF-8">
+    <title>Array.from 函数</title>
+    <script type="text/javascript">
+    /**
+     * 作用：类似数组的对象或可迭代的对象返回一个数组。
+     * 语法：Array.from (arrayLike [ , mapfn [ , thisArg ] ] );
+     */
 
-		//下面的示例返回一个字符数组。
-		var charArr = Array.from("abc");
-		// charArr[0] == "a";
-		
-		// 下面的示例返回集合中包含的对象数组。
-		var setObj = new Set("a", "b", "c");
-		var objArr = Array.from(setObj);
-		// objArr[1] == "b"; 
-		
-		// 下面的示例演示如何使用箭头语法和映射函数更改元素的值。
-		var arr = Array.from([1, 2, 3], x => x * 10);
-		// arr[0] == 10;
-		// arr[1] == 20;
-		// arr[2] == 30;
+    /**
+     * 参数
+     * arrayLike
+     * 必需。类似数组的对象或可迭代的对象。
+     * mapfn
+     * 可选。要对 arrayLike 中的每个元素调用的映射函数。
+     * thisArg
+     * 可选。指定映射函数中的 this 对象。
+     */
 
-	</script>
+    //下面的示例从 DOM 元素节点集合中返回一个数组。
+    var elemArr = Array.from(document.querySelectorAll('*'));
+    var elem = elemArr[0]; // elem contains a reference to the first DOM element
+
+    //下面的示例返回一个字符数组。
+    var charArr = Array.from("abc");
+    // charArr[0] == "a";
+
+    // 下面的示例返回集合中包含的对象数组。
+    var setObj = new Set("a", "b", "c");
+    var objArr = Array.from(setObj);
+    // objArr[1] == "b"; 
+
+    // 下面的示例演示如何使用箭头语法和映射函数更改元素的值。
+    var arr = Array.from([1, 2, 3], x => x * 10);
+    // arr[0] == 10;
+    // arr[1] == 20;
+    // arr[2] == 30;
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

@@ -1,88 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>every 方法</title>
-	<script type="text/javascript">
-		/**
-		 * 作用：确定数组的所有成员是否满足指定的测试。
-		 * 语法：array1.every(callbackfn[, thisArg])
-		 */
-		
-		/**
-		 * 参数
-		 * array1	必需。一个数组对象。
-		 * callbackfn	必需。一个接受最多三个参数的函数。 every 方法会为 array1 中的每个元素调用 callbackfn 函数，直到 callbackfn 返回 false，或直到到达数组的结尾。
-		 * thisArg 	可选。可在 callbackfn 函数中为其引用 this 关键字的对象。如果省略 thisArg，则 undefined 将用作 this 值。
-		 */
-						
-		// Define the callback function.
-		function CheckIfEven(value, index, ar) {
-		    console.log(value + " ");
+    <meta charset="UTF-8">
+    <title>every 方法</title>
+    <script type="text/javascript">
+    /**
+     * 作用：确定数组的所有成员是否满足指定的测试。
+     * 语法：array1.every(callbackfn[, thisArg])
+     */
 
-		    if (value % 2 == 0){
-		        return true;
-		    }
-		    else{
-		        return false;
-		    }
-		}
+    /**
+     * 参数
+     * array1	必需。一个数组对象。
+     * callbackfn	必需。一个接受最多三个参数的函数。 every 方法会为 array1 中的每个元素调用 callbackfn 函数，直到 callbackfn 返回 false，或直到到达数组的结尾。
+     * thisArg 	可选。可在 callbackfn 函数中为其引用 this 关键字的对象。如果省略 thisArg，则 undefined 将用作 this 值。
+     */
 
-		// Create an array.
-		var numbers = [2, 4, 5, 6, 8];
+    // Define the callback function.
+    function CheckIfEven(value, index, ar) {
+        console.log(value + " ");
 
-		// Check whether the callback function returns true for all of the
-		// array values.
-		if (numbers.every(CheckIfEven)){
-		    console.log("All are even.");
-		}
-		else{
-		    console.log("Some are not even.");
-		}
+        if (value % 2 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
-		// Output:
-		// 2 4 5 Some are not even.
-		
+    // Create an array.
+    var numbers = [2, 4, 5, 6, 8];
 
-		/**
-		 *下面的示例阐释 thisArg 参数的用法，该参数指定对其引用 this 关键字的对象。
-		 */
-		// Create a function that returns true if the value is
-		// numeric and within range.
-		var checkNumericRange = function(value) {
-		    if (typeof value !== 'number'){
-		        return false;
-		    }
-		    else {
-		        return value >= this.minimum && value <= this.maximum;
-		    }
-		}
+    // Check whether the callback function returns true for all of the
+    // array values.
+    if (numbers.every(CheckIfEven)) {
+        console.log("All are even.");
+    } else {
+        console.log("Some are not even.");
+    }
 
-		// Create an array of numbers.
-		var numbers = [10, 15, 19];
-
-		// Check whether the callback function returns true for
-		// all of the array values.
-		// The obj argument enables use of the this value
-		// within the callback function.
-
-		var obj = { minimum: 10, maximum: 20 }
-
-		if (numbers.every(checkNumericRange, obj)){
-		    console.log("All are within range.");
-		}
-		else{
-		    console.log("Some are not within range.");
-		}
-
-		// Output:
-		//   All are within range.
+    // Output:
+    // 2 4 5 Some are not even.
 
 
+    /**
+     *下面的示例阐释 thisArg 参数的用法，该参数指定对其引用 this 关键字的对象。
+     */
+    // Create a function that returns true if the value is
+    // numeric and within range.
+    var checkNumericRange = function(value) {
+        if (typeof value !== 'number') {
+            return false;
+        } else {
+            return value >= this.minimum && value <= this.maximum;
+        }
+    }
 
-	</script>
+    // Create an array of numbers.
+    var numbers = [10, 15, 19];
+
+    // Check whether the callback function returns true for
+    // all of the array values.
+    // The obj argument enables use of the this value
+    // within the callback function.
+
+    var obj = {
+        minimum: 10,
+        maximum: 20
+    }
+
+    if (numbers.every(checkNumericRange, obj)) {
+        console.log("All are within range.");
+    } else {
+        console.log("Some are not within range.");
+    }
+
+    // Output:
+    //   All are within range.
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

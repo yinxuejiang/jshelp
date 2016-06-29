@@ -1,45 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>sort 方法</title>
-	<script type="text/javascript">
-		/**
-		 * 作用：对 Array 排序。
-		 * 语法：arrayobj.sort(sortFunction) 
-		 */
-		
-		var a = new Array(4, 11, 2, 10, 3, 1);
+    <meta charset="UTF-8">
+    <title>sort 方法</title>
+    <script type="text/javascript">
+    /**
+     * 作用：对 Array 排序。
+     * 语法：arrayobj.sort(sortFunction) 
+     */
 
-		var b = a.sort();
-		console.log(b);
+    var a = new Array(4, 11, 2, 10, 3, 1);
 
-		// This is ASCII character order.
-		// Output: 1,10,11,2,3,4)
+    var b = a.sort();
+    console.log(b);
 
-		// Sort the array elements with a function that compares array elements.
-		b = a.sort(CompareForSort);
-		console.log(b);
-		// Output: 1,2,3,4,10,11.
+    // This is ASCII character order.
+    // Output: 1,10,11,2,3,4)
 
-		// Sorts array elements in ascending order numerically.
-		function CompareForSort(first, second)
-		{
-		    if (first == second){
-		        return 0;
-		    }
-		    if (first < second){
-		        return -1;
-		    }
-		    else{
-		        return 1; 
-		    }
-		}
+    // Sort the array elements with a function that compares array elements.
+    b = a.sort(CompareForSort);
+    console.log(b);
+    // Output: 1,2,3,4,10,11.
 
-
-	</script>
+    // Sorts array elements in ascending order numerically.
+    function CompareForSort(first, second) {
+        if (first == second) {
+            return 0;
+        }
+        if (first < second) {
+            return -1;
+        } else {
+            return 1;
+        }
+    }
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

@@ -1,50 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>lastIndexOf 方法</title>
-	<script type="text/javascript">
-		/**
-		 * 作用：返回指定的值在数组中的最后一个匹配项的索引。
-		 * 语法：array1.lastIndexOf(searchElement[, fromIndex])
-		 */
-		
-		/**
-		 * 参数
-		 * array1  必选。一个数组对象。
-		 * searchElement  必需。要在 array1 中定位的值。
-		 * fromIndex  可选。用于开始搜索的数组索引。如果省略 fromIndex，则搜索将从数组中的最后一个索引处开始。
-		 */
-		
-		// Create an array.
-		var ar = ["ab", "cd", "ef", "ab", "cd"];
+    <meta charset="UTF-8">
+    <title>lastIndexOf 方法</title>
+    <script type="text/javascript">
+    /**
+     * 作用：返回指定的值在数组中的最后一个匹配项的索引。
+     * 语法：array1.lastIndexOf(searchElement[, fromIndex])
+     */
 
-		// Determine the first location, in descending order, of "cd".
-		console.log(ar.lastIndexOf("cd"));
+    /**
+     * 参数
+     * array1  必选。一个数组对象。
+     * searchElement  必需。要在 array1 中定位的值。
+     * fromIndex  可选。用于开始搜索的数组索引。如果省略 fromIndex，则搜索将从数组中的最后一个索引处开始。
+     */
 
-		// Output: 4
+    // Create an array.
+    var ar = ["ab", "cd", "ef", "ab", "cd"];
 
-		// Find "cd" in descending order, starting at index 2.
-		console.log(ar.lastIndexOf("cd", 2));
+    // Determine the first location, in descending order, of "cd".
+    console.log(ar.lastIndexOf("cd"));
 
-		// Output: 1
+    // Output: 4
 
-		// Search for "gh" (which is not found).
-		console.log(ar.lastIndexOf("gh");
+    // Find "cd" in descending order, starting at index 2.
+    console.log(ar.lastIndexOf("cd", 2));
 
-		// Output: -1
+    // Output: 1
 
-		// Find "ab" with a fromIndex argument of -3.
-		// The search in descending order starts at index 3,
-		// which is the array length minus 2.
-		console.log(ar.lastIndexOf("ab", -3));
-		// Output: 0
+    // Search for "gh" (which is not found).
+    console.log(ar.lastIndexOf("gh");
 
+            // Output: -1
 
-
-	</script>
+            // Find "ab" with a fromIndex argument of -3.
+            // The search in descending order starts at index 3,
+            // which is the array length minus 2.
+            console.log(ar.lastIndexOf("ab", -3));
+            // Output: 0
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

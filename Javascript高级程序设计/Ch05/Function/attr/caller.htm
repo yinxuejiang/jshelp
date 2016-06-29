@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <title>functionName.caller ÊôĞÔ</title>
+    <title>functionName.caller å±æ€§</title>
     <script type="text/javascript">
-        /**
-         * ×÷ÓÃ£º»ñÈ¡µ÷ÓÃµ±Ç°º¯ÊıµÄº¯Êı¡£
-         * Óï·¨£ºfunctionName.caller
-         */
-        function CallLevel(){
-           if (CallLevel.caller == null){
-              return("CallLevel was called from the top level.");
-           }
-           else{
-              return("CallLevel was called by another function.");
-           }
+    /**
+     * ä½œç”¨ï¼šè·å–è°ƒç”¨å½“å‰å‡½æ•°çš„å‡½æ•°ã€‚
+     * è¯­æ³•ï¼šfunctionName.caller
+     */
+    function CallLevel() {
+        if (CallLevel.caller == null) {
+            return ("CallLevel was called from the top level.");
+        } else {
+            return ("CallLevel was called by another function.");
         }
+    }
 
-        document.write(CallLevel());
+    document.write(CallLevel());
 
-        // Output: CallLevel was called from the top level.
-
+    // Output: CallLevel was called from the top level.
     </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>

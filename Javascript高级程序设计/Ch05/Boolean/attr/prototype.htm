@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>prototype 属性</title>
-	<script type="text/javascript">
-		/**
-		 * 作用：为布尔值返回对原型的引用。
-		 * 语法：boolean.prototype
-		 */
+    <meta charset="UTF-8">
+    <title>prototype 属性</title>
+    <script type="text/javascript">
+    /**
+     * 作用：为布尔值返回对原型的引用。
+     * 语法：boolean.prototype
+     */
 
-		function isFalse() {
-			if (this.toString() == "false") {
-				return true;
-			} else {
-				return false;
-			}
-		}
-		Boolean.prototype.isFalse = isFalse;
-		var bool = new Boolean(1);
-		document.write(bool.isFalse());
+    function isFalse() {
+        if (this.toString() == "false") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    Boolean.prototype.isFalse = isFalse;
+    var bool = new Boolean(1);
+    document.write(bool.isFalse());
 
-		// Output:
-		// false
-
-		
-	</script>
+    // Output:
+    // false
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

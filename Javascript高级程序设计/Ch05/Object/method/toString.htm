@@ -1,67 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <title>toString 方法</title>
     <script type="text/javascript">
-        /**
-         * 作用：返回对象的字符串表示形式。
-         * 语法：objectname.toString([radix])
-         */
-        
-        /**
-         * 参数：
-         * objectname  必需。  要为其搜索字符串表示形式的对象。
-         * radix  可选。  为将数字值转换为字符串指定一个基数。  此值仅用于数字。  
-         */
-        
-        ////////////////////////////////////////////////////////////
-        // toString 方法是一个所有内置的 JavaScript 对象的成员。  它的行为取决于对象的类型：   //
-        ////////////////////////////////////////////////////////////
+    /**
+     * 作用：返回对象的字符串表示形式。
+     * 语法：objectname.toString([radix])
+     */
 
-        ////////////////////////////////////////////////////////////////////
-        // Object   行为                                                      //
-        // 数组    将 Array 的元素转换为字符串。  结果字符串被连接起来，用逗号分隔。                    //
-        // 布尔值  如果布尔值为 true，则返回“true”。  否则返回“false”。                    //
-        // 日期    返回日期的文本表示形式。                                             //
-        // 错误    返回一个包含相关错误信息的字符串。                                        //
-        // 函数    返回如下格式的字符串，其中 functionname 是一个函数的名称，此函数的 toString 方法被调用： //
-        // function functionname( ) { [native code] }                     //
-        // Number    返回数字的文字表示形式。                                         //
-        // 字符串    返回 String 对象的值。                                         //
-        // 默认    返回 "[object objectname]"，其中 objectname 为对象类型的名称。         //
-        ////////////////////////////////////////////////////////////////////
+    /**
+     * 参数：
+     * objectname  必需。  要为其搜索字符串表示形式的对象。
+     * radix  可选。  为将数字值转换为字符串指定一个基数。  此值仅用于数字。  
+     */
 
-        function CreateRadixTable (){
-           var s = "";
+    ////////////////////////////////////////////////////////////
+    // toString 方法是一个所有内置的 JavaScript 对象的成员。  它的行为取决于对象的类型：   //
+    ////////////////////////////////////////////////////////////
 
-           // Create table heading.
-           s += "Hex  Dec  Bin \n";
+    ////////////////////////////////////////////////////////////////////
+    // Object   行为                                                      //
+    // 数组    将 Array 的元素转换为字符串。  结果字符串被连接起来，用逗号分隔。                    //
+    // 布尔值  如果布尔值为 true，则返回“true”。  否则返回“false”。                    //
+    // 日期    返回日期的文本表示形式。                                             //
+    // 错误    返回一个包含相关错误信息的字符串。                                        //
+    // 函数    返回如下格式的字符串，其中 functionname 是一个函数的名称，此函数的 toString 方法被调用： //
+    // function functionname( ) { [native code] }                     //
+    // Number    返回数字的文字表示形式。                                         //
+    // 字符串    返回 String 对象的值。                                         //
+    // 默认    返回 "[object objectname]"，其中 objectname 为对象类型的名称。         //
+    ////////////////////////////////////////////////////////////////////
 
-           for (x = 0; x < 16; x++)
-           {
-              s += "   ";
+    function CreateRadixTable() {
+        var s = "";
 
-              // Convert to hexidecimal.
-              s += x.toString(16);
-              s += "     ";
-              if (x < 10) s += "  ";
+        // Create table heading.
+        s += "Hex  Dec  Bin \n";
 
-              // Convert to decimal.
-              s += x.toString(10);
-              s += "     ";
+        for (x = 0; x < 16; x++) {
+            s += "   ";
 
-              // Convert to binary.
-              s += x.toString(2);
-              s += "\n";
-           }
+            // Convert to hexidecimal.
+            s += x.toString(16);
+            s += "     ";
+            if (x < 10) s += "  ";
 
-           return(s);
+            // Convert to decimal.
+            s += x.toString(10);
+            s += "     ";
+
+            // Convert to binary.
+            s += x.toString(2);
+            s += "\n";
         }
 
+        return (s);
+    }
     </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>

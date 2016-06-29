@@ -1,72 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <title>__proto__ 属性</title>
     <script type="text/javascript">
-        /**
-         * 作用：包含对指定对象的内部原型的引用。
-         * 语法：object.__proto__
-         */
-        
-        function Rectangle() {
-        }
+    /**
+     * 作用：包含对指定对象的内部原型的引用。
+     * 语法：object.__proto__
+     */
 
-        var rec = new Rectangle();
+    function Rectangle() {}
 
-        if (console && console.log) {
-            console.log(rec.__proto__ === Rectangle.prototype);  // Returns true
-            rec.__proto__ = Object.prototype;
-            console.log(rec.__proto__ === Rectangle.prototype);  // Returns false
-        }
+    var rec = new Rectangle();
 
-        /**
-         * 下面的代码示例演示如何通过将属性添加到原型来将其添加到对象中。
-         */
-        
-        var proto = { y: 2 };
+    if (console && console.log) {
+        console.log(rec.__proto__ === Rectangle.prototype); // Returns true
+        rec.__proto__ = Object.prototype;
+        console.log(rec.__proto__ === Rectangle.prototype); // Returns false
+    }
 
-        var obj = { x: 10 };
-        obj.__proto__ = proto;
+    /**
+     * 下面的代码示例演示如何通过将属性添加到原型来将其添加到对象中。
+     */
 
-        proto.y = 20;
-        proto.z = 40;
+    var proto = {
+        y: 2
+    };
 
-        if (console && console.log) {
-            console.log(obj.x === 10);  // Returns true
-            console.log(obj.y === 20);  // Returns true
-            console.log(obj.z === 40);  // Returns true
-        }
+    var obj = {
+        x: 10
+    };
+    obj.__proto__ = proto;
+
+    proto.y = 20;
+    proto.z = 40;
+
+    if (console && console.log) {
+        console.log(obj.x === 10); // Returns true
+        console.log(obj.y === 20); // Returns true
+        console.log(obj.z === 40); // Returns true
+    }
 
 
-        /**
-         * 下面的代码示例通过在 String 对象上设置新原型将特性添加到该对象。
-         */
-        
-        var stringProp = { desc: "description" };
+    /**
+     * 下面的代码示例通过在 String 对象上设置新原型将特性添加到该对象。
+     */
 
-        String.__proto__ = stringProp;
-        var s1 = "333";
-        var s2 = new String("333");
+    var stringProp = {
+        desc: "description"
+    };
 
-        if (console && console.log) {
+    String.__proto__ = stringProp;
+    var s1 = "333";
+    var s2 = new String("333");
 
-            console.log(String.desc === "description"); // Returns true
-            console.log(s1.desc === "description");     // Returns false
-            console.log(s2.desc === "description");     // Returns false
+    if (console && console.log) {
 
-            s1.__proto__ = String;  // Can't be set.
-            s2.__proto__ = String;
+        console.log(String.desc === "description"); // Returns true
+        console.log(s1.desc === "description"); // Returns false
+        console.log(s2.desc === "description"); // Returns false
 
-            console.log(s1.desc === "description"); // Returns false
-            console.log(s2.desc === "description"); // Returns true
-        }
+        s1.__proto__ = String; // Can't be set.
+        s2.__proto__ = String;
 
-        
-
+        console.log(s1.desc === "description"); // Returns false
+        console.log(s2.desc === "description"); // Returns true
+    }
     </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>

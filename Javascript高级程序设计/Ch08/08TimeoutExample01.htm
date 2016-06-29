@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Timeout Example</title>
 </head>
+
 <body>
     <script type="text/javascript">
+    //avoid!
+    setTimeout("console.log('Hello world!') ", 1000);
 
-        //avoid!
-        setTimeout("console.log('Hello world!') ", 1000);
-        
-        //preferred
-        setTimeout(function() { 
-            console.log("Hello world!"); 
-        }, 1000);
-
+    //preferred
+    setTimeout(function() {
+        console.log("Hello world!");
+    }, 1000);
     </script>
 </body>
+
 </html>

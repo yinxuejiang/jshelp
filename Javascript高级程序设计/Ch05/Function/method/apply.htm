@@ -1,52 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <title>apply 方法</title>
     <script type="text/javascript">
-        /**
-         * 作用：调用函数，并用指定对象替换函数的 this 值，同时用指定数组替换函数的参数。
-         * 语法：apply([thisObj[,argArray]])
-         */
-        
-        /**
-         * 参数:
-         * thisObj  可选。要用作 this 对象的对象。
-         * argArray  可选。要传递到函数的一组参数。
-         */
-        function callMe(arg1, arg2){
-            var s = "";
+    /**
+     * 作用：调用函数，并用指定对象替换函数的 this 值，同时用指定数组替换函数的参数。
+     * 语法：apply([thisObj[,argArray]])
+     */
 
-            s += "this value: " + this;
+    /**
+     * 参数:
+     * thisObj  可选。要用作 this 对象的对象。
+     * argArray  可选。要传递到函数的一组参数。
+     */
+    function callMe(arg1, arg2) {
+        var s = "";
+
+        s += "this value: " + this;
+        s += "<br />";
+        for (i in callMe.arguments) {
+            s += "arguments: " + callMe.arguments[i];
             s += "<br />";
-            for (i in callMe.arguments) {
-                s += "arguments: " + callMe.arguments[i];
-                s += "<br />";
-            }
-            return s;
         }
+        return s;
+    }
 
-        document.write("Original function: <br/>");
-        document.write(callMe(1, 2));
-        document.write("<br/>");
+    document.write("Original function: <br/>");
+    document.write(callMe(1, 2));
+    document.write("<br/>");
 
-        document.write("Function called with apply: <br/>");
-        document.write(callMe.apply(3, [ 4, 5 ]));
+    document.write("Function called with apply: <br/>");
+    document.write(callMe.apply(3, [4, 5]));
 
-        // Output: 
-        // Original function: 
-        // this value: [object Window]
-        // arguments: 1
-        // arguments: 2
+    // Output: 
+    // Original function: 
+    // this value: [object Window]
+    // arguments: 1
+    // arguments: 2
 
-        // Function called with apply: 
-        // this value: 3
-        // arguments: 4
-        // arguments: 5
-
+    // Function called with apply: 
+    // this value: 3
+    // arguments: 4
+    // arguments: 5
     </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>

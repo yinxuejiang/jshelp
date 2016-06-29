@@ -1,116 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>reduce 方法</title>
-	<script type="text/javascript">
-		/**
-		 * 作用：对数组中的所有元素调用指定的回调函数。该回调函数的返回值为累积结果，并且此返回值在下一次调用该回调函数时作为参数提供。
-		 * 语法：array1.reduce(callbackfn[, initialValue])
-		 */
-		
-		/**
-		 * 参数
-		 * array1  必需。数组对象。
-		 * callbackfn  必需。一个接受最多四个参数的函数。对于数组中的每个元素，reduce 方法都会调用 callbackfn 函数一次。
-		 * initialValue  可选。如果指定 initialValue，则它将用作初始值来启动累积。第一次调用 callbackfn 函数会将此值作为参数而非数组值提供。
-		 */
-		
-		/**
-		 * 下面的示例演示如何使用 reduce 方法。
-		 */
-		
-		// Define the callback function.
-		function appendCurrent (previousValue, currentValue) {
-		    return previousValue + "::" + currentValue;
-		 }
+    <meta charset="UTF-8">
+    <title>reduce 方法</title>
+    <script type="text/javascript">
+    /**
+     * 作用：对数组中的所有元素调用指定的回调函数。该回调函数的返回值为累积结果，并且此返回值在下一次调用该回调函数时作为参数提供。
+     * 语法：array1.reduce(callbackfn[, initialValue])
+     */
 
-		// Create an array.
-		var elements = ["abc", "def", 123, 456];
+    /**
+     * 参数
+     * array1  必需。数组对象。
+     * callbackfn  必需。一个接受最多四个参数的函数。对于数组中的每个元素，reduce 方法都会调用 callbackfn 函数一次。
+     * initialValue  可选。如果指定 initialValue，则它将用作初始值来启动累积。第一次调用 callbackfn 函数会将此值作为参数而非数组值提供。
+     */
 
-		// Call the reduce method, which calls the callback function
-		// for each array element.
-		var result = elements.reduce(appendCurrent);
+    /**
+     * 下面的示例演示如何使用 reduce 方法。
+     */
 
-		console.log(result);
+    // Define the callback function.
+    function appendCurrent(previousValue, currentValue) {
+        return previousValue + "::" + currentValue;
+    }
 
-		// Output:
-		//  abc::def::123::456
-		
-		/**
-		 * 下面的示例向数组添加舍入后的值。使用初始值 0 调用 reduce 方法。
-		 */
+    // Create an array.
+    var elements = ["abc", "def", 123, 456];
 
-		// Define the callback function.
-		function addRounded (previousValue, currentValue) {
-		    return previousValue + Math.round(currentValue);
-		}
+    // Call the reduce method, which calls the callback function
+    // for each array element.
+    var result = elements.reduce(appendCurrent);
 
-		// Create an array.
-		var numbers = [10.9, 15.4, 0.5];
+    console.log(result);
 
-		// Call the reduce method, starting with an initial value of 0.
-		var result = numbers.reduce(addRounded, 0);
+    // Output:
+    //  abc::def::123::456
 
-		console.log (result);
-		// Output: 27
-		
-		/**
-		 * 下面的示例向数组中添加值。 currentIndex 和 array1 参数用于回调函数。
-		 */
+    /**
+     * 下面的示例向数组添加舍入后的值。使用初始值 0 调用 reduce 方法。
+     */
 
-		 function addDigitValue(previousValue, currentDigit, currentIndex, array) {
-		     var exponent = (array.length - 1) - currentIndex;
-		     var digitValue = currentDigit * Math.pow(10, exponent);
-		     return previousValue + digitValue;
-		 }
+    // Define the callback function.
+    function addRounded(previousValue, currentValue) {
+        return previousValue + Math.round(currentValue);
+    }
 
-		 var digits = [4, 1, 2, 5];
+    // Create an array.
+    var numbers = [10.9, 15.4, 0.5];
 
-		 // Determine an integer that is computed from values in the array.
-		 var result = digits.reduce(addDigitValue, 0);
+    // Call the reduce method, starting with an initial value of 0.
+    var result = numbers.reduce(addRounded, 0);
 
-		 console.log (result);
-		 // Output: 4125
-		 
-		 /**
-		  * 下面的示例获取一个数组，该数组仅包含另一个数组中的介于 1 和 10 之间值。提供给 reduce 方法的初始值是一个空数组。
-		  */
+    console.log(result);
+    // Output: 27
 
-		  function Process(previousArray, currentValue) {
-		      // If currentValue is between 1 and 10, 
-		      // append currentValue to the array.
-		      var nextArray;
-		      if (currentValue >= 1 && currentValue <= 10){
-		          nextArray = previousArray.concat(currentValue);
-		      }
-		      else{
-		          nextArray = previousArray;
-		      }
+    /**
+     * 下面的示例向数组中添加值。 currentIndex 和 array1 参数用于回调函数。
+     */
 
-		      // If this is not the last call by the reduce method,
-		      // the returned array is previousArray on the next call.
-		      // If this is the last call by the reduce method, the
-		      // returned array is the return value of the reduce method.
-		      return nextArray;
-		  }
+    function addDigitValue(previousValue, currentDigit, currentIndex, array) {
+        var exponent = (array.length - 1) - currentIndex;
+        var digitValue = currentDigit * Math.pow(10, exponent);
+        return previousValue + digitValue;
+    }
 
-		  // Create an array.
-		  var numbers = [20, 1, -5, 6, 50, 3];
+    var digits = [4, 1, 2, 5];
 
-		  // Call the reduce method, starting with an initial empty array.
-		  var emptyArray = new Array();
-		  var resultArray = numbers.reduce(Process, emptyArray);
+    // Determine an integer that is computed from values in the array.
+    var result = digits.reduce(addDigitValue, 0);
 
-		  console.log("result array=" + resultArray);
+    console.log(result);
+    // Output: 4125
 
-		  // Output:
-		  // result array=1,6,3
+    /**
+     * 下面的示例获取一个数组，该数组仅包含另一个数组中的介于 1 和 10 之间值。提供给 reduce 方法的初始值是一个空数组。
+     */
 
+    function Process(previousArray, currentValue) {
+        // If currentValue is between 1 and 10, 
+        // append currentValue to the array.
+        var nextArray;
+        if (currentValue >= 1 && currentValue <= 10) {
+            nextArray = previousArray.concat(currentValue);
+        } else {
+            nextArray = previousArray;
+        }
 
-	</script>
+        // If this is not the last call by the reduce method,
+        // the returned array is previousArray on the next call.
+        // If this is the last call by the reduce method, the
+        // returned array is the return value of the reduce method.
+        return nextArray;
+    }
+
+    // Create an array.
+    var numbers = [20, 1, -5, 6, 50, 3];
+
+    // Call the reduce method, starting with an initial empty array.
+    var emptyArray = new Array();
+    var resultArray = numbers.reduce(Process, emptyArray);
+
+    console.log("result array=" + resultArray);
+
+    // Output:
+    // result array=1,6,3
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

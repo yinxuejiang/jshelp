@@ -1,30 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <title>length  属性</title>
+    <title>length 属性</title>
     <script type="text/javascript">
-        /**
-         * 作用：返回由调用者传递给某个函数的参数的实际数目。
-         * 语法：[function.]arguments.length
-         */
-        function ArgTest(){
-           var s = "";
+    /**
+     * 作用：返回由调用者传递给某个函数的参数的实际数目。
+     * 语法：[function.]arguments.length
+     */
+    function ArgTest() {
+        var s = "";
 
-           s += "Expected Arguments: " + ArgTest.length;
-           s += "<br />";
-           s += "Passed Arguments: " + arguments.length;
+        s += "Expected Arguments: " + ArgTest.length;
+        s += "<br />";
+        s += "Passed Arguments: " + arguments.length;
 
-           document.write (s);
-        }
-        ArgTest ("aaa","bbb","ccc");
-        
-        //Expected Arguments: 0
-        //Passed Arguments: 3
+        document.write(s);
+    }
+    ArgTest("aaa", "bbb", "ccc");
 
+    //Expected Arguments: 0
+    //Passed Arguments: 3
     </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>

@@ -1,70 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <title>Object.getOwnPropertyNames 函数</title>
     <script type="text/javascript">
-        /**
-         * 作用：返回对象自己的属性的名称。一个对象的自己的属性是指直接对该对象定义的属性，而不是从该对象的原型继承的属性。对象的属性包括字段（对象）和函数。
-         * 语法：Object.getOwnPropertyNames(object)
-         */
-        
-        /**
-         * 参数:
-         * object  必需。包含属性的对象。
-         * propertyname  必需。属性的名称。
-         */
-        
-       function Pasta(grain, width, shape) {
-           // Define properties.
-           this.grain = grain;
-           this.width = width;
-           this.shape = shape;
-           this.toString = function () {
-               return (this.grain + ", " + this.width + ", " + this.shape);
-           }
-       }
+    /**
+     * 作用：返回对象自己的属性的名称。一个对象的自己的属性是指直接对该对象定义的属性，而不是从该对象的原型继承的属性。对象的属性包括字段（对象）和函数。
+     * 语法：Object.getOwnPropertyNames(object)
+     */
 
-       // Create an object.
-       var spaghetti = new Pasta("wheat", 0.2, "circle");
+    /**
+     * 参数:
+     * object  必需。包含属性的对象。
+     * propertyname  必需。属性的名称。
+     */
 
-       // Get the own property names.
-       var arr = Object.getOwnPropertyNames(spaghetti);
-       document.write (arr);
+    function Pasta(grain, width, shape) {
+        // Define properties.
+        this.grain = grain;
+        this.width = width;
+        this.shape = shape;
+        this.toString = function() {
+            return (this.grain + ", " + this.width + ", " + this.shape);
+        }
+    }
 
-       // Output:
-       //   grain,width,shape,toString
+    // Create an object.
+    var spaghetti = new Pasta("wheat", 0.2, "circle");
 
-       /**
-        * 下面的示例显示了使用 Pasta 构造函数构造的 spaghetti 对象中以字母“S”开头的属性名。
-        */
-       
-       function Pasta(grain, size, shape) {
-           this.grain = grain; 
-           this.size = size; 
-           this.shape = shape; 
-       }
+    // Get the own property names.
+    var arr = Object.getOwnPropertyNames(spaghetti);
+    document.write(arr);
 
-       var spaghetti = new Pasta("wheat", 2, "circle");
+    // Output:
+    //   grain,width,shape,toString
 
-       var names = Object.getOwnPropertyNames(spaghetti).filter(CheckKey);
-       document.write(names); 
+    /**
+     * 下面的示例显示了使用 Pasta 构造函数构造的 spaghetti 对象中以字母“S”开头的属性名。
+     */
 
-       // Check whether the first character of a string is 's'. 
-       function CheckKey(value) {
-           var firstChar = value.substr(0, 1); 
-           if (firstChar.toLowerCase() == 's')
-               return true; 
-           else
-                return false; 
-       }
-       // Output:
-       // size,shape
+    function Pasta(grain, size, shape) {
+        this.grain = grain;
+        this.size = size;
+        this.shape = shape;
+    }
 
+    var spaghetti = new Pasta("wheat", 2, "circle");
 
+    var names = Object.getOwnPropertyNames(spaghetti).filter(CheckKey);
+    document.write(names);
+
+    // Check whether the first character of a string is 's'. 
+    function CheckKey(value) {
+        var firstChar = value.substr(0, 1);
+        if (firstChar.toLowerCase() == 's')
+            return true;
+        else
+            return false;
+    }
+    // Output:
+    // size,shape
     </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>

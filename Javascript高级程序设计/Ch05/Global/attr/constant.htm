@@ -1,44 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <title>常量</title>
     <script type="text/javascript">
-        /**
-         * Infinity
-         * 一个大于最大浮点数的数字。返回 Number.POSITIVE_INFINITY 的初始值。负无穷大 (-Infinity) 小于最小浮点数。
-         * NaN
-         * 一个用于指定表达式不是数字的特殊常量。
-         * null
-         * null 用于说明变量不是有效数据。
-         * undefined
-         * 一个从未定义的值，如未初始化的变量。
-         */
-        
-        // A variable that has not been initialized.
-        var declared;
+    /**
+     * Infinity
+     * 一个大于最大浮点数的数字。返回 Number.POSITIVE_INFINITY 的初始值。负无穷大 (-Infinity) 小于最小浮点数。
+     * NaN
+     * 一个用于指定表达式不是数字的特殊常量。
+     * null
+     * null 用于说明变量不是有效数据。
+     * undefined
+     * 一个从未定义的值，如未初始化的变量。
+     */
 
-        if (declared == undefined)
-            document.write("declared has not been given a value <br/>");
-        else
-            document.write("declared has been given a value <br/>");
+    // A variable that has not been initialized.
+    var declared;
 
-        document.write("typeof declared is " + typeof(declared) + "<br/>");
+    if (declared == undefined)
+        document.write("declared has not been given a value <br/>");
+    else
+        document.write("declared has been given a value <br/>");
 
-        // An undeclared variable cannot be compared to undefined,
-        // so the next line would generate an error.
-        // if (notDeclared == undefined);
+    document.write("typeof declared is " + typeof(declared) + "<br/>");
 
-        document.write("typeof notDeclared is " + typeof(notDeclared));
+    // An undeclared variable cannot be compared to undefined,
+    // so the next line would generate an error.
+    // if (notDeclared == undefined);
 
-        // Output:
-        // declared has not been given a value
-        // typeof declared is undefined
-        // typeof notDeclared is undefined
+    document.write("typeof notDeclared is " + typeof(notDeclared));
 
+    // Output:
+    // declared has not been given a value
+    // typeof declared is undefined
+    // typeof notDeclared is undefined
     </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>

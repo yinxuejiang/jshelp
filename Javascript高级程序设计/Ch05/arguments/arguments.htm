@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <title>arguments  属性</title>
+    <title>arguments 属性</title>
     <script type="text/javascript">
-        /**
-         * 作用：返回 arguments 对象中的各个参数的实际值，该值是由一个正在执行的函数的 arguments 属性返回的。
-         * 语法：[function.]arguments[[0|1|2|...|n]]
-         */
-        function ArgTest(){
-           var s = "";
-           s += "The individual arguments are: "
-           for (n = 0; n < arguments.length; n++){
-              s += ArgTest.arguments[n];
-              s += " ";
-           }
-           return(s);
+    /**
+     * 作用：返回 arguments 对象中的各个参数的实际值，该值是由一个正在执行的函数的 arguments 属性返回的。
+     * 语法：[function.]arguments[[0|1|2|...|n]]
+     */
+    function ArgTest() {
+        var s = "";
+        s += "The individual arguments are: "
+        for (n = 0; n < arguments.length; n++) {
+            s += ArgTest.arguments[n];
+            s += " ";
         }
-        document.write(ArgTest(1, 2, "hello", new Date()));
-        //
-        //The individual arguments are: 1 2 hello Fri Jun 17 2016 11:36:40 GMT+0800 (中国标准时间)
-
+        return (s);
+    }
+    document.write(ArgTest(1, 2, "hello", new Date()));
+    //
+    //The individual arguments are: 1 2 hello Fri Jun 17 2016 11:36:40 GMT+0800 (中国标准时间)
     </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>

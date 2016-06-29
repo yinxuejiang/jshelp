@@ -1,45 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>localeCompare 方法</title>
-	<script type="text/javascript">
-		/**
-		 * 作用：将字符串与正则表达式匹配，并返回一个包含该搜索结果的数组。
-		 * 语法：stringObj.match(rgExp) 
-		 */
-		
-		/**
-		 * 参数：
-		 * stringObj  必需。执行搜索的 String 对象或字符串文本。
-		 * rgExp  必需。包含正则表达式模式和适用标志的正则表达式对象。这也可以是包含正则表达式模式和标志的变量名或字符串。
-		 */
-		
-		var src = "azcafAJAC";
+    <meta charset="UTF-8">
+    <title>localeCompare 方法</title>
+    <script type="text/javascript">
+    /**
+     * 作用：将字符串与正则表达式匹配，并返回一个包含该搜索结果的数组。
+     * 语法：stringObj.match(rgExp) 
+     */
 
-		var re = /[a-c]/;
+    /**
+     * 参数：
+     * stringObj  必需。执行搜索的 String 对象或字符串文本。
+     * rgExp  必需。包含正则表达式模式和适用标志的正则表达式对象。这也可以是包含正则表达式模式和标志的变量名或字符串。
+     */
 
-		var result = src.match(re);
+    var src = "azcafAJAC";
 
-		// The entire match is in array element 0.
-		document.write(result[0] + "<br/>");
+    var re = /[a-c]/;
 
-		// Now try the same match with the global flag.
-		var reg = /[a-c]/g;
-		result = src.match(reg);
+    var result = src.match(re);
 
+    // The entire match is in array element 0.
+    document.write(result[0] + "<br/>");
 
-		// The matches are in elements 0 through n.
-		for (var index = 0; index < result.length; index++)
-		{
-		    document.write ("submatch " + index + ": " +  result[index]);
-		    document.write ("<br />");
-		}
+    // Now try the same match with the global flag.
+    var reg = /[a-c]/g;
+    result = src.match(reg);
 
 
-	</script>
+    // The matches are in elements 0 through n.
+    for (var index = 0; index < result.length; index++) {
+        document.write("submatch " + index + ": " + result[index]);
+        document.write("<br />");
+    }
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <title>arguments  属性</title>
+    <title>arguments 属性</title>
     <script type="text/javascript">
-        /**
-         * 作用：获取当前正在执行的 Function 对象的参数。
-         * 语法：function.arguments
-         */
-        function ArgTest(arg1, arg2){
-           var s = "";
-           s += "The individual arguments are: "
-           for (n = 0; n < arguments.length; n++){
-              s += ArgTest.arguments[n];
-              s += " ";
-           }
-           return(s);
+    /**
+     * 作用：获取当前正在执行的 Function 对象的参数。
+     * 语法：function.arguments
+     */
+    function ArgTest(arg1, arg2) {
+        var s = "";
+        s += "The individual arguments are: "
+        for (n = 0; n < arguments.length; n++) {
+            s += ArgTest.arguments[n];
+            s += " ";
         }
-        document.write(ArgTest(1, 2, "hello"));
+        return (s);
+    }
+    document.write(ArgTest(1, 2, "hello"));
 
-        // Output: The individual arguments are: 1 2 hello
-
+    // Output: The individual arguments are: 1 2 hello
     </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>

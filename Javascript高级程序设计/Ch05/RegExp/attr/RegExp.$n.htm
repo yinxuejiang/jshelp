@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>RegExp.$n 属性</title>
-	<script type="text/javascript">
-		/**
-		 * 作用：返回在模式匹配期间找到的，所存储的最近的九个部分。只读。
-		 * 语法：RegExp.$n 
-		 */
-		/**
-		 * 参数：
-		 * RegExp  始终为全局 RegExp 对象。
-		 * n   1 至 9 之间的任意整数。
-		 */
-		var x = new String();
-		if (x.constructor == String){
-		    document.write("Object is a String.");
-		}
-		else{
-		    document.write("Object is not a String.");
-		}
+    <meta charset="UTF-8">
+    <title>RegExp.$n 属性</title>
+    <script type="text/javascript">
+    /**
+     * 作用：返回在模式匹配期间找到的，所存储的最近的九个部分。只读。
+     * 语法：RegExp.$n 
+     */
+    /**
+     * 参数：
+     * RegExp  始终为全局 RegExp 对象。
+     * n   1 至 9 之间的任意整数。
+     */
+    var x = new String();
+    if (x.constructor == String) {
+        document.write("Object is a String.");
+    } else {
+        document.write("Object is not a String.");
+    }
 
-		// Output:
-		// Object is a String.
-
-	</script>
+    // Output:
+    // Object is a String.
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

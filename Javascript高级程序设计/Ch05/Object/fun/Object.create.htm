@@ -1,77 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <title>Object.create 函数</title>
     <script type="text/javascript">
-        /**
-         * 作用：创建一个具有指定原型且可选择性地包含指定属性的对象。
-         * 语法：Object.create(prototype, descriptors)
-         */
-        
-        /**
-         * 参数：
-         * prototype  必需。  要用作原型的对象。  可以为 null。  
-         * descriptors  可选。  包含一个或多个属性描述符的 JavaScript 对象。  
-         */
-        
-        /**
-         * 创建使用 null 原型的对象并添加两个可枚举的属性。
-         */
-        
-        var newObj = Object.create(null, {
-                    size: {
-                        value: "large",
-                        enumerable: true
-                    },
-                    shape: {
-                        value: "round",
-                        enumerable: true
-                    }
-                });
+    /**
+     * 作用：创建一个具有指定原型且可选择性地包含指定属性的对象。
+     * 语法：Object.create(prototype, descriptors)
+     */
 
-        document.write(newObj.size + "<br/>");
-        document.write(newObj.shape + "<br/>");
-        document.write(Object.getPrototypeOf(newObj));
+    /**
+     * 参数：
+     * prototype  必需。  要用作原型的对象。  可以为 null。  
+     * descriptors  可选。  包含一个或多个属性描述符的 JavaScript 对象。  
+     */
 
-        // Output:
-        // large
-        // round
-        // null
+    /**
+     * 创建使用 null 原型的对象并添加两个可枚举的属性。
+     */
 
-        /**
-         * 创建一个具有与 Object 对象相同的内部原型的对象。  您会发现，该对象具有与使用对象文本创建的对象相同的原型。  
-         */
-        var firstLine = { x: undefined, y: undefined };
+    var newObj = Object.create(null, {
+        size: {
+            value: "large",
+            enumerable: true
+        },
+        shape: {
+            value: "round",
+            enumerable: true
+        }
+    });
 
-        var secondLine = Object.create(Object.prototype, {
-                x: {
-                    value: undefined, 
-                    writable: true, 
-                    configurable: true, 
-                    enumerable: true
-                    },
-                y: {
-                    value: undefined, 
-                    writable: true, 
-                    configurable: true, 
-                    enumerable: true
-                }
-        });
+    document.write(newObj.size + "<br/>");
+    document.write(newObj.shape + "<br/>");
+    document.write(Object.getPrototypeOf(newObj));
 
-        document.write("first line prototype = " + Object.getPrototypeOf(firstLine));
-        document.write("<br/>");
-        document.write("second line prototype = " + Object.getPrototypeOf(secondLine));
+    // Output:
+    // large
+    // round
+    // null
 
-        // Output:
-        // first line prototype = [object Object]
-        // second line prototype = [object Object]
-        
-        
+    /**
+     * 创建一个具有与 Object 对象相同的内部原型的对象。  您会发现，该对象具有与使用对象文本创建的对象相同的原型。  
+     */
+    var firstLine = {
+        x: undefined,
+        y: undefined
+    };
 
+    var secondLine = Object.create(Object.prototype, {
+        x: {
+            value: undefined,
+            writable: true,
+            configurable: true,
+            enumerable: true
+        },
+        y: {
+            value: undefined,
+            writable: true,
+            configurable: true,
+            enumerable: true
+        }
+    });
+
+    document.write("first line prototype = " + Object.getPrototypeOf(firstLine));
+    document.write("<br/>");
+    document.write("second line prototype = " + Object.getPrototypeOf(secondLine));
+
+    // Output:
+    // first line prototype = [object Object]
+    // second line prototype = [object Object]
     </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>

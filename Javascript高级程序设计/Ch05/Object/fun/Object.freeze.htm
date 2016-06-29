@@ -1,56 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <title>Object.freeze 函数</title>
     <script type="text/javascript">
-        /**
-         * 作用：阻止修改现有属性的特性和值，并阻止添加新属性。
-         * 语法：Object.freeze(object)
-         */
-        
-        /**
-         * 函数        对象已设置为不可扩展的        为每个属性将 configurable 设置为 false        为每个属性将 writable 设置为 false
-         * Object.preventExtensions        是        否        否
-         * Object.seal        是        是        否
-         * Object.freeze        是        是        是 
-         */
-        
-        /**
-         * 函数    对象是否可扩展   为所有属性将 configurable 设置为 false    为所有数据属性将 writable 设置为 false
-         * Object.isExtensible 是 否 否 
-         * Object.isSealed 否 是 否 
-         * Object.isFrozen 否 是 是
-         */
-        
-        // Create an object that has two properties.
-        var obj = { pasta: "spaghetti", length: 10 };
+    /**
+     * 作用：阻止修改现有属性的特性和值，并阻止添加新属性。
+     * 语法：Object.freeze(object)
+     */
 
-        // Freeze the object.
-        Object.freeze(obj);
+    /**
+     * 函数        对象已设置为不可扩展的        为每个属性将 configurable 设置为 false        为每个属性将 writable 设置为 false
+     * Object.preventExtensions        是        否        否
+     * Object.seal        是        是        否
+     * Object.freeze        是        是        是 
+     */
 
-        // Try to add a new property, and then verify that it is not added. 
-            obj.newProp = 50;
-            document.write(obj.newProp);
-            document.write("<br/>");
+    /**
+     * 函数    对象是否可扩展   为所有属性将 configurable 设置为 false    为所有数据属性将 writable 设置为 false
+     * Object.isExtensible 是 否 否 
+     * Object.isSealed 否 是 否 
+     * Object.isFrozen 否 是 是
+     */
 
-        // Try to delete a property, and then verify that it is still present. 
-        delete obj.length;
-        document.write(obj.length);
-        document.write("<br/>");
+    // Create an object that has two properties.
+    var obj = {
+        pasta: "spaghetti",
+        length: 10
+    };
 
-        // Try to change a property value, and then verify that it is not changed. 
-        obj.pasta = "linguini";
-        document.write(obj.pasta);
+    // Freeze the object.
+    Object.freeze(obj);
 
-        // Output:
-        // undefined
-        // 10
-        // spaghetti
+    // Try to add a new property, and then verify that it is not added. 
+    obj.newProp = 50;
+    document.write(obj.newProp);
+    document.write("<br/>");
 
+    // Try to delete a property, and then verify that it is still present. 
+    delete obj.length;
+    document.write(obj.length);
+    document.write("<br/>");
+
+    // Try to change a property value, and then verify that it is not changed. 
+    obj.pasta = "linguini";
+    document.write(obj.pasta);
+
+    // Output:
+    // undefined
+    // 10
+    // spaghetti
     </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>

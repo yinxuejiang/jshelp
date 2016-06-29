@@ -1,66 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>Math 函数</title>
-	<script type="text/javascript">
-		/**
-		 * 作用： Math 对象的函数。
-		 */
-		
-		/**
-		 * 函数		描述
-		 * Math.abs 函数		返回数字的绝对值。
-		 * Math.acos 函数		返回数字的反余弦值。
-		 * Math.acosh 函数		返回数字的双曲反余弦值（或反双曲余弦值）。
-		 * Math.asin 函数		返回数字的反正弦值。
-		 * Math.asinh 函数		返回数字的反双曲正弦。
-		 * Math.atan 函数		返回数字的反正切值。
-		 * Math.atan2 函数		将与 X 轴的角度（以弧度为单位）返回到由 y 和 x 坐标表示的点。
-		 * Math.atanh 函数		返回数字的反双曲正切。
-		 * Math.ceil 函数		返回大于或等于提供的数值表达式的最小整数。
-		 * Math.cos 函数		返回数字的余弦值。
-		 * Math.cosh 函数		返回数字的双曲余弦。
-		 * Math.exp 函数		返回 e（自然对数的底）的乘幂数。
-		 * Math.expm1 函数		返回 e（自然对数的底）的乘幂数减去 1 的结果。
-		 * Math.floor 函数		返回小于或等于提供的数值表达式的最大整数。
-		 * Math.hypot 函数		返回参数平方和的平方根。
-		 * Math.imul 函数		返回被视为 32 位带符号整数的两个数字的积。
-		 * Math.log 函数		返回数字的自然对数。
-		 * Math.log1p 函数		返回 1 加上一个数字的的自然对数。
-		 * Math.log10 函数		返回数字以 10 为底的对数。
-		 * Math.log2 函数		返回数字以 2 为底的对数。
-		 * Math.max 函数		返回提供的两个数值表达式中的较大值。
-		 * Math.min 函数		返回提供的两个数字中的较小值。
-		 * Math.pow 函数		返回基表达式的指定乘幂数的值。
-		 * Math.random 函数		返回介于 0 和 1 之间的伪随机数。
-		 * Math.round 函数		返回舍入到最近整数的指定数值表达式。
-		 * Math.sign 函数		返回数字符号，它指示数字为正数、负数还是 0。
-		 * Math.sin 函数		返回数字的正弦值。
-		 * Math.sinh 函数		返回数字的反双曲正弦。
-		 * Math.sqrt 函数		返回数字的平方根。
-		 * Math.tan 函数		返回数字的正切值。
-		 * Math.tanh 函数		返回数字的双曲正切。
-		 * Math.trunc 函数		返回数字的整数部分，删除任何小数数字。
-		 */
-		
-		var s;
-		var v1 = Math.abs(6);
-		var v2 = Math.abs(-6);
-		if (v1 == v2) {
-		    document.write("Absolute values are the same.");
-		}
-		else {
-		document.write("Absolute values are different.");
-		}
+    <meta charset="UTF-8">
+    <title>Math 函数</title>
+    <script type="text/javascript">
+    /**
+     * 作用： Math 对象的函数。
+     */
 
-		// Output: Absolute values are the same.
+    /**
+     * 函数		描述
+     * Math.abs 函数		返回数字的绝对值。
+     * Math.acos 函数		返回数字的反余弦值。
+     * Math.acosh 函数		返回数字的双曲反余弦值（或反双曲余弦值）。
+     * Math.asin 函数		返回数字的反正弦值。
+     * Math.asinh 函数		返回数字的反双曲正弦。
+     * Math.atan 函数		返回数字的反正切值。
+     * Math.atan2 函数		将与 X 轴的角度（以弧度为单位）返回到由 y 和 x 坐标表示的点。
+     * Math.atanh 函数		返回数字的反双曲正切。
+     * Math.ceil 函数		返回大于或等于提供的数值表达式的最小整数。
+     * Math.cos 函数		返回数字的余弦值。
+     * Math.cosh 函数		返回数字的双曲余弦。
+     * Math.exp 函数		返回 e（自然对数的底）的乘幂数。
+     * Math.expm1 函数		返回 e（自然对数的底）的乘幂数减去 1 的结果。
+     * Math.floor 函数		返回小于或等于提供的数值表达式的最大整数。
+     * Math.hypot 函数		返回参数平方和的平方根。
+     * Math.imul 函数		返回被视为 32 位带符号整数的两个数字的积。
+     * Math.log 函数		返回数字的自然对数。
+     * Math.log1p 函数		返回 1 加上一个数字的的自然对数。
+     * Math.log10 函数		返回数字以 10 为底的对数。
+     * Math.log2 函数		返回数字以 2 为底的对数。
+     * Math.max 函数		返回提供的两个数值表达式中的较大值。
+     * Math.min 函数		返回提供的两个数字中的较小值。
+     * Math.pow 函数		返回基表达式的指定乘幂数的值。
+     * Math.random 函数		返回介于 0 和 1 之间的伪随机数。
+     * Math.round 函数		返回舍入到最近整数的指定数值表达式。
+     * Math.sign 函数		返回数字符号，它指示数字为正数、负数还是 0。
+     * Math.sin 函数		返回数字的正弦值。
+     * Math.sinh 函数		返回数字的反双曲正弦。
+     * Math.sqrt 函数		返回数字的平方根。
+     * Math.tan 函数		返回数字的正切值。
+     * Math.tanh 函数		返回数字的双曲正切。
+     * Math.trunc 函数		返回数字的整数部分，删除任何小数数字。
+     */
 
+    var s;
+    var v1 = Math.abs(6);
+    var v2 = Math.abs(-6);
+    if (v1 == v2) {
+        document.write("Absolute values are the same.");
+    } else {
+        document.write("Absolute values are different.");
+    }
 
-
-	</script>
+    // Output: Absolute values are the same.
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

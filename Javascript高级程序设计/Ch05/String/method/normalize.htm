@@ -1,45 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>normalize 方法</title>
-	<script type="text/javascript">
-		/**
-		 * 作用：返回指定字符串的 Unicode 范式。
-		 * 语法：stringObj.normalize([form]);
-		 */
-		
-		/**
-		 * 参数：
-		 * stringObj  必需。要对照测试的字符串对象。
-		 * form  可选。Unicode 范式值。
-		 */
-		
-		var src = "azcafAJAC";
+    <meta charset="UTF-8">
+    <title>normalize 方法</title>
+    <script type="text/javascript">
+    /**
+     * 作用：返回指定字符串的 Unicode 范式。
+     * 语法：stringObj.normalize([form]);
+     */
 
-		var re = /[a-c]/;
+    /**
+     * 参数：
+     * stringObj  必需。要对照测试的字符串对象。
+     * form  可选。Unicode 范式值。
+     */
 
-		var result = src.match(re);
+    var src = "azcafAJAC";
 
-		// The entire match is in array element 0.
-		document.write(result[0] + "<br/>");
+    var re = /[a-c]/;
 
-		// Now try the same match with the global flag.
-		var reg = /[a-c]/g;
-		result = src.match(reg);
+    var result = src.match(re);
 
+    // The entire match is in array element 0.
+    document.write(result[0] + "<br/>");
 
-		// The matches are in elements 0 through n.
-		for (var index = 0; index < result.length; index++)
-		{
-		    document.write ("submatch " + index + ": " +  result[index]);
-		    document.write ("<br />");
-		}
+    // Now try the same match with the global flag.
+    var reg = /[a-c]/g;
+    result = src.match(reg);
 
 
-	</script>
+    // The matches are in elements 0 through n.
+    for (var index = 0; index < result.length; index++) {
+        document.write("submatch " + index + ": " + result[index]);
+        document.write("<br />");
+    }
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

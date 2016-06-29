@@ -1,44 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>raw 函数</title>
-	<script type="text/javascript">
-		/**
-		 * 作用：返回模板字符串的原始字符串形式。
-		 * 语法：String.raw`templateStr`;
-		 *       String.raw(obj, ...substitutions);
-		 */
-		
-		/**
-		 * 参数
-		 * templateStr  必需。模板字符串。
-		 * obj  必需。一个使用对象文本表示法指定的格式正确的对象，例如 { raw: “value” }。
-		 * ...substitutions  可选。一个数组（rest 参数），包含一个或多个替换值。
-		 */
-		
-		function log(arg) {
-		    if(console && console.log) {
-		        console.log(arg);
-		    }
-		};
+    <meta charset="UTF-8">
+    <title>raw 函数</title>
+    <script type="text/javascript">
+    /**
+     * 作用：返回模板字符串的原始字符串形式。
+     * 语法：String.raw`templateStr`;
+     *       String.raw(obj, ...substitutions);
+     */
 
-		var name = "bob";
+    /**
+     * 参数
+     * templateStr  必需。模板字符串。
+     * obj  必需。一个使用对象文本表示法指定的格式正确的对象，例如 { raw: “value” }。
+     * ...substitutions  可选。一个数组（rest 参数），包含一个或多个替换值。
+     */
 
-		log(`hello \t${name}`);
-		log(String.raw`hello \t${name}`);
-		// The following usage for String.raw is supported but
-		// is not typical.
-		log(String.raw({ raw: 'fred'}, 'F', 'R', 'E'));
+    function log(arg) {
+        if (console && console.log) {
+            console.log(arg);
+        }
+    };
 
-		// Output:
-		// hello   bob
-		// hello \tbob
-		// fFrReEd 
+    var name = "bob";
 
-	</script>
+    log(`hello \t${name}`);
+    log(String.raw `hello \t${name}`);
+    // The following usage for String.raw is supported but
+    // is not typical.
+    log(String.raw({
+        raw: 'fred'
+    }, 'F', 'R', 'E'));
+
+    // Output:
+    // hello   bob
+    // hello \tbob
+    // fFrReEd
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

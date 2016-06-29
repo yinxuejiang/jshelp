@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>setTime 函数</title>
-	<script type="text/javascript">
-		/**
-		 * 作用：设置 Date 对象中的日期和时间值。
-		 * 语法：dateObj.setTime(milliseconds) 
-		 */
-		
-		/**
-		 * 参数:
-		 * dateObj 必需。任意 Date 对象。
-		 * milliseconds  必需。一个数值，表示自 GMT 1970 年 1 月 1 日午夜之后经过的毫秒数。
-		 */
-		function SetTimeTest(newtime){
-		   var d, s;                  //Declare variables.
-		   d = new Date();            //Create Date object.
-		   d.setTime(newtime);        //Set time.
-		   s = "Current setting is ";
-		   s += d.toUTCString();
-		   return(s);                 //Return new setting.
-		}
-		
-	</script>
+    <meta charset="UTF-8">
+    <title>setTime 函数</title>
+    <script type="text/javascript">
+    /**
+     * 作用：设置 Date 对象中的日期和时间值。
+     * 语法：dateObj.setTime(milliseconds) 
+     */
+
+    /**
+     * 参数:
+     * dateObj 必需。任意 Date 对象。
+     * milliseconds  必需。一个数值，表示自 GMT 1970 年 1 月 1 日午夜之后经过的毫秒数。
+     */
+    function SetTimeTest(newtime) {
+        var d, s; //Declare variables.
+        d = new Date(); //Create Date object.
+        d.setTime(newtime); //Set time.
+        s = "Current setting is ";
+        s += d.toUTCString();
+        return (s); //Return new setting.
+    }
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <title>hasOwnProperty 方法</title>
     <script type="text/javascript">
-        /**
-         * 作用：确定某个对象是否具有带指定名称的属性。
-         * 语法：object.hasOwnProperty(proName)
-         */
-        
-        /**
-         * 参数：
-         * object  必需。对象的实例。
-         * proName  必需。一个属性名称的字符串值。
-         */
-        
-         var s = new String("Sample");
-         document.write(s.hasOwnProperty("split"));
-         document.write("<br/>");
-         document.write(String.prototype.hasOwnProperty("split"));
+    /**
+     * 作用：确定某个对象是否具有带指定名称的属性。
+     * 语法：object.hasOwnProperty(proName)
+     */
 
-         // Output:
-         // false
-         // true
+    /**
+     * 参数：
+     * object  必需。对象的实例。
+     * proName  必需。一个属性名称的字符串值。
+     */
 
+    var s = new String("Sample");
+    document.write(s.hasOwnProperty("split"));
+    document.write("<br/>");
+    document.write(String.prototype.hasOwnProperty("split"));
+
+    // Output:
+    // false
+    // true
     </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>

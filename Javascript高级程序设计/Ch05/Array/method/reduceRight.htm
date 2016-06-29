@@ -1,125 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>reduceRight 方法</title>
-	<script type="text/javascript">
-		/**
-		 * 作用：按降序顺序对数组中的所有元素调用指定的回调函数。该回调函数的返回值为累积结果，并且此返回值在下一次调用该回调函数时作为参数提供。
-		 * 语法：array1.reduceRight(callbackfn[, initialValue])
-		 */
-		
-		/**
-		 * 参数
-		 * array1  必需。数组对象。
-		 * callbackfn  必需。一个接受最多四个参数的函数。对于数组中的每个元素，reduceRight 方法都会调用 callbackfn 函数一次。
-		 * initialValue  可选。如果指定 initialValue，则它将用作初始值来启动累积。第一次调用 callbackfn 函数会将此值作为参数而非数组值提供。
-		 */
-		
-		/**
-		 * 下面的示例演示如何使用 reduceRight 方法。
-		 */
-		
-		// Define the callback function.
-		function appendCurrent (previousValue, currentValue) {
-		    return previousValue + "::" + currentValue;
-		    }
+    <meta charset="UTF-8">
+    <title>reduceRight 方法</title>
+    <script type="text/javascript">
+    /**
+     * 作用：按降序顺序对数组中的所有元素调用指定的回调函数。该回调函数的返回值为累积结果，并且此返回值在下一次调用该回调函数时作为参数提供。
+     * 语法：array1.reduceRight(callbackfn[, initialValue])
+     */
 
-		// Create an array.
-		var elements = ["abc", "def", 123, 456];
+    /**
+     * 参数
+     * array1  必需。数组对象。
+     * callbackfn  必需。一个接受最多四个参数的函数。对于数组中的每个元素，reduceRight 方法都会调用 callbackfn 函数一次。
+     * initialValue  可选。如果指定 initialValue，则它将用作初始值来启动累积。第一次调用 callbackfn 函数会将此值作为参数而非数组值提供。
+     */
 
-		// Call the reduceRight method, which calls the callback function
-		// for each array element, in descending index order.
-		var result = elements.reduceRight(appendCurrent);
+    /**
+     * 下面的示例演示如何使用 reduceRight 方法。
+     */
 
-		console.log(result);
+    // Define the callback function.
+    function appendCurrent(previousValue, currentValue) {
+        return previousValue + "::" + currentValue;
+    }
 
-		// Output:
-		//  456::123::def::abc
-		
-		/**
-		 * 下面的示例查找数组元素的平方和。使用初始值 0 调用 reduceRight 方法。
-		 */
+    // Create an array.
+    var elements = ["abc", "def", 123, 456];
 
-		// Define the callback function.
-		function Process(previousValue, currentValue, index, array) {
-		    // Add the previous value to the current value squared.
-		    var nextValue = previousValue + (currentValue * currentValue);
+    // Call the reduceRight method, which calls the callback function
+    // for each array element, in descending index order.
+    var result = elements.reduceRight(appendCurrent);
 
-		    // If this is not the last call by the reduceRight method,
-		    // the return value is previousValue on the next call.
-		    // If this is the last call by the reduceRight method, the
-		    // return value is the return value of the reduceRight method.
-		    return nextValue;
-		}
+    console.log(result);
 
-		// Create an array.
-		var numbers = [3, 4, 5];
+    // Output:
+    //  456::123::def::abc
 
-		// Call the reduceRight method with an initial value of 0.
-		var sumOfSquares = numbers.reduceRight(Process, 0);
+    /**
+     * 下面的示例查找数组元素的平方和。使用初始值 0 调用 reduceRight 方法。
+     */
 
-		console.log("sum of squares=" + sumOfSquares);
+    // Define the callback function.
+    function Process(previousValue, currentValue, index, array) {
+        // Add the previous value to the current value squared.
+        var nextValue = previousValue + (currentValue * currentValue);
 
-		// Output:
-		//  sum of squares=50
-		
-		/**
-		 * 下面的示例获取数组中值为 1 到 10 之间的元素。提供给 reduceRight 方法的初始值是一个空数组。
-		 */
+        // If this is not the last call by the reduceRight method,
+        // the return value is previousValue on the next call.
+        // If this is the last call by the reduceRight method, the
+        // return value is the return value of the reduceRight method.
+        return nextValue;
+    }
 
-		 function Process2(previousArray, currentValue) {
-		     // If currentValue is between 1 and 10, 
-		     // append currentValue to the array.
-		     var nextArray;
-		     if (currentValue >= 1 && currentValue <= 10)
-		         nextArray = previousArray.concat(currentValue);
-		     else
-		         nextArray = previousArray;
+    // Create an array.
+    var numbers = [3, 4, 5];
 
-		     // If this is not the last call by the reduceRight method,
-		     // the returned array is previousArray on the next call.
-		     // If this is the last call by the reduceRight method, the
-		     // returned array is the return value of the reduceRight method.
-		     return nextArray;
-		 }
+    // Call the reduceRight method with an initial value of 0.
+    var sumOfSquares = numbers.reduceRight(Process, 0);
 
-		 // Create an array.
-		 var numbers = [20, 1, -5, 6, 50, 3];
+    console.log("sum of squares=" + sumOfSquares);
 
-		 // Call the reduceRight method, starting with an empty array.
-		 var emptyArray = new Array();
-		 var resultArray = numbers.reduceRight(Process2, emptyArray);
+    // Output:
+    //  sum of squares=50
 
-		 console.log("result array=" + resultArray);
+    /**
+     * 下面的示例获取数组中值为 1 到 10 之间的元素。提供给 reduceRight 方法的初始值是一个空数组。
+     */
 
-		 // Output:
-		 //  result array=3,6,1
-		 
-		 /**
-		  * reduceRight 方法可应用于字符串。下面的示例演示如何使用此方法反转字符串中的字符。
-		  */
+    function Process2(previousArray, currentValue) {
+        // If currentValue is between 1 and 10, 
+        // append currentValue to the array.
+        var nextArray;
+        if (currentValue >= 1 && currentValue <= 10)
+            nextArray = previousArray.concat(currentValue);
+        else
+            nextArray = previousArray;
 
-		  // Define the callback function.
-		  function AppendToArray(previousValue, currentValue) {
-		      return previousValue + currentValue;
-		  }
+        // If this is not the last call by the reduceRight method,
+        // the returned array is previousArray on the next call.
+        // If this is the last call by the reduceRight method, the
+        // returned array is the return value of the reduceRight method.
+        return nextArray;
+    }
 
-		  var word = "retupmoc";
+    // Create an array.
+    var numbers = [20, 1, -5, 6, 50, 3];
 
-		  // Create a string that reverses the characters of another string.
-		  // The commented-out statement shows an alternative syntax.
-		  var result = [].reduceRight.call(word, AppendToArray, "the ");
-		  // var result = Array.prototype.reduceRight.call(word, AppendToArray, "the ");
+    // Call the reduceRight method, starting with an empty array.
+    var emptyArray = new Array();
+    var resultArray = numbers.reduceRight(Process2, emptyArray);
 
-		  console.log(result);
+    console.log("result array=" + resultArray);
 
-		  // Output:
-		  // the computer
+    // Output:
+    //  result array=3,6,1
 
-	</script>
+    /**
+     * reduceRight 方法可应用于字符串。下面的示例演示如何使用此方法反转字符串中的字符。
+     */
+
+    // Define the callback function.
+    function AppendToArray(previousValue, currentValue) {
+        return previousValue + currentValue;
+    }
+
+    var word = "retupmoc";
+
+    // Create a string that reverses the characters of another string.
+    // The commented-out statement shows an alternative syntax.
+    var result = [].reduceRight.call(word, AppendToArray, "the ");
+    // var result = Array.prototype.reduceRight.call(word, AppendToArray, "the ");
+
+    console.log(result);
+
+    // Output:
+    // the computer
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

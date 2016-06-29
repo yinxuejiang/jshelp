@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>splice 方法</title>
-	<script type="text/javascript">
-		/**
-		 * 作用：从一个数组中移除元素，如有必要，在所移除元素的位置上插入新元素，并返回所移除的元素。
-		 * 语法：arrayObj.splice(start, deleteCount, [item1[, item2[, . . . [,itemN]]]])
-		 */
-		
-		/**
-		 * 参数
-		 * arrayObj  必需。一个 Array 对象。
-		 * start  必需。数组中移除元素操作的起点，从 0 开始。
-		 * deleteCount  必需。要移除的元素数。
-		 * item1, item2,. . ., itemN 可选。插入数组中代替已移除元素的元素。
-		 */
-		
-		var arr = new Array("4", "11", "2", "10", "3", "1");
-		arr.splice(2, 2, "21", "31");
-		console.log(arr);
+    <meta charset="UTF-8">
+    <title>splice 方法</title>
+    <script type="text/javascript">
+    /**
+     * 作用：从一个数组中移除元素，如有必要，在所移除元素的位置上插入新元素，并返回所移除的元素。
+     * 语法：arrayObj.splice(start, deleteCount, [item1[, item2[, . . . [,itemN]]]])
+     */
 
-		// Output: 4,11,21,31,3,1
+    /**
+     * 参数
+     * arrayObj  必需。一个 Array 对象。
+     * start  必需。数组中移除元素操作的起点，从 0 开始。
+     * deleteCount  必需。要移除的元素数。
+     * item1, item2,. . ., itemN 可选。插入数组中代替已移除元素的元素。
+     */
 
-	</script>
+    var arr = new Array("4", "11", "2", "10", "3", "1");
+    arr.splice(2, 2, "21", "31");
+    console.log(arr);
+
+    // Output: 4,11,21,31,3,1
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

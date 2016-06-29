@@ -1,37 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>search 方法</title>
-	<script type="text/javascript">
-		/**
-		 * 作用：查找正则表达式搜索中第一个子字符串匹配项。
-		 * 语法：stringObj.search(rgExp) 
-		 */
-		
-		/**
-		 * 参数：
-		 * stringObj  必需。对其执行搜索的 String 对象或字符串文本。
-		 * rgExp  必需。包含正则表达式模式和适用标志的 Regular Expression 对象的实例。
-		 */
-		
-		var src = "is but a Dream within a dream";
-		var re = /dream/;
-		var pos = src.search(re);
-		document.write(pos);
-		document.write("<br/>");
+    <meta charset="UTF-8">
+    <title>search 方法</title>
+    <script type="text/javascript">
+    /**
+     * 作用：查找正则表达式搜索中第一个子字符串匹配项。
+     * 语法：stringObj.search(rgExp) 
+     */
 
-		re = /dream/i;
-		pos = src.search(re);
-		document.write(pos);
+    /**
+     * 参数：
+     * stringObj  必需。对其执行搜索的 String 对象或字符串文本。
+     * rgExp  必需。包含正则表达式模式和适用标志的 Regular Expression 对象的实例。
+     */
 
-		// Output: 
-		// 24 
-		// 9
+    var src = "is but a Dream within a dream";
+    var re = /dream/;
+    var pos = src.search(re);
+    document.write(pos);
+    document.write("<br/>");
 
-	</script>
+    re = /dream/i;
+    pos = src.search(re);
+    document.write(pos);
+
+    // Output: 
+    // 24 
+    // 9
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

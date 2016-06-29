@@ -1,39 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <title>constructor 属性</title>
     <script type="text/javascript">
-        /**
-         * 作用：指定创建一个对象的函数。
-         * 语法：object.constructor
-         */
-        
-        // A constructor function.
-        function MyObj() {
-            this.number = 1;
-        }
+    /**
+     * 作用：指定创建一个对象的函数。
+     * 语法：object.constructor
+     */
 
-        var x = new String("Hi");
+    // A constructor function.
+    function MyObj() {
+        this.number = 1;
+    }
 
-        if (x.constructor == String){
-            document.write("Object is a String.");
-        }
-        document.write ("<br />");
+    var x = new String("Hi");
 
-        var y = new MyObj;
-        if (y.constructor == MyObj){
-            document.write("Object constructor is MyObj.");
-        }
+    if (x.constructor == String) {
+        document.write("Object is a String.");
+    }
+    document.write("<br />");
 
-        // Output:
-        // Object is a String.
-        // Object constructor is MyObj.
+    var y = new MyObj;
+    if (y.constructor == MyObj) {
+        document.write("Object constructor is MyObj.");
+    }
 
-
+    // Output:
+    // Object is a String.
+    // Object constructor is MyObj.
     </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>
