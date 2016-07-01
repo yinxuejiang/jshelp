@@ -1,11 +1,11 @@
-var str="fdf\dfd";
-reg=/\[\\\]/g;
+var str = "fdf\dfd";
+reg = /\[\\\]/g;
 alert(reg.test(str))
 
-//ÏÂÃæÕâ¾äÊÇÒ»Ìõµ¯´°
-//alert('±êÊ¶·û£¡');
+//ä¸‹é¢è¿™å¥æ˜¯ä¸€æ¡å¼¹çª—
+//alert('æ ‡è¯†ç¬¦ï¼');
 
-//1.¶Ô´úÂë½øĞĞËµÃ÷£¬2.µ÷ÊÔ
+//1.å¯¹ä»£ç è¿›è¡Œè¯´æ˜ï¼Œ2.è°ƒè¯•
 
 /*
 	sdfdsfdsf
@@ -14,46 +14,30 @@ alert(reg.test(str))
 	sdfsdfsdfsdf
 	sdfdsfsdfsdfsdf
 	sdfdsfsdf
-	¶àĞĞ¿é¼¶×¢ÊÍ
+	å¤šè¡Œå—çº§æ³¨é‡Š
 */
 
-//var box  ÉùÃ÷±äÁ¿
-//var box = 100 ÉùÃ÷±äÁ¿²¢ÇÒ³õÊ¼»¯
-//alert(box)  ÒÔµ¯´°µÄ·½Ê½Êä³öboxµÄÖµ
+//var box  å£°æ˜å˜é‡
+//var box = 100 å£°æ˜å˜é‡å¹¶ä¸”åˆå§‹åŒ–
+//alert(box)  ä»¥å¼¹çª—çš„æ–¹å¼è¾“å‡ºboxçš„å€¼
 
 
-//var boxString = 'ÀîÑ×»Ö';
+//var boxString = 'æç‚æ¢';
 //boxString = 100;
 //alert(boxString);
 
-//box = 'ÀîÑ×»Ö';
+//box = 'æç‚æ¢';
 //alert(box);
 
-//var box = 'ÀîÑ×»Ö';
+//var box = 'æç‚æ¢';
 //var age = 28;
 //alert(box);
 //alert(age);
 
 
-var box = 'ÀîÑ×»Ö',
-	  age = 28,
-	  height = 178,
-	  width;
-	  
+var box = 'æç‚æ¢',
+  age = 28,
+  height = 178,
+  width;
+
 alert(width);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

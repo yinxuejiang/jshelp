@@ -1,41 +1,41 @@
 /*
 var box;
-alert(typeof box);		//boxÊÇUndefinedÀàÐÍ£¬ÖµÊÇundefined£¬ÀàÐÍ·µ»ØµÄ×Ö·û´®ÊÇundefined
+alert(typeof box);		//boxæ˜¯Undefinedç±»åž‹ï¼Œå€¼æ˜¯undefinedï¼Œç±»åž‹è¿”å›žçš„å­—ç¬¦ä¸²æ˜¯undefined
 */
 
 /*
 var box = true;
-alert(typeof box);		//boxÊÇBooleanÀàÐÍ£¬ÖµÊÇtrue£¬ÀàÐÍ·µ»ØµÄ×Ö·û´®ÊÇboolean
+alert(typeof box);		//boxæ˜¯Booleanç±»åž‹ï¼Œå€¼æ˜¯trueï¼Œç±»åž‹è¿”å›žçš„å­—ç¬¦ä¸²æ˜¯boolean
 */
 
 /*
-var box = 'ÀîÑ×»Ö';
-alert(typeof box);		//boxÊÇStringÀàÐÍ£¬ÖµÊÇ'ÀîÑ×»Ö'£¬ÀàÐÍ·µ»ØµÄ×Ö·û´®ÊÇstring
+var box = 'æŽç‚Žæ¢';
+alert(typeof box);		//boxæ˜¯Stringç±»åž‹ï¼Œå€¼æ˜¯'æŽç‚Žæ¢'ï¼Œç±»åž‹è¿”å›žçš„å­—ç¬¦ä¸²æ˜¯string
 */
 
 /*
 var box = 250;
-alert(typeof box);		//boxÊÇNumberÀàÐÍ£¬ÖµÊÇ250£¬ÀàÐÍ·µ»ØµÄ×Ö·û´®ÊÇnumber
+alert(typeof box);		//boxæ˜¯Numberç±»åž‹ï¼Œå€¼æ˜¯250ï¼Œç±»åž‹è¿”å›žçš„å­—ç¬¦ä¸²æ˜¯number
 */
 
 /*
-//¿ÕµÄ¶ÔÏó£¬±íÊ¾Õâ¸ö¶ÔÏó´´½¨ÁË£¬ÀïÃæÃ»¶«Î÷
-//¿Õ¶ÔÏó£¬±íÊ¾Ã»ÓÐ´´½¨£¬¾ÍÊÇÒ»¸önull
+//ç©ºçš„å¯¹è±¡ï¼Œè¡¨ç¤ºè¿™ä¸ªå¯¹è±¡åˆ›å»ºäº†ï¼Œé‡Œé¢æ²¡ä¸œè¥¿
+//ç©ºå¯¹è±¡ï¼Œè¡¨ç¤ºæ²¡æœ‰åˆ›å»ºï¼Œå°±æ˜¯ä¸€ä¸ªnull
 */
 
 /*
 var box = {};
-alert(typeof box);		//boxÊÇObjectÀàÐÍ£¬ÖµÊÇ[object Object]£¬ÀàÐÍ·µ»ØµÄ×Ö·û´®ÊÇobject
+alert(typeof box);		//boxæ˜¯Objectç±»åž‹ï¼Œå€¼æ˜¯[object Object]ï¼Œç±»åž‹è¿”å›žçš„å­—ç¬¦ä¸²æ˜¯object
 */
 
 /*
 var box = null;
-alert(typeof box);		//boxÊÇNullÀàÐÍ£¬ÖµÊÇnull£¬ÀàÐÍ·µ»ØµÄ×Ö·û´®ÊÇobject
+alert(typeof box);		//boxæ˜¯Nullç±»åž‹ï¼Œå€¼æ˜¯nullï¼Œç±»åž‹è¿”å›žçš„å­—ç¬¦ä¸²æ˜¯object
 */
 
 /*
 var box = new Object();
-alert(box);		//boxÊÇObjectÀàÐÍ£¬ÖµÊÇ[object Object]£¬ÀàÐÍ·µ»ØµÄ×Ö·û´®ÊÇobject
+alert(box);		//boxæ˜¯Objectç±»åž‹ï¼Œå€¼æ˜¯[object Object]ï¼Œç±»åž‹è¿”å›žçš„å­—ç¬¦ä¸²æ˜¯object
 
 */
 
@@ -43,13 +43,13 @@ alert(box);		//boxÊÇObjectÀàÐÍ£¬ÖµÊÇ[object Object]£¬ÀàÐÍ·µ»ØµÄ×Ö·û´®ÊÇobject
 function box() {
 
 }
-alert(typeof box);		//boxÊÇFunctionº¯Êý£¬ÖµÊÇfunction box() {}£¬ÀàÐÍ·µ»ØµÄ×Ö·û´®ÊÇfunction
+alert(typeof box);		//boxæ˜¯Functionå‡½æ•°ï¼Œå€¼æ˜¯function box() {}ï¼Œç±»åž‹è¿”å›žçš„å­—ç¬¦ä¸²æ˜¯function
 
-alert(typeof new Object());   //¿ÉÒÔÖ±½ÓÊ¹ÓÃ×ÖÃæÁ¿
+alert(typeof new Object());   //å¯ä»¥ç›´æŽ¥ä½¿ç”¨å­—é¢é‡
 */
 
 /*
-var box = undefined;		//Ã»ÓÐ±ØÒª
+var box = undefined;		//æ²¡æœ‰å¿…è¦
 alert(box);
 
 */
@@ -57,18 +57,18 @@ alert(box);
 /*
 var box;
 alert(typeof box);
-alert(typeof age);		//ÒÔºó±ØÐëÉùÃ÷Ò»¸ö±äÁ¿¾Í±ØÐë³õÊ¼»¯£¬ÒÔ±ÜÃâÕâÖÖÎÊÌâ
+alert(typeof age);		//ä»¥åŽå¿…é¡»å£°æ˜Žä¸€ä¸ªå˜é‡å°±å¿…é¡»åˆå§‹åŒ–ï¼Œä»¥é¿å…è¿™ç§é—®é¢˜
 */
 
 /*
 var box = {};
 
-if (box != null) {    //²»µÈÓÚnull£¬ËµÃ÷²»ÊÇ¿Õ¶ÔÏó
-	alert('¶ÔÏóÒÑ¾­´´½¨³É¹¦£¡');
+if (box != null) {    //ä¸ç­‰äºŽnullï¼Œè¯´æ˜Žä¸æ˜¯ç©ºå¯¹è±¡
+	alert('å¯¹è±¡å·²ç»åˆ›å»ºæˆåŠŸï¼');
 }
 
-var box = null;		//Õâ¸ö±íÊ¾£¬Äã»¹Ã»ÓÐ´´½¨¶ÔÏó£¬µ«ÏÈÉùÃ÷ÁË¶ÔÏóÒýÓÃ¶ø±ØÐë³õÊ¼»¯µÄ½á¹û
-							//Äã»¹Ã»ÓÐÀ´µÃ¼°´´½¨¶ÔÏó£¬ÏÈÉùÃ÷Ò»¸ö¶ÔÏóµÄ±äÁ¿·ÅÔÚÄÇ±ß£¬Ä¬ÈÏ³õÊ¼»¯Îªnull
+var box = null;		//è¿™ä¸ªè¡¨ç¤ºï¼Œä½ è¿˜æ²¡æœ‰åˆ›å»ºå¯¹è±¡ï¼Œä½†å…ˆå£°æ˜Žäº†å¯¹è±¡å¼•ç”¨è€Œå¿…é¡»åˆå§‹åŒ–çš„ç»“æžœ
+							//ä½ è¿˜æ²¡æœ‰æ¥å¾—åŠåˆ›å»ºå¯¹è±¡ï¼Œå…ˆå£°æ˜Žä¸€ä¸ªå¯¹è±¡çš„å˜é‡æ”¾åœ¨é‚£è¾¹ï¼Œé»˜è®¤åˆå§‹åŒ–ä¸ºnull
 
 							
 var box = null;
@@ -81,15 +81,15 @@ alert(box);
 */
 
 /*
-var box = '';				//´´½¨Ò»¸ö×Ö·û´®±äÁ¿£¬Ò»¿ªÊ¼²»ÖªµÀ³õÊ¼»¯Ê²Ã´×Ö·û´®£¬ËùÒÔ£¬¾Í¸øËûÒ»¸ö¿Õ×Ö·û´®³õÊ¼»¯
+var box = '';				//åˆ›å»ºä¸€ä¸ªå­—ç¬¦ä¸²å˜é‡ï¼Œä¸€å¼€å§‹ä¸çŸ¥é“åˆå§‹åŒ–ä»€ä¹ˆå­—ç¬¦ä¸²ï¼Œæ‰€ä»¥ï¼Œå°±ç»™ä»–ä¸€ä¸ªç©ºå­—ç¬¦ä¸²åˆå§‹åŒ–
 
-var box = 0;				//ÊýÖµ³õÊ¼»¯£¬Ò»°ãÓÃ0
+var box = 0;				//æ•°å€¼åˆå§‹åŒ–ï¼Œä¸€èˆ¬ç”¨0
 
-var box = false;		//²¼¶ûÖµ³õÊ¼»¯£¬Ò»°ãÒ»¿ªÊ¼ÓÃfalse»òÕßtrue
+var box = false;		//å¸ƒå°”å€¼åˆå§‹åŒ–ï¼Œä¸€èˆ¬ä¸€å¼€å§‹ç”¨falseæˆ–è€…true
 
-alert(undefined == null);		//ËûÃÇ¶¼ÊÇ¿ÕµÄ£¬ËùÒÔÏàµÈÀíËùµ±È»£¬
+alert(undefined == null);		//ä»–ä»¬éƒ½æ˜¯ç©ºçš„ï¼Œæ‰€ä»¥ç›¸ç­‰ç†æ‰€å½“ç„¶ï¼Œ
 
-alert(undefined === null);			//Êý¾ÝÀàÐÍÒ²±ØÐëÏàµÈ²Å¿ÉÒÔ
+alert(undefined === null);			//æ•°æ®ç±»åž‹ä¹Ÿå¿…é¡»ç›¸ç­‰æ‰å¯ä»¥
 
 alert(typeof undefined == typeof null);
 
@@ -106,30 +106,10 @@ alert(Boolean(box));
 /*
 var box;
 
-if (box) {					//Ìõ¼þÓï¾äÀïµÄ()Àï±ØÐëÊÇ²¼¶ûÖµ£¬true»òÕßfalse
-	alert('Õæ');
+if (box) {					//æ¡ä»¶è¯­å¥é‡Œçš„()é‡Œå¿…é¡»æ˜¯å¸ƒå°”å€¼ï¼Œtrueæˆ–è€…false
+	alert('çœŸ');
 } else {
-	alert('¼Ù');
+	alert('å‡');
 }
 
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

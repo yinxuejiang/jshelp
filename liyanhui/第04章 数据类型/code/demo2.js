@@ -1,31 +1,31 @@
 
 /*
-var box = 250;			//Ê®½øÖÆÕûĞÍ
+var box = 250;			//åè¿›åˆ¶æ•´å‹
 alert(box);
 */
 
 /*
-var box = 070;			//°Ë½øÖÆ£¬°´ÕÕÊ®½øÖÆÊä³öÊÇ56
+var box = 070;			//å…«è¿›åˆ¶ï¼ŒæŒ‰ç…§åè¿›åˆ¶è¾“å‡ºæ˜¯56
 alert(box);
 */
 
 /*
-var box = 0x1f;			//Ê®Áù½øÖÆ£¬
+var box = 0x1f;			//åå…­è¿›åˆ¶ï¼Œ
 alert(box);
 */
 
 /*
-var box = .8;			//¸¡µãĞÍ
+var box = .8;			//æµ®ç‚¹å‹
 alert(box);
 */
 
 /*
-var box = 12.0		//×Ô¶¯×ª»»ÕûĞÍ
+var box = 12.0		//è‡ªåŠ¨è½¬æ¢æ•´å‹
 alert(box);
 */
 
 /*
-var box = 4.12e9;			//¿ÆÑ§¼ÆÊı·¨
+var box = 4.12e9;			//ç§‘å­¦è®¡æ•°æ³•
 alert(box);
 */
 
@@ -35,27 +35,27 @@ alert(box);
 */
 
 /*
-alert(Number.MIN_VALUE);		//×îĞ¡Öµ
-alert(Number.MAX_VALUE);		//×î´óÖµ
+alert(Number.MIN_VALUE);		//æœ€å°å€¼
+alert(Number.MAX_VALUE);		//æœ€å¤§å€¼
 */
 
 /*
-var box = -100e1000;				//³¬¹ı·¶Î§
+var box = -100e1000;				//è¶…è¿‡èŒƒå›´
 alert(box)
 */
 
 /*
-alert(Number.POSITIVE_INFINITY);			//ÕıÎŞÇî
-alert(Number.NEGATIVE_INFINITY);		//¸ºÎŞÇî
+alert(Number.POSITIVE_INFINITY);			//æ­£æ— ç©·
+alert(Number.NEGATIVE_INFINITY);		//è´Ÿæ— ç©·
 */
 
 /*
 var box = 100e1000;
-alert(isFinite(box));			//ÊÇ·ñ³¬¹ı·¶Î§
+alert(isFinite(box));			//æ˜¯å¦è¶…è¿‡èŒƒå›´
 */
 
 /*
-var box = 0 / 0;			//ÊıÑ§ÖĞµÚÒ»¸ö¿ÉÒÔÎª0£¬µÚ¶ş¸ö²»¿ÉÒÔÎª0¡£
+var box = 0 / 0;			//æ•°å­¦ä¸­ç¬¬ä¸€ä¸ªå¯ä»¥ä¸º0ï¼Œç¬¬äºŒä¸ªä¸å¯ä»¥ä¸º0ã€‚
 alert(box);
 */
 
@@ -74,7 +74,7 @@ alert(box);
 */
 
 /*
-alert(NaN == NaN);			//²»ÏàµÈ
+alert(NaN == NaN);			//ä¸ç›¸ç­‰
 */
 
 /*
@@ -87,7 +87,7 @@ alert(isNaN(false));
 */
 
 /*
-//Èç¹û¶ÔÏóµÄtoString·½·¨ÄÜ¹»·µ»ØÊıÖµ£¬ÄÇÃ´¾Í²»ÊÇNaNÁË¡£
+//å¦‚æœå¯¹è±¡çš„toStringæ–¹æ³•èƒ½å¤Ÿè¿”å›æ•°å€¼ï¼Œé‚£ä¹ˆå°±ä¸æ˜¯NaNäº†ã€‚
 
 var box = {
 	toString : function() {
@@ -106,7 +106,7 @@ var box = {
 alert(Number(box));
 
 
-parseInt(); 		//Ö»ÄÜ×ª»»×Ö·û´®ÖÁÊıÖµ
+parseInt(); 		//åªèƒ½è½¬æ¢å­—ç¬¦ä¸²è‡³æ•°å€¼
 */
 
 /*

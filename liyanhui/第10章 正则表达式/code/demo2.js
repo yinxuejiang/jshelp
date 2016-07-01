@@ -1,44 +1,44 @@
 /*
-var pattern = /Box/i;									//Ã»ÓĞ¿ªÆôÈ«¾Ö
+var pattern = /Box/i;									//æ²¡æœ‰å¼€å¯å…¨å±€
 var str = 'This is a Box! That is a Box!';
-alert(str.match(pattern));							//Æ¥Åäµ½µÚÒ»¸ö×Ö·û´®·µ»ØÊı×é
+alert(str.match(pattern));							//åŒ¹é…åˆ°ç¬¬ä¸€ä¸ªå­—ç¬¦ä¸²è¿”å›æ•°ç»„
 */
 
 /*
 var pattern = /Box/i;									
 var str = 'This is a Box! That is a Box!';
 var a = str.match(pattern);		
-alert(a[0]);												//Ö¤Ã÷ÁËÊÇÊı×é
+alert(a[0]);												//è¯æ˜äº†æ˜¯æ•°ç»„
 */
 
 /*
-var pattern = /Box/ig;								//¿ªÆôÁËÈ«¾Ö								
+var pattern = /Box/ig;								//å¼€å¯äº†å…¨å±€								
 var str = 'This is a Box! That is a Box!';
-alert(str.match(pattern));							//½«ËùÓĞÆ¥ÅäµÄ×Ö·û´®×éºÏ³ÉÊı×é·µ»Ø
+alert(str.match(pattern));							//å°†æ‰€æœ‰åŒ¹é…çš„å­—ç¬¦ä¸²ç»„åˆæˆæ•°ç»„è¿”å›
 */
 
 /*
 var pattern = /Box/i;															
 var str = 'This is a Box! That is a Box!';
-alert(str.search(pattern));							//·µ»ØµÄµÚÒ»¸öÆ¥ÅäµÄÎ»ÖÃ
+alert(str.search(pattern));							//è¿”å›çš„ç¬¬ä¸€ä¸ªåŒ¹é…çš„ä½ç½®
 */
 
 /*
 var pattern = /xox/i;															
 var str = 'This is a Box! That is a Box!';
-alert(str.search(pattern));							//ÕÒ²»µ½Æ¥Åä£¬·µ»Ø-1
+alert(str.search(pattern));							//æ‰¾ä¸åˆ°åŒ¹é…ï¼Œè¿”å›-1
 */
 
 /*
-var pattern = /Box/i;								//Ã»ÓĞ¿ªÆôÈ«¾Ö								
+var pattern = /Box/i;								//æ²¡æœ‰å¼€å¯å…¨å±€								
 var str = 'This is a Box! That is a Box!';
-alert(str.replace(pattern, 'Tom'));			//·µ»ØÌæ»»ºóµÄ×Ö·û´®£¬Ö»ÏŞµÚÒ»¸ö
+alert(str.replace(pattern, 'Tom'));			//è¿”å›æ›¿æ¢åçš„å­—ç¬¦ä¸²ï¼Œåªé™ç¬¬ä¸€ä¸ª
 */
 
 /*
-var pattern = /Box/ig;								//¿ªÆôÈ«¾Ö								
+var pattern = /Box/ig;								//å¼€å¯å…¨å±€								
 var str = 'This is a Box! That is a Box!';
-alert(str.replace(pattern, 'Tom'));			//·µ»ØÌæ»»ºóµÄ×Ö·û´®£¬ËùÓĞÆ¥Åä¶¼»á±»Ìæ»»
+alert(str.replace(pattern, 'Tom'));			//è¿”å›æ›¿æ¢åçš„å­—ç¬¦ä¸²ï¼Œæ‰€æœ‰åŒ¹é…éƒ½ä¼šè¢«æ›¿æ¢
 */
 
 /*
@@ -50,8 +50,8 @@ alert(str.split(pattern).length);
 
 /*
 var pattern = /(g)oogle/ig;
-var str = 'This is a google£¡';
-pattern.test(str);								//±ØĞëÖ´ĞĞÒ»ÏÂ£¬¾²Ì¬ÊôĞÔ²ÅÓĞĞ§
+var str = 'This is a googleï¼';
+pattern.test(str);								//å¿…é¡»æ‰§è¡Œä¸€ä¸‹ï¼Œé™æ€å±æ€§æ‰æœ‰æ•ˆ
 */
 
 /*

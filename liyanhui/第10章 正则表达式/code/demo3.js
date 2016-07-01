@@ -3,67 +3,67 @@
 
 
 /*
-var pattern = /g..gle/;					//µã·ûºÅ±íÊ¾Æ¥Åä³ıÁË»»ĞĞ·ûÍâµÄÈÎÒâ×Ö·û
+var pattern = /g..gle/;					//ç‚¹ç¬¦å·è¡¨ç¤ºåŒ¹é…é™¤äº†æ¢è¡Œç¬¦å¤–çš„ä»»æ„å­—ç¬¦
 var str = 'g12gle';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /go*gle/;					//o*£¬±íÊ¾0¸ö£¬1¸ö£¬»òÕß¶à¸öo		
+var pattern = /go*gle/;					//o*ï¼Œè¡¨ç¤º0ä¸ªï¼Œ1ä¸ªï¼Œæˆ–è€…å¤šä¸ªo		
 var str = 'gbbbgle';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /go+gle/;					//o+£¬±íÊ¾1¸ö£¬»òÕß¶à¸ö
+var pattern = /go+gle/;					//o+ï¼Œè¡¨ç¤º1ä¸ªï¼Œæˆ–è€…å¤šä¸ª
 var str = 'ggle';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /go?gle/;					//o?£¬±íÊ¾1¸ö£¬»òÕß0¸ö
+var pattern = /go?gle/;					//o?ï¼Œè¡¨ç¤º1ä¸ªï¼Œæˆ–è€…0ä¸ª
 var str = 'google';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /g.?gle/;					//.?£¬±íÊ¾1¸ö£¬»òÕß0¸öµÄÈÎÒâ×Ö·û
+var pattern = /g.?gle/;					//.?ï¼Œè¡¨ç¤º1ä¸ªï¼Œæˆ–è€…0ä¸ªçš„ä»»æ„å­—ç¬¦
 var str = 'gbbgle';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /go{2,4}gle/;			//o{2,4}±íÊ¾Æ¥Åäo2-4´Î£¬°üº¬2ºÍ4
+var pattern = /go{2,4}gle/;			//o{2,4}è¡¨ç¤ºåŒ¹é…o2-4æ¬¡ï¼ŒåŒ…å«2å’Œ4
 var str = 'google';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /go{3}gle/;			//o{3}£¬±íÊ¾Ö»ÄÜÏŞ¶¨Îª3¸ö			
+var pattern = /go{3}gle/;			//o{3}ï¼Œè¡¨ç¤ºåªèƒ½é™å®šä¸º3ä¸ª			
 var str = 'goooogle';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /go{3,}gle/;			//o{3,}£¬±íÊ¾Îª3¸ö»ò3¸öÒÔÉÏ			
+var pattern = /go{3,}gle/;			//o{3,}ï¼Œè¡¨ç¤ºä¸º3ä¸ªæˆ–3ä¸ªä»¥ä¸Š			
 var str = 'goooooooooooooooooooogle';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /[a-z]oogle/;			//[a-z]±íÊ¾26¸öĞ¡Ğ´×ÖÄ¸£¬ÈÎÒâÒ»¸ö¶¼¿ÉÒÔÆ¥Åä
+var pattern = /[a-z]oogle/;			//[a-z]è¡¨ç¤º26ä¸ªå°å†™å­—æ¯ï¼Œä»»æ„ä¸€ä¸ªéƒ½å¯ä»¥åŒ¹é…
 var str = '6oogle';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /[A-Z]oogle/;			//[A-Z]±íÊ¾26¸ö´óĞ´×ÖÄ¸£¬ÈÎÒâÒ»¸ö¶¼¿ÉÒÔÆ¥Åä
+var pattern = /[A-Z]oogle/;			//[A-Z]è¡¨ç¤º26ä¸ªå¤§å†™å­—æ¯ï¼Œä»»æ„ä¸€ä¸ªéƒ½å¯ä»¥åŒ¹é…
 var str = 'Google';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /[0-9]*oogle/;			//[0-9]*£¬±íÊ¾0´Î£¬Ò»´Î£¬»òÕß¶à´Î
+var pattern = /[0-9]*oogle/;			//[0-9]*ï¼Œè¡¨ç¤º0æ¬¡ï¼Œä¸€æ¬¡ï¼Œæˆ–è€…å¤šæ¬¡
 var str = '44444oogle';
 alert(pattern.test(str));
 */
@@ -75,55 +75,55 @@ alert(pattern.test(str));
 */
 
 /*
-var pattern = /[a-zA-Z0-9]oogle/;		//[a-zA-Z0-9]±íÊ¾Æ¥Åä´óĞ¡Ğ´µÄa-zA-Z0-9
+var pattern = /[a-zA-Z0-9]oogle/;		//[a-zA-Z0-9]è¡¨ç¤ºåŒ¹é…å¤§å°å†™çš„a-zA-Z0-9
 var str = 'oogle';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /[^a-zA-Z0-9]oogle/;				//[^0-9]±íÊ¾·Ç0-9µÄÈÎÒâ×Ö·û
+var pattern = /[^a-zA-Z0-9]oogle/;				//[^0-9]è¡¨ç¤ºé0-9çš„ä»»æ„å­—ç¬¦
 var str = '_oogle';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /^[0-9]oogle/;				//Õâ¸ö^·ûºÅ£¬ÊÇ¼ÓÔÚ/ºóÃæµÄ¶ø²»ÊÇ[]ÀïÃæµÄ	
+var pattern = /^[0-9]oogle/;				//è¿™ä¸ª^ç¬¦å·ï¼Œæ˜¯åŠ åœ¨/åé¢çš„è€Œä¸æ˜¯[]é‡Œé¢çš„	
 var str = '444oogle';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /^[0-9]+oogle/;				//+ºÅ£¬¿ÉÒÔÆ¥ÅäÒ»¸ö»òÕß¶à¸ö	
+var pattern = /^[0-9]+oogle/;				//+å·ï¼Œå¯ä»¥åŒ¹é…ä¸€ä¸ªæˆ–è€…å¤šä¸ª	
 var str = '444oogle';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /\woogle/;					//\w±íÊ¾[a-zA-Z_]
+var pattern = /\woogle/;					//\wè¡¨ç¤º[a-zA-Z_]
 var str = '-oogle';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /\Woogle/;					//\W±íÊ¾[^a-zA-Z_]
+var pattern = /\Woogle/;					//\Wè¡¨ç¤º[^a-zA-Z_]
 var str = '-oogle';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /\doogle/;					//\d±íÊ¾[0-9]
+var pattern = /\doogle/;					//\dè¡¨ç¤º[0-9]
 var str = 'aoogle';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /\Doogle/;					//\D±íÊ¾[^0-9]
+var pattern = /\Doogle/;					//\Dè¡¨ç¤º[^0-9]
 var str = '1oogle';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /^[a-z]oogl[0-9]$/;		//^Ç¿ÖÆÊ×Æ¥Åä£¬$Ç¿ÖÆÎ²Æ¥Åä			
+var pattern = /^[a-z]oogl[0-9]$/;		//^å¼ºåˆ¶é¦–åŒ¹é…ï¼Œ$å¼ºåˆ¶å°¾åŒ¹é…			
 var str = 'googl5';
 alert(pattern.test(str));
 */

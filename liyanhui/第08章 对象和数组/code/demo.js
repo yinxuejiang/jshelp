@@ -1,56 +1,56 @@
 
 
 /*
-//¶ÔÏó°üº¬ÄÄĞ©ÔªËØ
-//1.ÊôĞÔ(×Ö¶Î)
-//2.·½·¨(º¯Êı)
+//å¯¹è±¡åŒ…å«å“ªäº›å…ƒç´ 
+//1.å±æ€§(å­—æ®µ)
+//2.æ–¹æ³•(å‡½æ•°)
 
 
-var box = new Object();							//´´½¨Ò»¸ö¶ÔÏó
-box.name = 'ÀîÑ×»Ö';
+var box = new Object();							//åˆ›å»ºä¸€ä¸ªå¯¹è±¡
+box.name = 'æç‚æ¢';
 box.age = 28;
 alert(box.age);
 */
 
 /*
-var box = Object();									//new¹Ø¼ü×ÖÊ¡ÂÔÁË
+var box = Object();									//newå…³é”®å­—çœç•¥äº†
 alert(box);
 */
 
 /*
-var box = {};											//×ÖÃæÁ¿·½Ê½´´½¨µÄ¶ÔÏó
+var box = {};											//å­—é¢é‡æ–¹å¼åˆ›å»ºçš„å¯¹è±¡
 alert(box);
 */
 
 /*
-var box = {											//ÓÃ×ÖÃæÁ¿¶ÔÏó·â×°Êı¾İ
-	name : 'ÀîÑ×»Ö',
+var box = {											//ç”¨å­—é¢é‡å¯¹è±¡å°è£…æ•°æ®
+	name : 'æç‚æ¢',
 	age : 28
 };
 alert(box.name);
 */
 
 /*
-var box = {											//ÓÃ×ÖÃæÁ¿¶ÔÏó·â×°Êı¾İ
-	'name' : 'ÀîÑ×»Ö',								//ÊôĞÔ¿ÉÒÔÓÃÒıºÅÀ´À¨ÆğÀ´
+var box = {											//ç”¨å­—é¢é‡å¯¹è±¡å°è£…æ•°æ®
+	'name' : 'æç‚æ¢',								//å±æ€§å¯ä»¥ç”¨å¼•å·æ¥æ‹¬èµ·æ¥
 	'age' : 28
 };
 alert(box.name);
 */
 
 /*
-var box = {};										//×ÖÃæÁ¿·½Ê½
-box.name = 'ÀîÑ×»Ö';							//´«Í³¸³Öµ·½Ê½
+var box = {};										//å­—é¢é‡æ–¹å¼
+box.name = 'æç‚æ¢';							//ä¼ ç»Ÿèµ‹å€¼æ–¹å¼
 alert(box.name);
 */
 
 /*
 var box = {											
-	name : 'ÀîÑ×»Ö',							
+	name : 'æç‚æ¢',							
 	age : 28
 };
 alert(box.name);
-alert(box['name']);							//ÓÃÊı×éµÄ·½·¨Êä³ö
+alert(box['name']);							//ç”¨æ•°ç»„çš„æ–¹æ³•è¾“å‡º
 */
 
 /*
@@ -58,35 +58,35 @@ function objrun() {
 	return '123';
 }
 
-//·½·¨=º¯Êı
+//æ–¹æ³•=å‡½æ•°
 
-var box = new Object();							//´´½¨Ò»¸ö¶ÔÏó
-box.name = 'ÀîÑ×»Ö';
+var box = new Object();							//åˆ›å»ºä¸€ä¸ªå¯¹è±¡
+box.name = 'æç‚æ¢';
 box.age = 28;
-box.run = objrun;										//ÕâÀïÓĞµãĞ¡¸´ÔÓ
+box.run = objrun;										//è¿™é‡Œæœ‰ç‚¹å°å¤æ‚
 alert(box.run());								
 */
 
 /*
 var box = {											
-	name : 'ÀîÑ×»Ö',							
+	name : 'æç‚æ¢',							
 	age : 28,
-	run : function () {								//ÄäÃûº¯Êı
+	run : function () {								//åŒ¿åå‡½æ•°
 		return '123';
 	}
 };
-alert(box.run());										//µ÷ÓÃ·½·¨(º¯Êı)£¬Èç¹ûÃ»ÓĞÔ²À¨ºÅ£¬»á´òÓ¡´úÂë
+alert(box.run());										//è°ƒç”¨æ–¹æ³•(å‡½æ•°)ï¼Œå¦‚æœæ²¡æœ‰åœ†æ‹¬å·ï¼Œä¼šæ‰“å°ä»£ç 
 	
-															//ÓĞÔ²À¨ºÅ£¬²Å»á´òÓ¡·µ»ØÖµ
+															//æœ‰åœ†æ‹¬å·ï¼Œæ‰ä¼šæ‰“å°è¿”å›å€¼
 */
 
 /*
 var box = {											
-	name : 'ÀîÑ×»Ö'
+	name : 'æç‚æ¢'
 };
 
 alert(box.name);
-delete box.name;			//É¾³ıÊôĞÔ
+delete box.name;			//åˆ é™¤å±æ€§
 alert(box.name);														
 */
 
@@ -97,7 +97,7 @@ function box(name,age,height,address,love) {
 	alert(age);
 }
 
-box('ÀîÑ×»Ö',28,178,'½­ËÕÑÎ³Ç','´òÇò');
+box('æç‚æ¢',28,178,'æ±Ÿè‹ç›åŸ','æ‰“çƒ');
 */
 
 /*
@@ -107,11 +107,11 @@ function box(obj) {
 	if (obj.age != undefined) alert(obj.age);
 }
 
-box({												//ÄäÃû¶ÔÏó
-	name : 'ÀîÑ×»Ö',
+box({												//åŒ¿åå¯¹è±¡
+	name : 'æç‚æ¢',
 	age : 28,
 	height : 178,
-	address : '½­ËÕÑÎ³Ç'
+	address : 'æ±Ÿè‹ç›åŸ'
 });
 
 

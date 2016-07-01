@@ -1,37 +1,37 @@
 
 /*
-var pattern = /goo gle/;				//Ö±½ÓÊ¹ÓÃ¿Õ¸ñÆ¥Åä
+var pattern = /goo gle/;				//ç›´æ¥ä½¿ç”¨ç©ºæ ¼åŒ¹é…
 var str = 'goo gle';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /goo\sgle/;			//\s±íÊ¾¿Õ¸ñÆ¥Åä
+var pattern = /goo\sgle/;			//\sè¡¨ç¤ºç©ºæ ¼åŒ¹é…
 var str = 'goo gle';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /google\b/;			//\b±íÊ¾µ½´ï±ß½ç
+var pattern = /google\b/;			//\bè¡¨ç¤ºåˆ°è¾¾è¾¹ç•Œ
 var str = 'google';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /google|baidu|bing/;			//|±íÊ¾Æ¥Åä»òÑ¡ÔñÄ£Ê½		
-var str = 'this is a bing';						//Æ¥Åä¸ÅÄî£¬²»ÊÇÏàµÈ£¬°üº¬ÒâË¼
+var pattern = /google|baidu|bing/;			//|è¡¨ç¤ºåŒ¹é…æˆ–é€‰æ‹©æ¨¡å¼		
+var str = 'this is a bing';						//åŒ¹é…æ¦‚å¿µï¼Œä¸æ˜¯ç›¸ç­‰ï¼ŒåŒ…å«æ„æ€
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /google{4,8}$/;					//±íÊ¾eµÄ4-8´Î
+var pattern = /google{4,8}$/;					//è¡¨ç¤ºeçš„4-8æ¬¡
 var str = 'googleeee';
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /(google){4,8}$/;				//·Ö×é£¬¿ÉÒÔ¿´×ÅÒ»¸ö×Ö·û	
-var str = 'googlegooglegooglegoogle';		//±íÊ¾google4-8´Î
+var pattern = /(google){4,8}$/;				//åˆ†ç»„ï¼Œå¯ä»¥çœ‹ç€ä¸€ä¸ªå­—ç¬¦	
+var str = 'googlegooglegooglegoogle';		//è¡¨ç¤ºgoogle4-8æ¬¡
 alert(pattern.test(str));
 */
 
@@ -49,58 +49,58 @@ alert(RegExp.$1);
 */
 
 /*
-//RegExp.$1±íÊ¾»ñÈ¡Ä£Ê½ÖĞµÚÒ»¸ö·Ö×é¶ÔÓ¦µÄÆ¥Åä×Ö·û´®
+//RegExp.$1è¡¨ç¤ºè·å–æ¨¡å¼ä¸­ç¬¬ä¸€ä¸ªåˆ†ç»„å¯¹åº”çš„åŒ¹é…å­—ç¬¦ä¸²
 */
 
 /*
 var pattern = /8(.*)8/;
 var str = 'This is a 8google8';
-document.write(str.replace(pattern, '<strong>$1</strong>'));			//$1±íÊ¾·Ö×é»ñÈ¡×Ö·û´®Æ¥Åäµ½µÄÄÚÈİ
+document.write(str.replace(pattern, '<strong>$1</strong>'));			//$1è¡¨ç¤ºåˆ†ç»„è·å–å­—ç¬¦ä¸²åŒ¹é…åˆ°çš„å†…å®¹
 */
 
 /*
 var pattern = /(.*)\s(.*)/;
 var str = 'google baidu';
-alert(str.replace(pattern, '$2 $1'));			//Î»ÖÃ½»»»
+alert(str.replace(pattern, '$2 $1'));			//ä½ç½®äº¤æ¢
 */
 
 /*
-var pattern = /[a-z]+/;								//ÕâÀïÊ¹ÓÃÁËÌ°À·Ä£Ê½
+var pattern = /[a-z]+/;								//è¿™é‡Œä½¿ç”¨äº†è´ªå©ªæ¨¡å¼
 var str = 'abcdefj';
-alert(str.replace(pattern, '1'));					//ËùÓĞµÄ×Ö·û´®±ä³ÉÁË1
+alert(str.replace(pattern, '1'));					//æ‰€æœ‰çš„å­—ç¬¦ä¸²å˜æˆäº†1
 */
 
 /*
-var pattern = /[a-z]+?/;								//Ê¹ÓÃ¶èĞÔÄ£Ê½
+var pattern = /[a-z]+?/;								//ä½¿ç”¨æƒ°æ€§æ¨¡å¼
 var str = 'abcdefj';
-alert(str.replace(pattern, '1'));					//Ö»ÓĞµÚÒ»¸ö×Ö·û±ä³ÉÁË1£¬ºóÃæÃ»ÓĞÆ¥Åä
+alert(str.replace(pattern, '1'));					//åªæœ‰ç¬¬ä¸€ä¸ªå­—ç¬¦å˜æˆäº†1ï¼Œåé¢æ²¡æœ‰åŒ¹é…
 */
 
 /*
-var pattern = /[a-z]+?/g;							//¿ªÆôÈ«¾Ö£¬²¢ÇÒÊ¹ÓÃ¶èĞÔÄ£Ê½	
+var pattern = /[a-z]+?/g;							//å¼€å¯å…¨å±€ï¼Œå¹¶ä¸”ä½¿ç”¨æƒ°æ€§æ¨¡å¼	
 var str = 'abcdefj';
-alert(str.replace(pattern, '1'));					//Ã¿Ò»¸ö×ÖÄ¸Ìæ»»³ÉÁË1
+alert(str.replace(pattern, '1'));					//æ¯ä¸€ä¸ªå­—æ¯æ›¿æ¢æˆäº†1
 */
 
 /*
-var pattern = /8(.*)8/;								//Ê¹ÓÃÁËÌ°À·£¬
-var str = '8google8 8google8 8google8';	//Æ¥Åäµ½ÁËgoogle8 8google8 8google
+var pattern = /8(.*)8/;								//ä½¿ç”¨äº†è´ªå©ªï¼Œ
+var str = '8google8 8google8 8google8';	//åŒ¹é…åˆ°äº†google8 8google8 8google
 document.write(str.replace(pattern, '<strong>$1</strong>'));
-//½á¹û£º<strong>google8 8google8 8google</strong>
+//ç»“æœï¼š<strong>google8 8google8 8google</strong>
 */
 
 /*
-var pattern = /8(.*?)8/g;								//Ê¹ÓÃÁË¶èĞÔ£¬¿ªÆôÈ«¾Ö
+var pattern = /8(.*?)8/g;								//ä½¿ç”¨äº†æƒ°æ€§ï¼Œå¼€å¯å…¨å±€
 var str = '8google8 8google8 8google8';	
 document.write(str.replace(pattern, '<strong>$1</strong>'));
-//Õâ´Î½á¹ûÕıÈ·ÁË
+//è¿™æ¬¡ç»“æœæ­£ç¡®äº†
 //<strong>google</strong>
 //<strong>google</strong>
 //<strong>google</strong>
 */
 
 /*
-var pattern = /8([^8]*)8/g;								//ÁíÒ»ÖÖ¶èĞÔ£¬ÆÁ±ÎÁË8µÄÆ¥Åä£¬Ò²¾ÍÊÇÁ½±ß°üº¬×Ö·û			
+var pattern = /8([^8]*)8/g;								//å¦ä¸€ç§æƒ°æ€§ï¼Œå±è”½äº†8çš„åŒ¹é…ï¼Œä¹Ÿå°±æ˜¯ä¸¤è¾¹åŒ…å«å­—ç¬¦			
 var str = '8google8 8google8 8google8';	
 document.write(str.replace(pattern, '<strong>$1</strong>'));
 //<strong>google</strong>

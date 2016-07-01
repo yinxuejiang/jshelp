@@ -3,35 +3,35 @@
 /*
 var box = 1;
 
-do {								//ÏÈÔËÐÐ£¬ÔÙÅÐ¶ÏµÄÑ­»·Ìå
-	alert(box);				//´òÓ¡1£¬´òÓ¡2£¬3, 4 ,5
+do {								//å…ˆè¿è¡Œï¼Œå†åˆ¤æ–­çš„å¾ªçŽ¯ä½“
+	alert(box);				//æ‰“å°1ï¼Œæ‰“å°2ï¼Œ3, 4 ,5
 	box++;						//box = 2 ++ 3 4 5 6
-} while (box <= 5);		//ÅÐ¶Ï6 < = 5£¬ÔÙÔËÐÐµÚ7ÐÐ,ÍË³öÁË
-									//µ±whileÅÐ¶ÏÎªfalseµÄÊ±ºò£¬ÍË³öÑ­»·£¬
-									//µ±whileÅÐ¶ÏÎªtrueµÄÊ±ºò£¬Ö´ÐÐÑ­»·
-									//Èç¹ûÌõ¼þÒ»¿ªÊ¼²»Âú×ã£¬ÖÁÉÙ»áÖ´ÐÐÒ»´Î
-									//ÇÐ¼Ç£¬Ñ­»·ÌåµÄÅÐ¶ÏÒªÏëºÃ£¬²»È»¿ÉÄÜ»á³öÏÖËÀÑ­»·
+} while (box <= 5);		//åˆ¤æ–­6 < = 5ï¼Œå†è¿è¡Œç¬¬7è¡Œ,é€€å‡ºäº†
+									//å½“whileåˆ¤æ–­ä¸ºfalseçš„æ—¶å€™ï¼Œé€€å‡ºå¾ªçŽ¯ï¼Œ
+									//å½“whileåˆ¤æ–­ä¸ºtrueçš„æ—¶å€™ï¼Œæ‰§è¡Œå¾ªçŽ¯
+									//å¦‚æžœæ¡ä»¶ä¸€å¼€å§‹ä¸æ»¡è¶³ï¼Œè‡³å°‘ä¼šæ‰§è¡Œä¸€æ¬¡
+									//åˆ‡è®°ï¼Œå¾ªçŽ¯ä½“çš„åˆ¤æ–­è¦æƒ³å¥½ï¼Œä¸ç„¶å¯èƒ½ä¼šå‡ºçŽ°æ­»å¾ªçŽ¯
 */
 
 /*
 var box = 1;
-while (box <= 5) {		//ÏÈÅÐ¶Ï£¬ÔÙÔËÐÐµÄÑ­»·Ìå
+while (box <= 5) {		//å…ˆåˆ¤æ–­ï¼Œå†è¿è¡Œçš„å¾ªçŽ¯ä½“
 	alert(box);
 	box++;
 }
 */
 
 /*
-for (var box = 1;box <= 5; box++) {		//µÚÒ»²½£¬ÉùÃ÷±äÁ¿box=1
-	alert(box);										//µÚ¶þ²½£¬ÅÐ¶Ïbox < = 5£¬Èç¹û·µ»ØtrueÖ´ÐÐµÚÈý²½£¬·ñÔòÍË³ö 
-}															//µÚÈý²½£¬alert(box)£¬Êä³öbox
-															//µÚËÄ²½£¬box++ ÀÛÔö 2
-															//µÚÎå²½£¬È¥Ö´ÐÐµÚ¶þ²½
+for (var box = 1;box <= 5; box++) {		//ç¬¬ä¸€æ­¥ï¼Œå£°æ˜Žå˜é‡box=1
+	alert(box);										//ç¬¬äºŒæ­¥ï¼Œåˆ¤æ–­box < = 5ï¼Œå¦‚æžœè¿”å›žtrueæ‰§è¡Œç¬¬ä¸‰æ­¥ï¼Œå¦åˆ™é€€å‡º 
+}															//ç¬¬ä¸‰æ­¥ï¼Œalert(box)ï¼Œè¾“å‡ºbox
+															//ç¬¬å››æ­¥ï¼Œbox++ ç´¯å¢ž 2
+															//ç¬¬äº”æ­¥ï¼ŒåŽ»æ‰§è¡Œç¬¬äºŒæ­¥
 */
 
 /*
-var box = {								//Õâ¸ö¶ÔÏóÓÐÈý¸öÊôÐÔname,age,height
-	'name' : 'ÀîÑ×»Ö',
+var box = {								//è¿™ä¸ªå¯¹è±¡æœ‰ä¸‰ä¸ªå±žæ€§name,age,height
+	'name' : 'æŽç‚Žæ¢',
 	'age' : 28,
 	'height' : 178
 };
@@ -66,14 +66,14 @@ alert(n+a+h);
 /*
 
 var box = {							
-	'name' : 'ÀîÑ×»Ö',
+	'name' : 'æŽç‚Žæ¢',
 	'age' : 28,
 	'height' : 178
 };
 
 
-with (box) {			//with(box)¿ÉÒÔ½«box.¸øÊ¡ÂÔµô
-	var n = name;	//ÕâÀïµÄnameÏàµ±ÓÚbox.name
+with (box) {			//with(box)å¯ä»¥å°†box.ç»™çœç•¥æŽ‰
+	var n = name;	//è¿™é‡Œçš„nameç›¸å½“äºŽbox.name
 	var a = age;
 	var h = height;
 }

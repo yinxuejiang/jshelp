@@ -2,26 +2,26 @@
 
 /*
 var box = 100;
---box;					//Ç°ÖÃµÝÔö£¬box = box +1
+--box;					//å‰ç½®é€’å¢žï¼Œbox = box +1
 alert(box);
 */
 
 /*
 var box = 100;
-var age = ++box;		//ÏÈboxÀÛ¼Óµ½101£¬È»ºó¸³Öµ¸øage
+var age = ++box;		//å…ˆboxç´¯åŠ åˆ°101ï¼Œç„¶åŽèµ‹å€¼ç»™age
 alert(age);
 */
 
 /*
 var box = 100;
-var age = box++;		//ÏÈbox¸³Öµ¸øage100£¬È»ºóÔÚboxÀÛ¼Ó101
+var age = box++;		//å…ˆboxèµ‹å€¼ç»™age100ï¼Œç„¶åŽåœ¨boxç´¯åŠ 101
 alert(age);
 alert(box);
 */
 
 /*
 var box = '89';
-box++;					//++Èç¹û¶ÔÊýÖµ×Ö·û´®£¬ÓÐÒ»¸öÒþº¬µÄ×ªÐÍ¹¦ÄÜ
+box++;					//++å¦‚æžœå¯¹æ•°å€¼å­—ç¬¦ä¸²ï¼Œæœ‰ä¸€ä¸ªéšå«çš„è½¬åž‹åŠŸèƒ½
 alert(typeof box);
 */
 
@@ -37,28 +37,28 @@ alert(box);
 
 /*
 var box = 100;
-+box;						//ÕýÊý£¬¸ºÊý +boxÕýÊý£¬-box ¾ÍÊÇ¸ºÊý			
++box;						//æ­£æ•°ï¼Œè´Ÿæ•° +boxæ­£æ•°ï¼Œ-box å°±æ˜¯è´Ÿæ•°			
 alert(box);
 var box = '89';					
-alert(typeof +box);		//+ºÅ£¬ÓÐ¸ö×Ô¶¯×ªÐÍµÄ¹¦ÄÜ
+alert(typeof +box);		//+å·ï¼Œæœ‰ä¸ªè‡ªåŠ¨è½¬åž‹çš„åŠŸèƒ½
 */
 
 /*
-var box = 100 + '100';		//Õâ¸öÊ±ºòµÄ¼ÓºÅ¾ÍÊÇ×Ö·û´®Á¬½Ó·û£¬¶ø²»ÊÇ¼Ó·¨ÔËËã·û£¬Ö»ÒªÆäÖÐÓÐÒ»¸öÊÇ×Ö·û´®£¬ÄÇÃ´¾Í×Ô¶¯Ê¹ÓÃ×Ö·û´®Á¬½Ó·û
+var box = 100 + '100';		//è¿™ä¸ªæ—¶å€™çš„åŠ å·å°±æ˜¯å­—ç¬¦ä¸²è¿žæŽ¥ç¬¦ï¼Œè€Œä¸æ˜¯åŠ æ³•è¿ç®—ç¬¦ï¼Œåªè¦å…¶ä¸­æœ‰ä¸€ä¸ªæ˜¯å­—ç¬¦ä¸²ï¼Œé‚£ä¹ˆå°±è‡ªåŠ¨ä½¿ç”¨å­—ç¬¦ä¸²è¿žæŽ¥ç¬¦
 alert(typeof box);		
 */
 
 /*
-var box = 'ÄúµÄÄêÁäÊÇ£º' + 10 + 20;		//×Ö·û´®Á´½Ó²Ù×÷
+var box = 'æ‚¨çš„å¹´é¾„æ˜¯ï¼š' + 10 + 20;		//å­—ç¬¦ä¸²é“¾æŽ¥æ“ä½œ
 
-var box = 10 + 20 + 'ÄúµÄÄêÁäÊÇ£º';		//Á½¸ö¶¼ÊÇÊýÖµ£¬ÄÇÃ´¾Í°´ÕÕ¼Ó·¨¼ÆËã
+var box = 10 + 20 + 'æ‚¨çš„å¹´é¾„æ˜¯ï¼š';		//ä¸¤ä¸ªéƒ½æ˜¯æ•°å€¼ï¼Œé‚£ä¹ˆå°±æŒ‰ç…§åŠ æ³•è®¡ç®—
 
-var box =  'ÄúµÄÄêÁäÊÇ£º' + (10 + 20);	//À¨ºÅÇ¿ÖÆÓÅÏÈ¼¶
+var box =  'æ‚¨çš„å¹´é¾„æ˜¯ï¼š' + (10 + 20);	//æ‹¬å·å¼ºåˆ¶ä¼˜å…ˆçº§
 
-var box =  10 + {};		//10+{}  10[object Object] ÀàÐÍÊÇstring£¬×Ö·û´®
+var box =  10 + {};		//10+{}  10[object Object] ç±»åž‹æ˜¯stringï¼Œå­—ç¬¦ä¸²
 
 var box =  10 + {
-	toString : function () {			//Èç¹û¶ÔÏótoString·µ»ØµÄÊÇÊýÖµ£¬ÄÇÃ´¾Í°´ÊýÖµÀ´
+	toString : function () {			//å¦‚æžœå¯¹è±¡toStringè¿”å›žçš„æ˜¯æ•°å€¼ï¼Œé‚£ä¹ˆå°±æŒ‰æ•°å€¼æ¥
 		return '20';
 	}
 };

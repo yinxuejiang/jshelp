@@ -3,8 +3,8 @@
 /*
 var box = 25 >>> 2;
 alert(box);
-var box = 100; 			//½«100¸³Öµ¸øbox±äÁ¿
-box = box +100;			//box + 100¸³Öµ¸øbox
+var box = 100; 			//å°†100èµ‹å€¼ç»™boxå˜é‡
+box = box +100;			//box + 100èµ‹å€¼ç»™box
 var box = 100;
 //box += 100;				//box = box +100;
 box -= 100;				//box = box -100;
@@ -28,12 +28,12 @@ alert(box[1]);
 var box = '';
 
 if (3 > 4) {
-	box = '¶Ô';
+	box = 'å¯¹';
 } else {
-	box = '´í';
+	box = 'é”™';
 }
 
-var box = 3 > 4 ? '¶Ô' : '´í';
+var box = 3 > 4 ? 'å¯¹' : 'é”™';
 alert(box);
 
 var box = (5 - 4) * 8;

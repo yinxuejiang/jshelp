@@ -3,7 +3,7 @@ function sum(num) {
 	if (num <= 1) {
 		return 1;
 	} else {
-		return num * sum(num-1);				//4 * 3 * 2 * 1 = 24 ½×³Ë£¬µÝ¹é
+		return num * sum(num-1);				//4 * 3 * 2 * 1 = 24 é˜¶ä¹˜ï¼Œé€’å½’
 	}
 }
 alert(sum(4));
@@ -14,31 +14,31 @@ function box(num) {
 	if (num <= 1) {
 		return 1;
 	} else {
-		return num * arguments.callee(num-1);				//Ê¹ÓÃarguments.callee£¬µ÷ÓÃ×ÔÉí£¬ÊµÏÖµÝ¹é
+		return num * arguments.callee(num-1);				//ä½¿ç”¨arguments.calleeï¼Œè°ƒç”¨è‡ªèº«ï¼Œå®žçŽ°é€’å½’
 	}
 }
 alert(box(4));
 */
 
 /*
-//windowÊÇÒ»¸ö¶ÔÏó£¬¶øÇÒÊÇJSÀïÃæ×î´óµÄ¶ÔÏó£¬ÊÇ×îÍâÎ§µÄ¶ÔÏó
-//alert(typeof window);		windowÊÇ¶ÔÏó£¬ÀàÐÍÊÇ¶ÔÏó£¬window±íÊ¾È«¾Ö
-alert(this);			//[object Window] thisÄ¿Ç°±íÊ¾µÄÊÇwindow£¬ÒòÎªÔÚwindowµÄ·¶Î§ÏÂ
-alert(typeof this);	//ºÍwindowÒ»Ä£Ò»Ñù£¬ËùÒÔthis¾ÍÊÇwindow
+//windowæ˜¯ä¸€ä¸ªå¯¹è±¡ï¼Œè€Œä¸”æ˜¯JSé‡Œé¢æœ€å¤§çš„å¯¹è±¡ï¼Œæ˜¯æœ€å¤–å›´çš„å¯¹è±¡
+//alert(typeof window);		windowæ˜¯å¯¹è±¡ï¼Œç±»åž‹æ˜¯å¯¹è±¡ï¼Œwindowè¡¨ç¤ºå…¨å±€
+alert(this);			//[object Window] thisç›®å‰è¡¨ç¤ºçš„æ˜¯windowï¼Œå› ä¸ºåœ¨windowçš„èŒƒå›´ä¸‹
+alert(typeof this);	//å’Œwindowä¸€æ¨¡ä¸€æ ·ï¼Œæ‰€ä»¥thiså°±æ˜¯window
 */
 
 /*
-var color = 'ºìÉ«µÄ';			//ÕâÀïcolor¾ÍÊÇÈ«¾Ö±äÁ¿£¬¶øÕâ¸ö±äÁ¿ÓÖÊÇwindowµÄÊôÐÔ
-//alert(window.color);			//ÕâÀïÒÑ¾­ºÜºÃµÄËµÃ÷colorÊÇwindowÏÂµÄÊôÐÔ
-alert(this.color);				//Í¬ÉÏ
+var color = 'çº¢è‰²çš„';			//è¿™é‡Œcolorå°±æ˜¯å…¨å±€å˜é‡ï¼Œè€Œè¿™ä¸ªå˜é‡åˆæ˜¯windowçš„å±žæ€§
+//alert(window.color);			//è¿™é‡Œå·²ç»å¾ˆå¥½çš„è¯´æ˜Žcoloræ˜¯windowä¸‹çš„å±žæ€§
+alert(this.color);				//åŒä¸Š
 */
 
 /*
-window.color = 'ºìÉ«µÄ';		//Ïàµ±ÓÚ var color = 'ºìÉ«µÄ';£¿£¿£¿£¬ÊÇÒ»ÑùµÄ
+window.color = 'çº¢è‰²çš„';		//ç›¸å½“äºŽ var color = 'çº¢è‰²çš„';ï¼Ÿï¼Ÿï¼Ÿï¼Œæ˜¯ä¸€æ ·çš„
 var box = {
-	color : 'À¶É«µÄ',				//ÕâÀïµÄcolorÊÇboxÏÂµÄÊôÐÔ£¬Ò²¾ÍÊÇ¾Ö²¿±äÁ¿
+	color : 'è“è‰²çš„',				//è¿™é‡Œçš„coloræ˜¯boxä¸‹çš„å±žæ€§ï¼Œä¹Ÿå°±æ˜¯å±€éƒ¨å˜é‡
 	sayColor : function() {
-		alert(this.color);			//ÕâÀïthis£¬ÎÒÃÇÈ·¶¨ÁËÊÇ´ú±íµÄbox¶ÔÏó¡£
+		alert(this.color);			//è¿™é‡Œthisï¼Œæˆ‘ä»¬ç¡®å®šäº†æ˜¯ä»£è¡¨çš„boxå¯¹è±¡ã€‚
 	}
 };
 alert(this.color);
@@ -46,19 +46,19 @@ box.sayColor();
 */
 
 /*
-window.color = 'ºìÉ«µÄ';
+window.color = 'çº¢è‰²çš„';
 function sayColor() {
-	alert(this.color);			//ËùÒÔÕâÀïÖ´ÐÐµÄÊ±ºòÊÇ¶¯Ì¬µÄ£¬µÚÒ»´ÎÔÚwindowÏÂ£¬µÚ¶þ´ÎÔÚboxÏÂ
+	alert(this.color);			//æ‰€ä»¥è¿™é‡Œæ‰§è¡Œçš„æ—¶å€™æ˜¯åŠ¨æ€çš„ï¼Œç¬¬ä¸€æ¬¡åœ¨windowä¸‹ï¼Œç¬¬äºŒæ¬¡åœ¨boxä¸‹
 }
 
-sayColor();						//ÕâÀïµ÷ÓÃsayColor£¬ÆäÊµ·¶Î§»¹ÊÇÔÚwindowÏÂ
+sayColor();						//è¿™é‡Œè°ƒç”¨sayColorï¼Œå…¶å®žèŒƒå›´è¿˜æ˜¯åœ¨windowä¸‹
 var box = {
-	color : 'À¶É«µÄ'
+	color : 'è“è‰²çš„'
 };
 
 
-box.sayColor = sayColor;	//Õâ¶Î´úÂëÏàµ±ÓÚ47ÐÐ
-box.sayColor();				//ÕâÀïÖ´ÐÐµÄÊÇboxÀïÃæµÄthis.color
+box.sayColor = sayColor;	//è¿™æ®µä»£ç ç›¸å½“äºŽ47è¡Œ
+box.sayColor();				//è¿™é‡Œæ‰§è¡Œçš„æ˜¯boxé‡Œé¢çš„this.color
 */
 
 /*
@@ -73,12 +73,12 @@ function box(num1, num2) {
 	return num1 + num2;
 }
 
-function sum(num1, num2) {						//applyºÍcall¿ÉÒÔÃ°³äÁíÍâÒ»¸öº¯Êý
-	return box.apply(this, [num1, num2]);		//this±íÊ¾window×÷ÓÃÓò£¬[]±íÊ¾´«µÝµÄ²ÎÊý
+function sum(num1, num2) {						//applyå’Œcallå¯ä»¥å†’å……å¦å¤–ä¸€ä¸ªå‡½æ•°
+	return box.apply(this, [num1, num2]);		//thisè¡¨ç¤ºwindowä½œç”¨åŸŸï¼Œ[]è¡¨ç¤ºä¼ é€’çš„å‚æ•°
 }
 
 function sum2(num1, num2) {
-	return box.apply(this, arguments);			//Õâ¸ö¿ÉÒÔµ±Êý×é´«µÝ£¬arguments
+	return box.apply(this, arguments);			//è¿™ä¸ªå¯ä»¥å½“æ•°ç»„ä¼ é€’ï¼Œarguments
 }
 
 //alert(box(10,10));
@@ -91,24 +91,24 @@ function box(num1, num2) {
 	return num1 + num2;
 }
 function sum(num1, num2) {
-	return box.call(this, num1, num2);		//callÖ»ÊÇ´«µÝ²ÎÊý²»Í¬£¬ÆäËûºÍapplyÒ»Ñù
+	return box.call(this, num1, num2);		//callåªæ˜¯ä¼ é€’å‚æ•°ä¸åŒï¼Œå…¶ä»–å’Œapplyä¸€æ ·
 }
 alert(sum(10,10));
 */
 
 /*
-var color = 'ºìÉ«µÄ';				//È«¾Ö
+var color = 'çº¢è‰²çš„';				//å…¨å±€
 var box = {
-	color : 'À¶É«µÄ'					//¾Ö²¿
+	color : 'è“è‰²çš„'					//å±€éƒ¨
 };
 function sayColor() {
 	alert(this.color);				
 }
-//sayColor();							//È«¾Ö
-//ÓÃcallÊÇÊµÏÖ¶ÔÏóÃ°³ä£¬Ã°³äboxÏÂ£¬Ã°³äwindowÏÂ
-//sayColor.call(window);			//Ã°³äwindow ºìÉ«µÄ
-//sayColor.call(this);					//this¾ÍÊÇwindow
-sayColor.call(box);					//Ã°³äbox£¬×÷ÓÃÓò¾ÍÔÚbox¶ÔÏóÀïÃæ£¬ËùÒÔcolor¾ÍÊÇÀ¶É«µÄ
+//sayColor();							//å…¨å±€
+//ç”¨callæ˜¯å®žçŽ°å¯¹è±¡å†’å……ï¼Œå†’å……boxä¸‹ï¼Œå†’å……windowä¸‹
+//sayColor.call(window);			//å†’å……window çº¢è‰²çš„
+//sayColor.call(this);					//thiså°±æ˜¯window
+sayColor.call(box);					//å†’å……boxï¼Œä½œç”¨åŸŸå°±åœ¨boxå¯¹è±¡é‡Œé¢ï¼Œæ‰€ä»¥colorå°±æ˜¯è“è‰²çš„
 */
 
 

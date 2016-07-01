@@ -5,7 +5,7 @@ alert(box+box2);
 */
 
 /*
-var box = 'Lee";		//ÒıºÅ±ØĞë³É¶Ô
+var box = 'Lee";		//å¼•å·å¿…é¡»æˆå¯¹
 alert(box);
 */
 
@@ -49,12 +49,12 @@ alert(String(box));			// 'null'		//  'undefined'
 /*
 var box = null;
 
-var box = {};			//¶ÔÏó×ÖÃæÁ¿µÄ´´½¨·½·¨
+var box = {};			//å¯¹è±¡å­—é¢é‡çš„åˆ›å»ºæ–¹æ³•
 alert(typeof box);
 */
 
 /*
-var box = new Object();			//Í¨¹ınew´´½¨Ò»¸ö¶ÔÏó
+var box = new Object();			//é€šè¿‡newåˆ›å»ºä¸€ä¸ªå¯¹è±¡
 alert(typeof box);
 */
 
@@ -65,7 +65,7 @@ alert(box + age);
 */
 
 /*
-var box = new Number(60);			//ÕâÖÖ·½·¨Ò²ÊÇ´´½¨Ò»¸öÊıÖµ¶ÔÏó
+var box = new Number(60);			//è¿™ç§æ–¹æ³•ä¹Ÿæ˜¯åˆ›å»ºä¸€ä¸ªæ•°å€¼å¯¹è±¡
 alert(box);
 */
 

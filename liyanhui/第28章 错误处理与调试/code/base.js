@@ -1,5 +1,5 @@
 
-//¿çä¯ÀÀÆ÷Ìí¼ÓÊÂ¼ş
+//è·¨æµè§ˆå™¨æ·»åŠ äº‹ä»¶
 function addEvent(obj, type, fn) {
 	if (obj.addEventListener) {
 		obj.addEventListener(type, fn, false);
@@ -10,7 +10,7 @@ function addEvent(obj, type, fn) {
 	}
 }
 
-//¿çä¯ÀÀÆ÷ÒÆ³ıÊÂ¼ş
+//è·¨æµè§ˆå™¨ç§»é™¤äº‹ä»¶
 function removeEvent(obj, type, fn) {
 	if (obj.removeEventListener) {
 		obj.removeEventListener(type, fn, false);
@@ -19,7 +19,7 @@ function removeEvent(obj, type, fn) {
 	}
 }
 
-//¿çä¯ÀÀÆ÷×èÖ¹Ä¬ÈÏĞĞÎª
+//è·¨æµè§ˆå™¨é˜»æ­¢é»˜è®¤è¡Œä¸º
 function preDef(evt) {
 	var e = evt || window.event;
 	if (e.preventDefault) {
@@ -29,7 +29,7 @@ function preDef(evt) {
 	}
 }
 
-//¿çä¯ÀÀÆ÷»ñÈ¡Ä¿±ê¶ÔÏó
+//è·¨æµè§ˆå™¨è·å–ç›®æ ‡å¯¹è±¡
 function getTarget(evt) {
 	if (evt.target) {		//W3C
 		return evt.target;
@@ -38,7 +38,7 @@ function getTarget(evt) {
 	}
 }
 
-//¿çä¯ÀÀÆ÷»ñÈ¡×Ö·û±àÂë
+//è·¨æµè§ˆå™¨è·å–å­—ç¬¦ç¼–ç 
 function getCharCode(evt) {
 	var e = evt || window.event;
 	if (typeof e.charCode == 'number') {

@@ -2,40 +2,40 @@
 
 
 /*
-function box() {											//º¯ÊýµÄÉùÃ÷
-	alert('ÎÒÖ»ÓÐ±»µ÷ÓÃ²Å¿ÉÒÔÖ´ÐÐ£¡');						//º¯Êý±¾ÉíÃ»ÓÐÔËÐÐ¹¦ÄÜ
-}															//±ØÐëµ÷ÓÃ²Å¿ÉÒÔÖ´ÐÐ
-box();														//µ÷ÓÃ
+function box() {											//å‡½æ•°çš„å£°æ˜Ž
+	alert('æˆ‘åªæœ‰è¢«è°ƒç”¨æ‰å¯ä»¥æ‰§è¡Œï¼');						//å‡½æ•°æœ¬èº«æ²¡æœ‰è¿è¡ŒåŠŸèƒ½
+}															//å¿…é¡»è°ƒç”¨æ‰å¯ä»¥æ‰§è¡Œ
+box();														//è°ƒç”¨
 */
 
 /*
 function box(name, age) {
-	alert('ÄãµÄÐÕÃûÊÇ£º' + name + '£¬ÄêÁäÎª£º' + age);
+	alert('ä½ çš„å§“åæ˜¯ï¼š' + name + 'ï¼Œå¹´é¾„ä¸ºï¼š' + age);
 }
 
-box('ÀîÑ×»Ö', 28);
+box('æŽç‚Žæ¢', 28);
 */
 
 /*
 function box() {
-	return 'ÎÒÖ»ÓÐ±»µ÷ÓÃ²Å¿ÉÒÔÖ´ÐÐ£¡';			//return±íÊ¾°ÑÕâ¾ä»°×Ö·û´®·µ»Ø»ØÀ´
+	return 'æˆ‘åªæœ‰è¢«è°ƒç”¨æ‰å¯ä»¥æ‰§è¡Œï¼';			//returnè¡¨ç¤ºæŠŠè¿™å¥è¯å­—ç¬¦ä¸²è¿”å›žå›žæ¥
 }
 
-//´òÓ¡³öº¯Êýµ÷ÓÃ·µ»Ø¹ýÀ´µÄ½á¹û
-alert(box());																//µ÷ÓÃ£¬Ïàµ±ÓÚbox() ='ÎÒÖ»ÓÐ±»µ÷ÓÃ²Å¿ÉÒÔÖ´ÐÐ£¡'
+//æ‰“å°å‡ºå‡½æ•°è°ƒç”¨è¿”å›žè¿‡æ¥çš„ç»“æžœ
+alert(box());																//è°ƒç”¨ï¼Œç›¸å½“äºŽbox() ='æˆ‘åªæœ‰è¢«è°ƒç”¨æ‰å¯ä»¥æ‰§è¡Œï¼'
 */
 
 /*
 function box(name, age) {
-	return 'ÄãµÄÐÕÃûÊÇ£º' + name + '£¬ÄêÁäÎª£º' + age;
+	return 'ä½ çš„å§“åæ˜¯ï¼š' + name + 'ï¼Œå¹´é¾„ä¸ºï¼š' + age;
 }
-var strInfo = box('ÂíÔÆ',40);
+var strInfo = box('é©¬äº‘',40);
 alert(strInfo);
 */
 
 /*
 function box(num) {
-	if (num < 5) return num;							//µ±Ò»¸öº¯ÊýÓöµ½µÚÒ»¸öreturn£¬¾Í»áÖÕÖ¹º¯Êý¼ÌÐøÍùÏÂÖ´ÐÐ
+	if (num < 5) return num;							//å½“ä¸€ä¸ªå‡½æ•°é‡åˆ°ç¬¬ä¸€ä¸ªreturnï¼Œå°±ä¼šç»ˆæ­¢å‡½æ•°ç»§ç»­å¾€ä¸‹æ‰§è¡Œ
 	return 100;
 }
 
@@ -47,7 +47,7 @@ function box() {
 	return arguments[0] + ' | ' + arguments[1] + ' | ' + arguments[2] + ' | ' + arguments[3] + ' | ' + arguments[4];
 }
 
-alert(box('ÀîÑ×»Ö', 28, '¼ÆËã»ú','ÑÎ³Ç'));
+alert(box('æŽç‚Žæ¢', 28, 'è®¡ç®—æœº','ç›åŸŽ'));
 */
 
 /*
@@ -55,7 +55,7 @@ function box() {
 	return arguments.length;
 }
 
-alert(box('ÀîÑ×»Ö', 28));
+alert(box('æŽç‚Žæ¢', 28));
 */
 
 /*
@@ -75,9 +75,9 @@ function box(num,a) {
 	return num + 100;
 }
 
-function box(num) {					//µÚ¶þ¸öº¯Êý£¬°ÑµÚÒ»¸öº¯Êý¸²¸ÇµôÁË£¬²»¾ß±¸ÖØÔØ¹¦ÄÜ
+function box(num) {					//ç¬¬äºŒä¸ªå‡½æ•°ï¼ŒæŠŠç¬¬ä¸€ä¸ªå‡½æ•°è¦†ç›–æŽ‰äº†ï¼Œä¸å…·å¤‡é‡è½½åŠŸèƒ½
 	return num + 200;
 }
-alert(box(50,1));	//ÖØÔØ¾ÍÊÇ¸ù¾Ý²ÎÊý£¬Ñ¡ÔñÏàÍ¬º¯ÊýÃû¶ø²ÎÊý²»Í¬µÄº¯Êý
+alert(box(50,1));	//é‡è½½å°±æ˜¯æ ¹æ®å‚æ•°ï¼Œé€‰æ‹©ç›¸åŒå‡½æ•°åè€Œå‚æ•°ä¸åŒçš„å‡½æ•°
 
 */

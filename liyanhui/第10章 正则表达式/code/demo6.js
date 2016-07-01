@@ -1,12 +1,12 @@
 /*
 var pattern = /[1-9][0-9]{5}/;
-var str = 'This is 224000 !';						//±ØĞëÊÇ6Î»£¬±ØĞëÊÇÊı×Ö£¬µÚÒ»Î»²»ÄÜÎª0
+var str = 'This is 224000 !';						//å¿…é¡»æ˜¯6ä½ï¼Œå¿…é¡»æ˜¯æ•°å­—ï¼Œç¬¬ä¸€ä½ä¸èƒ½ä¸º0
 alert(pattern.test(str));
 */
 
 /*
-var pattern = /^[\w\-]+\.zip|gz|rar/;		//\w+£¬¼ÓÉÏ^À´ÏŞ¶¨Ê××Ö·û¿ªÊ¼Æ¥Åä
-var str = '2-13.zip';					//ÎÄ¼şÃû£º×ÖÄ¸_Êı×Ö . zip,gz,rar,7z
+var pattern = /^[\w\-]+\.zip|gz|rar/;		//\w+ï¼ŒåŠ ä¸Š^æ¥é™å®šé¦–å­—ç¬¦å¼€å§‹åŒ¹é…
+var str = '2-13.zip';					//æ–‡ä»¶åï¼šå­—æ¯_æ•°å­— . zip,gz,rar,7z
 alert(pattern.test(str));
 */
 
@@ -26,7 +26,7 @@ alert('|' + result + '|');
 */
 
 /*
-var pattern = /^\s+(.+?)\s+$/;						//(.+)ÊÇÌ°À·Ä£Ê½£¬¶èĞÔÄ£Ê½
+var pattern = /^\s+(.+?)\s+$/;						//(.+)æ˜¯è´ªå©ªæ¨¡å¼ï¼Œæƒ°æ€§æ¨¡å¼
 var str = '               goo    gle              ';
 var result = pattern.exec(str)[1];
 alert('|' + result + '|');
@@ -35,7 +35,7 @@ alert('|' + result + '|');
 /*
 var pattern = /^\s+(.+?)\s+$/;						
 var str = '               goo    gle              ';
-var result = str.replace(pattern, '$1');			//Ê¹ÓÃµÄ·Ö×é
+var result = str.replace(pattern, '$1');			//ä½¿ç”¨çš„åˆ†ç»„
 alert('|' + result + '|');
 */
 

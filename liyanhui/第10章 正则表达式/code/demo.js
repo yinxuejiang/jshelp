@@ -1,41 +1,41 @@
 /*
-var box = new RegExp('Box');					//µÚÒ»¸ö²ÎÊıÊÇÄ£Ê½×Ö·û´®
-alert(box);										// /Box/Á½¸ö·´Ğ±¸ÜÊÇÕıÔò±í´ïÊ½µÄ×ÖÃæÁ¿±íÊ¾·¨
+var box = new RegExp('Box');					//ç¬¬ä¸€ä¸ªå‚æ•°æ˜¯æ¨¡å¼å­—ç¬¦ä¸²
+alert(box);										// /Box/ä¸¤ä¸ªåæ–œæ æ˜¯æ­£åˆ™è¡¨è¾¾å¼çš„å­—é¢é‡è¡¨ç¤ºæ³•
 */
 
 /*
-var box = new RegExp('Box', 'gi');				//µÚ¶ş²ÎÊı¿ÉÑ¡£¬Ä£Ê½ĞŞÊÎ·û				
+var box = new RegExp('Box', 'gi');				//ç¬¬äºŒå‚æ•°å¯é€‰ï¼Œæ¨¡å¼ä¿®é¥°ç¬¦				
 alert(box);		
 */
 
 /*
-var box = /Box/;								//Ê¹ÓÃ×ÖÃæÁ¿·½Ê½µÄÕıÔò
+var box = /Box/;								//ä½¿ç”¨å­—é¢é‡æ–¹å¼çš„æ­£åˆ™
 alert(box);		
 */
 
 /*
-var box = /Box/ig;								//×ÖÃæÁ¿ÕıÔò£¬´øĞŞÊÎ·ûµÄ							
+var box = /Box/ig;								//å­—é¢é‡æ­£åˆ™ï¼Œå¸¦ä¿®é¥°ç¬¦çš„							
 alert(box);
 */
 
 /*
-var pattern = new RegExp('Box');				//Ä£Ê½
-var str = 'box';								//×Ö·û´®
-alert(pattern.test(str));						//·µ»ØµÄÊÇfalse£¬´óĞ¡Ğ´²»Ò»ÖÂ
+var pattern = new RegExp('Box');				//æ¨¡å¼
+var str = 'box';								//å­—ç¬¦ä¸²
+alert(pattern.test(str));						//è¿”å›çš„æ˜¯falseï¼Œå¤§å°å†™ä¸ä¸€è‡´
 */
 
 /*
-var pattern = new RegExp('Box', 'i');			//Çø·Ö´óĞ¡Ğ´
+var pattern = new RegExp('Box', 'i');			//åŒºåˆ†å¤§å°å†™
 var str = 'box';											
 alert(pattern.test(str));						//true
 */
 
 /*
-alert(/Box/i.test('box'));						//true£¬Ò»¾ä»°Æ¥Åä
+alert(/Box/i.test('box'));						//trueï¼Œä¸€å¥è¯åŒ¹é…
 */
 
 /*
-var pattern = /Box/i;							//Ê¹ÓÃ×ÖÃæÁ¿µÄ·½Ê½
+var pattern = /Box/i;							//ä½¿ç”¨å­—é¢é‡çš„æ–¹å¼
 var str = 'box';
 alert(pattern.test(str));						//true
 */
@@ -43,27 +43,27 @@ alert(pattern.test(str));						//true
 /*
 var str1 = 'box';
 var str2 = 'box';
-alert(str1 == str2);							//×Ö·û´®µÄÆ¥Åä±È½Ï·½Ê½
+alert(str1 == str2);							//å­—ç¬¦ä¸²çš„åŒ¹é…æ¯”è¾ƒæ–¹å¼
 */
 
 /*
-var pattern = /Box/i;							//²»Çø·Ö´óĞ¡Ğ´Æ¥Åä
-var str = 'This is a xox!';						//Ò»¾äÓ¢ÎÄ
-alert(pattern.test(str));						//×Ö·û´®ÖĞÊÇ·ñ°üº¬Ä£Ê½ÖĞµÄÕıÔò
+var pattern = /Box/i;							//ä¸åŒºåˆ†å¤§å°å†™åŒ¹é…
+var str = 'This is a xox!';						//ä¸€å¥è‹±æ–‡
+alert(pattern.test(str));						//å­—ç¬¦ä¸²ä¸­æ˜¯å¦åŒ…å«æ¨¡å¼ä¸­çš„æ­£åˆ™
 
-												//This is a box! ÖĞÊÇ·ñ°üº¬²»Çø·Ö´óĞ¡Ğ´µÄBox
+												//This is a box! ä¸­æ˜¯å¦åŒ…å«ä¸åŒºåˆ†å¤§å°å†™çš„Box
 */
 
 /*
 var pattern = /Box/i;
 var str = 'box';
-alert(typeof pattern.exec(str));				//·µ»ØµÄÊÇÊı×é£¬ÓĞ¾Í·µ»ØÊı×éµÄÖµ£¬Ã»ÓĞ¾Í·µ»Ønull
+alert(typeof pattern.exec(str));				//è¿”å›çš„æ˜¯æ•°ç»„ï¼Œæœ‰å°±è¿”å›æ•°ç»„çš„å€¼ï¼Œæ²¡æœ‰å°±è¿”å›null
 */
 
 /*
 var pattern = /Box/i;
 var str = 'ssss';	
-alert(pattern.exec(str));						//Èç¹ûÃ»ÓĞÆ¥Åäµ½£¬¾Í·µ»Ønull
+alert(pattern.exec(str));						//å¦‚æœæ²¡æœ‰åŒ¹é…åˆ°ï¼Œå°±è¿”å›null
 */
 
 

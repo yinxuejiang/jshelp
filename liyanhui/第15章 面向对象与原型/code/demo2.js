@@ -1,7 +1,7 @@
 /*
 //工厂模式
 function createObject(name, age) {
-	var obj = new Object();									//创建对象
+	var obj = new Object();										//创建对象
 	obj.name = name;											//添加属性
 	obj.age = age;
 	obj.run = function () {										//添加方法
@@ -12,7 +12,7 @@ function createObject(name, age) {
 */
 
 /*
-function Desk(name, age) {			//创建一个对象，所有构造函数的对象其实就是Object
+function Desk(name, age) {				//创建一个对象，所有构造函数的对象其实就是Object
 	this.name = name;					//添加一个属性
 	this.age = age;			
 	this.run = function () {			//添加一个方法
