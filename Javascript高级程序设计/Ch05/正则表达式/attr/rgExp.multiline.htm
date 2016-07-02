@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>rgExp.multiline  属性</title>
-	<script type="text/javascript">
-		/**
-		 * 作用：返回布尔值，该值指示在正则表达式中使用的 multiline 标志 (m) 的状态。默认值为 false。只读
-		 * 语法：rgExp.multiline
-		 */
-	
-		function RegExpMultilineDemo(flag){
-		   // The flag parameter is a string that contains
-		   // g, i, or m.  The flags can be combined.
+    <meta charset="UTF-8">
+    <title>rgExp.multiline 属性</title>
+    <script type="text/javascript">
+    /**
+     * 作用：返回布尔值，该值指示在正则表达式中使用的 multiline 标志 (m) 的状态。默认值为 false。只读
+     * 语法：rgExp.multiline
+     */
 
-		   // Check flags for validity.
-		   if (flag.match(/[^gim]/))
-		      {
-		      return ("Flag specified is not valid");
-		      }
+    function RegExpMultilineDemo(flag) {
+        // The flag parameter is a string that contains
+        // g, i, or m.  The flags can be combined.
+
+        // Check flags for validity.
+        if (flag.match(/[^gim]/)) {
+            return ("Flag specified is not valid");
+        }
 
 
-		   // Create the string on which to perform the replacement.
-		   var ss = "The man hit the ball with the bat ";
-		   ss += "\nwhile the fielder caught the ball with the glove.";
+        // Create the string on which to perform the replacement.
+        var ss = "The man hit the ball with the bat ";
+        ss += "\nwhile the fielder caught the ball with the glove.";
 
-		   // Replace "while" with "and".
-		   var re = new RegExp("^while", flag);
-		   var r = ss.replace(re, "and");        
+        // Replace "while" with "and".
+        var re = new RegExp("^while", flag);
+        var r = ss.replace(re, "and");
 
-		   // Output the multiline flag and the resulting string.
-		   var s = "";
-		   s += "Result for multiline = " + re.multiline.toString();
-		   s += ": " + r;
+        // Output the multiline flag and the resulting string.
+        var s = "";
+        s += "Result for multiline = " + re.multiline.toString();
+        s += ": " + r;
 
-		   return(s);
+        return (s);
 
-		}
+    }
 
-		sa = RegExpMultilineDemo("m");
-		sb = RegExpMultilineDemo("");
-		document.write (sa + "<br />" + sb);
-
-	</script>
+    sa = RegExpMultilineDemo("m");
+    sb = RegExpMultilineDemo("");
+    document.write(sa + "<br />" + sb);
+    </script>
 </head>
+
 <body>
-	
 </body>
+
 </html>

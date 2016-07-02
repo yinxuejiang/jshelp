@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>IE Event Object Example</title>
 </head>
+
 <body>
     <input type="button" id="myBtn" value="Click Me" />
     <p>This example only works in Internet Explorer.</p>
     <script type="text/javascript">
-        var btn = document.getElementById("myBtn");
-        btn.onclick = function(){
-            console.log(window.event.srcElement === this);      //true
-        };
-        
-        btn.attachEvent("onclick", function(event){
-            console.log(event.srcElement === this);             //false
-        });
-      
+    var btn = document.getElementById("myBtn");
+    btn.onclick = function() {
+        console.log(window.event.srcElement === this); //true
+    };
+
+    btn.attachEvent("onclick", function(event) {
+        console.log(event.srcElement === this); //false
+    });
     </script>
 </body>
+
 </html>

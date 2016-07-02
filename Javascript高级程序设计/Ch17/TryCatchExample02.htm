@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Try-Catch Example</title>
 </head>
+
 <body>
     <script type="text/javascript">
-        function testFinally(){
-            try {
-                return 2;
-            } catch (error){
-                return 1;
-            } finally {
-                return 0;
-            }
+    function testFinally() {
+        try {
+            return 2;
+        } catch (error) {
+            return 1;
+        } finally {
+            return 0;
         }
-        
-        function testWithoutFinally(){
-            try {
-                return 2;
-            } catch (error){
-                return 1;
-            }
+    }
+
+    function testWithoutFinally() {
+        try {
+            return 2;
+        } catch (error) {
+            return 1;
         }
-        
-        console.log(testFinally());
-        console.log(testWithoutFinally());
-        
+    }
+
+    console.log(testFinally());
+    console.log(testWithoutFinally());
     </script>
 </body>
+
 </html>

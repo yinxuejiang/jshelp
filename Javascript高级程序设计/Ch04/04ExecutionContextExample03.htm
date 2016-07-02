@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Execution Context Example 3</title>
     <script type="text/javascript">
-          
-        function buildUrl() {
-            var qs = "?debug=true";
-        
-            with(location){
-                var url = href + qs;        
-            }
-        
-            return url;
+    function buildUrl() {
+        var qs = "?debug=true";
+
+        with(location) {
+            var url = href + qs;
         }
 
-        var result = buildUrl();
-        console.log(result);
-      
-    </script>
+        return url;
+    }
 
+    var result = buildUrl();
+    console.log(result);
+    </script>
 </head>
+
 <body>
-  
 </body>
+
 </html>

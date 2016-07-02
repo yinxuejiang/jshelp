@@ -1,10 +1,12 @@
 <!doctype html>
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Node Removal Events Example</title>
     <script type="text/javascript" src="EventUtil.js"></script>
 </head>
+
 <body>
     <ul id="myList">
         <li>Item 1</li>
@@ -13,26 +15,26 @@
     </ul>
     <p>This example shows the use of mutation events. Not all browsers support this. Safari 3 is known to support mutation events.</p>
     <script type="text/javascript">
-        EventUtil.addHandler(window, "load", function(event){
-            var list = document.getElementById("myList");
-            
-            EventUtil.addHandler(document, "DOMSubtreeModified", function(event){
-                console.log(event.type);
-                console.log(event.target);
-            });
-            EventUtil.addHandler(document, "DOMNodeRemoved", function(event){
-                console.log(event.type);
-                console.log(event.target);
-                console.log(event.relatedNode);
-            });
-            EventUtil.addHandler(list.firstChild, "DOMNodeRemovedFromDocument", function(event){
-                console.log(event.type);
-                console.log(event.target);
-            });            
-            
-            list.parentNode.removeChild(list);
+    EventUtil.addHandler(window, "load", function(event) {
+        var list = document.getElementById("myList");
+
+        EventUtil.addHandler(document, "DOMSubtreeModified", function(event) {
+            console.log(event.type);
+            console.log(event.target);
+        });
+        EventUtil.addHandler(document, "DOMNodeRemoved", function(event) {
+            console.log(event.type);
+            console.log(event.target);
+            console.log(event.relatedNode);
+        });
+        EventUtil.addHandler(list.firstChild, "DOMNodeRemovedFromDocument", function(event) {
+            console.log(event.type);
+            console.log(event.target);
         });
 
+        list.parentNode.removeChild(list);
+    });
     </script>
 </body>
+
 </html>
