@@ -1,13 +1,13 @@
 /*
 	var box = document.getElementById('box');
 	
-	//alert(box.childNodes[0].nodeValue);		//»ñÈ¡µÚÒ»¸ö×Ó½Úµã
-	//alert(box.childNodes[box.childNodes.length - 1].nodeValue)		//»ñÈ¡×îºóÒ»¸ö×Ó½Úµã
+	//alert(box.childNodes[0].nodeValue);		//è·å–ç¬¬ä¸€ä¸ªå­èŠ‚ç‚¹
+	//alert(box.childNodes[box.childNodes.length - 1].nodeValue)		//è·å–æœ€åä¸€ä¸ªå­èŠ‚ç‚¹
 	
-	alert(box.firstChild.nodeValue);			//»ñÈ¡µÚÒ»¸ö×Ó½Úµã
-	alert(box.lastChild.nodeValue);				//»ñÈ¡×îºóÒ»¸ö×Ó½Úµã
+	alert(box.firstChild.nodeValue);			//è·å–ç¬¬ä¸€ä¸ªå­èŠ‚ç‚¹
+	alert(box.lastChild.nodeValue);				//è·å–æœ€åä¸€ä¸ªå­èŠ‚ç‚¹
 	
-	//alert(box.ownerDocument);			//HTMLDocument£¬·µ»ØÎÄµµ¶ÔÏó£¬¸ù½Úµã
+	//alert(box.ownerDocument);			//HTMLDocumentï¼Œè¿”å›æ–‡æ¡£å¯¹è±¡ï¼Œæ ¹èŠ‚ç‚¹
 	//alert(document);								//HTMLDocument
 	//alert(box.ownerDocument === document);
 	
@@ -16,24 +16,24 @@
 	
 	//alert(box.parentNode);			//HTMLBodyElement
 	//alert(box.firstChild.nextSibling);	//HTMLSpanElement
-	//alert(box.firstChild.nextSibling.nodeName);	//ÏÂÒ»¸öÍ¬¼¶½ÚµãµÄ±êÇ©Ãû
-	//alert(box.lastChild.previousSibling.nodeName);//ÉÏÒ»¸öÍ¬¼¶½ÚµãµÄ±êÇ©Ãû
+	//alert(box.firstChild.nextSibling.nodeName);	//ä¸‹ä¸€ä¸ªåŒçº§èŠ‚ç‚¹çš„æ ‡ç­¾å
+	//alert(box.lastChild.previousSibling.nodeName);//ä¸Šä¸€ä¸ªåŒçº§èŠ‚ç‚¹çš„æ ‡ç­¾å
 	
 	
-	//alert(box.attributes);				//NamedNodeMap£¬¼¯ºÏÊı×é£¬±£´æ×ÅÕâ¸öÔªËØ½ÚµãµÄÊôĞÔÁĞ±í
-	//alert(box.attributes.length);		//3¸öÊôĞÔ
-	//alert(box.attributes[0]);			//Attr £¬ÊôĞÔ½Úµã
-	//alert(box.attributes[0].nodeType);		//2£¬ÊôĞÔ½ÚµãµÄÀàĞÍÖµ
-	//alert(box.attributes[0].nodeValue);		//bbb£¬µÚÒ»¸öÊôĞÔµÄÊôĞÔÖµ
-	//alert(box.attributes[0].nodeName);		//class£¬µÚÒ»¸öÊôĞÔµÄÊôĞÔÃû
+	//alert(box.attributes);				//NamedNodeMapï¼Œé›†åˆæ•°ç»„ï¼Œä¿å­˜ç€è¿™ä¸ªå…ƒç´ èŠ‚ç‚¹çš„å±æ€§åˆ—è¡¨
+	//alert(box.attributes.length);		//3ä¸ªå±æ€§
+	//alert(box.attributes[0]);			//Attr ï¼Œå±æ€§èŠ‚ç‚¹
+	//alert(box.attributes[0].nodeType);		//2ï¼Œå±æ€§èŠ‚ç‚¹çš„ç±»å‹å€¼
+	//alert(box.attributes[0].nodeValue);		//bbbï¼Œç¬¬ä¸€ä¸ªå±æ€§çš„å±æ€§å€¼
+	//alert(box.attributes[0].nodeName);		//classï¼Œç¬¬ä¸€ä¸ªå±æ€§çš„å±æ€§å
 	
-	//±éÀúµÄÊ±ºò£¬ÊÇ´ÓºóÏòÇ°µÄ
+	//éå†çš„æ—¶å€™ï¼Œæ˜¯ä»åå‘å‰çš„
 	alert(box.attributes['title'].nodeValue);
 	
 	
 	alert(removeWhiteNode(box.childNodes).length);
 	
-	//ºöÂÔ¿Õ°××Ö·û
+	//å¿½ç•¥ç©ºç™½å­—ç¬¦
 	function filterWhiteNode(node) {
 		var ret = [];
 		for (var i = 0; i < node.length; i ++) {
@@ -46,7 +46,7 @@
 		return ret;
 	}
 	
-	//ÒÆ³ı¿Õ°××Ö·û
+	//ç§»é™¤ç©ºç™½å­—ç¬¦
 	function removeWhiteNode(node) {
 		for (var i = 0; i < node.length; i ++) {
 			if (node[i].nodeType === 3 && /^\s+$/.test(node[i].nodeValue)) {
@@ -64,7 +64,7 @@ window.onload = function () {
 };
 
 
-//ÒÆ³ı¿Õ°×½Úµã
+//ç§»é™¤ç©ºç™½èŠ‚ç‚¹
 function removeWhiteNode(node) {
 	for (var i = 0; i < node.childNodes.length; i ++) {
 		if (node.childNodes[i].nodeType === 3 && /^\s+$/.test(node.childNodes[i].nodeValue)) {

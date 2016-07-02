@@ -1,4 +1,4 @@
-//¿çä¯ÀÀÆ÷·µ»ØXML DOM¶ÔÏó
+//è·¨æµè§ˆå™¨è¿”å›XML DOMå¯¹è±¡
 function getXMLDOM(xmlStr) {
 	var xmlDom = null;
 	
@@ -6,7 +6,7 @@ function getXMLDOM(xmlStr) {
 		xmlDom = (new DOMParser).parseFromString(xmlStr, 'text/xml');
 		var errors = xmlDom.getElementsByTagName('parsererror');
 		if (errors.length > 0) {
-			throw new Error('´íÎóĞÅÏ¢£º' + errors[0].textContent);
+			throw new Error('é”™è¯¯ä¿¡æ¯ï¼š' + errors[0].textContent);
 		}
 	} else if (typeof window.ActiveXObject != 'undefined') {
 		var version = [
@@ -19,23 +19,23 @@ function getXMLDOM(xmlStr) {
 			try {
 				var xmlDom = new ActiveXObject(version[i]);
 			} catch (e) {
-				//Ìø¹ı
+				//è·³è¿‡
 			}
 		}
 		xmlDom.loadXML(xmlStr);
 		if (xmlDom.parseError != 0) {
-				throw new Error('´íÎóĞÅÏ¢£º' + xmlDom.parseError.reason);
+				throw new Error('é”™è¯¯ä¿¡æ¯ï¼š' + xmlDom.parseError.reason);
 		}
 		return xmlDom;
 	} else {
-		throw new Error('ÄúµÄÏµÍ³»òä¯ÀÀÆ÷²»Ö§³ÖXML DOM¶ÔÏó£¡');
+		throw new Error('æ‚¨çš„ç³»ç»Ÿæˆ–æµè§ˆå™¨ä¸æ”¯æŒXML DOMå¯¹è±¡ï¼');
 	}
 	
 	return xmlDom;
 }
 
 
-//ĞòÁĞ»¯XML
+//åºåˆ—åŒ–XML
 function serializerXML(xmlDom) {
 	var xml = '';
 	
@@ -54,24 +54,24 @@ var xmlStr = '<root><user>Lee</user></root>';
 var xmlDom = getXMLDOM(xmlStr);
 alert(serializerXML(xmlDom));
 
-//PS£ºÎªÁË¿çÔ½ËùÓĞä¯ÀÀÆ÷¼æÈİ£¬ÎÒÃÇ·ÅÆúÁË´ÓÍâ²¿¼ÓÔØXMLÎÄ¼ş£¬¶øÊ¹ÓÃÁË×Ö·û´®XML¼ÓÔØºÍĞòÁĞ»¯¡£
+//PSï¼šä¸ºäº†è·¨è¶Šæ‰€æœ‰æµè§ˆå™¨å…¼å®¹ï¼Œæˆ‘ä»¬æ”¾å¼ƒäº†ä»å¤–éƒ¨åŠ è½½XMLæ–‡ä»¶ï¼Œè€Œä½¿ç”¨äº†å­—ç¬¦ä¸²XMLåŠ è½½å’Œåºåˆ—åŒ–ã€‚
 
 /*
-//Ä£ÄâloadXML()·½·¨£¬¿ÉÒÔ¼òÒ×µÄ´´½¨XML×Ö·û´®
-var xmlParser = new DOMParser();		//´´½¨DOMParser¶ÔÏó
-var xmlStr = '<root>\n\t<user>Lee</user>\n</root>';		//XML×Ö·û´®
+//æ¨¡æ‹ŸloadXML()æ–¹æ³•ï¼Œå¯ä»¥ç®€æ˜“çš„åˆ›å»ºXMLå­—ç¬¦ä¸²
+var xmlParser = new DOMParser();		//åˆ›å»ºDOMParserå¯¹è±¡
+var xmlStr = '<root>\n\t<user>Lee</user>\n</root>';		//XMLå­—ç¬¦ä¸²
 var xmlDom = xmlParser.parseFromString(xmlStr, 'text/xml');		//XMLDocument XMLDOM
 //alert(xmlDom.getElementsByTagName('user')[0].tagName);
 
 
-//Ä£Äâ.xmlÊôĞÔĞòÁĞ»¯×Ö·û´®
+//æ¨¡æ‹Ÿ.xmlå±æ€§åºåˆ—åŒ–å­—ç¬¦ä¸²
 var serializer = new XMLSerializer();
 var xml = serializer.serializeToString(xmlDom);
 var errors = xmlDom.getElementsByTagName('parsererror');
 if (errors.length == 0) {
 	alert(xml);
 } else {
-	throw new Error('´íÎóĞÅÏ¢£º' + errors[0].textContent);
+	throw new Error('é”™è¯¯ä¿¡æ¯ï¼š' + errors[0].textContent);
 }
 */
 

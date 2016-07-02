@@ -1,90 +1,90 @@
 /*
-//¹¤³§Ä£Ê½
+//å·¥å‚æ¨¡å¼
 function createObject(name, age) {
-	var obj = new Object();										//´´½¨¶ÔÏó
-	obj.name = name;											//Ìí¼ÓÊôĞÔ
+	var obj = new Object();										//åˆ›å»ºå¯¹è±¡
+	obj.name = name;											//æ·»åŠ å±æ€§
 	obj.age = age;
-	obj.run = function () {										//Ìí¼Ó·½·¨
-		return this.name + this.age + 'ÔËĞĞÖĞ...';
+	obj.run = function () {										//æ·»åŠ æ–¹æ³•
+		return this.name + this.age + 'è¿è¡Œä¸­...';
 	};
-	return obj;														//·µ»Ø¶ÔÏóÒıÓÃ
+	return obj;														//è¿”å›å¯¹è±¡å¼•ç”¨
 };
 */
 
 /*
-function Desk(name, age) {				//´´½¨Ò»¸ö¶ÔÏó£¬ËùÓĞ¹¹Ôìº¯ÊıµÄ¶ÔÏóÆäÊµ¾ÍÊÇObject
-	this.name = name;					//Ìí¼ÓÒ»¸öÊôĞÔ
+function Desk(name, age) {				//åˆ›å»ºä¸€ä¸ªå¯¹è±¡ï¼Œæ‰€æœ‰æ„é€ å‡½æ•°çš„å¯¹è±¡å…¶å®å°±æ˜¯Object
+	this.name = name;					//æ·»åŠ ä¸€ä¸ªå±æ€§
 	this.age = age;			
-	this.run = function () {			//Ìí¼ÓÒ»¸ö·½·¨
-		return this.name + this.age + 'ÔËĞĞÖĞ...';
+	this.run = function () {			//æ·»åŠ ä¸€ä¸ªæ–¹æ³•
+		return this.name + this.age + 'è¿è¡Œä¸­...';
 	};
 };
 
-//1.¹¹Ôìº¯ÊıÃ»ÓĞnew Object£¬µ«ËüºóÌ¨»á×Ô¶¯var obj = new Object
-//2.this¾ÍÏàµ±ÓÚobj
-//3.¹¹Ôìº¯Êı²»ĞèÒª·µ»Ø¶ÔÏóÒıÓÃ£¬ËüÊÇºóÌ¨×Ô¶¯·µ»ØµÄ
+//1.æ„é€ å‡½æ•°æ²¡æœ‰new Objectï¼Œä½†å®ƒåå°ä¼šè‡ªåŠ¨var obj = new Object
+//2.thiså°±ç›¸å½“äºobj
+//3.æ„é€ å‡½æ•°ä¸éœ€è¦è¿”å›å¯¹è±¡å¼•ç”¨ï¼Œå®ƒæ˜¯åå°è‡ªåŠ¨è¿”å›çš„
 
-//1.¹¹Ôìº¯ÊıÒ²ÊÇº¯Êı£¬µ«º¯ÊıÃûµÚÒ»¸ö×ÖÄ¸´óĞ´
-//2.±ØĞënew ¹¹Ôìº¯ÊıÃû()£¬new Box()£¬¶øÕâ¸öBoxµÚÒ»¸ö×ÖÄ¸Ò²ÊÇ´óĞ´µÄ
-//3.±ØĞëÊ¹ÓÃnew ÔËËã·û
+//1.æ„é€ å‡½æ•°ä¹Ÿæ˜¯å‡½æ•°ï¼Œä½†å‡½æ•°åç¬¬ä¸€ä¸ªå­—æ¯å¤§å†™
+//2.å¿…é¡»new æ„é€ å‡½æ•°å()ï¼Œnew Box()ï¼Œè€Œè¿™ä¸ªBoxç¬¬ä¸€ä¸ªå­—æ¯ä¹Ÿæ˜¯å¤§å†™çš„
+//3.å¿…é¡»ä½¿ç”¨new è¿ç®—ç¬¦
 
-var box2 = new Box('Jack', 200);	//ÊµÀı»¯
-var box3 = new Desk('kkk', 500);	//ÊµÀı»¯
+var box2 = new Box('Jack', 200);	//å®ä¾‹åŒ–
+var box3 = new Desk('kkk', 500);	//å®ä¾‹åŒ–
 
 //alert(box1.run());
 //alert(box2.run());
 //alert(box1 instanceof Object);
 //alert(box1 instanceof Box);
 //alert(box2 instanceof Box);
-//alert(box3 instanceof Box);			//¿ÉÒÔÊ¶±ğÁË£¬ÒòÎªbox3ÊÇDesk¶ÔÏóµÄÒıÓÃ
-alert(box3 instanceof Desk);			//¿ÉÒÔÊ¶±ğ
+//alert(box3 instanceof Box);			//å¯ä»¥è¯†åˆ«äº†ï¼Œå› ä¸ºbox3æ˜¯Deskå¯¹è±¡çš„å¼•ç”¨
+alert(box3 instanceof Desk);			//å¯ä»¥è¯†åˆ«
 
-var box1 = new Box('Lee', 100);		//ÊµÀı»¯
+var box1 = new Box('Lee', 100);		//å®ä¾‹åŒ–
 alert(box1.run());
 */
 
 /*
 var user = 'bbb';
-alert(this.user);							//window,name±äÁ¿±È½ÏÌØÊâ
+alert(this.user);							//window,nameå˜é‡æ¯”è¾ƒç‰¹æ®Š
 */
 
 /*
-function box() {  //ÆÕÍ¨º¯Êı£¬Ê××ÖÄ¸ÎŞĞë´óĞ´
+function box() {  //æ™®é€šå‡½æ•°ï¼Œé¦–å­—æ¯æ— é¡»å¤§å†™
 
 }
 */
 
 /*
-alert(Box('Lee', 100));					//¹¹Ôìº¯Êı£¬ÓÃÆÕÍ¨º¯Êıµ÷ÓÃÒ»°ãÊÇÎŞĞ§µÄ£¬±ØĞëÊ¹ÓÃnewÔËËã·û
+alert(Box('Lee', 100));					//æ„é€ å‡½æ•°ï¼Œç”¨æ™®é€šå‡½æ•°è°ƒç”¨ä¸€èˆ¬æ˜¯æ— æ•ˆçš„ï¼Œå¿…é¡»ä½¿ç”¨newè¿ç®—ç¬¦
 
 var o = new Object();
-Box.call(o, 'Lee', 100);					//¶ÔÏóÃ°³ä
+Box.call(o, 'Lee', 100);					//å¯¹è±¡å†’å……
 alert(o.run());
 */
 
 /*
 //alert(box1.name == box2.name);
 //alert(box1.age == box2.age);
-//alert(box1.run() == box1.run());	//¹¹Ôìº¯ÊıÌåÄÚµÄ·½·¨µÄÖµÊÇÏàµ±µÄ
-//alert(box1.run == box2.run);			//ÒòÎªËûÃÇ±È½ÏµÄÊÇÒıÓÃµØÖ·£¬
+//alert(box1.run() == box1.run());	//æ„é€ å‡½æ•°ä½“å†…çš„æ–¹æ³•çš„å€¼æ˜¯ç›¸å½“çš„
+//alert(box1.run == box2.run);			//å› ä¸ºä»–ä»¬æ¯”è¾ƒçš„æ˜¯å¼•ç”¨åœ°å€ï¼Œ
 */
 
 /*
-//¹¹Ôìº¯Êı
-function Box(user, age) {			//´´½¨Ò»¸ö¶ÔÏó£¬ËùÓĞ¹¹Ôìº¯ÊıµÄ¶ÔÏóÆäÊµ¾ÍÊÇObject
-	this.user = user;					//Ìí¼ÓÒ»¸öÊôĞÔ
+//æ„é€ å‡½æ•°
+function Box(user, age) {			//åˆ›å»ºä¸€ä¸ªå¯¹è±¡ï¼Œæ‰€æœ‰æ„é€ å‡½æ•°çš„å¯¹è±¡å…¶å®å°±æ˜¯Object
+	this.user = user;					//æ·»åŠ ä¸€ä¸ªå±æ€§
 	this.age = age;			
 	this.run = run;
 };
 
 
-function run() {							//°Ñ¹¹Ôìº¯ÊıÄÚ²¿µÄ·½·¨Í¨¹ıÈ«¾ÖÀ´ÊµÏÖÒıÓÃµØÖ·Ò»ÖÂ
-	return this.user + this.age + 'ÔËĞĞÖĞ...';
+function run() {							//æŠŠæ„é€ å‡½æ•°å†…éƒ¨çš„æ–¹æ³•é€šè¿‡å…¨å±€æ¥å®ç°å¼•ç”¨åœ°å€ä¸€è‡´
+	return this.user + this.age + 'è¿è¡Œä¸­...';
 }
 
 
-var box1 = new Box('Lee', 100);	//ÊµÀı»¯ºóµØÖ·Îª1
-var box2 = new Box('Lee', 100);  //ÊµÀı»¯ºóµØÖ·Îª2
+var box1 = new Box('Lee', 100);	//å®ä¾‹åŒ–ååœ°å€ä¸º1
+var box2 = new Box('Lee', 100);  //å®ä¾‹åŒ–ååœ°å€ä¸º2
 //alert(box1.run == box2.run);			//
 alert(box1.run());
 alert(run());

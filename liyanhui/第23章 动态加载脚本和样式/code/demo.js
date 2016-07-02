@@ -33,10 +33,10 @@ function getRect(element) {
 
 alert(typeof BrowserDetect);
 
-var flag = true;						//Èç¹ûflagÎªÕæ£¬ÄÇÃ´¾Í¼ÓÔØJS½Å±¾
+var flag = true;						//å¦‚æœflagä¸ºçœŸï¼Œé‚£ä¹ˆå°±åŠ è½½JSè„šæœ¬
 
 
-//Ö´ĞĞË³ĞòÀí½âµÄÎÊÌâ
+//æ‰§è¡Œé¡ºåºç†è§£çš„é—®é¢˜
 if (flag) {
 	loadScript('browserdetect.js');
 }
@@ -48,14 +48,14 @@ function loadScript(url) {
 	document.getElementsByTagName('head')[0].appendChild(script);
 }
 
-var flag = false;						//Èç¹ûflagÎªÕæ£¬ÄÇÃ´¾Í¼ÓÔØJS½Å±¾
+var flag = false;						//å¦‚æœflagä¸ºçœŸï¼Œé‚£ä¹ˆå°±åŠ è½½JSè„šæœ¬
 
 
-//Ö´ĞĞË³ĞòÀí½âµÄÎÊÌâ
+//æ‰§è¡Œé¡ºåºç†è§£çš„é—®é¢˜
 if (flag) {
 	var script = document.createElement('script');
 	script.type = 'text/javascript';
-	//script.appendChild(document.createTextNode("alert('Lee')"));	IE²»Ö§³ÖÕâÖÖĞ´·¨
+	//script.appendChild(document.createTextNode("alert('Lee')"));	IEä¸æ”¯æŒè¿™ç§å†™æ³•
 	script.text = "alert('Lee')";
 	document.getElementsByTagName('head')[0].appendChild(script);
 }
@@ -88,17 +88,17 @@ var flag = true;
 if (flag) {
 	var style = document.createElement('style');
 	style.type = 'text/css';
-	//style.appendChild(document.createTextNode('#box {width:200px;height:200px;background:red}'));	//IE²»Ö§³Ö
+	//style.appendChild(document.createTextNode('#box {width:200px;height:200px;background:red}'));	//IEä¸æ”¯æŒ
 	document.getElementsByTagName('head')[0].appendChild(style);
 	insertRule(document.styleSheets[0], '#box', 'width:200px;height:200px;background:red', 0);
 }
 
 
 function insertRule(sheet, selectorText, cssText, position) {
-	//Èç¹ûÊÇ·ÇIE
+	//å¦‚æœæ˜¯éIE
 	if (sheet.insertRule) {
 		sheet.insertRule(selectorText + "{" + cssText + "}", position);
-	//Èç¹ûÊÇIE
+	//å¦‚æœæ˜¯IE
 	} else if (sheet.addRule) {
 		sheet.addRule(selectorText, cssText, position);
 	}

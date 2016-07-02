@@ -1,13 +1,13 @@
 /*
-//Ñ­»·ÀïµÄÄäÃûº¯ÊýµÄÈ¡ÖµÎÊÌâ
+//å¾ªçŽ¯é‡Œçš„åŒ¿åå‡½æ•°çš„å–å€¼é—®é¢˜
 function box() {
 	var arr = [];
 	for (var i = 0; i < 5; i ++) {
-		arr[i] = function () {					//arr[0] = 0£¬arr[1] = 1 .... arr[4]  = 4
+		arr[i] = function () {					//arr[0] = 0ï¼Œarr[1] = 1 .... arr[4]  = 4
 			return i;
 		};
 	}
-	//Ñ­»·ÒÑ¾­Ö´ÐÐÍê±ÏÁË£¬i×îÖÕÊÇ4++ = 5 ,ÄÇÃ´×îÖÕ¾ÍÊÇ5
+	//å¾ªçŽ¯å·²ç»æ‰§è¡Œå®Œæ¯•äº†ï¼Œiæœ€ç»ˆæ˜¯4++ = 5 ,é‚£ä¹ˆæœ€ç»ˆå°±æ˜¯5
 	return arr;
 }
 //alert(box()[0]);
@@ -19,7 +19,7 @@ for (var i = 0; i < 5; i ++) {
 */
 
 /*
-//¸Ä0
+//æ”¹0
 function box() {
 	var arr = [];
 	for (var i = 0; i < 5; i ++) {
@@ -34,11 +34,11 @@ for (var i = 0; i < 5; i ++) {
 */
 
 /*
-//¸Ä1
+//æ”¹1
 function box() {
 	var arr = [];
 	for (var i = 0; i < 5; i ++) {
-		arr[i] = (function (num) {						//Í¨¹ý×ÔÎÒ¼°Ê±Ö´ÐÐÄäÃûº¯Êý
+		arr[i] = (function (num) {						//é€šè¿‡è‡ªæˆ‘åŠæ—¶æ‰§è¡ŒåŒ¿åå‡½æ•°
 			return num;
 		})(i);
 	}
@@ -52,18 +52,18 @@ for (var i = 0; i < 5; i ++) {
 */
 
 /*
-//¸Ä2
+//æ”¹2
 function box() {
 	var arr = [];
 	for (var i = 0; i < 5; i ++) {
 		arr[i] = (function (num) {
-			//numÆäÊµÔÚÕâÀï	
-			return function () {				//ÒòÎª±Õ°ü¿ÉÒÔ½«±äÁ¿×¤ÁôÔÚÄÚ´æÖÐ£¬ºÍÉÏÒ»½Ú¿ÎµÄÀÛ¼ÓÊÇÒ»¸öµÀÀí
+			//numå…¶å®žåœ¨è¿™é‡Œ	
+			return function () {				//å› ä¸ºé—­åŒ…å¯ä»¥å°†å˜é‡é©»ç•™åœ¨å†…å­˜ä¸­ï¼Œå’Œä¸Šä¸€èŠ‚è¯¾çš„ç´¯åŠ æ˜¯ä¸€ä¸ªé“ç†
 				return num;
 			}
 		})(i);
 	}
-	//ÒÑ¾­Ö´ÐÐÍê±ÏÁË£¬numÎªÊ²Ã´¿ÉÒÔ0,1,2,3,4
+	//å·²ç»æ‰§è¡Œå®Œæ¯•äº†ï¼Œnumä¸ºä»€ä¹ˆå¯ä»¥0,1,2,3,4
 	return arr;
 }
 
@@ -81,12 +81,12 @@ function box() {
 	var arr = [];
 	for (var i = 0; i < 5; i ++) {
 		arr[i] = function (num) {
-			return function () {				//ÒòÎª±Õ°ü¿ÉÒÔ½«±äÁ¿×¤ÁôÔÚÄÚ´æÖÐ£¬ºÍÉÏÒ»½Ú¿ÎµÄÀÛ¼ÓÊÇÒ»¸öµÀÀí
+			return function () {				//å› ä¸ºé—­åŒ…å¯ä»¥å°†å˜é‡é©»ç•™åœ¨å†…å­˜ä¸­ï¼Œå’Œä¸Šä¸€èŠ‚è¯¾çš„ç´¯åŠ æ˜¯ä¸€ä¸ªé“ç†
 				return num;
 			}
 		}(i);
 	}	
-	//ÒÑ¾­Ö´ÐÐÍê±ÏÁË£¬numÎªÊ²Ã´¿ÉÒÔ0,1,2,3,4
+	//å·²ç»æ‰§è¡Œå®Œæ¯•äº†ï¼Œnumä¸ºä»€ä¹ˆå¯ä»¥0,1,2,3,4
 	return arr;
 }
 
@@ -97,7 +97,7 @@ for (var i = 0; i < 5; i ++) {
 */
 
 /*
-//¹ØÓÚthis¶ÔÏó
+//å…³äºŽthiså¯¹è±¡
 var box = {
 	getThis : function () {
 		return function () {
@@ -113,16 +113,16 @@ var user = 'The Window';
 var box = {
 	user : 'The Box',
 	getUser : function () {
-		//ÕâÀï×÷ÓÃÓòµÄthisÊÇBox
+		//è¿™é‡Œä½œç”¨åŸŸçš„thisæ˜¯Box
 		var that = this;
 		return function () {
-			//ÕâÀï×÷ÓÃÓòµÄthisÊÇwindow
+			//è¿™é‡Œä½œç”¨åŸŸçš„thisæ˜¯window
 			return that.user;
 		}
 	}
 };
 //alert(box.getUser()());
-//¶ÔÏóÃ°³ä
+//å¯¹è±¡å†’å……
 //alert(box.getUser().call(box));
 alert(box.getUser()());
 */
@@ -134,7 +134,7 @@ function box() {
 	oDiv.onclick = function () {
 		alert(text);
 	};
-	oDiv = null;					//½â³ýÒýÓÃ£¬µÈ´ýÀ¬»ø»ØÊÕ
+	oDiv = null;					//è§£é™¤å¼•ç”¨ï¼Œç­‰å¾…åžƒåœ¾å›žæ”¶
 	alert(oDiv);
 }
 box();

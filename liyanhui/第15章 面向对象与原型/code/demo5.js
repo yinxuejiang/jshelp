@@ -1,37 +1,37 @@
 /*
-//Ô­ĞÍµÄÈ±µã
+//åŸå‹çš„ç¼ºç‚¹
 
 function Box() {}
 Box.prototype = {
 	constructor : Box, 
 	name : 'Lee', 
 	age : 100,
-	family : ['¸ç¸ç','½ã½ã','ÃÃÃÃ'],
+	family : ['å“¥å“¥','å§å§','å¦¹å¦¹'],
 	run : function () {
-		return this.name + this.age + 'ÔËĞĞÖĞ...'
+		return this.name + this.age + 'è¿è¡Œä¸­...'
 	}
 };
 var box1 = new Box();
 alert(box1.family);
-box1.family.push('µÜµÜ');			//ÔÚµÚÒ»¸öÊµÀıĞŞ¸ÄºóÒıÓÃÀàĞÍ£¬±£³ÖÁË¹²Ïí
+box1.family.push('å¼Ÿå¼Ÿ');			//åœ¨ç¬¬ä¸€ä¸ªå®ä¾‹ä¿®æ”¹åå¼•ç”¨ç±»å‹ï¼Œä¿æŒäº†å…±äº«
 alert(box1.family);
 var box2 = new Box();
-alert(box2.family);					//¹²ÏíÁËbox1Ìí¼ÓºóµÄÒıÓÃÀàĞÍµÄÔ­ĞÍ
+alert(box2.family);					//å…±äº«äº†box1æ·»åŠ åçš„å¼•ç”¨ç±»å‹çš„åŸå‹
 */
 
 /*
-//×éºÏ¹¹Ôìº¯Êı+Ô­ĞÍÄ£Ê½
+//ç»„åˆæ„é€ å‡½æ•°+åŸå‹æ¨¡å¼
 
-function Box(name, age) {		//±£³Ö¶ÀÁ¢µÄÓÃ¹¹Ôìº¯Êı
+function Box(name, age) {		//ä¿æŒç‹¬ç«‹çš„ç”¨æ„é€ å‡½æ•°
 	this.name = name;
 	this.age = age;
-	this.family = ['¸ç¸ç','½ã½ã','ÃÃÃÃ'];
+	this.family = ['å“¥å“¥','å§å§','å¦¹å¦¹'];
 }
 
-Box.prototype = {					//±£³Ö¹²ÏíµÄÓÃÔ­ĞÍ
+Box.prototype = {					//ä¿æŒå…±äº«çš„ç”¨åŸå‹
 	constructor : Box,
 	run : function () {
-		return this.name + this.age + 'ÔËĞĞÖĞ...'
+		return this.name + this.age + 'è¿è¡Œä¸­...'
 	}
 };
 
@@ -39,41 +39,41 @@ Box.prototype = {					//±£³Ö¹²ÏíµÄÓÃÔ­ĞÍ
 var box1 = new Box('Lee', 100);
 //alert(box1.run());
 alert(box1.family);
-box1.family.push('µÜµÜ');		
+box1.family.push('å¼Ÿå¼Ÿ');		
 alert(box1.family);
 
 var box2 = new Box('Jack', 200);
 //alert(box2.run());
-alert(box2.family);					//ÒıÓÃÀàĞÍÃ»ÓĞÊ¹ÓÃÔ­ĞÍ£¬ËùÒÔÃ»ÓĞ¹²Ïí
+alert(box2.family);					//å¼•ç”¨ç±»å‹æ²¡æœ‰ä½¿ç”¨åŸå‹ï¼Œæ‰€ä»¥æ²¡æœ‰å…±äº«
 */
 
 /*
-//¶¯Ì¬Ô­ĞÍÄ£Ê½
-//¿ÉÒÔ½«Ô­ĞÍ·â×°µ½¹¹Ôìº¯ÊıÀï
+//åŠ¨æ€åŸå‹æ¨¡å¼
+//å¯ä»¥å°†åŸå‹å°è£…åˆ°æ„é€ å‡½æ•°é‡Œ
 function Box(name, age) {		
 	this.name = name;
 	this.age = age;
-	this.family = ['¸ç¸ç','½ã½ã','ÃÃÃÃ'];
+	this.family = ['å“¥å“¥','å§å§','å¦¹å¦¹'];
 	
-	if (typeof this.run != 'function') {				//ÅĞ¶Ïthis.runÊÇ·ñ´æÔÚ
+	if (typeof this.run != 'function') {				//åˆ¤æ–­this.runæ˜¯å¦å­˜åœ¨
 		Box.prototype.run = function() {
-			return this.name + this.age + 'ÔËĞĞÖĞ...'
+			return this.name + this.age + 'è¿è¡Œä¸­...'
 		};
 	}
 }
-//Ô­ĞÍµÄ³õÊ¼»¯£¬Ö»ÒªµÚÒ»´Î³õÊ¼»¯£¬¾Í¿ÉÒÔÁË£¬Ã»±ØÒªÃ¿´Î¹¹Ôìº¯ÊıÊµÀı»¯µÄÊ±ºò¶¼³õÊ¼»¯
+//åŸå‹çš„åˆå§‹åŒ–ï¼Œåªè¦ç¬¬ä¸€æ¬¡åˆå§‹åŒ–ï¼Œå°±å¯ä»¥äº†ï¼Œæ²¡å¿…è¦æ¯æ¬¡æ„é€ å‡½æ•°å®ä¾‹åŒ–çš„æ—¶å€™éƒ½åˆå§‹åŒ–
 var box1 = new Box('Lee', 100);
 var box2 = new Box('Jack', 200);
 */
 
 /*
-//¼ÄÉú¹¹Ôìº¯Êı = ¹¤³§Ä£Ê½ + ¹¹Ôìº¯Êı
+//å¯„ç”Ÿæ„é€ å‡½æ•° = å·¥å‚æ¨¡å¼ + æ„é€ å‡½æ•°
 function Box(name, age) {
 	var obj = new Object();
 	obj.name = name;
 	obj.age = age;
 	obj.run = function () {
-		return this.name + this.age + 'ÔËĞĞÖĞ...'
+		return this.name + this.age + 'è¿è¡Œä¸­...'
 	};
 	return obj;
 }
@@ -86,13 +86,13 @@ alert(box2.run());
 */
 
 /*
-//ÎÈÍ×¹¹Ôìº¯Êı
+//ç¨³å¦¥æ„é€ å‡½æ•°
 function Box(name, age) {
 	var obj = new Object();
 	obj.name = name;
 	obj.age = age;
 	obj.run = function () {
-		return this.name + this.age + 'ÔËĞĞÖĞ...'
+		return this.name + this.age + 'è¿è¡Œä¸­...'
 	};
 	return obj;
 }

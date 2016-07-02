@@ -9,7 +9,7 @@ alert(window.box);
 */
 
 /*
-var box = '//Lee¿Ó';
+var box = '//LeeÊùé';
 var a = encodeURI(box);
 var b = encodeURIComponent(box);
 alert(decodeURI(a));

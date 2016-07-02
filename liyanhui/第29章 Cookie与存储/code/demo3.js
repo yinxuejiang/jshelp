@@ -3,14 +3,14 @@
 
 
 /*
-//¹ıÆÚÊ±¼ä
-function setCookieDate(day) {			//´«µİÒ»¸öÌìÊı£¬±ÈÈç´«µİ7£¬¾Í7ÌìºóÊ§Ğ§
+//è¿‡æœŸæ—¶é—´
+function setCookieDate(day) {			//ä¼ é€’ä¸€ä¸ªå¤©æ•°ï¼Œæ¯”å¦‚ä¼ é€’7ï¼Œå°±7å¤©åå¤±æ•ˆ
 	var date = null;
 	if (typeof day == 'number' && day > 0) {
 		date = new Date();
 		date.setDate(date.getDate() + day);
 	} else {
-		throw new Error('Äú´«µİµÄÌìÊı²»ºÏ·¨£¡±ØĞëÊÇÊı×ÖÇÒ´óÓÚ0');
+		throw new Error('æ‚¨ä¼ é€’çš„å¤©æ•°ä¸åˆæ³•ï¼å¿…é¡»æ˜¯æ•°å­—ä¸”å¤§äº0');
 	}
 	return date.toGMTString();
 }
@@ -18,19 +18,19 @@ function setCookieDate(day) {			//´«µİÒ»¸öÌìÊı£¬±ÈÈç´«µİ7£¬¾Í7ÌìºóÊ§Ğ§
 
 addEvent(window, 'load', function () {
 	var box = document.getElementById('box');
-	//box.setAttribute('name', 'Lee');		//Õâ¸öÊÇÃû/Öµ¶Ô
+	//box.setAttribute('name', 'Lee');		//è¿™ä¸ªæ˜¯å/å€¼å¯¹
 	//box.expires = setCookieDate(7);
-	//box.save('user');							//Ïàµ±ÓÚ cookieÃû
+	//box.save('user');							//ç›¸å½“äº cookieå
 	
 	//box.removeAttribute('name');
 	//box.save('user');
 	
-	box.load('user');								//Ïàµ±ÓÚ¼ÓÔØ cookie
+	box.load('user');								//ç›¸å½“äºåŠ è½½ cookie
 	alert(box.getAttribute('name'));
 });
 
 
-//PS²»È¥ÉèÖÃÊ±¼ä£¬¾ÍÊÇÓÀ¾Ã±£´æ£¬ÊÇ±£´æÔÚIEcookieÎÄ¼ş¼ĞÀïµÄ
+//PSä¸å»è®¾ç½®æ—¶é—´ï¼Œå°±æ˜¯æ°¸ä¹…ä¿å­˜ï¼Œæ˜¯ä¿å­˜åœ¨IEcookieæ–‡ä»¶å¤¹é‡Œçš„
 */
 
 

@@ -2,31 +2,31 @@
 
 
 /*
-	»ñÈ¡form¶ÔÏóµÄ·½·¨
+	è·å–formå¯¹è±¡çš„æ–¹æ³•
 	//var fm = document.getElementById('myForm');
 	//var fm = document.getElementsByTagName('form')[0];
-	//var fm = document.forms[0];			//HTML DOMÍ¨¹ı0ÏÂ±í»ñÈ¡
-	//var fm = document.forms['yourForm'];	//HTML DOMÍ¨¹ınameÏÂ±í»ñÈ¡
-	var fm = document.yourForm;		//ÏòÏÂ¼æÈİµÄ·½·¨£¬²»ÍÆ¼öÊ¹ÓÃ
+	//var fm = document.forms[0];			//HTML DOMé€šè¿‡0ä¸‹è¡¨è·å–
+	//var fm = document.forms['yourForm'];	//HTML DOMé€šè¿‡nameä¸‹è¡¨è·å–
+	var fm = document.yourForm;		//å‘ä¸‹å…¼å®¹çš„æ–¹æ³•ï¼Œä¸æ¨èä½¿ç”¨
 	
-	submitÊÂ¼ş´¥·¢µÄÒ»Ğ©ÎÊÌâ
-	//×èÖ¹Ìá½»
+	submitäº‹ä»¶è§¦å‘çš„ä¸€äº›é—®é¢˜
+	//é˜»æ­¢æäº¤
 	//addEvent(fm, 'submit', function (evt) {
 	//	preDef(evt);
 	//});
 
-	//PS£ºsubmitÊÂ¼ş£¬ÓÃ´«Í³µÄ·½Ê½£ºfm.onsubmit = function () {};
+	//PSï¼šsubmitäº‹ä»¶ï¼Œç”¨ä¼ ç»Ÿçš„æ–¹å¼ï¼šfm.onsubmit = function () {};
 	
-	//ÒÉÎÊ£ºsubmitÊÂ¼ş£¬ÎªÊ²Ã´ÒªÓÃform¶ÔÏóÀ´´¥·¢ÄØ£¿ÎªÊ²Ã´²»ÄÜÊÇinputÖĞµÄsumit°´Å¥´¥·¢ÄØ£¿
+	//ç–‘é—®ï¼šsubmitäº‹ä»¶ï¼Œä¸ºä»€ä¹ˆè¦ç”¨formå¯¹è±¡æ¥è§¦å‘å‘¢ï¼Ÿä¸ºä»€ä¹ˆä¸èƒ½æ˜¯inputä¸­çš„sumitæŒ‰é’®è§¦å‘å‘¢ï¼Ÿ
 	
 	var sub = document.getElementById('sub');
 	//addEvent(sub, 'submit', function (evt) {
 	//	preDef(evt);
 	//});
 	
-	//PS£º°ÑsubmitÊÂ¼ş×¢²áµ½inputÖĞµÄsubmit°´Å¥£¬ÊÇÎŞ·¨´¥·¢submitÊÂ¼şµÄ
-	//PS£º±ØĞë°ÑsubmitÊÂ¼ş°ó¶¨µ½form¶ÔÏóÉÏ£¬²Å¿ÉÒÔ´¥·¢submitÊÂ¼ş
-	//PS£ºÖ»²»¹ı´¥·¢submitÊÂ¼şµÄÁ÷³ÌÊÇµã»÷inputÖĞµÄsubmit°´Å¥¶øÒÑ
+	//PSï¼šæŠŠsubmitäº‹ä»¶æ³¨å†Œåˆ°inputä¸­çš„submitæŒ‰é’®ï¼Œæ˜¯æ— æ³•è§¦å‘submitäº‹ä»¶çš„
+	//PSï¼šå¿…é¡»æŠŠsubmitäº‹ä»¶ç»‘å®šåˆ°formå¯¹è±¡ä¸Šï¼Œæ‰å¯ä»¥è§¦å‘submitäº‹ä»¶
+	//PSï¼šåªä¸è¿‡è§¦å‘submitäº‹ä»¶çš„æµç¨‹æ˜¯ç‚¹å‡»inputä¸­çš„submitæŒ‰é’®è€Œå·²
 	
 	////addEvent(fm, 'submit', function (evt) {
 	//	alert('Lee');
@@ -36,10 +36,10 @@
 		alert('Lee');
 	});
 	
-	//Ê¹ÓÃfm.submit()ÈÃ·Çsubmit°´Å¥ÊµÏÖÌá½»
+	//ä½¿ç”¨fm.submit()è®©ésubmitæŒ‰é’®å®ç°æäº¤
 	//var button = document.getElementById('button');
 	//addEvent(button, 'click', function () {
-	//	fm.submit();				//¿ÉÒÔÈÃ·Çsubmit°´Å¥Ìá½»±íµ¥
+	//	fm.submit();				//å¯ä»¥è®©ésubmitæŒ‰é’®æäº¤è¡¨å•
 	//});
 	
 	var strong = document.getElementsByTagName('strong')[0];
@@ -54,12 +54,12 @@
 
 addEvent(window, 'load', function () {
 	var fm = document.getElementById('myForm');
-	//×èÖ¹Ìá½»
+	//é˜»æ­¢æäº¤
 	addEvent(fm, 'submit', function (evt) {
 		preDef(evt);
 	});
 	
-	//ÊµÏÖctrl+enterÊµÏÖÌá½»
+	//å®ç°ctrl+enterå®ç°æäº¤
 	addEvent(document, 'keydown', function (evt) {
 		var e = evt || window.event;
 		if (e.ctrlKey && e.keyCode == 13) fm.submit();

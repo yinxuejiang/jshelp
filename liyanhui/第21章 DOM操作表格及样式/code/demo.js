@@ -1,20 +1,20 @@
 /*
-	thead±êÇ©ÔÚÒ»¸ö±í¸ñÀïÖ»ÄÜÓĞÒ»¸ö
-	tfoot±êÇ©ÔÚÒ»¸ö±í¸ñÀïÖ»ÓĞÓĞÒ»¸ö
-	tbody±êÇ©ÔÚÒ»¸ö±í¸ñÀïÓĞN¸ö
-	caption±êÇ©£¬ÔÚÒ»¸ö±í¸ñÀïÖ»ÓĞÒ»¸ö
-	tr±êÇ©£¬ÔÚÒ»¸ö±í¸ñÀï¿ÉÒÔÓĞN¸ö
-	tdºÍth±êÇ©£¬ÔÚÒ»¸ö±í¸ñÀï¿ÉÒÔÓĞN¸ö
+	theadæ ‡ç­¾åœ¨ä¸€ä¸ªè¡¨æ ¼é‡Œåªèƒ½æœ‰ä¸€ä¸ª
+	tfootæ ‡ç­¾åœ¨ä¸€ä¸ªè¡¨æ ¼é‡Œåªæœ‰æœ‰ä¸€ä¸ª
+	tbodyæ ‡ç­¾åœ¨ä¸€ä¸ªè¡¨æ ¼é‡Œæœ‰Nä¸ª
+	captionæ ‡ç­¾ï¼Œåœ¨ä¸€ä¸ªè¡¨æ ¼é‡Œåªæœ‰ä¸€ä¸ª
+	træ ‡ç­¾ï¼Œåœ¨ä¸€ä¸ªè¡¨æ ¼é‡Œå¯ä»¥æœ‰Nä¸ª
+	tdå’Œthæ ‡ç­¾ï¼Œåœ¨ä¸€ä¸ªè¡¨æ ¼é‡Œå¯ä»¥æœ‰Nä¸ª
 	
-	Ê¹ÓÃDOMÀ´´´½¨Ò»¸ö±í¸ñ
+	ä½¿ç”¨DOMæ¥åˆ›å»ºä¸€ä¸ªè¡¨æ ¼
 	var table = document.createElement('table');
 	table.width = 300;			//table.setAttribute('width', 300);
 	table.border = 1;
 	
 	var caption = document.createElement('caption');
 	table.appendChild(caption);
-	//caption.innerHTML = 'ÈËÔ±±í';
-	var captionText = document.createTextNode('ÈËÔ±±í');
+	//caption.innerHTML = 'äººå‘˜è¡¨';
+	var captionText = document.createTextNode('äººå‘˜è¡¨');
 	caption.appendChild(captionText);
 	
 	var thead = document.createElement('thead');
@@ -26,39 +26,39 @@
 	var th = document.createElement('th');
 	tr.appendChild(th);
 	
-	th.appendChild(document.createTextNode('Êı¾İ1'));
+	th.appendChild(document.createTextNode('æ•°æ®1'));
 	
 	var th2 = document.createElement('th');
 	tr.appendChild(th2);
-	th2.appendChild(document.createTextNode('Êı¾İ2'));
+	th2.appendChild(document.createTextNode('æ•°æ®2'));
 	
 	document.body.appendChild(table);
 	
-	//Ê¹ÓÃDOMÈ¥»ñÈ¡±í¸ñÊı¾İ
+	//ä½¿ç”¨DOMå»è·å–è¡¨æ ¼æ•°æ®
 	var table = document.getElementsByTagName('table')[0];
-	//alert(table.children[0].innerHTML);		//²»ÇåÎú
-	//alert(table.children[2].children[1].children[1].innerHTML);		//³¬¼¶·³£¬ºÜ²»ÇåÎú
+	//alert(table.children[0].innerHTML);		//ä¸æ¸…æ™°
+	//alert(table.children[2].children[1].children[1].innerHTML);		//è¶…çº§çƒ¦ï¼Œå¾ˆä¸æ¸…æ™°
 	var tbody = table.getElementsByTagName('tbody')[0];
 	var tr = tbody.getElementsByTagName('tr')[1];
 	var td = tr.getElementsByTagName('td')[1];
-	alert(td.innerHTML);												//±È½ÏÇåÎú£¬µ«³¬³¬·³
+	alert(td.innerHTML);												//æ¯”è¾ƒæ¸…æ™°ï¼Œä½†è¶…è¶…çƒ¦
 	
 	
 	var table = document.getElementsByTagName('table')[0];
-	//alert(table.caption.innerHTML);			//ÇåÎú£¬·½±ã£¬¼òµ¥
-	//table.caption.innerHTML = 'ÊÇ³ö±í';
+	//alert(table.caption.innerHTML);			//æ¸…æ™°ï¼Œæ–¹ä¾¿ï¼Œç®€å•
+	//table.caption.innerHTML = 'æ˜¯å‡ºè¡¨';
 	
 	//alert(table.tHead);
 	
 	//alert(table.tBodies[0]);
 	
-	//alert(table.rows.length);		//µÃµ½ËùÓĞtrµÄĞĞÊı
+	//alert(table.rows.length);		//å¾—åˆ°æ‰€æœ‰trçš„è¡Œæ•°
 	
 	//alert(table.tBodies[0].rows.length);
 	//alert(table.tBodies[0].rows[0]);
 	//alert(table.tBodies[0].rows[0].cells.length);
 	
-	//alert(table.tBodies[0].rows[1].cells[1].innerHTML);		//ºÜÇåÎú£¬ºÜ·½±ã
+	//alert(table.tBodies[0].rows[1].cells[1].innerHTML);		//å¾ˆæ¸…æ™°ï¼Œå¾ˆæ–¹ä¾¿
 	
 	//table.deleteCaption();
 	//table.deleteTHead();
@@ -74,16 +74,16 @@ window.onload = function () {
 	table.width = 300;
 	table.border = 1;
 	
-	table.createCaption().innerHTML = 'ÈËÔ±±í';
+	table.createCaption().innerHTML = 'äººå‘˜è¡¨';
 	
 	//table.createTHead();
-	//var tr = table.tHead.insertRow(0);		//table.tHead¾Í±íÊ¾·µ»ØtheadµÄÒıÓÃ£¬µ«²»½¨ÒéÕâÃ´×ö£¬»á»ìÏı
+	//var tr = table.tHead.insertRow(0);		//table.tHeadå°±è¡¨ç¤ºè¿”å›theadçš„å¼•ç”¨ï¼Œä½†ä¸å»ºè®®è¿™ä¹ˆåšï¼Œä¼šæ··æ·†
 	
 	var thead = table.createTHead();
 	var tr = thead.insertRow(0);
-	tr.insertCell(0).innerHTML = 'Êı¾İ1';
-	tr.insertCell(1).innerHTML = 'Êı¾İ2';
-	tr.insertCell(2).innerHTML = 'Êı¾İ3';
+	tr.insertCell(0).innerHTML = 'æ•°æ®1';
+	tr.insertCell(1).innerHTML = 'æ•°æ®2';
+	tr.insertCell(2).innerHTML = 'æ•°æ®3';
 	
 	document.body.appendChild(table);
 };

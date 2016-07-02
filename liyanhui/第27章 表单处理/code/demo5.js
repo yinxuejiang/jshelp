@@ -10,14 +10,14 @@
 	
 	//alert(city.options[0]);			//HTMLOptionElement
 	
-	//alert(city.type);				//select-oneµ¥ĞĞ£¬select-multiple¶àĞĞ
+	//alert(city.type);				//select-oneå•è¡Œï¼Œselect-multipleå¤šè¡Œ
 	
 	
 	//alert(city.options[1].value + '---' + city.options[1].text);
-	//valueºÍtextÊ¹ÓÃµÄHTML DOM·½·¨£¬¿ÉÒÔ²Î¿¼HTML DOMÊÖ²á
+	//valueå’Œtextä½¿ç”¨çš„HTML DOMæ–¹æ³•ï¼Œå¯ä»¥å‚è€ƒHTML DOMæ‰‹å†Œ
 	
-	//Ê¹ÓÃ±ê×¼DOMÒ²¿ÉÒÔ»ñÈ¡£¬²»½¨ÒéÔÚ±íµ¥ÖĞÊ¹ÓÃ±ê×¼DOM£¬
-	//ÒòÎªHTML DOMµÄ¼æÈİĞÔÒÑ¾­·Ç³£ºÃµÄ£¬¶øÇÒ¼æÈİÈİÒ×£¬²¢ÇÒºÃÀí½â
+	//ä½¿ç”¨æ ‡å‡†DOMä¹Ÿå¯ä»¥è·å–ï¼Œä¸å»ºè®®åœ¨è¡¨å•ä¸­ä½¿ç”¨æ ‡å‡†DOMï¼Œ
+	//å› ä¸ºHTML DOMçš„å…¼å®¹æ€§å·²ç»éå¸¸å¥½çš„ï¼Œè€Œä¸”å…¼å®¹å®¹æ˜“ï¼Œå¹¶ä¸”å¥½ç†è§£
 	//alert(city.options[0].firstChild.nodeValue + '---' + city.options[0].getAttribute('value'));
 	
 	//alert(city.options[3].value);
@@ -28,35 +28,35 @@
 	//});
 	
 	
-	//Õâ¸ö¶¨Î»ÊÇ±ØĞëÔÚselect¶ÔÏóÉÏ
-	//city.selectedIndex = 3;			//¶¨Î»µ½Ä³¸öÑ¡ÏîÉÏ
+	//è¿™ä¸ªå®šä½æ˜¯å¿…é¡»åœ¨selectå¯¹è±¡ä¸Š
+	//city.selectedIndex = 3;			//å®šä½åˆ°æŸä¸ªé€‰é¡¹ä¸Š
 	
-	//Õâ¸ö¶¨Î»ÊÇ±ØĞëÔÚoption¶ÔÏóÉÏ
-	//city.options[1].selected = true;		//¶¨Î»ÔÚÄ³¸öÑ¡ÏîÉÏ
+	//è¿™ä¸ªå®šä½æ˜¯å¿…é¡»åœ¨optionå¯¹è±¡ä¸Š
+	//city.options[1].selected = true;		//å®šä½åœ¨æŸä¸ªé€‰é¡¹ä¸Š
 	
 	addEvent(city, 'change', function () {
 		if (this.options[2].selected) {
-			alert('ÕıÈ·£¡');
+			alert('æ­£ç¡®ï¼');
 		} else {
-			alert('´íÎó£¡');
+			alert('é”™è¯¯ï¼');
 		}
 	});
 	
-	//±ê×¼DOMÌí¼Ó·½·¨
+	//æ ‡å‡†DOMæ·»åŠ æ–¹æ³•
 	//var option = document.createElement('option');
-	//var text = document.createTextNode('±±¾©t');
+	//var text = document.createTextNode('åŒ—äº¬t');
 	//option.appendChild(text);
-	//option.setAttribute('value', '±±¾©v');
+	//option.setAttribute('value', 'åŒ—äº¬v');
 	//city.appendChild(option);
 	
-	//Ê¹ÓÃOption¹¹Ôìº¯ÊıÌí¼Ó
-	//var option = new Option('±±¾©t', '±±¾©v');
-	//city.appendChild(option);		IE²»¼æÈİ
-	//city.add(option, 0);			//0·ÇIEä¯ÀÀÆ÷»á²»¼æÈİ
+	//ä½¿ç”¨Optionæ„é€ å‡½æ•°æ·»åŠ 
+	//var option = new Option('åŒ—äº¬t', 'åŒ—äº¬v');
+	//city.appendChild(option);		IEä¸å…¼å®¹
+	//city.add(option, 0);			//0éIEæµè§ˆå™¨ä¼šä¸å…¼å®¹
 	//city.add(option,null);
-	//null±íÊ¾²»´æÔÚµÄÎ»ÖÃ£¬µ«±¾Éí´æÔÚ
+	//nullè¡¨ç¤ºä¸å­˜åœ¨çš„ä½ç½®ï¼Œä½†æœ¬èº«å­˜åœ¨
 	
-	//city.add(option,undefined);	//×î¼Ñ¼æÈİ·½°¸
+	//city.add(option,undefined);	//æœ€ä½³å…¼å®¹æ–¹æ¡ˆ
 	
 	
 	//city.removeChild(city.options[0]);
@@ -79,7 +79,7 @@ addEvent(window, 'load', function () {
 	//alert(city.selectedIndex);
 	//alert(city.options[0].index);
 	
-	var option1 = city.options[2];		//µÃµ½µÄÊÇÄÏ¾©¶ÔÏó
+	var option1 = city.options[2];		//å¾—åˆ°çš„æ˜¯å—äº¬å¯¹è±¡
 	city.insertBefore(option1, city.options[option1.index - 1]);
 	
 });

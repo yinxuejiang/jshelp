@@ -1,32 +1,32 @@
 /*
 	var box = document.getElementById('box');
-	alert(box.innerHTML);									//»ñÈ¡µ±Ç°ÔªËØ½ÚµãµÄÎÄ±¾ÄÚÈİ(°üº¬HTML)
+	alert(box.innerHTML);									//è·å–å½“å‰å…ƒç´ èŠ‚ç‚¹çš„æ–‡æœ¬å†…å®¹(åŒ…å«HTML)
 */
 
 /*	
 	var box = document.getElementById('box');
-	box.innerHTML = 'Íæ×ª<strong>JS</strong>';	//¸³Öµ£¬¿ÉÒÔ½âÎöHTML£¬²»ÊÇµ¥´¿µÄÎÄ±¾ÁË(°üº¬ÁËHTML)
+	box.innerHTML = 'ç©è½¬<strong>JS</strong>';	//èµ‹å€¼ï¼Œå¯ä»¥è§£æHTMLï¼Œä¸æ˜¯å•çº¯çš„æ–‡æœ¬äº†(åŒ…å«äº†HTML)
 */
 
 /*	
 	var box = document.getElementById('box');
-	box.id = 'kkk';		//Ö±½Óµ÷ÓÃµÄÊôĞÔÒ²¿ÉÒÔ¸³Öµ
+	box.id = 'kkk';		//ç›´æ¥è°ƒç”¨çš„å±æ€§ä¹Ÿå¯ä»¥èµ‹å€¼
 */
 
 /*	
-	var li = document.getElementsByTagName('li');		//²ÎÊı´«µİÒ»¸ö±êÇ©Ãû¼´¿É
-	//alert(li);			//·µ»ØÒ»¸öÊı×é¼¯ºÏ£¬HTMLCollection
-	//alert(li.length);	//·µ»ØliÊı×éµÄÊıÁ¿
-	//alert(li[0]);		//HTMLLIElement£¬liµÄ½Úµã¶ÔÏó
-	//alert(li.item(0));	//Í¬ÉÏ£¬ÒâÒåÒ»ÖÂ¡£HTMLLIElement
+	var li = document.getElementsByTagName('li');		//å‚æ•°ä¼ é€’ä¸€ä¸ªæ ‡ç­¾åå³å¯
+	//alert(li);			//è¿”å›ä¸€ä¸ªæ•°ç»„é›†åˆï¼ŒHTMLCollection
+	//alert(li.length);	//è¿”å›liæ•°ç»„çš„æ•°é‡
+	//alert(li[0]);		//HTMLLIElementï¼Œliçš„èŠ‚ç‚¹å¯¹è±¡
+	//alert(li.item(0));	//åŒä¸Šï¼Œæ„ä¹‰ä¸€è‡´ã€‚HTMLLIElement
 	//alert(li[0].tagName);	//LI
 	//alert(li[0].innerHTML);	//1
 */
 
 /*	
-	»ñÈ¡body½Úµã¶ÔÏó
+	è·å–bodyèŠ‚ç‚¹å¯¹è±¡
 	var body = document.getElementsByTagName('body')[0];
-	//alert(body);				//·µ»Ø HTMLBodyElement¶ÔÏó£¬body½Úµã
+	//alert(body);				//è¿”å› HTMLBodyElementå¯¹è±¡ï¼ŒbodyèŠ‚ç‚¹
 */
 
 /*	
@@ -35,10 +35,10 @@
 */
 
 /*	
-	//»ğºüä¯ÀÀÆ÷µÄfirebug´ò¿ªºó£¬»á×Ô¶¯´´½¨Ò»¸ödiv£¬ËùÒÔ»á¶àËãÒ»¸ö
+	//ç«ç‹æµè§ˆå™¨çš„firebugæ‰“å¼€åï¼Œä¼šè‡ªåŠ¨åˆ›å»ºä¸€ä¸ªdivï¼Œæ‰€ä»¥ä¼šå¤šç®—ä¸€ä¸ª
 	
 	alert(all[0].tagName);
-	//IEä¯ÀÀÆ÷±È»ğºüºÍ¹È¸è¶àÒ»¸ö½Úµã£¬ÊÇ°Ñ<!µÄÎÄµµÉùÃ÷Ò²Ëã½øÈ¥ÁË
+	//IEæµè§ˆå™¨æ¯”ç«ç‹å’Œè°·æ­Œå¤šä¸€ä¸ªèŠ‚ç‚¹ï¼Œæ˜¯æŠŠ<!çš„æ–‡æ¡£å£°æ˜ä¹Ÿç®—è¿›å»äº†
 	
 	//alert(all[0].innerHTML);
 */
@@ -49,8 +49,8 @@
 */
 
 /*	
-	//IEä¯ÀÀÆ÷ÔÚ»ñÈ¡²»ºÏ·¨µÄHTMLÖĞµÄnameÊ±£¬»á»ñÈ¡²»µ½
-	//Ò²¾ÍÊÇËµname ÊôĞÔ±¾Éí²»ÊÇdivÀïµÄÊôĞÔ£¬ËùÒÔIE¾ÍºöÂÔµôÁË
+	//IEæµè§ˆå™¨åœ¨è·å–ä¸åˆæ³•çš„HTMLä¸­çš„nameæ—¶ï¼Œä¼šè·å–ä¸åˆ°
+	//ä¹Ÿå°±æ˜¯è¯´name å±æ€§æœ¬èº«ä¸æ˜¯divé‡Œçš„å±æ€§ï¼Œæ‰€ä»¥IEå°±å¿½ç•¥æ‰äº†
 	
 	
 	var input = document.getElementsByName('test')[0];
@@ -59,21 +59,21 @@
 */
 
 /*	
-	//inputÖĞÓĞºÏ·¨µÄnameÊôĞÔ£¬ËùÒÔ£¬IEÒ²¾ÍÖ§³ÖÁË¡£
+	//inputä¸­æœ‰åˆæ³•çš„nameå±æ€§ï¼Œæ‰€ä»¥ï¼ŒIEä¹Ÿå°±æ”¯æŒäº†ã€‚
 	var box = document.getElementById('box');
-	alert(box.bbb);		//×Ô¶¨Òå£¬W3C²»ºÏ·¨£¬·ÇIE²»Ö§³Ö£¬µ«IEÖ§³Ö
+	alert(box.bbb);		//è‡ªå®šä¹‰ï¼ŒW3Cä¸åˆæ³•ï¼ŒéIEä¸æ”¯æŒï¼Œä½†IEæ”¯æŒ
 */
 
 /*	
-	alert(box.getAttribute('style'));		//·ÇIE·µ»ØµÄÊÇstyle×Ö·û´®£¬IE·µ»ØµÄÊÇ¶ÔÏó£¬ÕâÀïÓĞ¸ö²»¼æÈİ
-	alert(box.getAttribute('bbb'));	//×Ô¶¨Òå£¬¾ÍÈ«²¿¼æÈİÁË
+	alert(box.getAttribute('style'));		//éIEè¿”å›çš„æ˜¯styleå­—ç¬¦ä¸²ï¼ŒIEè¿”å›çš„æ˜¯å¯¹è±¡ï¼Œè¿™é‡Œæœ‰ä¸ªä¸å…¼å®¹
+	alert(box.getAttribute('bbb'));	//è‡ªå®šä¹‰ï¼Œå°±å…¨éƒ¨å…¼å®¹äº†
 	//alert(box.className);
-	//alert(box.getAttribute('class'));		//IEÎŞ·¨»ñÈ¡
-	//alert(box.getAttribute('className'));//IE¿ÉÒÔ»ñÈ¡£¬·ÇIEÎŞ·¨»ñÈ¡
+	//alert(box.getAttribute('class'));		//IEæ— æ³•è·å–
+	//alert(box.getAttribute('className'));//IEå¯ä»¥è·å–ï¼ŒéIEæ— æ³•è·å–
 */
 
 /*	
-	//¿çä¯ÀÀÆ÷»ñÈ¡className
+	//è·¨æµè§ˆå™¨è·å–className
 	if (box.getAttribute('className') == null) {
 		alert(box.getAttribute('class'));
 	} else {
@@ -83,15 +83,15 @@
 
 /*	
 	var box = document.getElementById('box');
-	//alert(box.onclick); //¾ù·µ»Øº¯ÊıÊ½
-	alert(box.getAttribute('onclick'));	//IE7¼°Ò»ÏÂ»á·µ»Øº¯ÊıÊ½£¬·ÇIE·µ»Ø×Ö·û´®
+	//alert(box.onclick); //å‡è¿”å›å‡½æ•°å¼
+	alert(box.getAttribute('onclick'));	//IE7åŠä¸€ä¸‹ä¼šè¿”å›å‡½æ•°å¼ï¼ŒéIEè¿”å›å­—ç¬¦ä¸²
 */
 
 /*	
-	//box.setAttribute('title', '±êÌâ');		//´´½¨Ò»¸öÊôĞÔºÍÊôĞÔÖµ
+	//box.setAttribute('title', 'æ ‡é¢˜');		//åˆ›å»ºä¸€ä¸ªå±æ€§å’Œå±æ€§å€¼
 	//box.setAttribute('align', 'center');
 	//box.setAttribute('bbb', 'cccc');
-	box.setAttribute('style', 'color:green');		//IE7¼°ÒÔÏÂ£¬styleºÍonclickÃ»ÓĞĞ§¹û£¬±ÜÃâÊ¹ÓÃ
+	box.setAttribute('style', 'color:green');		//IE7åŠä»¥ä¸‹ï¼Œstyleå’Œonclickæ²¡æœ‰æ•ˆæœï¼Œé¿å…ä½¿ç”¨
 */
 
 /*	

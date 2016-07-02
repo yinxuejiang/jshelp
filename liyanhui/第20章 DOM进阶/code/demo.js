@@ -1,21 +1,21 @@
 
 /*
-		//alert(Node);				//object Node,IE²»Ö§³Ö
-	//if (xxx.nodeType === 1) //±íÊ¾ÅĞ¶ÏÔªËØ½Úµã
-	//if (xxx.nodeType === 3) //±íÊ¾ÅĞ¶ÏÎÄ±¾½Úµã
-	//alert(Node.ELEMENT_NODE);	//±íÊ¾ÔªËØ½ÚµãµÄÀàĞÍÖµ
-	//alert(Node.TEXT_NODE);		//±íÊ¾ÎÄ±¾½ÚµãµÄÀàĞÍÖµ
+		//alert(Node);				//object Node,IEä¸æ”¯æŒ
+	//if (xxx.nodeType === 1) //è¡¨ç¤ºåˆ¤æ–­å…ƒç´ èŠ‚ç‚¹
+	//if (xxx.nodeType === 3) //è¡¨ç¤ºåˆ¤æ–­æ–‡æœ¬èŠ‚ç‚¹
+	//alert(Node.ELEMENT_NODE);	//è¡¨ç¤ºå…ƒç´ èŠ‚ç‚¹çš„ç±»å‹å€¼
+	//alert(Node.TEXT_NODE);		//è¡¨ç¤ºæ–‡æœ¬èŠ‚ç‚¹çš„ç±»å‹å€¼
 	
 	//if (xxx.nodeType === Node.ELEMENT_NODE)
 	//if (xxx.nodeType === Node.TEXT_NODE)
 	
-	//if (xxx.nodeType === ÔªËØ)
-	//if (xxx.nodeType === ÎÄ±¾)
+	//if (xxx.nodeType === å…ƒç´ )
+	//if (xxx.nodeType === æ–‡æœ¬)
 	
-	//Í¨¹ıÓ¢ÎÄ³£Á¿À´´úÌæ°¢À­²®Êı×Ö£¬Ê¹µÃÅĞ¶Ï¸ü¼ÓµÄÇåÎú
+	//é€šè¿‡è‹±æ–‡å¸¸é‡æ¥ä»£æ›¿é˜¿æ‹‰ä¼¯æ•°å­—ï¼Œä½¿å¾—åˆ¤æ–­æ›´åŠ çš„æ¸…æ™°
 	
 	if (typeof Node == 'undefined') {
-	//´´½¨Ò»¸öÈ«¾ÖNode
+	//åˆ›å»ºä¸€ä¸ªå…¨å±€Node
 		window.Node = {
 			ELEMENT_NODE : 1,
 			TEXT_NODE : 3
@@ -31,12 +31,12 @@
 	//alert(document.nodeType);	//9
 	//alert(document.nodeValue);	//null
 	//alert(document.nodeName);	//#document
-	//alert(document.childNodes[0]);	//DocumentType£¬IEÀí½âÎª×¢ÊÍ
-	//alert(document.childNodes[0].nodeType);	//10£¬IEÎª8
+	//alert(document.childNodes[0]);	//DocumentTypeï¼ŒIEç†è§£ä¸ºæ³¨é‡Š
+	//alert(document.childNodes[0].nodeType);	//10ï¼ŒIEä¸º8
 	//alert(document.childNodes[0].nodeName);
 	
-	//»ğºüÎªHTML£¬¹È¸èÎªhtml£¬IEÎª#comment
-	//»ğºüĞÂ°æ±¾Îªhtml
+	//ç«ç‹ä¸ºHTMLï¼Œè°·æ­Œä¸ºhtmlï¼ŒIEä¸º#comment
+	//ç«ç‹æ–°ç‰ˆæœ¬ä¸ºhtml
 	
 	//alert(document.childNodes[1]);	//HTMLHtmlElement
 	//alert(document.childNodes[1].nodeType);	//1
@@ -44,9 +44,9 @@
 	
 	
 	//alert(document.documentElement);	//HTMLHtmlElement
-	//alert(document.body.nodeName);		//»ñÈ¡Body
+	//alert(document.body.nodeName);		//è·å–Body
 	
-	//alert(document.doctype);			//DocumentType,	IE»áÏÔÊ¾null
+	//alert(document.doctype);			//DocumentType,	IEä¼šæ˜¾ç¤ºnull
 	
 	//alert(document.title);
 	//document.title = 'box';
@@ -60,13 +60,13 @@
 	var text2 = document.createTextNode('Lee');
 	box.appendChild(text1);
 	box.appendChild(text2);
-	//box.normalize();					//ºÏ²¢Í¬Ò»¼¶±ğµÄÎÄ±¾½Úµã
+	//box.normalize();					//åˆå¹¶åŒä¸€çº§åˆ«çš„æ–‡æœ¬èŠ‚ç‚¹
 	//alert(box.childNodes.length);
 	alert(box.childNodes[0].nodeValue);
 	
 	
 	var box = document.getElementById('box');
-	box.childNodes[0].splitText(3);					//°ÑÇ°Èı¸ö×Ö·û·ÖÀë³ÉĞÂ½Úµã
+	box.childNodes[0].splitText(3);					//æŠŠå‰ä¸‰ä¸ªå­—ç¬¦åˆ†ç¦»æˆæ–°èŠ‚ç‚¹
 	alert(box.childNodes[0].nodeValue);
 	
 	
@@ -80,8 +80,8 @@
 	//var box = document.getElementById('box');
 	//alert(box.firstChild);			//Comment
 	//alert(box.firstChild.nodeType);		//8
-	//alert(box.firstChild.nodeValue);		//ÎÒÊÇ×¢ÊÍ
-	var c = document.getElementsByTagName('!');		//IEÖ§³Ö£¬ÆäËû²»Ö§³Ö
+	//alert(box.firstChild.nodeValue);		//æˆ‘æ˜¯æ³¨é‡Š
+	var c = document.getElementsByTagName('!');		//IEæ”¯æŒï¼Œå…¶ä»–ä¸æ”¯æŒ
 	alert(c[1].nodeValue);
 */
 

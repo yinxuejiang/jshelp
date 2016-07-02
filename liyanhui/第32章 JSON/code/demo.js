@@ -1,5 +1,5 @@
 /*
-//JSON¼òµ¥Öµ
+//JSONç®€å•å€¼
 10
 "hello"
 true
@@ -7,7 +7,7 @@ null
 */
 
 /*
-//¶ÔÏó±íÊ¾
+//å¯¹è±¡è¡¨ç¤º
 var box = {
 	name : 'Lee', 
 	age : 100
@@ -16,7 +16,7 @@ alert(box.name);
 */
 
 /*
-//JSON¶ÔÏó±íÊ¾
+//JSONå¯¹è±¡è¡¨ç¤º
 {
 	"name" : "Lee",
 	"age" : 100
@@ -24,22 +24,22 @@ alert(box.name);
 */
 
 /*
-//ÆÕÍ¨Êý×é
+//æ™®é€šæ•°ç»„
 var box = [100, 'Lee', true];
 */
 
 /*
-//JSONÊý×é
+//JSONæ•°ç»„
 '[100, "Lee", true]'
 */
 
 /*
-//PS£ºJSONËµ°×ÁË¾ÍÊÇÒ»¸ö×Ö·û´®£¬ËùÒÔÈÎºÎ±íÊ¾£¬¶¼Ó¦¸Ã¼ÓÉÏÒýºÅ±íÊ¾×Ö·û´®
-//PS£ºJSON¶ÔÏóºÍÊý×é±ÈÆÕÍ¨¶ÔÏóºÍÊý×é£¬ÉÙÁË·ÖºÅ£¬ÉÙÁË±äÁ¿¸³Öµ£¬¶øÇÒ±¾ÉíÓ¦¸ÃÊÇ×Ö·û´®±íÊ¾
+//PSï¼šJSONè¯´ç™½äº†å°±æ˜¯ä¸€ä¸ªå­—ç¬¦ä¸²ï¼Œæ‰€ä»¥ä»»ä½•è¡¨ç¤ºï¼Œéƒ½åº”è¯¥åŠ ä¸Šå¼•å·è¡¨ç¤ºå­—ç¬¦ä¸²
+//PSï¼šJSONå¯¹è±¡å’Œæ•°ç»„æ¯”æ™®é€šå¯¹è±¡å’Œæ•°ç»„ï¼Œå°‘äº†åˆ†å·ï¼Œå°‘äº†å˜é‡èµ‹å€¼ï¼Œè€Œä¸”æœ¬èº«åº”è¯¥æ˜¯å­—ç¬¦ä¸²è¡¨ç¤º
 */
 
 /*
-//×î³£ÓÃµÄJSON½á¹¹
+//æœ€å¸¸ç”¨çš„JSONç»“æž„
 [
 	{
 		"title" : "a",
@@ -57,16 +57,16 @@ var box = [100, 'Lee', true];
 */
 
 /*
-//Ä£Äâ¼ÓÔØJSONÊý¾Ý×Ö·û´®µÄ¹ý³Ì£¬var json = load('demo.json');		//°ÑJSON×Ö·û´®¼ÓÔØ½øÀ´²¢ÇÒ¸³Öµ¸øjson±äÁ¿
-var json = '[{"title" : "a", "num" : 1},{"title" : "b", "num" : 2}]';		//Ä£Äâ¼ÓÔØJSON×Ö·û´®µÄ¹ý³Ì
+//æ¨¡æ‹ŸåŠ è½½JSONæ•°æ®å­—ç¬¦ä¸²çš„è¿‡ç¨‹ï¼Œvar json = load('demo.json');		//æŠŠJSONå­—ç¬¦ä¸²åŠ è½½è¿›æ¥å¹¶ä¸”èµ‹å€¼ç»™jsonå˜é‡
+var json = '[{"title" : "a", "num" : 1},{"title" : "b", "num" : 2}]';		//æ¨¡æ‹ŸåŠ è½½JSONå­—ç¬¦ä¸²çš„è¿‡ç¨‹
 //alert(typeof json);
 */
 
 /*
-//Ê¹ÓÃeval()À´Ö´ÐÐ×Ö·û´®ÀïµÄJS´úÂë
-var box = eval(json);			//½âÎöJSON×Ö·û´®£¬ÈÃËû±ä³ÉJavaScript´úÂë
+//ä½¿ç”¨eval()æ¥æ‰§è¡Œå­—ç¬¦ä¸²é‡Œçš„JSä»£ç 
+var box = eval(json);			//è§£æžJSONå­—ç¬¦ä¸²ï¼Œè®©ä»–å˜æˆJavaScriptä»£ç 
 alert(box[1].title);
-//PS£ºeval()²»°²È«
+//PSï¼ševal()ä¸å®‰å…¨
 */
 
 /*
@@ -131,8 +131,8 @@ var json = JSON.stringify(box, function (key, value) {
 alert(json);
 
 
-//PS£º»ðºü3.5ºÍ3.6ÔÚ×î³õÖ§³ÖJSONµÄÊ±ºòstringify·½·¨ÓÐ¸öÐ¡BUG£¬Ö´ÐÐfunction»á³ö´í
-//PS£ºÏÖÔÚ»ðºüµÄ°æ±¾ÊÇ17.0£¬ËùÒÔ3.5ºÍ3.6µÄÊÐ³¡·Ý¶î¿ÉÒÔºöÂÔ²»¼Æ£¬Ã»±ØÒªµ¥¶À¼æÈÝ
+//PSï¼šç«ç‹3.5å’Œ3.6åœ¨æœ€åˆæ”¯æŒJSONçš„æ—¶å€™stringifyæ–¹æ³•æœ‰ä¸ªå°BUGï¼Œæ‰§è¡Œfunctionä¼šå‡ºé”™
+//PSï¼šçŽ°åœ¨ç«ç‹çš„ç‰ˆæœ¬æ˜¯17.0ï¼Œæ‰€ä»¥3.5å’Œ3.6çš„å¸‚åœºä»½é¢å¯ä»¥å¿½ç•¥ä¸è®¡ï¼Œæ²¡å¿…è¦å•ç‹¬å…¼å®¹
 */
 
 /*

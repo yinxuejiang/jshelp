@@ -7,7 +7,7 @@
 
 
 /*
-	//¼ì²âÊÇ·ñÖ§³ÖsheetÑùÊ½±í£¬Á´½ÓÊ½ÄÚÁªÊ½
+	//æ£€æµ‹æ˜¯å¦æ”¯æŒsheetæ ·å¼è¡¨ï¼Œé“¾æ¥å¼å†…è”å¼
 	//alert(document.implementation.hasFeature('styleSheets', '2.0'));
 	
 	var link = document.getElementsByTagName('link')[0];
@@ -15,22 +15,22 @@
 	
 	
 	//alert(link);				//HTMLLinkElement
-	//var sheet = link.sheet;		//CSSStyleSheet£¬±íÊ¾Á´½ÓµÄcssÑùÊ½±í¶ÔÏó
+	//var sheet = link.sheet;		//CSSStyleSheetï¼Œè¡¨ç¤ºé“¾æ¥çš„cssæ ·å¼è¡¨å¯¹è±¡
 	
 	//alert(sheet);
 	
-	//ÎªÁË¼æÈİIE
+	//ä¸ºäº†å…¼å®¹IE
 	//var sheet = link.sheet || link.styleSheet;
 
 	//alert(sheet);
 	
-		//¸ü¼Ó¼ò±ãµÄ»ñÈ¡sheetµÄ·½·¨
+		//æ›´åŠ ç®€ä¾¿çš„è·å–sheetçš„æ–¹æ³•
 	
-	//document.styleSheetsµÃµ½µÄÊÇStyleSheetList¼¯ºÏ
+	//document.styleSheetså¾—åˆ°çš„æ˜¯StyleSheetListé›†åˆ
 	
-	var sheet = document.styleSheets[0];		//Õâ¸öÊôĞÔ£¬ËùÓĞä¯ÀÀÆ÷¶¼¼æÈİµÄ
+	var sheet = document.styleSheets[0];		//è¿™ä¸ªå±æ€§ï¼Œæ‰€æœ‰æµè§ˆå™¨éƒ½å…¼å®¹çš„
 	
-	//alert(sheet.disabled = true);		//½ûÓÃ
+	//alert(sheet.disabled = true);		//ç¦ç”¨
 	
 	//alert(sheet.href);
 	
@@ -40,45 +40,45 @@
 	
 	
 	var sheet = document.styleSheets[0];	
-	//alert(sheet.cssRules);			//CSSRuleList£¬ÊÇÑùÊ½¹æÔò¼¯ºÏ
+	//alert(sheet.cssRules);			//CSSRuleListï¼Œæ˜¯æ ·å¼è§„åˆ™é›†åˆ
 	
-	//ÑùÊ½µÄ¹æÔò¾ÍÊÇ£¬Ò»ÈºÑùÊ½µÄ¼¯ºÏ±íÊ¾Ò»¸ö¹æÔò
+	//æ ·å¼çš„è§„åˆ™å°±æ˜¯ï¼Œä¸€ç¾¤æ ·å¼çš„é›†åˆè¡¨ç¤ºä¸€ä¸ªè§„åˆ™
 	
-	//alert(sheet.cssRules[0]);			//CSSStyleRule, µÃµ½µÚÒ»¸ö¹æÔò
-	//alert(sheet.cssRules[0].cssText);	//µÃµ½µÚÒ»¸ö¹æÔòµÄCSSÎÄ±¾
-	//alert(sheet.cssRules[0].selectorText);	//µÃµ½µÚÒ»¸ö¹æÔòµÄÑ¡Ôñ·û	
+	//alert(sheet.cssRules[0]);			//CSSStyleRule, å¾—åˆ°ç¬¬ä¸€ä¸ªè§„åˆ™
+	//alert(sheet.cssRules[0].cssText);	//å¾—åˆ°ç¬¬ä¸€ä¸ªè§„åˆ™çš„CSSæ–‡æœ¬
+	//alert(sheet.cssRules[0].selectorText);	//å¾—åˆ°ç¬¬ä¸€ä¸ªè§„åˆ™çš„é€‰æ‹©ç¬¦	
 	
-	//sheet.deleteRule(0);		//É¾³ıµÚÒ»Ìõ¹æÔò
+	//sheet.deleteRule(0);		//åˆ é™¤ç¬¬ä¸€æ¡è§„åˆ™
 	
-	//sheet.insertRule('body {background-color:red}', 0);		//Ìí¼ÓÒ»Ìõ¹æÔòÔÚµÚÒ»¸öÎ»ÖÃÉÏ
+	//sheet.insertRule('body {background-color:red}', 0);		//æ·»åŠ ä¸€æ¡è§„åˆ™åœ¨ç¬¬ä¸€ä¸ªä½ç½®ä¸Š
 	
-	//·ÇIE»ñÈ¡Rules
+	//éIEè·å–Rules
 	//sheet.cssRules
-	//IE»ñÈ¡Rules
+	//IEè·å–Rules
 	//alert(sheet.rules);
 	
-	//·ÇIEÉ¾³ıµÚÒ»Ìõ¹æÔò
+	//éIEåˆ é™¤ç¬¬ä¸€æ¡è§„åˆ™
 	//sheet.deleteRule(0);
-	//IEÉ¾³ıµÚÒ»Ìõ¹æÔò
+	//IEåˆ é™¤ç¬¬ä¸€æ¡è§„åˆ™
 	//sheet.removeRule(0);
 	
-	//·ÇIEÌí¼ÓÒ»Ìõ¹æÔò
+	//éIEæ·»åŠ ä¸€æ¡è§„åˆ™
 	//sheet.insertRule('body {background-color:red}', 0);	
-	//IEÌí¼ÓÒ»Ìõ¹æÔò
+	//IEæ·»åŠ ä¸€æ¡è§„åˆ™
 	//sheet.addRule('body', 'background-color:red', 0);
 	
 	
-	// ¿çä¯ÀÀÆ÷¼æÈİ»ñÈ¡rules
+	// è·¨æµè§ˆå™¨å…¼å®¹è·å–rules
 	//var rules = sheet.cssRules || sheet.rules;
 	//alert(rules);
 	
-	//¿çä¯ÀÀÆ÷¼æÈİÉ¾³ıµÚÒ»Ìõ¹æÔò
+	//è·¨æµè§ˆå™¨å…¼å®¹åˆ é™¤ç¬¬ä¸€æ¡è§„åˆ™
 	//deleteRule(sheet, 0);
 	
-	//¿çä¯ÀÀÆ÷¼æÈİÌí¼ÓµÚÒ»Ìõ¹æÔò
+	//è·¨æµè§ˆå™¨å…¼å®¹æ·»åŠ ç¬¬ä¸€æ¡è§„åˆ™
 	insertRule(sheet, 'body', 'background-color:red', 0);
 	
-	//¿çä¯ÀÀÆ÷¼æÈİÌí¼ÓµÚÒ»Ìõ¹æÔò
+	//è·¨æµè§ˆå™¨å…¼å®¹æ·»åŠ ç¬¬ä¸€æ¡è§„åˆ™
 	function insertRule(sheet, selectorText, cssText, position) {
 		if (sheet.insertRule) {
 			sheet.insertRule(selectorText + ' { ' + cssText + ' }', position);	
@@ -88,7 +88,7 @@
 	}
 
 
-	//¿çä¯ÀÀÆ÷¼æÈİÉ¾³ıµÚÒ»Ìõ¹æÔò
+	//è·¨æµè§ˆå™¨å…¼å®¹åˆ é™¤ç¬¬ä¸€æ¡è§„åˆ™
 	function deleteRule(sheet, position) {
 		if (sheet.deleteRule) {
 			sheet.deleteRule(position);

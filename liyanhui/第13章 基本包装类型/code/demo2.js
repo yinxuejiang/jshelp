@@ -1,48 +1,48 @@
 /*
 var box = 'Mr. Lee';
-alert(box.length);					//ÊôĞÔ
+alert(box.length);					//å±æ€§
 alert(box.constructor);
 */
 
 /*								
 var box = 'Mr. Lee';
 //alert(box.charAt(1));				//r
-//alert(box.charCodeAt(4));			//L£¬·µ»ØµÄÊÇacssiiÂë
+//alert(box.charCodeAt(4));			//Lï¼Œè¿”å›çš„æ˜¯acssiiç 
 //alert(box[1]);
-//alert(box.concat(' is ', ' Teacher ', '!')); //²ÎÊı×Ö·û´®Á¬½Ó
+//alert(box.concat(' is ', ' Teacher ', '!')); //å‚æ•°å­—ç¬¦ä¸²è¿æ¥
 //alert(box.slice(4, 6));				//Le
 //alert(box.substring(4, 6));		//Le
-//alert(box.substr(4,6));				//´ÓµÚËÄ¸ö¿ªÊ¼£¬Ñ¡6¸ö
+//alert(box.substr(4,6));				//ä»ç¬¬å››ä¸ªå¼€å§‹ï¼Œé€‰6ä¸ª
 //alert(box.substr(4,2));				//Le
 //alert(box.slice(4));
 //alert(box.substring(4));
-//alert(box.substr(4));					//Èı¸ö¶¼ÊÇLee
+//alert(box.substr(4));					//ä¸‰ä¸ªéƒ½æ˜¯Lee
 */
 
 /*								
-//alert(box.slice(-2));					//7+(-2)=5, µÚ5Î»¿ªÊ¼£¬ee
-//alert(box.substring(-2));			//¸ºÊı·µ»ØÈ«²¿×Ö·û´®£¬Mr. Lee
-//alert(box.substr(-2));				//7+(-2)=5, µÚ5Î»¿ªÊ¼£¬ee
+//alert(box.slice(-2));					//7+(-2)=5, ç¬¬5ä½å¼€å§‹ï¼Œee
+//alert(box.substring(-2));			//è´Ÿæ•°è¿”å›å…¨éƒ¨å­—ç¬¦ä¸²ï¼ŒMr. Lee
+//alert(box.substr(-2));				//7+(-2)=5, ç¬¬5ä½å¼€å§‹ï¼Œee
 */
 
 /*								
-//alert(box.slice(2,-1));				//7+(-1)=6£¬(2,6)£¬. Le
-//alert(box.slice(-2,-1));				//7+(-2)=5, 7+(-1)=6£¬(5,6)£¬e
-//alert(box.substring(2,-1));			//²ÎÊıÈç¹ûÊÇ¸º£¬Ö±½Ó0£¬(2,0); Èç¹ûµÚ¶ş¸ö²ÎÊı±ÈµÚÒ»¸öĞ¡£¬ÄÇÃ´µÚ¶ş¸ö²ÎÊıÌáÇ°£¬(0,2)
-//alert(box.substr(2, -1));			//µÚ¶ş²ÎÊıÎª¸º£¬Ö±½Ó0£¬(2,0)£¬¿Õ
+//alert(box.slice(2,-1));				//7+(-1)=6ï¼Œ(2,6)ï¼Œ. Le
+//alert(box.slice(-2,-1));				//7+(-2)=5, 7+(-1)=6ï¼Œ(5,6)ï¼Œe
+//alert(box.substring(2,-1));			//å‚æ•°å¦‚æœæ˜¯è´Ÿï¼Œç›´æ¥0ï¼Œ(2,0); å¦‚æœç¬¬äºŒä¸ªå‚æ•°æ¯”ç¬¬ä¸€ä¸ªå°ï¼Œé‚£ä¹ˆç¬¬äºŒä¸ªå‚æ•°æå‰ï¼Œ(0,2)
+//alert(box.substr(2, -1));			//ç¬¬äºŒå‚æ•°ä¸ºè´Ÿï¼Œç›´æ¥0ï¼Œ(2,0)ï¼Œç©º
 */
 
 /*								
-//alert(box.substr(-2));				//IEä¯ÀÀÆ÷»áÓöµ½¸ºÖµ»áÈ«²¿·µ»Ø
+//alert(box.substr(-2));				//IEæµè§ˆå™¨ä¼šé‡åˆ°è´Ÿå€¼ä¼šå…¨éƒ¨è¿”å›
 */
 
 /*								
 var box = 'Mr. Lee is Lee a Lee a Lee';
-//alert(box.indexOf('L'));				//·µ»Ø´Ó³õÊ¼Î»ÖÃËÑË÷LµÚÒ»´Î³öÏÖµÄÎ»ÖÃ£¬4
-//alert(box.lastIndexOf('L'));		//·µ»Ø´ÓÄ©Î²Î»ÖÃËÑË÷LµÚÒ»´Î³öÏÖµÄÎ»ÖÃ£¬11
-//alert(box.indexOf('L',5));			//´ÓµÚ5¸öÎ»ÖÃ¿ªÊ¼ËÑË÷LµÚÒ»´Î³öÏÖµÄÎ»ÖÃ£¬11
-//alert(box.lastIndexOf('L',5));		//´ÓµÚ5¸öÎ»ÖÃ¿ªÊ¼ÏòÇ°ËÑË÷LµÚÒ»´Î³öÏÖµÄÎ»ÖÃ£¬4
-//alert(box.indexOf(','));				//ÕÒ²»µ½£¬·µ»Ø-1
+//alert(box.indexOf('L'));				//è¿”å›ä»åˆå§‹ä½ç½®æœç´¢Lç¬¬ä¸€æ¬¡å‡ºç°çš„ä½ç½®ï¼Œ4
+//alert(box.lastIndexOf('L'));		//è¿”å›ä»æœ«å°¾ä½ç½®æœç´¢Lç¬¬ä¸€æ¬¡å‡ºç°çš„ä½ç½®ï¼Œ11
+//alert(box.indexOf('L',5));			//ä»ç¬¬5ä¸ªä½ç½®å¼€å§‹æœç´¢Lç¬¬ä¸€æ¬¡å‡ºç°çš„ä½ç½®ï¼Œ11
+//alert(box.lastIndexOf('L',5));		//ä»ç¬¬5ä¸ªä½ç½®å¼€å§‹å‘å‰æœç´¢Lç¬¬ä¸€æ¬¡å‡ºç°çš„ä½ç½®ï¼Œ4
+//alert(box.indexOf(','));				//æ‰¾ä¸åˆ°ï¼Œè¿”å›-1
 
 var boxarr = [];
 var pos = box.indexOf('L');

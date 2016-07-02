@@ -12,8 +12,8 @@ var box = 'Lee';
 function setBox() {
 	return 123;
 }
-alert(window.box);						//È«¾Ö±äÁ¿£¬×îÍâÎ§£¬ÊôÓÚwindowÊôĞÔ
-alert(window.setBox());				//È«¾Öº¯Êı£¬×îÍâÎ§£¬ÊôÓÚwindow·½·¨
+alert(window.box);						//å…¨å±€å˜é‡ï¼Œæœ€å¤–å›´ï¼Œå±äºwindowå±æ€§
+alert(window.setBox());				//å…¨å±€å‡½æ•°ï¼Œæœ€å¤–å›´ï¼Œå±äºwindowæ–¹æ³•
 */
 
 /*
@@ -30,13 +30,13 @@ alert(xxx.setColor());
 /*
 var box = 'Lee';
 function setBox() {
-	var box = 'red';						//Õâ¸öÊÇ¾Ö²¿±äÁ¿£¬ËûµÄ·¶Î§ÔÚsetBox()Àï£¬³öÀ´¾Í²»ÈÏÊ¶ÁË
+	var box = 'red';						//è¿™ä¸ªæ˜¯å±€éƒ¨å˜é‡ï¼Œä»–çš„èŒƒå›´åœ¨setBox()é‡Œï¼Œå‡ºæ¥å°±ä¸è®¤è¯†äº†
 }
 setBox();
 alert(box);
 var box = 'Lee';
 function setBox() {
-	box = 'red';									//È¥µôvar¾Í±ä³ÉÈ«¾Ö±äÁ¿ÁË
+	box = 'red';									//å»æ‰varå°±å˜æˆå…¨å±€å˜é‡äº†
 }
 setBox();
 alert(box);
@@ -44,7 +44,7 @@ alert(box);
 
 /*
 var box = 'Lee';
-function setBox(box) {			//Í¨¹ı´«²Î£¬Ò²ÊÇ¾Ö²¿±äÁ¿£¬×÷ÓÃÓòÔÚsetBox()·¶Î§ÏÂ
+function setBox(box) {			//é€šè¿‡ä¼ å‚ï¼Œä¹Ÿæ˜¯å±€éƒ¨å˜é‡ï¼Œä½œç”¨åŸŸåœ¨setBox()èŒƒå›´ä¸‹
 	alert(box);
 }
 setBox('red');
@@ -55,8 +55,8 @@ alert(box);
 var box = 'Lee';
 function setBox() {
 	return setColor();
-	function setColor() {			//setColor()·½·¨µÄ×÷ÓÃÓòÔÚsetBox()ÄÚ
-		var b = 'kkk';					//bµÄ×÷ÓÃÓòÔÚsetColor()Àï
+	function setColor() {			//setColor()æ–¹æ³•çš„ä½œç”¨åŸŸåœ¨setBox()å†…
+		var b = 'kkk';					//bçš„ä½œç”¨åŸŸåœ¨setColor()é‡Œ
 		alert(b);
 		return 123;
 	}		
@@ -65,7 +65,7 @@ function setBox() {
 
 /*
 alert(window.setBox());
-if (true) {							//ifÓï¾äµÄ»¨À¨ºÅÃ»ÓĞ×÷ÓÃÓòµÄ¹¦ÄÜ
+if (true) {							//ifè¯­å¥çš„èŠ±æ‹¬å·æ²¡æœ‰ä½œç”¨åŸŸçš„åŠŸèƒ½
 	var box = 'Lee';
 }
 alert(window.box);
@@ -80,7 +80,7 @@ alert(window.box);
 /*
 var num = 0;
 function box() {
-	num = 10;					//Èç¹ûÓĞvar£¬ÔÚº¯ÊıÌåÄÚÉùÃ÷±äÁ¿£¬¾ÍÊÇ¾Ö²¿µÄ£¬È¥µôvar¾ÍÊÇÈ«¾Ö
+	num = 10;					//å¦‚æœæœ‰varï¼Œåœ¨å‡½æ•°ä½“å†…å£°æ˜å˜é‡ï¼Œå°±æ˜¯å±€éƒ¨çš„ï¼Œå»æ‰varå°±æ˜¯å…¨å±€
 }
 
 box();
@@ -101,7 +101,7 @@ alert(setBox());
 var box = {};
 box.name = 'Lee';
 alert(box.name);
-box = null;								//Ïú»ÙÒıÓÃ£¬µÈ´ıÀ¬»øÊÕ¼¯Æ÷À´ÇåÀí
+box = null;								//é”€æ¯å¼•ç”¨ï¼Œç­‰å¾…åƒåœ¾æ”¶é›†å™¨æ¥æ¸…ç†
 alert(box)
 */
 

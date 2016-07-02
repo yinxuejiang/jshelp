@@ -1,30 +1,30 @@
 /*
-	����ʵ�ʴ�С
+	滚动实际大小
 	alert(box.scrollWidth);
 	alert(box.scrollHeight);
 	
-	//IE�������ָ���ĸ߶��»�ȡscrollHeight������Ϊ��ȡ��Ч���ݵĸ߶�
-	//����ı�����ˣ�û�ӹ���������ͬ�������Ҳ��̫����
-	//��������Ϲ����������ɼ���
+	//IE浏览器在指定的高度下获取scrollHeight会理解为获取有效内容的高度
+	//如果文本溢出了，没加滚动条，不同的浏览器也不太兼容
+	//有溢出加上滚动条，方可兼容
 	
-	Ԫ��ʵ�ʴ�С
+	元素实际大小
 	alert(box.offsetWidth);
 	alert(box.offsetHeight);
 	
-	�߿��С
+	边框大小
 	alert(box.clientTop);
 	alert(box.clientLeft);
 	
-	ƫ��
+	偏移
 	//alert(box.offsetTop);
 	//alert(box.offsetLeft);
 	
 	//alert(box.offsetParent);
 	
-	//IE���������ĸ��ϵĸ�Ԫ��ΪHTML����IE����ĸ��ϵĸ�Ԫ��ΪBODY�������ⲻ��
-	//���û�����ö�λ��������
+	//IE浏览器理解的根上的父元素为HTML，非IE理解的根上的父元素为BODY，但问题不大
+	//如果没有设置定位，问题多多
 	
-	//���box����ҳ���ֱ�ӵľ���
+	//求出box距离页面口直接的距离
 	
 	
 	//alert(box.offsetTop + box.offsetParent.offsetTop);
@@ -33,7 +33,7 @@
 	
 	
 function offsetTop(element) {
-	var top = element.offsetTop;		//��һ��ľ���
+	var top = element.offsetTop;		//第一层的距离
 	var parent = element.offsetParent;
 	
 	while (parent !== null) {

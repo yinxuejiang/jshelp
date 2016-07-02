@@ -4,7 +4,7 @@
 
 
 
-//¿çä¯ÀÀÆ÷·µ»ØXML DOM¶ÔÏó
+//è·¨æµè§ˆå™¨è¿”å›XML DOMå¯¹è±¡
 function getXMLDOM(xmlStr) {
 	var xmlDom = null;
 	
@@ -12,7 +12,7 @@ function getXMLDOM(xmlStr) {
 		xmlDom = (new DOMParser).parseFromString(xmlStr, 'text/xml');
 		var errors = xmlDom.getElementsByTagName('parsererror');
 		if (errors.length > 0) {
-			throw new Error('´íÎóĞÅÏ¢£º' + errors[0].textContent);
+			throw new Error('é”™è¯¯ä¿¡æ¯ï¼š' + errors[0].textContent);
 		}
 	} else if (typeof window.ActiveXObject != 'undefined') {
 		var version = [
@@ -25,23 +25,23 @@ function getXMLDOM(xmlStr) {
 			try {
 				var xmlDom = new ActiveXObject(version[i]);
 			} catch (e) {
-				//Ìø¹ı
+				//è·³è¿‡
 			}
 		}
 		xmlDom.loadXML(xmlStr);
 		if (xmlDom.parseError != 0) {
-				throw new Error('´íÎóĞÅÏ¢£º' + xmlDom.parseError.reason);
+				throw new Error('é”™è¯¯ä¿¡æ¯ï¼š' + xmlDom.parseError.reason);
 		}
 		return xmlDom;
 	} else {
-		throw new Error('ÄúµÄÏµÍ³»òä¯ÀÀÆ÷²»Ö§³ÖXML DOM¶ÔÏó£¡');
+		throw new Error('æ‚¨çš„ç³»ç»Ÿæˆ–æµè§ˆå™¨ä¸æ”¯æŒXML DOMå¯¹è±¡ï¼');
 	}
 	
 	return xmlDom;
 }
 
 
-//ĞòÁĞ»¯XML
+//åºåˆ—åŒ–XML
 function serializerXML(xmlDom) {
 	var xml = '';
 	
@@ -55,7 +55,7 @@ function serializerXML(xmlDom) {
 }
 
 
-//¿çä¯ÀÀÆ÷µ¥Ò»½Úµã
+//è·¨æµè§ˆå™¨å•ä¸€èŠ‚ç‚¹
 function selectSingleNode(xmlDom, xpath) {
 	var node = null;
 	if (typeof xmlDom.evaluate != 'undefined') {		//W3C
@@ -77,7 +77,7 @@ function selectSingleNode(xmlDom, xpath) {
 	return node;
 }
 
-//¿çä¯ÀÀÆ÷½Úµã¼¯ºÏ
+//è·¨æµè§ˆå™¨èŠ‚ç‚¹é›†åˆ
 function selectNodes(xmlDom, xpath) {
 	var nodes = [];
 	if (typeof xmlDom.evaluate != 'undefined') {		//W3C
@@ -114,15 +114,15 @@ try {
 	var node = selectSingleNode(xmlDom, 'root/user[2]');
 	alert(serializerXML(node));
 } catch (e) {
-	throw new Error('XPathÓĞÎó£¡');
+	throw new Error('XPathæœ‰è¯¯ï¼');
 }
 */
 
 
-//Á½ÖÖ·½Ê½´´½¨XPathResult
+//ä¸¤ç§æ–¹å¼åˆ›å»ºXPathResult
 
 /*
-//µ¥Ò»½Úµã£¬W3CµÄXPathÏÂ±êÊÇ´Ó1¿ªÊ¼µÄ
+//å•ä¸€èŠ‚ç‚¹ï¼ŒW3Cçš„XPathä¸‹æ ‡æ˜¯ä»1å¼€å§‹çš„
 var eva = new XPathEvaluator();
 var result = eva.evaluate('root/user', xmlDom, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
 if (result !== null) {
@@ -131,7 +131,7 @@ if (result !== null) {
 
 
 
-//µ¥Ò»½Úµã
+//å•ä¸€èŠ‚ç‚¹
 var result = xmlDom.evaluate('root/user', xmlDom, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
 if (result !== null) {
 	alert(serializerXML(result.singleNodeValue));
@@ -140,7 +140,7 @@ if (result !== null) {
 
 
 
-//½Úµã¼¯ºÏ
+//èŠ‚ç‚¹é›†åˆ
 var result = xmlDom.evaluate('root/user', xmlDom, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
 if (result != null) {
 	var nodes = [];

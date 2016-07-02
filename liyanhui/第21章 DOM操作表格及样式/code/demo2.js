@@ -2,28 +2,28 @@
 
 
 /*
-	DOM¶ÔCSSµÄÄÜÁ¦¼ì²â£¬IEÉÏ²¢²»¾«È·
+	DOMå¯¹CSSçš„èƒ½åŠ›æ£€æµ‹ï¼ŒIEä¸Šå¹¶ä¸ç²¾ç¡®
 	
 	alert(document.implementation.hasFeature('CSS', '2.0'));
 	alert(document.implementation.hasFeature('CSS2', '2.0'));
 	alert(document.implementation.hasFeature('HTML', '1.0'));
 	
-	ĞĞÄÚ¡¢ÄÚÁª¡¢Á´½Ó
-	ĞĞÄÚ£º¾ÍÊÇÔÚ±êÇ©ÀïµÄstyleÊôĞÔÌí¼ÓµÄÑùÊ½
-	ÄÚÁª£º¾ÍÊÇ<style>±êÇ©ÀïÊéĞ´µÄÑùÊ½
-	Á´½Ó£º¾ÍÊÇÍ¨¹ı<link href>±êÇ©Á´½Óµ½µÄÑùÊ½
+	è¡Œå†…ã€å†…è”ã€é“¾æ¥
+	è¡Œå†…ï¼šå°±æ˜¯åœ¨æ ‡ç­¾é‡Œçš„styleå±æ€§æ·»åŠ çš„æ ·å¼
+	å†…è”ï¼šå°±æ˜¯<style>æ ‡ç­¾é‡Œä¹¦å†™çš„æ ·å¼
+	é“¾æ¥ï¼šå°±æ˜¯é€šè¿‡<link href>æ ‡ç­¾é“¾æ¥åˆ°çš„æ ·å¼
 	
 	
-	//Ê¹ÓÃĞĞÄÚstyle»ñÈ¡ÊôĞÔ
+	//ä½¿ç”¨è¡Œå†…styleè·å–å±æ€§
 	var box = document.getElementById('box');
-	//alert(box.style);			//CSSStyleDeclaration¶ÔÏó
+	//alert(box.style);			//CSSStyleDeclarationå¯¹è±¡
 	//alert(box.style.color);
-	//alert(box.style.fontSize);	//°Ñ-ºÅÈ¥µô£¬ºóÃæµÄ×Ö·û´óĞ´
+	//alert(box.style.fontSize);	//æŠŠ-å·å»æ‰ï¼Œåé¢çš„å­—ç¬¦å¤§å†™
 	//alert(box.style.background);
 	//alert(box.style.float);
-	//alert(box.style.cssFloat);		//·ÇIEä¯ÀÀÆ÷¶Ô¹Ø¼ü×Ö±£Áô×ÖµÄÓÃ·¨
-	//alert(box.style.styleFloat);		//IEä¯ÀÀÆ÷µÄµ÷ÓÃ·½Ê½
-	alert(box.style.cssFloat || box.style.styleFloat);	//¿çä¯ÀÀÆ÷¼æÈİ
+	//alert(box.style.cssFloat);		//éIEæµè§ˆå™¨å¯¹å…³é”®å­—ä¿ç•™å­—çš„ç”¨æ³•
+	//alert(box.style.styleFloat);		//IEæµè§ˆå™¨çš„è°ƒç”¨æ–¹å¼
+	alert(box.style.cssFloat || box.style.styleFloat);	//è·¨æµè§ˆå™¨å…¼å®¹
 	
 	var box = document.getElementById('box');
 	box.style.color = 'red';
@@ -34,15 +34,15 @@
 	typeof box.style.cssFloat != 'undefined' ? box.style.cssFloat = 'right' : box.style.styleFloat = 'right';
 	
 	
-	//DOM2¼¶ÎªstyleÌá¹©ÁËÒ»Ğ©ÊôĞÔ·½·¨
+	//DOM2çº§ä¸ºstyleæä¾›äº†ä¸€äº›å±æ€§æ–¹æ³•
 	var box = document.getElementById('box');
-	//alert(box.style.cssText);			//²é¿´CSSÎÄ±¾
+	//alert(box.style.cssText);			//æŸ¥çœ‹CSSæ–‡æœ¬
 	alert(box.style.length);
 	
-	//box.style.setProperty('color','blue');	//»ğºü¾É°æ±¾µÄBUG
+	//box.style.setProperty('color','blue');	//ç«ç‹æ—§ç‰ˆæœ¬çš„BUG
 	box.style.removeProperty('color');
 	
-	alert(box.style.color);			//styleÊôĞÔÖ»ÄÜ»ñÈ¡ºÍÉèÖÃĞĞÄÚ£¬²»ÄÜ»ñÈ¡ÄÚÁªºÍÁ´½Ó
+	alert(box.style.color);			//styleå±æ€§åªèƒ½è·å–å’Œè®¾ç½®è¡Œå†…ï¼Œä¸èƒ½è·å–å†…è”å’Œé“¾æ¥
 */
 
 
@@ -51,24 +51,24 @@ window.onload = function () {
 
 	var box = document.getElementById('box');
 	//var style = window.getComputedStyle(box, null);
-	//alert(style.color);						//¼ÆËãºóµÄÑùÊ½£¬Ò»°ã±íÊ¾Ä¬ÈÏÑùÊ½ºÍÉèÖÃºóµÄÑùÊ½
+	//alert(style.color);						//è®¡ç®—åçš„æ ·å¼ï¼Œä¸€èˆ¬è¡¨ç¤ºé»˜è®¤æ ·å¼å’Œè®¾ç½®åçš„æ ·å¼
 	//var style = box.currentStyle;
-	//alert(style.color);						//IEµÄ¼ÆËãÑùÊ½
+	//alert(style.color);						//IEçš„è®¡ç®—æ ·å¼
 	//alert(style.fontSize);
 	
 	var style = window.getComputedStyle ? window.getComputedStyle(box, null) : null || box.currentStyle;
 	//alert(style.fontSize);
-	//alert(style.border);	//¸´ºÏĞÍÊôĞÔ¾ÍÎŞ·¨»ñÈ¡ÁË
+	//alert(style.border);	//å¤åˆå‹å±æ€§å°±æ— æ³•è·å–äº†
 	
 	//alert(style.borderTopColor);
 	
-	//borderÕâ¸öÊôĞÔ±»¼ÆËãºó¾Í²»´æÔÚÁË
+	//borderè¿™ä¸ªå±æ€§è¢«è®¡ç®—åå°±ä¸å­˜åœ¨äº†
 	
 	alert(box.style.border);
 	
-	//¼ÆËãÑùÊ½µÄ»ñÈ¡£¬²»½ö½ö¿ÉÒÔ»ñÈ¡Ã»ÓĞÉèÖÃµÄÄ¬ÈÏÑùÊ½£¬Ò²¿ÉÒÔ»ñÈ¡ĞĞÄÚ£¬ÄÚÁªºÍÁ´½Ó
-	//ÎªÊ²Ã´¿ÉÒÔ»ñÈ¡ÄÚÁªºÍÁ´½ÓÄØ£¿
-	//ÒòÎª²»¹ÜÄãÔÚÄÇÀïÉèÖÃCSS£¬×îÖÕ»á×¤ÁôÔÚä¯ÀÀÆ÷µÄ¼ÆËãÑùÊ½Àï
+	//è®¡ç®—æ ·å¼çš„è·å–ï¼Œä¸ä»…ä»…å¯ä»¥è·å–æ²¡æœ‰è®¾ç½®çš„é»˜è®¤æ ·å¼ï¼Œä¹Ÿå¯ä»¥è·å–è¡Œå†…ï¼Œå†…è”å’Œé“¾æ¥
+	//ä¸ºä»€ä¹ˆå¯ä»¥è·å–å†…è”å’Œé“¾æ¥å‘¢ï¼Ÿ
+	//å› ä¸ºä¸ç®¡ä½ åœ¨é‚£é‡Œè®¾ç½®CSSï¼Œæœ€ç»ˆä¼šé©»ç•™åœ¨æµè§ˆå™¨çš„è®¡ç®—æ ·å¼é‡Œ
 
 };
 

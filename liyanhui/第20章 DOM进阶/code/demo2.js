@@ -2,7 +2,7 @@
 
 
 /*
-	³ÊÏÖ
+	å‘ˆç°
 		
 	if (document.compatMode == 'CSS1Compat') {
 		alert(document.documentElement.clientWidth);
@@ -10,11 +10,11 @@
 		alert(document.body.clientWidth);
 	}
 	
-	document.getElementById('box').scrollIntoView();		//½«Ö¸¶¨µÄ½Úµã¹ö¶¯µ½¿É¼û·¶Î§ÄÚ
+	document.getElementById('box').scrollIntoView();		//å°†æŒ‡å®šçš„èŠ‚ç‚¹æ»šåŠ¨åˆ°å¯è§èŒƒå›´å†…
 	
 	var box = document.getElementById('box');
 	//alert(box.childNodes.length);
-	//alert(box.children.length);				//ºöÂÔµôÁË¿Õ°×½Úµã
+	//alert(box.children.length);				//å¿½ç•¥æ‰äº†ç©ºç™½èŠ‚ç‚¹
 	alert(box.children[0].nodeName);
 	
 	
@@ -39,16 +39,16 @@ function contains(refNode, otherNode) {
 
 	var box = document.getElementById('box');
 	var p = box.firstChild;
-	//alert(box.contains(p));			//ÅĞ¶ÏboxÊÇ²»ÊÇpµÄ¸¸½Úµã
+	//alert(box.contains(p));			//åˆ¤æ–­boxæ˜¯ä¸æ˜¯pçš„çˆ¶èŠ‚ç‚¹
 	
-	//alert(box.compareDocumentPosition(p) > 16);	//°üº¬¹ØÏµ
+	//alert(box.compareDocumentPosition(p) > 16);	//åŒ…å«å…³ç³»
 	
 	//alert(typeof box.contains);
 	
 	
-	//PS£º»ğºü¾É°æ±¾²»Ö§³Ö3.6£¬ĞÂ°æÖ§³Ö14
-	//PS£ºSafari2.x²»Ö§³Ö£¬3.0ÒÔÉÏ²ÅÖ§³Ö
-	//PS£ººÜ¶à¸üµÍµÄ°æ±¾£¬Ìá¹©µÄÁ½¸ö·½°¸¾ù²»Ö§³Ö
+	//PSï¼šç«ç‹æ—§ç‰ˆæœ¬ä¸æ”¯æŒ3.6ï¼Œæ–°ç‰ˆæ”¯æŒ14
+	//PSï¼šSafari2.xä¸æ”¯æŒï¼Œ3.0ä»¥ä¸Šæ‰æ”¯æŒ
+	//PSï¼šå¾ˆå¤šæ›´ä½çš„ç‰ˆæœ¬ï¼Œæä¾›çš„ä¸¤ä¸ªæ–¹æ¡ˆå‡ä¸æ”¯æŒ
 	
 	alert(contains(box,p));
 	
@@ -72,14 +72,14 @@ function contains(refNode, otherNode) {
 		}
 	}
 
-	//alert(box.innerText);			//»ñÈ¡ÎÄ±¾²¢¹ıÂËµôHTML£¬Ö±½ÓÉ¾µôµÄ£¬»ğºü²»Ö§³Ö
-	//box.innerText = '<b>123</b>';	//¸³Öµ²¢×ªÒåHTML
+	//alert(box.innerText);			//è·å–æ–‡æœ¬å¹¶è¿‡æ»¤æ‰HTMLï¼Œç›´æ¥åˆ æ‰çš„ï¼Œç«ç‹ä¸æ”¯æŒ
+	//box.innerText = '<b>123</b>';	//èµ‹å€¼å¹¶è½¬ä¹‰HTML
 	
 	//alert(typeof box.textContent);
 	alert(getInnerText(box));
 	
-	//alert(document.getElementById('box').innerHTML); //»ñÈ¡ÎÄ±¾(²»¹ıÂËHTML)
-	//document.getElementById('box').innerHTML = '<b>123</b>'; //¿É½âÎöHTML
+	//alert(document.getElementById('box').innerHTML); //è·å–æ–‡æœ¬(ä¸è¿‡æ»¤HTML)
+	//document.getElementById('box').innerHTML = '<b>123</b>'; //å¯è§£æHTML
 	document.getElementById('box').innerHTML = "<script>alert('')</script>";
 	
 */
@@ -88,7 +88,7 @@ window.onload = function () {
 	//alert(box.outerText);
 	box.outerText = '<b>123</b>';
 	box.outerHTML = '<b>123</b>';
-	alert(document.getElementById('box'));		//nullÁË£¬±íÃ÷<div>Õâ¸ö±êÇ©±»Ä¨È¥ÁË
+	alert(document.getElementById('box'));		//nulläº†ï¼Œè¡¨æ˜<div>è¿™ä¸ªæ ‡ç­¾è¢«æŠ¹å»äº†
 };
 
 

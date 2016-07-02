@@ -1,66 +1,66 @@
 /*
-//1.Ô­ĞÍÁ´¼Ì³Ğ£¬2.½èÓÃ¹¹Ôìº¯Êı¼Ì³Ğ(¶ÔÏóÃ°³ä¼Ì³Ğ) 3.×éºÏ¼Ì³Ğ(½áºÏÇ°Á½ÖÖ)
-//4.Ô­ĞÍÊ½¼Ì³Ğ
-//ÁÙÊ±ÖĞ×ªº¯Êı
-function obj(o) {				//o±íÊ¾½«Òª´«µİ½øÈëµÄÒ»¸ö¶ÔÏó 
-	function F() {}				//F¹¹ÔìÊÇÒ»¸öÁÙÊ±ĞÂ½¨µÄ¶ÔÏó£¬ÓÃÀ´´æ´¢´«µİ¹ıÀ´µÄ¶ÔÏó
-	F.prototype = o;			//½«o¶ÔÏóÊµÀı¸³Öµ¸øF¹¹ÔìµÄÔ­ĞÍ¶ÔÏó
-	return new F();				//×îºó·µ»ØÕâ¸öµÃµ½´«µİ¹ıÀ´¶ÔÏóµÄ¶ÔÏóÊµÀı
+//1.åŸå‹é“¾ç»§æ‰¿ï¼Œ2.å€Ÿç”¨æ„é€ å‡½æ•°ç»§æ‰¿(å¯¹è±¡å†’å……ç»§æ‰¿) 3.ç»„åˆç»§æ‰¿(ç»“åˆå‰ä¸¤ç§)
+//4.åŸå‹å¼ç»§æ‰¿
+//ä¸´æ—¶ä¸­è½¬å‡½æ•°
+function obj(o) {				//oè¡¨ç¤ºå°†è¦ä¼ é€’è¿›å…¥çš„ä¸€ä¸ªå¯¹è±¡ 
+	function F() {}				//Fæ„é€ æ˜¯ä¸€ä¸ªä¸´æ—¶æ–°å»ºçš„å¯¹è±¡ï¼Œç”¨æ¥å­˜å‚¨ä¼ é€’è¿‡æ¥çš„å¯¹è±¡
+	F.prototype = o;			//å°†oå¯¹è±¡å®ä¾‹èµ‹å€¼ç»™Fæ„é€ çš„åŸå‹å¯¹è±¡
+	return new F();				//æœ€åè¿”å›è¿™ä¸ªå¾—åˆ°ä¼ é€’è¿‡æ¥å¯¹è±¡çš„å¯¹è±¡å®ä¾‹
 }
-//F.prototype = o ÆäÊµ¾ÍÏàµ±ÓÚ Desk.prototype = new Box();
-//ÕâÊÇ×ÖÃæÁ¿µÄÉùÃ÷·½Ê½£¬Ïàµ±ÓÚvar box = new Box();
+//F.prototype = o å…¶å®å°±ç›¸å½“äº Desk.prototype = new Box();
+//è¿™æ˜¯å­—é¢é‡çš„å£°æ˜æ–¹å¼ï¼Œç›¸å½“äºvar box = new Box();
 var box = {
 	name : 'Lee',
 	age : 100,
-	family : ['¸ç¸ç','½ã½ã','ÃÃÃÃ']
+	family : ['å“¥å“¥','å§å§','å¦¹å¦¹']
 };
-//box1¾ÍµÈÓÚnew F()
+//box1å°±ç­‰äºnew F()
 var box1 = obj(box);
 //alert(box1.name);
 alert(box1.family);
-box1.family.push('µÜµÜ');
+box1.family.push('å¼Ÿå¼Ÿ');
 alert(box1.family);
 var box2 = obj(box);
-alert(box2.family);					//ÒıÓÃÀàĞÍµÄÊôĞÔ¹²ÏíÁË
+alert(box2.family);					//å¼•ç”¨ç±»å‹çš„å±æ€§å…±äº«äº†
 */
 
 /*
-//5.¼ÄÉúÊ½¼Ì³Ğ = Ô­ĞÍÊ½ + ¹¤³§Ä£Ê½
-//ÁÙÊ±ÖĞ×ªº¯Êı
+//5.å¯„ç”Ÿå¼ç»§æ‰¿ = åŸå‹å¼ + å·¥å‚æ¨¡å¼
+//ä¸´æ—¶ä¸­è½¬å‡½æ•°
 function obj(o) {
 	function F() {}				
 	F.prototype = o;			
 	return new F();			
 }
-//¼ÄÉúº¯Êı
+//å¯„ç”Ÿå‡½æ•°
 function create(o) {
 	var f = obj(o);
 	f.run = function () {
-		return this.name + '·½·¨';
+		return this.name + 'æ–¹æ³•';
 	}
 	return f;
 }
 var box = {
 	name : 'Lee',
 	age : 100,
-	family : ['¸ç¸ç','½ã½ã','ÃÃÃÃ']
+	family : ['å“¥å“¥','å§å§','å¦¹å¦¹']
 };
 var box1 = create(box);
 alert(box1.run());
 */
 
 /*
-//6.¼ÄÉú×éºÏ¼Ì³Ğ
-//ÁÙÊ±ÖĞ×ªº¯Êı
+//6.å¯„ç”Ÿç»„åˆç»§æ‰¿
+//ä¸´æ—¶ä¸­è½¬å‡½æ•°
 function obj(o) {				
 	function F() {}				
 	F.prototype = o;			
 	return new F();			
 }
-//¼ÄÉúº¯Êı
+//å¯„ç”Ÿå‡½æ•°
 function create(box, desk) {
 	var f = obj(box.prototype);
-	f.constructor = desk;				//µ÷ÕûÔ­ĞÍ¹¹ÔìÖ¸Õë
+	f.constructor = desk;				//è°ƒæ•´åŸå‹æ„é€ æŒ‡é’ˆ
 	desk.prototype = f;
 }
 function Box(name, age) {
@@ -68,13 +68,13 @@ function Box(name, age) {
 	this.age = age;
 }
 Box.prototype.run = function () {
-	return this.name + this.age + 'ÔËĞĞÖĞ...'
+	return this.name + this.age + 'è¿è¡Œä¸­...'
 }
 function Desk(name, age) {
-	Box.call(this, name, age);				//¶ÔÏóÃ°³ä
+	Box.call(this, name, age);				//å¯¹è±¡å†’å……
 }
-//Í¨¹ı¼ÄÉú×éºÏ¼Ì³ĞÀ´ÊµÏÖ¼Ì³Ğ
-create(Box, Desk);							//Õâ¾ä»°ÓÃÀ´Ìæ´úDesk.prototype = new Box();
+//é€šè¿‡å¯„ç”Ÿç»„åˆç»§æ‰¿æ¥å®ç°ç»§æ‰¿
+create(Box, Desk);							//è¿™å¥è¯ç”¨æ¥æ›¿ä»£Desk.prototype = new Box();
 var desk = new Desk('Lee', 100);
 alert(desk.run());
 alert(desk.constructor);

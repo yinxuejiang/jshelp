@@ -3,35 +3,35 @@
 
 /*
 	document.onclick = function () {
-		alert(this);								//HTMLDocument£¬´ú±íÊÇdocument
+		alert(this);								//HTMLDocumentï¼Œä»£è¡¨æ˜¯document
 	};
 	
 	window.onload = function () {
-		//document.onclick = box;				//ÒòÎªbox()º¯Êı±»onclick°ó¶¨ÁË£¬ËùÒÔÀïÃæµÄthis´ú±ídocument
+		//document.onclick = box;				//å› ä¸ºbox()å‡½æ•°è¢«onclickç»‘å®šäº†ï¼Œæ‰€ä»¥é‡Œé¢çš„thisä»£è¡¨document
 	};
 
 
 	function box() {
-		alert(this);									//HTMLDocument£¬´ú±íÊÇdocument		
+		alert(this);									//HTMLDocumentï¼Œä»£è¡¨æ˜¯document		
 	};
 
 
-	box();												//object Window£¬Èç¹ûÊÇÔÚÈ«¾Ö·¶Î§µ÷ÓÃbox()£¬ÄÇÃ´this´ú±íwindow
+	box();												//object Windowï¼Œå¦‚æœæ˜¯åœ¨å…¨å±€èŒƒå›´è°ƒç”¨box()ï¼Œé‚£ä¹ˆthisä»£è¡¨window
 
 
 
 function box() {
-	alert(arguments.length);				//»ñÈ¡²ÎÊıµÄÊıÁ¿
+	alert(arguments.length);				//è·å–å‚æ•°çš„æ•°é‡
 };
 
 box()
 
 document.onclick = function () {
-	alert(arguments.length);			//Èç¹ûÊÇÊÂ¼ş´¦Àíº¯Êı°ó¶¨µÄº¯Êı£¬ä¯ÀÀÆ÷»áÄ¬ÈÏ´«µİÒ»¸ö²ÎÊı£¬Õâ¸ö²ÎÊı¾ÍÊÇevent¶ÔÏó
+	alert(arguments.length);			//å¦‚æœæ˜¯äº‹ä»¶å¤„ç†å‡½æ•°ç»‘å®šçš„å‡½æ•°ï¼Œæµè§ˆå™¨ä¼šé»˜è®¤ä¼ é€’ä¸€ä¸ªå‚æ•°ï¼Œè¿™ä¸ªå‚æ•°å°±æ˜¯eventå¯¹è±¡
 };		
 
-	//alert(arguments[0]);				//MouseEvent£¬Êó±êÊÂ¼ş¶ÔÏó
-	alert(arguments[0]);					//KeyboardEvent£¬¼üÅÌÊÂ¼ş¶ÔÏó
+	//alert(arguments[0]);				//MouseEventï¼Œé¼ æ ‡äº‹ä»¶å¯¹è±¡
+	alert(arguments[0]);					//KeyboardEventï¼Œé”®ç›˜äº‹ä»¶å¯¹è±¡
 
 	
 	document.onclick = function (evt) {
@@ -39,15 +39,15 @@ document.onclick = function () {
 		alert(e);
 	};		
 	
-//PS:window.eventÕâ¸öÊôĞÔIEÊÇÖ§³ÖµÄ£¬ChromeÒ²ÊÇÖ§³ÖµÄ£¬
-//PS:ChromeÒ²ÊÇÖ§³ÖW3CµÄ
-//PS:Èç¹ûËµW3CºÍIEµÄ¶¼Ö§³ÖµÄ»°£¬ÄÇÃ´¾ÍÒÑW3CÎª×¼
+//PS:window.eventè¿™ä¸ªå±æ€§IEæ˜¯æ”¯æŒçš„ï¼ŒChromeä¹Ÿæ˜¯æ”¯æŒçš„ï¼Œ
+//PS:Chromeä¹Ÿæ˜¯æ”¯æŒW3Cçš„
+//PS:å¦‚æœè¯´W3Cå’ŒIEçš„éƒ½æ”¯æŒçš„è¯ï¼Œé‚£ä¹ˆå°±å·²W3Cä¸ºå‡†
 
 
-//¿çä¯ÀÀÆ÷Êó±ê°´Å¥
+//è·¨æµè§ˆå™¨é¼ æ ‡æŒ‰é’®
 function getButton(evt) {
 	var e = evt || window.event;	
-	if (evt) {									//Õâ¸öĞ´Ç°Ãæ
+	if (evt) {									//è¿™ä¸ªå†™å‰é¢
 		return e.button;
 	} else if (window.event) {
 		switch (e.button) {
@@ -62,15 +62,15 @@ function getButton(evt) {
 }
 
 	document.onmousedown = function (evt) {
-		if (getButton(evt) == 0) alert('×ó¼ü');
-		if (getButton(evt) == 1) alert('ÖĞ¼ü');
-		if (getButton(evt) == 2) alert('ÓÒ¼ü');
+		if (getButton(evt) == 0) alert('å·¦é”®');
+		if (getButton(evt) == 1) alert('ä¸­é”®');
+		if (getButton(evt) == 2) alert('å³é”®');
 	};		
 	
-		alert(e.clientX ',' + e.clientY);		//¿ÉÊÓÇø×ø±ê
-		//ChromeÒªÓÃdocument.documentElement.scrollTop
+		alert(e.clientX ',' + e.clientY);		//å¯è§†åŒºåæ ‡
+		//Chromeè¦ç”¨document.documentElement.scrollTop
 		
-		alert(e.screenX + ','+ e.screenY);	//ÆÁÄ»×ø±ê
+		alert(e.screenX + ','+ e.screenY);	//å±å¹•åæ ‡
 */
 
 
@@ -88,7 +88,7 @@ function getKey(evt) {
 	
 	if (e.shiftKey) keys.push('shift');
 	if (e.ctrlKey) keys.push('ctrl');
-	if (e.altKey) keys.push('alt');						//µ¥»÷+altºÍ360µÄ¿ì½İ¼ü³åÍ»ÁË	
+	if (e.altKey) keys.push('alt');						//å•å‡»+altå’Œ360çš„å¿«æ·é”®å†²çªäº†	
 	return keys;
 }
 

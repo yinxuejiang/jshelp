@@ -3,43 +3,43 @@
 
 
 /*
-	¹ÅÀÏµÄµ÷ÊÔ·½·¨alert
+	å¤è€çš„è°ƒè¯•æ–¹æ³•alert
 	var num1 = 1;
 	//alert(num1);
-	var num2 = 2;						//PS£º³ÌĞò·Ç³£ÅÓ´óµÄÊ±ºò£¬×Ö·û´®ÓĞ¿ÉÄÜÊÇÉÏÏÂÎÄµÄ±äÁ¿»òÕßº¯ÊıÀïµÄ·µ»ØÖµ£¬²¢²»ÊÇÄÇÃ´ÈİÒ×¿´³öÀ´µÄ
+	var num2 = 2;						//PSï¼šç¨‹åºéå¸¸åºå¤§çš„æ—¶å€™ï¼Œå­—ç¬¦ä¸²æœ‰å¯èƒ½æ˜¯ä¸Šä¸‹æ–‡çš„å˜é‡æˆ–è€…å‡½æ•°é‡Œçš„è¿”å›å€¼ï¼Œå¹¶ä¸æ˜¯é‚£ä¹ˆå®¹æ˜“çœ‹å‡ºæ¥çš„
 	//alert(typeof num2);
 	var result = num1 + num2;
 	alert(result);
 
 
-	//PS£ºÈç¹ûalert¿ÉÒÔÖ´ĞĞ£¬ÄÇÃ´Ö®Ç°µÄ´úÂëÃ»ÓĞ´íÎó
+	//PSï¼šå¦‚æœalertå¯ä»¥æ‰§è¡Œï¼Œé‚£ä¹ˆä¹‹å‰çš„ä»£ç æ²¡æœ‰é”™è¯¯
 	
-console.error('´íÎó');
-console.info('ĞÅÏ¢');
-console.log('ÈÕÖ¾');
-console.warn('¾¯¸æ');
+console.error('é”™è¯¯');
+console.info('ä¿¡æ¯');
+console.log('æ—¥å¿—');
+console.warn('è­¦å‘Š');
 	
 	
 var num1 = 1;
-//console.log('num1 = ' + num1 + 'ÀàĞÍ:' + typeof num1);
+//console.log('num1 = ' + num1 + 'ç±»å‹:' + typeof num1);
 var num2 = 'b';	
-//console.log('num2 = ' + num2 + 'ÀàĞÍ:' + typeof num2);				
+//console.log('num2 = ' + num2 + 'ç±»å‹:' + typeof num2);				
 var result = num1 + num2;
 alert(result);
 
 
-//PS£ºconsoleµ÷ÊÔ¾ÍËã²»É¾³ı£¬³ÌĞòÑ½ÕÕÑùÖ´ĞĞ£¬¶øalert»áÖĞÍ¾×è¶ÏºóÃæ´úÂëµÄÖ´ĞĞ
+//PSï¼šconsoleè°ƒè¯•å°±ç®—ä¸åˆ é™¤ï¼Œç¨‹åºå‘€ç…§æ ·æ‰§è¡Œï¼Œè€Œalertä¼šä¸­é€”é˜»æ–­åé¢ä»£ç çš„æ‰§è¡Œ
 
 
 var num1 = 1;
-if (typeof num1 != 'number') throw new Error('num1±ØĞëÊÇÊı×Ö');
+if (typeof num1 != 'number') throw new Error('num1å¿…é¡»æ˜¯æ•°å­—');
 var num2 = 2;	
-if (typeof num2 != 'number') throw new Error('num2±ØĞëÊÇÊı×Ö');		
+if (typeof num2 != 'number') throw new Error('num2å¿…é¡»æ˜¯æ•°å­—');		
 var result = num1 + num2;
 alert(result);
-//ÍøÒ³°æµÄFirebug £ºFirebug lite
-//±ØĞëÓĞÍø£¬±ØĞëËÙ¶È¿ì
-//PS£ºChromeä¯ÀÀÆ÷±ØĞëÔÚ·şÎñÆ÷¶Ë²ÅÓĞĞ§
+//ç½‘é¡µç‰ˆçš„Firebug ï¼šFirebug lite
+//å¿…é¡»æœ‰ç½‘ï¼Œå¿…é¡»é€Ÿåº¦å¿«
+//PSï¼šChromeæµè§ˆå™¨å¿…é¡»åœ¨æœåŠ¡å™¨ç«¯æ‰æœ‰æ•ˆ
 */
 
 
@@ -48,7 +48,7 @@ addEvent(window, 'load', function () {
 	var a = 1;
 	var box = document.getElementById('box');
 	addEvent(box, 'click', function () {
-		this.innerHTML = '±»µãÁË£¡';
+		this.innerHTML = 'è¢«ç‚¹äº†ï¼';
 	});
 	a = 2;
 	b = 1;
@@ -57,8 +57,8 @@ addEvent(window, 'load', function () {
 });
 
 
-//PS£ºÉèÖÃ¶Ïµã£¬¾ÍÊÇÖ´ĞĞµ÷ÊÔµÄÆğµã
-//PS£º²»ĞèÒªµ÷ÊÔµÄÊ±ºò£¬Ò»¶¨ÒªÈ¥µô¶Ïµã£¬²»È»Ã¿´ÎË¢ĞÂ×Ü»á½øÈëµ÷ÊÔÄ£Ê½
+//PSï¼šè®¾ç½®æ–­ç‚¹ï¼Œå°±æ˜¯æ‰§è¡Œè°ƒè¯•çš„èµ·ç‚¹
+//PSï¼šä¸éœ€è¦è°ƒè¯•çš„æ—¶å€™ï¼Œä¸€å®šè¦å»æ‰æ–­ç‚¹ï¼Œä¸ç„¶æ¯æ¬¡åˆ·æ–°æ€»ä¼šè¿›å…¥è°ƒè¯•æ¨¡å¼
 
 
 

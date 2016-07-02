@@ -10,29 +10,26 @@ var isActive = false;
 
 // *************************************************************************************************
 
-function handleIconClick(tab)
-{
+function handleIconClick(tab) {
     if (tab.url.indexOf("https://chrome.google.com/webstore") == 0 ||
         tab.url.indexOf("https://chrome.google.com/extensions") == 0 ||
-        tab.url.indexOf("chrome://") == 0)
-    {
-        alert("Sorry, for security reasons extensions cannot run scripts in this page, "+
-                "which means Firebug Lite can't work here.   :(");
-        
+        tab.url.indexOf("chrome://") == 0) {
+        alert("Sorry, for security reasons extensions cannot run scripts in this page, " +
+            "which means Firebug Lite can't work here.   :(");
+
         return;
     }
 
-    if (tab.url.indexOf("file:///") == 0)
-    {
+    if (tab.url.indexOf("file:///") == 0) {
         // TODO: include message here about the problem, and chrome bug
         //chrome.tabs.update(tab.id, {url: bookmarklet});
-        
+
         alert("So, you want to load Firebug Lite in a local file, huh?\n\n" +
-        
+
             "Sorry to say but this is a complicated issue... there's a Chrome bug preventing us " +
             "to load Firebug Lite here, and there's a JavaScript security restriction " +
             "preventing us to do XHR calls.  :(\n\n" +
-            
+
             "You can solve all these problems by using a local web server which is simple to " +
             "install and is safer for you.   :)\n\n" +
 
@@ -40,27 +37,29 @@ function handleIconClick(tab)
             "our FAQ entry for this subject at:\n\n" +
             "http://getfirebug.com/wiki/index.php/Firebug_Lite_FAQ"
         );
-        
+
         return;
     }
-    
+
     var isContentScriptActive = false;
-    
-    var tryToActivateFirebug = function(){
-        chrome.tabs.sendRequest( tab.id, {name: "FB_isActive"}, 
-        
-            function(response)
-            {
+
+    var tryToActivateFirebug = function() {
+        chrome.tabs.sendRequest(tab.id, {
+                name: "FB_isActive"
+            },
+
+            function(response) {
                 isContentScriptActive = true;
-                
-                if (response.value == "true")
-                {
-                    chrome.tabs.update(tab.id, {url: "javascript:Firebug.chrome.toggle()"});
-                }
-                else
-                {
+
+                if (response.value == "true") {
+                    chrome.tabs.update(tab.id, {
+                        url: "javascript:Firebug.chrome.toggle()"
+                    });
+                } else {
                     setActivationStorage(tab);
-                    chrome.tabs.sendRequest(tab.id, {name: "FB_loadFirebug"});
+                    chrome.tabs.sendRequest(tab.id, {
+                        name: "FB_loadFirebug"
+                    });
                 }
             }
         );
@@ -69,94 +68,86 @@ function handleIconClick(tab)
     var firebugShouldBeLoaded = tab.url.indexOf("https://") == 0 || tab.url.indexOf("http://") == 0;
 
     tryToActivateFirebug();
-    
-    setTimeout(function(){
-    
+
+    setTimeout(function() {
+
         // the problem of this approach is that if the page does not allow content scripts, like
         // the Chrome Web Store, it will falsely warn users that reloading the page will complete
         // the activation process when in the reality it will not. But, the most common case is
         // when the user just installed Firebug Lite and have other tabs already opened, which
         // completely ruins the very first experience with using the Firebug Lite extension.
-        if (!isContentScriptActive)
-        {
-        
+        if (!isContentScriptActive) {
+
             // try again
             tryToActivateFirebug();
 
-            setTimeout(function(){
+            setTimeout(function() {
 
-                if (!isContentScriptActive)
-                {
+                if (!isContentScriptActive) {
                     //chrome.tabs.update(tab.id, {url: bookmarlet});
                     //enableBrowserActionIcon();
                     //setActivationStorage(tab);
-                    
-                    if (firebugShouldBeLoaded)
-                    {
+
+                    if (firebugShouldBeLoaded) {
                         setActivationStorage(tab);
-                        if (confirm("It seems that this page was opened before Firebug Lite was "+
-                              "enabled. It will (hopefully) load after reloading this page.   :)"+
-                              "\n\nPress ok to reload the page now, or cancel to reload it later."))
-                        {
-                            chrome.tabs.update(tab.id, {url: "javascript:window.location.reload()"});
+                        if (confirm("It seems that this page was opened before Firebug Lite was " +
+                                "enabled. It will (hopefully) load after reloading this page.   :)" +
+                                "\n\nPress ok to reload the page now, or cancel to reload it later.")) {
+                            chrome.tabs.update(tab.id, {
+                                url: "javascript:window.location.reload()"
+                            });
                         }
-                    }
-                    else
-                    {
+                    } else {
                         // TODO: add FAQ entry with the problem and point it here
-                        alert("Sorry, Firebug Lite cannot be loaded in this page.   :(\n\nFor "+
-                                "support, please visit:\nhttp://groups.google.com/group/firebug");
+                        alert("Sorry, Firebug Lite cannot be loaded in this page.   :(\n\nFor " +
+                            "support, please visit:\nhttp://groups.google.com/group/firebug");
                     }
                 }
 
-            },500);
+            }, 500);
 
         }
-        
-    },500);
+
+    }, 500);
 };
 
 chrome.browserAction.onClicked.addListener(handleIconClick);
 
 // *************************************************************************************************
 
-function handleTabChange(tabId, selectInfo)
-{
+function handleTabChange(tabId, selectInfo) {
     var isUpdated = false;
-    
-    chrome.tabs.sendRequest(tabId, {name: "FB_isActive"}, 
-    
-        function(response)
-        {
+
+    chrome.tabs.sendRequest(tabId, {
+            name: "FB_isActive"
+        },
+
+        function(response) {
             isUpdated = true;
-            
-            if (response.value == "true")
-            {
+
+            if (response.value == "true") {
                 enableBrowserActionIcon();
                 isActive = true;
-            }
-            else
-            {
+            } else {
                 disableBrowserActionIcon();
                 isActive = false;
             }
         }
     );
-    
-    setTimeout(function(){
-    
-        chrome.tabs.get(tabId, function(tab){
-        
+
+    setTimeout(function() {
+
+        chrome.tabs.get(tabId, function(tab) {
+
             var title = tab.title || "";
-            if (!isUpdated && !title.indexOf("Firebug Lite") == 0)
-            {
+            if (!isUpdated && !title.indexOf("Firebug Lite") == 0) {
                 disableBrowserActionIcon();
                 isActive = false;
             }
-            
+
         });
-           
-    },100);  
+
+    }, 100);
 };
 
 // *************************************************************************************************
@@ -165,10 +156,9 @@ chrome.tabs.onSelectionChanged.addListener(handleTabChange);
 
 // *************************************************************************************************
 
-function handleUpdateTab(tabId, updateInfo, tab)
-{
+function handleUpdateTab(tabId, updateInfo, tab) {
     if (updateInfo.status == "complete") return;
-    
+
     handleTabChange(tabId, updateInfo);
 }
 
@@ -177,23 +167,22 @@ function handleUpdateTab(tabId, updateInfo, tab)
 
 // *************************************************************************************************
 
-chrome.extension.onRequest.addListener
-(
-    function(request, sender, sendResponse)
-    {
+chrome.extension.onRequest.addListener(
+    function(request, sender, sendResponse) {
         if (request.name == "FB_enableIcon")
             enableBrowserActionIcon();
-        
+
         else if (request.name == "FB_disableIcon")
             disableBrowserActionIcon();
-            
-        else if (request.name == "FB_deactivate")
-        {
+
+        else if (request.name == "FB_deactivate") {
             disableBrowserActionIcon();
-            chrome.tabs.getSelected(null, function(tab){
+            chrome.tabs.getSelected(null, function(tab) {
                 unsetActivationStorage(tab);
-                
-                chrome.tabs.sendRequest(tab.id, {name: "FB_deactivate"});
+
+                chrome.tabs.sendRequest(tab.id, {
+                    name: "FB_deactivate"
+                });
             });
         }
 
@@ -207,35 +196,45 @@ chrome.contextMenus.create({
     title: "Inspect with Firebug Lite",
     "contexts": ["all"],
     onclick: function(info, tab) {
-        chrome.tabs.sendRequest(tab.id, {name: "FB_contextMenuClick"});
+        chrome.tabs.sendRequest(tab.id, {
+            name: "FB_contextMenuClick"
+        });
     }
 });
 
 // *************************************************************************************************
 
-function enableBrowserActionIcon()
-{
-    chrome.browserAction.setTitle({title: firebugVersion + " (On)"});
-    chrome.browserAction.setIcon({path:"firebug24.png"});
+function enableBrowserActionIcon() {
+    chrome.browserAction.setTitle({
+        title: firebugVersion + " (On)"
+    });
+    chrome.browserAction.setIcon({
+        path: "firebug24.png"
+    });
 };
 
-function disableBrowserActionIcon()
-{
-    chrome.browserAction.setTitle({title: firebugVersion + " (Off)"});
-    chrome.browserAction.setIcon({path:"firebug24_disabled.png"});
+function disableBrowserActionIcon() {
+    chrome.browserAction.setTitle({
+        title: firebugVersion + " (Off)"
+    });
+    chrome.browserAction.setIcon({
+        path: "firebug24_disabled.png"
+    });
 };
 
 // *************************************************************************************************
 
-function setActivationStorage(tab)
-{
-    chrome.tabs.update(tab.id, {url: "javascript:localStorage.setItem('Firebug','1,1,"+extensionURL+"')"});
+function setActivationStorage(tab) {
+    chrome.tabs.update(tab.id, {
+        url: "javascript:localStorage.setItem('Firebug','1,1," + extensionURL + "')"
+    });
     isActive = true;
 };
 
-function unsetActivationStorage(tab)
-{
-    chrome.tabs.update(tab.id, {url: "javascript:localStorage.removeItem('Firebug')"});
+function unsetActivationStorage(tab) {
+    chrome.tabs.update(tab.id, {
+        url: "javascript:localStorage.removeItem('Firebug')"
+    });
     isActive = false;
 };
 

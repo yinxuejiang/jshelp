@@ -1,32 +1,32 @@
 /*
-	navigator¶ÔÏóÊÇwindow¶ÔÏóÏÂµÄ
+	navigatorå¯¹è±¡æ˜¯windowå¯¹è±¡ä¸‹çš„
 	alert(window.navigator);
-	alert(navigator.appName);			//ä¯ÀÀÆ÷µÄÃû³Æ£¬Õâ¸öÊôĞÔ²»ÄÜ¾«È·µÄÈ¡µ½ä¯ÀÀÆ÷µÄÃû³Æ
-	alert(navigator.userAgent);			//ÓÃ»§´úÀí×Ö·û´®£¬±íÊ¾ä¯ÀÀÆ÷ĞÅÏ¢µÄ¶«Î÷
-	alert(navigator.platform);			//²Ù×÷ÏµÍ³,Æ½Ì¨
+	alert(navigator.appName);			//æµè§ˆå™¨çš„åç§°ï¼Œè¿™ä¸ªå±æ€§ä¸èƒ½ç²¾ç¡®çš„å–åˆ°æµè§ˆå™¨çš„åç§°
+	alert(navigator.userAgent);			//ç”¨æˆ·ä»£ç†å­—ç¬¦ä¸²ï¼Œè¡¨ç¤ºæµè§ˆå™¨ä¿¡æ¯çš„ä¸œè¥¿
+	alert(navigator.platform);			//æ“ä½œç³»ç»Ÿ,å¹³å°
 	
-	alert(BrowserDetect.browser);		//ä¯ÀÀÆ÷µÄÃû³Æ
-	alert(BrowserDetect.version);		//ä¯ÀÀÆ÷µÄ°æ±¾
-	alert(BrowserDetect.OS);			//ËùÔÚµÄÏµÍ³
+	alert(BrowserDetect.browser);		//æµè§ˆå™¨çš„åç§°
+	alert(BrowserDetect.version);		//æµè§ˆå™¨çš„ç‰ˆæœ¬
+	alert(BrowserDetect.OS);			//æ‰€åœ¨çš„ç³»ç»Ÿ
 
-	//¸øIE7Ò»ÏÂµÄä¯ÀÀÆ÷×öÌØÊâ´¦Àí
+	//ç»™IE7ä¸€ä¸‹çš„æµè§ˆå™¨åšç‰¹æ®Šå¤„ç†
 	if (BrowserDetect.browser == 'Internet Explorer' && BrowserDetect.version < 7) {
-		alert('ĞèÒª×öIEµÍ°æ±¾µÄ¼æÈİ£¡');
+		alert('éœ€è¦åšIEä½ç‰ˆæœ¬çš„å…¼å®¹ï¼');
 	}
 */
 
 /*
-//²å¼ş¼ì²â
+//æ’ä»¶æ£€æµ‹
 for (var i = 0; i < navigator.plugins.length; i ++) {
-	document.write('²å¼şÃû£º' + navigator.plugins[i].name + '<br />');
-	document.write('ÎÄ¼şÃû£º' + navigator.plugins[i].filename + '<br />');
-	document.write('Ãè¡¡Êö£º' + navigator.plugins[i].description + '<br />');
+	document.write('æ’ä»¶åï¼š' + navigator.plugins[i].name + '<br />');
+	document.write('æ–‡ä»¶åï¼š' + navigator.plugins[i].filename + '<br />');
+	document.write('æã€€è¿°ï¼š' + navigator.plugins[i].description + '<br />');
 	document.write('<br />');
 }
 */
 
 /*
-//¼ì²â·ÇIEä¯ÀÀÆ÷²å¼şÊÇ·ñ´æÔÚ
+//æ£€æµ‹éIEæµè§ˆå™¨æ’ä»¶æ˜¯å¦å­˜åœ¨
 function hasPlugin(name) {
 	var name = name.toLowerCase();
 	for (var i = 0; i < navigator.plugins.length; i ++) {
@@ -40,20 +40,20 @@ alert(hasPlugin('Flash'));
 */
 
 /*
-//¼ì²âIEä¯ÀÀÆ÷µÄ¿Ø¼ş
+//æ£€æµ‹IEæµè§ˆå™¨çš„æ§ä»¶
 function hasIEPlugin(name) {
-	try {													//ÕâÀï½Ğ×ö³¢ÊÔ×ÅÈ¥Ö´ĞĞÒ»¶Î´úÂë£¬Èç¹ûÓĞÎó£¬¾ÍÈ¥Ö´ĞĞcatch
-		new ActiveXObject(name)			//ÕâÀïµÄname±ØĞëÊÇ¿Ø¼şµÄÎ¨Ò»±êÊ¶·ûID
-		return true;									//Èç¹ûnew ³É¹¦ÁË£¬Ã»ÓĞ²úÉú´íÎó£¬ÄÇÃ´¾Í²»È¥Ö´ĞĞcatch
+	try {													//è¿™é‡Œå«åšå°è¯•ç€å»æ‰§è¡Œä¸€æ®µä»£ç ï¼Œå¦‚æœæœ‰è¯¯ï¼Œå°±å»æ‰§è¡Œcatch
+		new ActiveXObject(name)			//è¿™é‡Œçš„nameå¿…é¡»æ˜¯æ§ä»¶çš„å”¯ä¸€æ ‡è¯†ç¬¦ID
+		return true;									//å¦‚æœnew æˆåŠŸäº†ï¼Œæ²¡æœ‰äº§ç”Ÿé”™è¯¯ï¼Œé‚£ä¹ˆå°±ä¸å»æ‰§è¡Œcatch
 	} catch (e) {
-		return false;								//Èç¹ûnew Ê§°ÜÁË£¬¾ÍÖ´ĞĞcatchÀïÃæµÄÓï¾ä
+		return false;								//å¦‚æœnew å¤±è´¥äº†ï¼Œå°±æ‰§è¡Œcatché‡Œé¢çš„è¯­å¥
 	}
 }
 alert(hasIEPlugin('ShockwaveFlash.ShockwaveFlash'));
 */
 
 /*
-//¿çä¯ÀÀÆ÷¼ì²âFlashÊÇ·ñ´æÔÚ
+//è·¨æµè§ˆå™¨æ£€æµ‹Flashæ˜¯å¦å­˜åœ¨
 function hasPlugin(name) {
 	var name = name.toLowerCase();
 	for (var i = 0; i < navigator.plugins.length; i ++) {
@@ -72,9 +72,9 @@ function hasIEPlugin(name) {
 	}
 }
 function hasFlash() {
-	//Ê×ÏÈ£¬ÏÈÈ¥¼ì²â·ÇIEµÄä¯ÀÀÆ÷
-	var result = hasPlugin('Flash');			//Èç¹û·µ»Øtrue£¬ËµÃ÷¼ì²âµ½ÁË£¬²¢ÇÒ²»ÊÇIEä¯ÀÀÆ÷
-	if (!result) {										//Èç¹ûÃ»ÓĞ¼ì²âµ½£¬ËµÃ÷Õâ¸öä¯ÀÀÆ÷Ã»ÓĞflash²å¼ş£¬»òÕßËü¿ÉÄÜÊÇIEä¯ÀÀÆ÷
+	//é¦–å…ˆï¼Œå…ˆå»æ£€æµ‹éIEçš„æµè§ˆå™¨
+	var result = hasPlugin('Flash');			//å¦‚æœè¿”å›trueï¼Œè¯´æ˜æ£€æµ‹åˆ°äº†ï¼Œå¹¶ä¸”ä¸æ˜¯IEæµè§ˆå™¨
+	if (!result) {										//å¦‚æœæ²¡æœ‰æ£€æµ‹åˆ°ï¼Œè¯´æ˜è¿™ä¸ªæµè§ˆå™¨æ²¡æœ‰flashæ’ä»¶ï¼Œæˆ–è€…å®ƒå¯èƒ½æ˜¯IEæµè§ˆå™¨
 		result = hasIEPlugin('ShockwaveFlash.ShockwaveFlash');
 	}
 	return result;
@@ -83,15 +83,15 @@ alert(hasFlash());
 */
 
 /*
-//mimeÀàĞÍ
-//±éÀú·ÇIE ÏÂËùÓĞMIME ÀàĞÍĞÅÏ¢
+//mimeç±»å‹
+//éå†éIE ä¸‹æ‰€æœ‰MIME ç±»å‹ä¿¡æ¯
 for (var i = 0; i < navigator.mimeTypes.length; i++) {
 	if (navigator.mimeTypes[i].enabledPlugin != null) {
 	document.write('<dl>');
-	document.write('<dd>ÀàĞÍÃû³Æ£º' + navigator.mimeTypes[i].type + '</dd>');
-	document.write('<dd>ÀàĞÍÒıÓÃ£º' + navigator.mimeTypes[i].enabledPlugin.name +'</dd>');
-	document.write('<dd>ÀàĞÍÃèÊö£º' + navigator.mimeTypes[i].description + '</dd>');
-	document.write('<dd>ÀàĞÍºó×º£º' + navigator.mimeTypes[i].suffixes + '</dd>');
+	document.write('<dd>ç±»å‹åç§°ï¼š' + navigator.mimeTypes[i].type + '</dd>');
+	document.write('<dd>ç±»å‹å¼•ç”¨ï¼š' + navigator.mimeTypes[i].enabledPlugin.name +'</dd>');
+	document.write('<dd>ç±»å‹æè¿°ï¼š' + navigator.mimeTypes[i].description + '</dd>');
+	document.write('<dd>ç±»å‹åç¼€ï¼š' + navigator.mimeTypes[i].suffixes + '</dd>');
 	document.write('</dl>')
 	}
 }

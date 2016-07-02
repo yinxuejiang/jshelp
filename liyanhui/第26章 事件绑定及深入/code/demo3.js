@@ -3,7 +3,7 @@
 
 
 
-//¿çä¯ÀÀÆ÷Ìí¼ÓÊÂ¼ş
+//è·¨æµè§ˆå™¨æ·»åŠ äº‹ä»¶
 function addEvent(obj, type, fn) {
 	if (obj.addEventListener) {
 		obj.addEventListener(type, fn, false);
@@ -12,7 +12,7 @@ function addEvent(obj, type, fn) {
 	}
 }
 
-//¿çä¯ÀÀÆ÷ÒÆ³ıÊÂ¼ş
+//è·¨æµè§ˆå™¨ç§»é™¤äº‹ä»¶
 function removeEvent(obj, type, fn) {
 	if (obj.removeEventListener) {
 		obj.removeEventListener(type, fn, false);
@@ -25,21 +25,21 @@ function removeEvent(obj, type, fn) {
 addEvent(window, 'load', function () {
 	var box = document.getElementById('box');
 	
-	//W3CµÄmouseover,mouseout
+	//W3Cçš„mouseover,mouseout
 	//addEvent(box, 'mouseover', function (evt) {
-	//	alert(evt.relatedTarget);									//µÃµ½ÒÆÈëbox×î½üµÄÄÇ¸öDOM¶ÔÏó
+	//	alert(evt.relatedTarget);									//å¾—åˆ°ç§»å…¥boxæœ€è¿‘çš„é‚£ä¸ªDOMå¯¹è±¡
 	//});
 	
 	//addEvent(box, 'mouseout', function (evt) {
-	//	alert(evt.relatedTarget);									//´ÓboxÒÆ³ö×î½üµÄÄÇ¸öDOM¶ÔÏó
+	//	alert(evt.relatedTarget);									//ä»boxç§»å‡ºæœ€è¿‘çš„é‚£ä¸ªDOMå¯¹è±¡
 	//});
 	
 	//addEvent(box, 'mouseover', function () {
-	//	alert(window.event.fromElement.tagName);					//µÃµ½ÒÆÈëbox×î½üµÄÄÇ¸öDOM¶ÔÏó
+	//	alert(window.event.fromElement.tagName);					//å¾—åˆ°ç§»å…¥boxæœ€è¿‘çš„é‚£ä¸ªDOMå¯¹è±¡
 	//});
 	
 	//addEvent(box, 'mouseout', function () {
-	//	alert(window.event.toElement.tagName);					//´ÓboxÒÆ³ö×î½üµÄÄÇ¸öDOM¶ÔÏó
+	//	alert(window.event.toElement.tagName);					//ä»boxç§»å‡ºæœ€è¿‘çš„é‚£ä¸ªDOMå¯¹è±¡
 	//});
 	
 	addEvent(box, 'mouseover', function (evt) {
@@ -70,11 +70,11 @@ addEvent(window, 'load', function () {
 	//};
 	
 	addEvent(link, 'click', function (evt) {
-		preDef(evt);				//×èÖ¹Ä¬ÈÏĞĞÎª
+		preDef(evt);				//é˜»æ­¢é»˜è®¤è¡Œä¸º
 	});
 	
-	//PS£ºreturn false²»ºÃµÄÔ­Òò£¬±ØĞëÔÚ×îºó£¬µ¼ÖÂ¿ÉÄÜ¸ù±¾ÎŞ·¨×èÖ¹Ä¬ÈÏĞĞÎª£¬×îºÃÊÇ·Åµ½×îÇ°
-	//PS£º·Åµ½×îÇ°Ö®ºó£¬ºóÃæµÄ´úÂëÓÖÎŞ·¨Ö´ĞĞ
+	//PSï¼šreturn falseä¸å¥½çš„åŸå› ï¼Œå¿…é¡»åœ¨æœ€åï¼Œå¯¼è‡´å¯èƒ½æ ¹æœ¬æ— æ³•é˜»æ­¢é»˜è®¤è¡Œä¸ºï¼Œæœ€å¥½æ˜¯æ”¾åˆ°æœ€å‰
+	//PSï¼šæ”¾åˆ°æœ€å‰ä¹‹åï¼Œåé¢çš„ä»£ç åˆæ— æ³•æ‰§è¡Œ
 });
 
 addEvent(window, 'load', function () {

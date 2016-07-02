@@ -1,20 +1,20 @@
 /*
-var box = new Object();			//»òÕßÐ´³É{}
-box.name = 'Lee';						//Ìí¼ÓÒ»¸öÊôÐÔ
+var box = new Object();			//æˆ–è€…å†™æˆ{}
+box.name = 'Lee';						//æ·»åŠ ä¸€ä¸ªå±žæ€§
 alert(box.name);
 */
 
 /*
-var box = 'Lee';						//»ù±¾ÀàÐÍÖµ£¬ÊÇ×Ö·û´®
-box.age = 28;							//»ù±¾ÀàÐÍÖµÌí¼ÓÊôÐÔ£¬ºÜ¹ÖÒì
-alert(box.age);							//²»ÊÇÒýÓÃÀàÐÍ£¬ÎÞ·¨Êä³ö
+var box = 'Lee';						//åŸºæœ¬ç±»åž‹å€¼ï¼Œæ˜¯å­—ç¬¦ä¸²
+box.age = 28;							//åŸºæœ¬ç±»åž‹å€¼æ·»åŠ å±žæ€§ï¼Œå¾ˆæ€ªå¼‚
+alert(box.age);							//ä¸æ˜¯å¼•ç”¨ç±»åž‹ï¼Œæ— æ³•è¾“å‡º
 */
 
 /*
 var box = 'Lee';
 var box2 = box;
 
-box2 = 'kkk';								//»ù±¾ÀàÐÍ±£³Ö¶ÀÁ¢£¬box2µÄÐÞ¸Ä²»»áÓ°Ïìµ½box
+box2 = 'kkk';								//åŸºæœ¬ç±»åž‹ä¿æŒç‹¬ç«‹ï¼Œbox2çš„ä¿®æ”¹ä¸ä¼šå½±å“åˆ°box
 
 alert(box2);
 alert(box);
@@ -25,28 +25,28 @@ var box = new Object();
 box.name = 'Lee';
 var box2 = box;
 
-box2.name = 'kkk';					//ÒòÎªËûÃÇÖ¸ÏòµÄÊÇÍ¬Ò»¸öobject£¬Í¬Ò»¸öname£¬²»¹ÜÐÞ¸ÄË­£¬´ó¼Ò¶¼ÐÞ¸ÄÁË
+box2.name = 'kkk';					//å› ä¸ºä»–ä»¬æŒ‡å‘çš„æ˜¯åŒä¸€ä¸ªobjectï¼ŒåŒä¸€ä¸ªnameï¼Œä¸ç®¡ä¿®æ”¹è°ï¼Œå¤§å®¶éƒ½ä¿®æ”¹äº†
 
 alert(box2.name);
 alert(box.name);
 */
 
 /*
-function box(num) {							//°´Öµ´«µÝ
+function box(num) {							//æŒ‰å€¼ä¼ é€’
 	num += 10;
 	return num;
 }
 
 var num = 50;
 alert(box(num));
-alert(num);										//Èç¹ûÊÇ°´ÒýÓÃ´«µÝ£¬ÄÇÃ´º¯ÊýÀïµÄnum»á³ÉÎªÀàËÆÈ«¾Ö±äÁ¿£¬°ÑÍâÃæµÄnumÌæ»»µô
-														//Ò²¾ÍÊÇËµ£¬×îºóÊä³ö60£¬
+alert(num);										//å¦‚æžœæ˜¯æŒ‰å¼•ç”¨ä¼ é€’ï¼Œé‚£ä¹ˆå‡½æ•°é‡Œçš„numä¼šæˆä¸ºç±»ä¼¼å…¨å±€å˜é‡ï¼ŒæŠŠå¤–é¢çš„numæ›¿æ¢æŽ‰
+														//ä¹Ÿå°±æ˜¯è¯´ï¼Œæœ€åŽè¾“å‡º60ï¼Œ
 */
 
 /*										
-function box(obj) {							//ÕâÀï½«Òª´«µÝÒ»¸öÒýÓÃÀàÐÍµÄ²ÎÊý£¬µ«²»ÊÇ°´ÒýÓÃ´«µÝ£¬ÊÇ°´Öµ´«µÝµÄ
+function box(obj) {							//è¿™é‡Œå°†è¦ä¼ é€’ä¸€ä¸ªå¼•ç”¨ç±»åž‹çš„å‚æ•°ï¼Œä½†ä¸æ˜¯æŒ‰å¼•ç”¨ä¼ é€’ï¼Œæ˜¯æŒ‰å€¼ä¼ é€’çš„
 	obj.name = 'Lee';
-	var obj = new Object();				//ËùÒÔ£¬JSÃ»ÓÐ°´ÒýÓÃ´«²ÎµÄ¹¦ÄÜ£¬ÇÐ¼Ç£¬²»ÄÜ°Ñ´«µÝÒýÓÃ²ÎÊýµ±×÷°´ÒýÓÃ´«²Î
+	var obj = new Object();				//æ‰€ä»¥ï¼ŒJSæ²¡æœ‰æŒ‰å¼•ç”¨ä¼ å‚çš„åŠŸèƒ½ï¼Œåˆ‡è®°ï¼Œä¸èƒ½æŠŠä¼ é€’å¼•ç”¨å‚æ•°å½“ä½œæŒ‰å¼•ç”¨ä¼ å‚
 	obj.name = 'kkk';
 }
 

@@ -1,5 +1,5 @@
 /*
-ÉèÖÃcookie
+è®¾ç½®cookie
 document.cookie = 'user=Lee';
 document.cookie = 'url=yc60.com';
 document.cookie = 'email=yc60.com@gmail.com';
@@ -8,12 +8,12 @@ alert(document.cookie);
 */
 
 /*
-setCookie('user', 'ÀîÑ×»Ö', setCookieDate(7));
+setCookie('user', 'æç‚æ¢', setCookieDate(7));
 setCookie('url', 'yc60.com', setCookieDate(7));
 setCookie('email', 'yc60.com@gmail.com', setCookieDate(7));
 */
 
-//ÉèÖÃcookie
+//è®¾ç½®cookie
 function setCookie(name, value, expires, path, domain, secure) {
 	var cookieName = encodeURIComponent(name) + '=' + encodeURIComponent(value);
 	if (expires instanceof Date) {
@@ -31,7 +31,7 @@ function setCookie(name, value, expires, path, domain, secure) {
 	document.cookie = cookieName;
 }
 
-//»ñÈ¡Cookie
+//è·å–Cookie
 function getCookie(name) {
 	var cookieName = encodeURIComponent(name) + '=';
 	var cookieStart = document.cookie.indexOf(cookieName);
@@ -51,14 +51,14 @@ function getCookie(name) {
 
 
 
-//¹ıÆÚÊ±¼ä
-function setCookieDate(day) {			//´«µİÒ»¸öÌìÊı£¬±ÈÈç´«µİ7£¬¾Í7ÌìºóÊ§Ğ§
+//è¿‡æœŸæ—¶é—´
+function setCookieDate(day) {			//ä¼ é€’ä¸€ä¸ªå¤©æ•°ï¼Œæ¯”å¦‚ä¼ é€’7ï¼Œå°±7å¤©åå¤±æ•ˆ
 	var date = null;
 	if (typeof day == 'number' && day > 0) {
 		date = new Date();
 		date.setDate(date.getDate() + day);
 	} else {
-		throw new Error('Äú´«µİµÄÌìÊı²»ºÏ·¨£¡±ØĞëÊÇÊı×ÖÇÒ´óÓÚ0');
+		throw new Error('æ‚¨ä¼ é€’çš„å¤©æ•°ä¸åˆæ³•ï¼å¿…é¡»æ˜¯æ•°å­—ä¸”å¤§äº0');
 	}
 	return date;
 }

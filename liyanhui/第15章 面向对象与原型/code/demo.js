@@ -1,25 +1,25 @@
 
-var box = new Object();				//´´½¨¶ÔÏó
-box.name1 = 'Lee';					//Ìí¼ÓÊôĞÔ
+var box = new Object();				//åˆ›å»ºå¯¹è±¡
+box.name1 = 'Lee';					//æ·»åŠ å±æ€§
 box.age = 100;						//
 box.run = function () {
-	return this.name1 + this.age + 'ÔËĞĞÖĞ...';		//this±íÊ¾µ±Ç°×÷ÓÃÓòÏÂ¶ÔÏó
+	return this.name1 + this.age + 'è¿è¡Œä¸­...';		//thisè¡¨ç¤ºå½“å‰ä½œç”¨åŸŸä¸‹å¯¹è±¡
 };
 /*
-var box = new Object();				//´´½¨¶ÔÏó
-box.name1 = 'Lee';					//Ìí¼ÓÊôĞÔ
+var box = new Object();				//åˆ›å»ºå¯¹è±¡
+box.name1 = 'Lee';					//æ·»åŠ å±æ€§
 box.age = 100;						//
 box.run = function () {
-	return this.name1 + this.age + 'ÔËĞĞÖĞ...';		//this±íÊ¾µ±Ç°×÷ÓÃÓòÏÂ¶ÔÏó
+	return this.name1 + this.age + 'è¿è¡Œä¸­...';		//thisè¡¨ç¤ºå½“å‰ä½œç”¨åŸŸä¸‹å¯¹è±¡
 };
-//this±íÊ¾new Object()ÊµÀı»¯³öÀ´µÄÄÇ¸ö¶ÔÏó
-//thisÒª·ÅÔÚÒ»¸ö×÷ÓÃÓòÏÂ£¬±ÈÈçbox.run() {} £¬Õâ¸öÊÇbox×÷ÓÃÓòÏÂµÄ·½·¨£¬·½¿ÉÓÃthis£¬À´±íÊ¾box±¾Éí
+//thisè¡¨ç¤ºnew Object()å®ä¾‹åŒ–å‡ºæ¥çš„é‚£ä¸ªå¯¹è±¡
+//thisè¦æ”¾åœ¨ä¸€ä¸ªä½œç”¨åŸŸä¸‹ï¼Œæ¯”å¦‚box.run() {} ï¼Œè¿™ä¸ªæ˜¯boxä½œç”¨åŸŸä¸‹çš„æ–¹æ³•ï¼Œæ–¹å¯ç”¨thisï¼Œæ¥è¡¨ç¤ºboxæœ¬èº«
 alert(box.run());
 */
 
 /*
 var name1 = 'jack';
-alert(this.name1);				//ÕâÀïµÄthis´ú±íµÄÊÇwindow
+alert(this.name1);				//è¿™é‡Œçš„thisä»£è¡¨çš„æ˜¯window
 */
 
 /*
@@ -27,14 +27,14 @@ var box = new Object();
 box.name = 'Lee';				
 box.age = 100;						
 box.run = function () {
-	return this.name + this.age + 'ÔËĞĞÖĞ...';	
+	return this.name + this.age + 'è¿è¡Œä¸­...';	
 };
 
 var box2 = new Object();		
 box2.name = 'Jack';				
 box2.age = 200;						
 box2.run = function () {
-	return this.name + this.age + 'ÔËĞĞÖĞ...';	
+	return this.name + this.age + 'è¿è¡Œä¸­...';	
 };
 */
 
@@ -43,14 +43,14 @@ var box = new Object();
 box.name = 'Lee';				
 box.age = 100;						
 box.run = function () {
-	return this.name + this.age + 'ÔËĞĞÖĞ...';	
+	return this.name + this.age + 'è¿è¡Œä¸­...';	
 };
 
 var box2 = box;	
 box2.name = 'Jack';				
 box2.age = 200;						
 box2.run = function () {
-	return this.name + this.age + 'ÔËĞĞÖĞ...';	
+	return this.name + this.age + 'è¿è¡Œä¸­...';	
 };
 
 alert(box.run());
@@ -58,38 +58,38 @@ alert(box2.run());
 */
 
 /*
-//¹¤³§Ä£Ê½
+//å·¥å‚æ¨¡å¼
 function createObject(name, age) {
-	var obj = new Object();									//´´½¨¶ÔÏó
-	obj.name = name;											//Ìí¼ÓÊôĞÔ
+	var obj = new Object();									//åˆ›å»ºå¯¹è±¡
+	obj.name = name;											//æ·»åŠ å±æ€§
 	obj.age = age;
-	obj.run = function () {										//Ìí¼Ó·½·¨
-		return this.name + this.age + 'ÔËĞĞÖĞ...';
+	obj.run = function () {										//æ·»åŠ æ–¹æ³•
+		return this.name + this.age + 'è¿è¡Œä¸­...';
 	};
-	return obj;														//·µ»Ø¶ÔÏóÒıÓÃ
+	return obj;														//è¿”å›å¯¹è±¡å¼•ç”¨
 };
 
 function createObject2(name, age) {
-	var obj = new Object();									//´´½¨¶ÔÏó
-	obj.name = name;											//Ìí¼ÓÊôĞÔ
+	var obj = new Object();									//åˆ›å»ºå¯¹è±¡
+	obj.name = name;											//æ·»åŠ å±æ€§
 	obj.age = age;
-	obj.run = function () {										//Ìí¼Ó·½·¨
-		return this.name + this.age + 'ÔËĞĞÖĞ...';
+	obj.run = function () {										//æ·»åŠ æ–¹æ³•
+		return this.name + this.age + 'è¿è¡Œä¸­...';
 	};
-	return obj;														//·µ»Ø¶ÔÏóÒıÓÃ
+	return obj;														//è¿”å›å¯¹è±¡å¼•ç”¨
 };
 
-var box1 = createObject('Lee', 100);					//´´½¨µÚÒ»¸ö¶ÔÏó
-var box2 = createObject('Jack', 200);					//´´½¨µÚ¶ş¸ö¶ÔÏó
-var box3 = createObject2('kkk', 500);					//´´½¨µÚÈı¸ö¶ÔÏó
+var box1 = createObject('Lee', 100);					//åˆ›å»ºç¬¬ä¸€ä¸ªå¯¹è±¡
+var box2 = createObject('Jack', 200);					//åˆ›å»ºç¬¬äºŒä¸ªå¯¹è±¡
+var box3 = createObject2('kkk', 500);					//åˆ›å»ºç¬¬ä¸‰ä¸ªå¯¹è±¡
 
-//alert(box1.run());													//´òÓ¡µÚÒ»¸ö¶ÔÏóÊµÀıµÄrun()·½·¨
-//alert(box2.run());													//´òÓ¡µÚ¶ş¸ö¶ÔÏóÊµÀıµÄrun()·½·¨
+//alert(box1.run());													//æ‰“å°ç¬¬ä¸€ä¸ªå¯¹è±¡å®ä¾‹çš„run()æ–¹æ³•
+//alert(box2.run());													//æ‰“å°ç¬¬äºŒä¸ªå¯¹è±¡å®ä¾‹çš„run()æ–¹æ³•
 
 //alert(typeof box1);
 //alert(typeof box2);
 alert(box1 instanceof Object);
 alert(box2 instanceof Object);
-alert(box3 instanceof Object);						//²»¹ÜÔõÑù£¬ËûÃÇ¶¼ÊÇObjectÀàĞÍ£¬¾ÍÎŞ·¨Çø·Ö£¬Ë­µ½µ×ÊÇË­µÄ¶ÔÏóÁË
+alert(box3 instanceof Object);						//ä¸ç®¡æ€æ ·ï¼Œä»–ä»¬éƒ½æ˜¯Objectç±»å‹ï¼Œå°±æ— æ³•åŒºåˆ†ï¼Œè°åˆ°åº•æ˜¯è°çš„å¯¹è±¡äº†
 */
 

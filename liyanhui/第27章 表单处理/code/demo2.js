@@ -2,26 +2,26 @@
 
 
 /*
-	ÖØ¸´Ìá½»
+	é‡å¤æäº¤
 	var fm = document.getElementById('myForm');
 	var flag = false;
-	//×èÖ¹Ìá½»
+	//é˜»æ­¢æäº¤
 	addEvent(fm, 'submit', function (evt) {
 		preDef(evt);
-		//Ä£ÄâÑÓ³Ù
-		//ÕâÖÖ·½·¨£¬Ö»ÏŞÓÚÍ¨¹ıÌá½»°´Å¥·ÀÖ¹ÖØ¸´Ìá½»µÄ£¬
-		document.getElementById('sub').disabled = true;	//µÚÒ»´ÎÌá½»ºó£¬½«°´Å¥½ûÓÃ
+		//æ¨¡æ‹Ÿå»¶è¿Ÿ
+		//è¿™ç§æ–¹æ³•ï¼Œåªé™äºé€šè¿‡æäº¤æŒ‰é’®é˜²æ­¢é‡å¤æäº¤çš„ï¼Œ
+		document.getElementById('sub').disabled = true;	//ç¬¬ä¸€æ¬¡æäº¤åï¼Œå°†æŒ‰é’®ç¦ç”¨
 		if (flag == true) return;
-		flag = true;	//±íÊ¾ÎÒÌá½»¹ıÒ»´ÎÁË
-		alert('Ìá½»');
+		flag = true;	//è¡¨ç¤ºæˆ‘æäº¤è¿‡ä¸€æ¬¡äº†
+		alert('æäº¤');
 		setTimeout(function () {
 			fm.submit();
 		}, 5000);
 	});
 	
-	//PS£ºf5Ö»ÄÜÇ³Ë¢ĞÂ£¬»º´æ¼¶±ğµÄË¢ĞÂ£¬ÄÇÃ´´ÓÔ´Í·Ë¢ĞÂ£¬²ÉÓÃctrl+f5¼´¿É
+	//PSï¼šf5åªèƒ½æµ…åˆ·æ–°ï¼Œç¼“å­˜çº§åˆ«çš„åˆ·æ–°ï¼Œé‚£ä¹ˆä»æºå¤´åˆ·æ–°ï¼Œé‡‡ç”¨ctrl+f5å³å¯
 	
-	//resetÊÂ¼ş,reset()·½·¨
+	//resetäº‹ä»¶,reset()æ–¹æ³•
 	addEvent(fm, 'reset', function () {
 		alert('Lee');
 	});
@@ -30,18 +30,18 @@
 		fm.reset();
 	});
 	
-	»ñÈ¡±íµ¥¿Ø¼ş
+	è·å–è¡¨å•æ§ä»¶
 	var fm = document.getElementById('myForm');
-	//alert(fm.elements);		//±íµ¥¿Ø¼ş¼¯ºÏ£¬HTMLCollection
-	//alert(fm.length);			//ÏòÏÂ¼æÈİ£¬²»ÍÆ¼ö
-	//alert(fm[0]);					//ÏòÏÂ¼æÈİ£¬²»ÍÆ¼ö
-	//alert(fm.elements.length);	//ÍÆ¼ö
+	//alert(fm.elements);		//è¡¨å•æ§ä»¶é›†åˆï¼ŒHTMLCollection
+	//alert(fm.length);			//å‘ä¸‹å…¼å®¹ï¼Œä¸æ¨è
+	//alert(fm[0]);					//å‘ä¸‹å…¼å®¹ï¼Œä¸æ¨è
+	//alert(fm.elements.length);	//æ¨è
 	//alert(fm.elements[0]);	//HTMLInputElement
 	//alert(fm.elements['user']);
 	
 	
-	//PS£º±íµ¥¿Ø¼şÊÇÊ²Ã´£¿ formÀïÃæµÄinput submit textarea select ÕâĞ©½Ğ×ö±íµ¥¿Ø¼ş£¬ÆäÊµ¾ÍÊÇ±íµ¥ÔªËØ±êÇ©
-	//PS£ºÍ¨¹ı±íµ¥¼¯ºÏ»ñÈ¡µÚÒ»¸öÔªËØ£¬·Ç±íµ¥¿Ø¼ş»á±»ºöÂÔµô
+	//PSï¼šè¡¨å•æ§ä»¶æ˜¯ä»€ä¹ˆï¼Ÿ formé‡Œé¢çš„input submit textarea select è¿™äº›å«åšè¡¨å•æ§ä»¶ï¼Œå…¶å®å°±æ˜¯è¡¨å•å…ƒç´ æ ‡ç­¾
+	//PSï¼šé€šè¿‡è¡¨å•é›†åˆè·å–ç¬¬ä¸€ä¸ªå…ƒç´ ï¼Œéè¡¨å•æ§ä»¶ä¼šè¢«å¿½ç•¥æ‰
 */
 
 
@@ -54,17 +54,17 @@ addEvent(window, 'load', function () {
 	//alert(sexList[0].value);
 	//alert(sexList[0].name);
 	//sexList[1].disabled = true;
-	//alert(sexList[0].form);		//µÃµ½´ÓÊôµÄform¶ÔÏó
+	//alert(sexList[0].form);		//å¾—åˆ°ä»å±çš„formå¯¹è±¡
 	//alert(sexList[0].type);		//radio
-	//sexList[0].type = 'checkbox';	//²»ÍÆ¼öÊ¹ÓÃ´ËÊôĞÔĞŞ¸Ä
+	//sexList[0].type = 'checkbox';	//ä¸æ¨èä½¿ç”¨æ­¤å±æ€§ä¿®æ”¹
 	
 	//alert(fm.elements['sub'].type);
 	
-	//user.focus();			//½«½¹µãÒÆÈë
-	//user.blur();			//½«½¹µãÒÆ³ö
+	//user.focus();			//å°†ç„¦ç‚¹ç§»å…¥
+	//user.blur();			//å°†ç„¦ç‚¹ç§»å‡º
 	
 	
-	//´«Í³Ä£Ê½£ºonfocus
+	//ä¼ ç»Ÿæ¨¡å¼ï¼šonfocus
 	//addEvent(user, 'focus', function () {
 	//	alert('Lee');
 	//});

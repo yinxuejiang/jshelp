@@ -13,65 +13,65 @@ function createXMLDOM() {
 			var xmlDom = new ActiveXObject(version[i]);
 			return xmlDom;
 		} catch (e) {
-			//Ìø¹ı
+			//è·³è¿‡
 		}
 	}
-	throw new Error('ÄúµÄÏµÍ³»òä¯ÀÀÆ÷²»Ö§³ÖMSXML¿â£¡');
+	throw new Error('æ‚¨çš„ç³»ç»Ÿæˆ–æµè§ˆå™¨ä¸æ”¯æŒMSXMLåº“ï¼');
 }
 
 /*
-//DOM2¼¶XML
-var xmlDom = document.implementation.createDocument('', 'root', null);		//XML DOM¶ÔÏóÒÑ´´½¨£¬²¢ÇÒÌá¹©ÁË<root>¸ù±êÇ©
+//DOM2çº§XML
+var xmlDom = document.implementation.createDocument('', 'root', null);		//XML DOMå¯¹è±¡å·²åˆ›å»ºï¼Œå¹¶ä¸”æä¾›äº†<root>æ ¹æ ‡ç­¾
 //alert(xmlDom);
 //alert(xmlDom.documentElement.tagName);
 //alert(xmlDom.getElementsByTagName('root')[0].tagName);
 
-//Ê¹ÓÃ±ê×¼DOMÈ¥´´½¨½Úµã
+//ä½¿ç”¨æ ‡å‡†DOMå»åˆ›å»ºèŠ‚ç‚¹
 var user = xmlDom.createElement('user');
 xmlDom.documentElement.appendChild(user);
 alert(xmlDom.getElementsByTagName('user')[0].tagName);
 
-//PS£ºDOM2¼¶µÄXML DOM¶ÔÏóÊÇ²»Ö§³ÖloadXML()·½·¨£¬ÎŞ·¨¼òÒ×µÄÍ¨¹ı×Ö·û´®´´½¨XMLÎÄµµ
-//PS£ºÓĞÃ»ÓĞload()·½·¨ÄØ£¿¾ÍÊÇÔÚÍâ²¿¼ÓÔØXMLÎÄ¼ş
+//PSï¼šDOM2çº§çš„XML DOMå¯¹è±¡æ˜¯ä¸æ”¯æŒloadXML()æ–¹æ³•ï¼Œæ— æ³•ç®€æ˜“çš„é€šè¿‡å­—ç¬¦ä¸²åˆ›å»ºXMLæ–‡æ¡£
+//PSï¼šæœ‰æ²¡æœ‰load()æ–¹æ³•å‘¢ï¼Ÿå°±æ˜¯åœ¨å¤–éƒ¨åŠ è½½XMLæ–‡ä»¶
 */
 
 /*
-//Í¬²½¼ÓÔØxmlÎÄ¼ş
-var xmlDom = document.implementation.createDocument('', 'root', null);		//´´½¨XMLDOM¶ÔÏó
-xmlDom.async = false;												//falseÊÇÍ¬²½£¬trueÊÇÒì²½£¬Òì²½trueÊÇÄ¬ÈÏ
-xmlDom.load('demo.xml');										//ÔØÈëÍâ²¿XMLÎÄ¼ş
-//alert(xmlDom.xml);													//Êä³öĞòÁĞ»¯ºóµÄXML×Ö·û´®
+//åŒæ­¥åŠ è½½xmlæ–‡ä»¶
+var xmlDom = document.implementation.createDocument('', 'root', null);		//åˆ›å»ºXMLDOMå¯¹è±¡
+xmlDom.async = false;												//falseæ˜¯åŒæ­¥ï¼Œtrueæ˜¯å¼‚æ­¥ï¼Œå¼‚æ­¥trueæ˜¯é»˜è®¤
+xmlDom.load('demo.xml');										//è½½å…¥å¤–éƒ¨XMLæ–‡ä»¶
+//alert(xmlDom.xml);													//è¾“å‡ºåºåˆ—åŒ–åçš„XMLå­—ç¬¦ä¸²
 //alert(xmlDom.getElementsByTagName('user')[0].tagName);
 //alert(xmlDom.getElementsByTagName('user')[0].firstChild.nodeValue);
-alert(xmlDom.getElementsByTagName('user')[0].textContent);			//Ïàµ±ÓÚXHTML½ÚµãÖĞµÄinnerHTML
+alert(xmlDom.getElementsByTagName('user')[0].textContent);			//ç›¸å½“äºXHTMLèŠ‚ç‚¹ä¸­çš„innerHTML
 
-//PS£ºDOM2¼¶ÊÇÃ»ÓĞ.xmlÊôĞÔÀ´ĞòÁĞ»¯XML×Ö·ûµÄ
+//PSï¼šDOM2çº§æ˜¯æ²¡æœ‰.xmlå±æ€§æ¥åºåˆ—åŒ–XMLå­—ç¬¦çš„
 */
 
 /*
-//Òì²½¼ÓÔØXMLÎÄ¼ş
-var xmlDom = document.implementation.createDocument('', 'root', null);		//´´½¨XMLDOM¶ÔÏó
-xmlDom.async = true;												//falseÊÇÍ¬²½£¬trueÊÇÒì²½£¬Òì²½trueÊÇÄ¬ÈÏ
-xmlDom.onload = function () {								//Òì²½¼ÓÔØ£¬Í¨¹ıonload¼´¿É£¬ÀàËÆÓÚIEÖĞµÄ¾ÍĞ÷×´Ì¬ÊÂ¼ş
+//å¼‚æ­¥åŠ è½½XMLæ–‡ä»¶
+var xmlDom = document.implementation.createDocument('', 'root', null);		//åˆ›å»ºXMLDOMå¯¹è±¡
+xmlDom.async = true;												//falseæ˜¯åŒæ­¥ï¼Œtrueæ˜¯å¼‚æ­¥ï¼Œå¼‚æ­¥trueæ˜¯é»˜è®¤
+xmlDom.onload = function () {								//å¼‚æ­¥åŠ è½½ï¼Œé€šè¿‡onloadå³å¯ï¼Œç±»ä¼¼äºIEä¸­çš„å°±ç»ªçŠ¶æ€äº‹ä»¶
 	alert(xmlDom.getElementsByTagName('user')[0].textContent);
 };
 xmlDom.load('demo.xml');
-//PS£ºload()·½·¨Ö»Ö§³ÖFirefoxä¯ÀÀÆ÷£¬ºÍĞÂ°æ±¾µÄOperaä¯ÀÀÆ÷£¬ÆäËûä¯ÀÀÆ÷²»Ö§³Ö
+//PSï¼šload()æ–¹æ³•åªæ”¯æŒFirefoxæµè§ˆå™¨ï¼Œå’Œæ–°ç‰ˆæœ¬çš„Operaæµè§ˆå™¨ï¼Œå…¶ä»–æµè§ˆå™¨ä¸æ”¯æŒ
 */
 
 /*
-//1.²»ÄÜ¼òÒ×µÄÊ¹ÓÃ×Ö·û´®À´´´½¨XML£¬±ÈÈçÀàËÆÓëIEµÄloadXML()·½·¨
-//2.²»ÄÜ¹»ÏñIEÖĞÄÇÑù£¬Í¨¹ı.xmlĞòÁĞ»¯XML×Ö·û´®Êä³ö
+//1.ä¸èƒ½ç®€æ˜“çš„ä½¿ç”¨å­—ç¬¦ä¸²æ¥åˆ›å»ºXMLï¼Œæ¯”å¦‚ç±»ä¼¼ä¸IEçš„loadXML()æ–¹æ³•
+//2.ä¸èƒ½å¤ŸåƒIEä¸­é‚£æ ·ï¼Œé€šè¿‡.xmlåºåˆ—åŒ–XMLå­—ç¬¦ä¸²è¾“å‡º
 
 
-//Ä£ÄâloadXML()·½·¨£¬¿ÉÒÔ¼òÒ×µÄ´´½¨XML×Ö·û´®
-var xmlParser = new DOMParser();		//´´½¨DOMParser¶ÔÏó
-var xmlStr = '<root>\n\t<user>Lee</user>\n</root>';		//XML×Ö·û´®
+//æ¨¡æ‹ŸloadXML()æ–¹æ³•ï¼Œå¯ä»¥ç®€æ˜“çš„åˆ›å»ºXMLå­—ç¬¦ä¸²
+var xmlParser = new DOMParser();		//åˆ›å»ºDOMParserå¯¹è±¡
+var xmlStr = '<root>\n\t<user>Lee</user>\n</root>';		//XMLå­—ç¬¦ä¸²
 var xmlDom = xmlParser.parseFromString(xmlStr, 'text/xml');		//XMLDocument XMLDOM
 //alert(xmlDom.getElementsByTagName('user')[0].tagName);
 
 
-//Ä£Äâ.xmlÊôĞÔĞòÁĞ»¯×Ö·û´®
+//æ¨¡æ‹Ÿ.xmlå±æ€§åºåˆ—åŒ–å­—ç¬¦ä¸²
 var serializer = new XMLSerializer();
 var xml = serializer.serializeToString(xmlDom);
 alert(xml);

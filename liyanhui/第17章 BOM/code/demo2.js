@@ -2,23 +2,23 @@
 alert(screenLeft);
 alert(screenTop);
 
-ÕâÁ½¸öÊôĞÔ£¬»ğºü²»ÈÏÊ¶£¬¾Í»áµ±×÷ÊÇÃ»ÓĞÉùÃ÷³õÊ¼»¯µÄ±äÁ¿£¬»á±¨´í
+è¿™ä¸¤ä¸ªå±æ€§ï¼Œç«ç‹ä¸è®¤è¯†ï¼Œå°±ä¼šå½“ä½œæ˜¯æ²¡æœ‰å£°æ˜åˆå§‹åŒ–çš„å˜é‡ï¼Œä¼šæŠ¥é”™
 
-ÎÒÃÇ¾Í±ØĞëÇ¿ÖÆÔÚÕâ¸öÊôĞÔÇ°Ãæ¼ÓÉÏwindow.
+æˆ‘ä»¬å°±å¿…é¡»å¼ºåˆ¶åœ¨è¿™ä¸ªå±æ€§å‰é¢åŠ ä¸Šwindow.
 */
 
 /*
-alert(window.screenLeft);				//IEÖ§³Ö
+alert(window.screenLeft);				//IEæ”¯æŒ
 alert(window.screenTop);
 
-alert(typeof window.screenLeft);			//»ğºüundefined£¬ÆäËûnumber£¬ÊıÖµ
+alert(typeof window.screenLeft);			//ç«ç‹undefinedï¼Œå…¶ä»–numberï¼Œæ•°å€¼
 
-alert(window.screenX);				//IE²»Ö§³ÖÁË£¬Ö§³Ö»ğºü
+alert(window.screenX);				//IEä¸æ”¯æŒäº†ï¼Œæ”¯æŒç«ç‹
 alert(window.screenY);
 */
 
 /*
-//¿çä¯ÀÀÆ÷²Ù×÷
+//è·¨æµè§ˆå™¨æ“ä½œ
 var leftX = typeof window.screenLeft == 'number' ? window.screenLeft : window.screenX;
 var topY = typeof window.screenTop == 'number' ? window.screenTop : window.screenY;
 
@@ -27,22 +27,22 @@ alert(topY);
 */
 
 /*
-alert(window.innerWidth);				//´°¿ÚÒ³ÃæµÄ´óĞ¡
+alert(window.innerWidth);				//çª—å£é¡µé¢çš„å¤§å°
 alert(window.innerHeight);
 
-alert(window.outerWidth);			//´°¿Ú+±ß¿ò´óĞ¡
+alert(window.outerWidth);			//çª—å£+è¾¹æ¡†å¤§å°
 alert(window.outerHeight);
 
-alert(document.documentElement.clientWidth);			//IEÖ§³Ö
+alert(document.documentElement.clientWidth);			//IEæ”¯æŒ
 alert(document.documentElement.clientHeight);
 */
 
 /*
-//¿çä¯ÀÀÆ÷»ñÈ¡ÊÓ¿Ú(¿ÉÊÓ·¶Î§µÄÒ³Ãæ´°¿Ú)
-var width = window.innerWidth;		//window.±ØĞëÓĞ£¬ÒòÎªIE²»Ö§³Ö
-var height = window.innerHeight;		//Èç¹ûÖ§³ÖinnerµÄ£¬ÄÇÃ´¾ÍÊ¹ÓÃËü£¬
+//è·¨æµè§ˆå™¨è·å–è§†å£(å¯è§†èŒƒå›´çš„é¡µé¢çª—å£)
+var width = window.innerWidth;		//window.å¿…é¡»æœ‰ï¼Œå› ä¸ºIEä¸æ”¯æŒ
+var height = window.innerHeight;		//å¦‚æœæ”¯æŒinnerçš„ï¼Œé‚£ä¹ˆå°±ä½¿ç”¨å®ƒï¼Œ
 
-//²»Ö§³ÖµÄ¾ÍÊÇÓÃdocument¶ÔÏóµÄ·½·¨
+//ä¸æ”¯æŒçš„å°±æ˜¯ç”¨documentå¯¹è±¡çš„æ–¹æ³•
 */
 
 /*
@@ -61,11 +61,11 @@ alert(height);
 */
 
 /*
-//3.x¾É°æ»ğºüÖ§³Ö£¬ĞÂ°æÄ¬ÈÏ²»Ö§³ÖÁË
+//3.xæ—§ç‰ˆç«ç‹æ”¯æŒï¼Œæ–°ç‰ˆé»˜è®¤ä¸æ”¯æŒäº†
 //moveTo(100,100);
-moveBy(10,10);			//IEÔ­°æÖ§³Ö£¬¹È¸èĞÂ°æ²»Ö§³Ö
+moveBy(10,10);			//IEåŸç‰ˆæ”¯æŒï¼Œè°·æ­Œæ–°ç‰ˆä¸æ”¯æŒ
 
-//µ÷Õû´óĞ¡£¬ºÍÉÏÃæÒ»Ñù
+//è°ƒæ•´å¤§å°ï¼Œå’Œä¸Šé¢ä¸€æ ·
 //resizeTo(300,300);
 resizeBy(-10,-10);
 */

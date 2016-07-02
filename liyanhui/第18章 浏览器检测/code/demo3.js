@@ -1,5 +1,5 @@
 /*
-	ÄÜÁ¦¼ì²â
+	èƒ½åŠ›æ£€æµ‹
 	var width = window.innerWidth;
 
 	if (typeof width != 'number') {
@@ -9,10 +9,10 @@
 	alert(width);
 
 	
-	//¹Öñ±¼ì²âbug(È±Ïİ)
+	//æ€ªç™–æ£€æµ‹bug(ç¼ºé™·)
 
 	var box = {
-		toString : function () {},			//IEµÄĞ¡ BUG
+		toString : function () {},			//IEçš„å° BUG
 		toString2 : function () {}
 	};
 
@@ -20,52 +20,52 @@
 		alert(o);
 	}
 	
-	//window¶ÔÏóÖ§³ÖoperaÊôĞÔ
+	//windowå¯¹è±¡æ”¯æŒoperaå±æ€§
 	//alert(window.opera);
 
 	for (var o in window.opera) {
 		document.write(o + '<br />'); 
 	}
 	
-	alert(window.opera.version());	//operaä¯ÀÀÆ÷µÄ°æ±¾ºÅ
+	alert(window.opera.version());	//operaæµè§ˆå™¨çš„ç‰ˆæœ¬å·
 	
 	if (client.engine.opera) {
-		alert("Ä¿Ç°Ê¹ÓÃµÄÊÇOperaä¯ÀÀÆ÷£¬°æ±¾Îª£º" + client.engine.ver);
+		alert("ç›®å‰ä½¿ç”¨çš„æ˜¯Operaæµè§ˆå™¨ï¼Œç‰ˆæœ¬ä¸ºï¼š" + client.engine.ver);
 	}
 
 	if (client.engine.webkit) {
-		alert('WebKitÒıÇæµÄ°æ±¾Îª£º' + client.engine.ver);
+		alert('WebKitå¼•æ“çš„ç‰ˆæœ¬ä¸ºï¼š' + client.engine.ver);
 	}	
 	
 	if (client.engine.ie) {
-		alert('ieÒıÇæµÄ°æ±¾Îª£º' + client.engine.ver);
+		alert('ieå¼•æ“çš„ç‰ˆæœ¬ä¸ºï¼š' + client.engine.ver);
 	}
 */
 
 
 
-//ÓÃ»§´úÀí×Ö·û´®
+//ç”¨æˆ·ä»£ç†å­—ç¬¦ä¸²
 document.write(navigator.userAgent);
 document.write('<br />');
 document.write(navigator.platform);
 
 
 	
-var client = function () {					//´´½¨Ò»¸ö¶ÔÏó
+var client = function () {					//åˆ›å»ºä¸€ä¸ªå¯¹è±¡
 	
-	//ÒıÇæ
+	//å¼•æ“
 	var engine = {
-		ie : false,									//Õâ¸öÊôĞÔÓÃÓÚÈ·¶¨ÊÇ·ñÊÇIEÒıÇæ
+		ie : false,									//è¿™ä¸ªå±æ€§ç”¨äºç¡®å®šæ˜¯å¦æ˜¯IEå¼•æ“
 		gecko : false,
 		webkit : false,
 		khtml : false,
 		opera : false,
 		
-		//ÒıÇæµÄ°æ±¾
+		//å¼•æ“çš„ç‰ˆæœ¬
 		ver : 0
 	};
 	
-	//ä¯ÀÀÆ÷
+	//æµè§ˆå™¨
 	var browser = {
 		ie : false,
 		firefox : false,
@@ -73,46 +73,46 @@ var client = function () {					//´´½¨Ò»¸ö¶ÔÏó
 		safari : false,
 		opera : false,
 		
-		//ä¯ÀÀÆ÷µÄ°æ±¾ºÅ
+		//æµè§ˆå™¨çš„ç‰ˆæœ¬å·
 		ver : 0,
-		//ä¯ÀÀÆ÷Í¨ÓÃÃû³Æ
+		//æµè§ˆå™¨é€šç”¨åç§°
 		name : ''
 	};
 	
-	//ÏµÍ³
+	//ç³»ç»Ÿ
 	var system = {
 		win : false,
 		mac : false,
 		x11 : false,
 		
-		//ÏµÍ³Ãû³Æ
+		//ç³»ç»Ÿåç§°
 		sysname : ''
 	};
 	
 	
 	
-	//ºËĞÄ¼ì²â³ÌĞòÇø
+	//æ ¸å¿ƒæ£€æµ‹ç¨‹åºåŒº
 	var ua = navigator.userAgent;
 	var p = navigator.platform;
 	
 	if (p.indexOf('Win') == 0) {
-		system.win = true;						//ÓÃÓÚÈ·¶¨ÊÇwindowsÏµÍ³
+		system.win = true;						//ç”¨äºç¡®å®šæ˜¯windowsç³»ç»Ÿ
 		system.sysname = 'Windows';
 	} else if (p.indexOf('Mac') == 0) {
-		system.mac = true;						//ÓÃÓÚÈ·¶¨ÊÇMacÏµÍ³
+		system.mac = true;						//ç”¨äºç¡®å®šæ˜¯Macç³»ç»Ÿ
 		system.sysname = 'Macintosh';
 	} else if (p == 'X11' || p.indexOf('Linux') == 0) {
-		system.x11 = true;						//ÓÃÓÚÈ·¶¨ÊÇMacÏµÍ³
+		system.x11 = true;						//ç”¨äºç¡®å®šæ˜¯Macç³»ç»Ÿ
 		system.sysname = 'Linux';
 	}
 	
 	
 	if (window.opera) {
-		engine.opera = browser.opera = true;				//±íÊ¾È·¶¨operaÒıÇæ
+		engine.opera = browser.opera = true;				//è¡¨ç¤ºç¡®å®šoperaå¼•æ“
 		engine.ver = browser.ver = window.opera.version();
 		browser.name = 'Opera';
 	} else if (/AppleWebKit\/(\S+)/.test(ua)) {
-		engine.webkit = true;				//±íÊ¾È·¶¨webkitÒıÇæ
+		engine.webkit = true;				//è¡¨ç¤ºç¡®å®šwebkitå¼•æ“
 		engine.ver = RegExp['$1'];
 		if (/Chrome\/(\S+)/.test(ua)) {
 			browser.chrome = true;
@@ -124,7 +124,7 @@ var client = function () {					//´´½¨Ò»¸ö¶ÔÏó
 			browser.name = 'Safari';
 		}
 	} else if (/rv:([^\)]+)\) Gecko\/\d{8}/.test(ua)) {
-		engine.gecko = true;				//±íÊ¾È·¶¨geckoÒıÇæ
+		engine.gecko = true;				//è¡¨ç¤ºç¡®å®šgeckoå¼•æ“
 		engine.ver = RegExp['$1'];
 		if (/Firefox\/(\S+)/.test(ua)) {
 			browser.firefox = true;
@@ -132,18 +132,18 @@ var client = function () {					//´´½¨Ò»¸ö¶ÔÏó
 			browser.name = 'Firefox';
 		}
 	} else if (/MSIE ([^;]+)/.test(ua)) {
-		engine.ie = browser.ie = true;						//±íÊ¾È·¶¨ieÒıÇæ
+		engine.ie = browser.ie = true;						//è¡¨ç¤ºç¡®å®šieå¼•æ“
 		engine.ver = browser.ver = RegExp['$1'];
 		browser.name = 'Internet Explorer';
 	}
 	
-	return {										//·µ»ØÒ»¸ö¶ÔÏó£¬¿ÉÒÔÍ¬Ê±·µ»ØÒıÇæ£¬ä¯ÀÀÆ÷ºÍÏµÍ³µÄ¶ÔÏó
-		engine : engine,						//Ç°Ò»¸öengineÊÇÊôĞÔ£¬ºóÒ»¸öengineÊÇ¶ÔÏóÖµ
+	return {										//è¿”å›ä¸€ä¸ªå¯¹è±¡ï¼Œå¯ä»¥åŒæ—¶è¿”å›å¼•æ“ï¼Œæµè§ˆå™¨å’Œç³»ç»Ÿçš„å¯¹è±¡
+		engine : engine,						//å‰ä¸€ä¸ªengineæ˜¯å±æ€§ï¼Œåä¸€ä¸ªengineæ˜¯å¯¹è±¡å€¼
 		browser : browser,
 		system : system
 	}
 	
-}();													//×ÔÎÒÖ´ĞĞ£¬²¢¸³Öµ
+}();													//è‡ªæˆ‘æ‰§è¡Œï¼Œå¹¶èµ‹å€¼
 
 
 

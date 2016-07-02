@@ -2,51 +2,51 @@
 
 
 /*
-	valueµÄ»ñÈ¡
+	valueçš„è·å–
 	var fm = document.getElementById('myForm');
 	var user = fm.elements['user'];
 	var content = fm.elements['content'];
 	
-	alert(user.value);			HTML DOM»ñÈ¡
+	alert(user.value);			HTML DOMè·å–
 	alert(content.value);
 	
-	PS£ºÔÚHTMLÖĞinputÓĞvalueÊôĞÔ£¬textareaÃ»ÓĞvalueÊôĞÔ
-	PS£ºÔÚjsÖĞinput ºÍ textarea¶¼ÓĞvalueÊôĞÔ
+	PSï¼šåœ¨HTMLä¸­inputæœ‰valueå±æ€§ï¼Œtextareaæ²¡æœ‰valueå±æ€§
+	PSï¼šåœ¨jsä¸­input å’Œ textareaéƒ½æœ‰valueå±æ€§
 	
-	//Ê¹ÓÃ±ê×¼DOM»ñÈ¡
+	//ä½¿ç”¨æ ‡å‡†DOMè·å–
 	//alert(user.getAttribute('value'));
-	//alert(content.getAttribute('value'));		//¼æÈİĞÔ»áÓĞÎÊÌâ£¬IE¿ÉÒÔ»ñÈ¡£¬·ÇIE»ñÈ¡²»µ½
+	//alert(content.getAttribute('value'));		//å…¼å®¹æ€§ä¼šæœ‰é—®é¢˜ï¼ŒIEå¯ä»¥è·å–ï¼ŒéIEè·å–ä¸åˆ°
 	
-	//alert(user.getAttribute('value'));				//±ê×¼DOMÎŞ·¨»ñÈ¡¸ü¸ÄºóµÄvalue
+	//alert(user.getAttribute('value'));				//æ ‡å‡†DOMæ— æ³•è·å–æ›´æ”¹åçš„value
 	alert(user.value);
 	
-	alert(user.defaultValue);			//»ñÈ¡Ò»¿ªÊ¼µÄvalueÖµ£¬²»»á¸Ä±ä
+	alert(user.defaultValue);			//è·å–ä¸€å¼€å§‹çš„valueå€¼ï¼Œä¸ä¼šæ”¹å˜
 	
 	
-	user.select();		//Ñ¡¶¨ÎÄ±¾
+	user.select();		//é€‰å®šæ–‡æœ¬
 	
-	//Ñ¡Ôñ²¿·ÖÎÄ±¾
-	//user.setSelectionRange(2,3);		//´ÓµÚ0¸öÎ»ÖÃµ½µÚ1¸öÎ»ÖÃµÄÎÄ±¾
+	//é€‰æ‹©éƒ¨åˆ†æ–‡æœ¬
+	//user.setSelectionRange(2,3);		//ä»ç¬¬0ä¸ªä½ç½®åˆ°ç¬¬1ä¸ªä½ç½®çš„æ–‡æœ¬
 	//user.setSelectionRange(0,user.value.length);
-	//user.focus();			//½¹µãÒÆÈë
+	//user.focus();			//ç„¦ç‚¹ç§»å…¥
 	
 	
-	//PS£º·ÇIE´ÓµÚN¸öµ½µÚM¸öÎ»ÖÃ
+	//PSï¼šéIEä»ç¬¬Nä¸ªåˆ°ç¬¬Mä¸ªä½ç½®
 	
-	//IEÎÄ±¾·¶Î§µÄ¸ÅÄî£¬Õâ¸öÖªÊ¶£¬ÎÒÃÇÃ»ÓĞ½²¹ı£¬ÕâÀï¾ÍÏÈ¼òµ¥ÓÃÒ»ÏÂ
-	//W3CÒ²ÓĞÒ»¸ö·¶Î§µÄ¸ÅÄî£¬½Ğ×öDOM·¶Î§£¬ÒÔºóÓĞÊ±¼äÏµÍ³µÄ½²½â
+	//IEæ–‡æœ¬èŒƒå›´çš„æ¦‚å¿µï¼Œè¿™ä¸ªçŸ¥è¯†ï¼Œæˆ‘ä»¬æ²¡æœ‰è®²è¿‡ï¼Œè¿™é‡Œå°±å…ˆç®€å•ç”¨ä¸€ä¸‹
+	//W3Cä¹Ÿæœ‰ä¸€ä¸ªèŒƒå›´çš„æ¦‚å¿µï¼Œå«åšDOMèŒƒå›´ï¼Œä»¥åæœ‰æ—¶é—´ç³»ç»Ÿçš„è®²è§£
 	
 
-	var range = user.createTextRange();		//range¶ÔÏó£¬ÎÄ±¾·¶Î§
-	range.collapse(true);							//½«ÎÄ±¾Ö¸ÕëÒÆµ½¿ªÍ·
-	range.moveStart('character',2);			//Öğ×ÖÒÆ¶¯£¬0
-	range.moveEnd('character',1);			//Í¬ÉÏ
+	var range = user.createTextRange();		//rangeå¯¹è±¡ï¼Œæ–‡æœ¬èŒƒå›´
+	range.collapse(true);							//å°†æ–‡æœ¬æŒ‡é’ˆç§»åˆ°å¼€å¤´
+	range.moveStart('character',2);			//é€å­—ç§»åŠ¨ï¼Œ0
+	range.moveEnd('character',1);			//åŒä¸Š
 	range.select();
 
 	
-	//PS£ºIEÊÇ´ÓµÚN¸ö¿ªÊ¼Ñ¡ÔñM¸ö
+	//PSï¼šIEæ˜¯ä»ç¬¬Nä¸ªå¼€å§‹é€‰æ‹©Mä¸ª
 	
-	//¿çä¯ÀÀÆ÷Ñ¡¶¨²¿·ÖÎÄ±¾
+	//è·¨æµè§ˆå™¨é€‰å®šéƒ¨åˆ†æ–‡æœ¬
 	function getSelectText(text, start, num) {
 		if (text.setSelectionRange) {
 			text.setSelectionRange(start,num);
@@ -55,7 +55,7 @@
 			var range = text.createTextRange();		
 			range.collapse(true);							
 			range.moveStart('character',start);			
-			range.moveEnd('character',num - start);				//ÓÃ×îºóµÄÎ»ÖÃ - ¿ªÊ¼µÄÎ»ÖÃ = ¸öÊı		
+			range.moveEnd('character',num - start);				//ç”¨æœ€åçš„ä½ç½® - å¼€å§‹çš„ä½ç½® = ä¸ªæ•°		
 			range.select();
 		}
 	}
@@ -71,7 +71,7 @@ addEvent(window, 'load', function () {
 	var user = fm.elements['user'];
 	var content = fm.elements['content'];
 	
-	//select ÊÂ¼ş
+	//select äº‹ä»¶
 	addEvent(user, 'select', function () {
 		//alert(this.value);
 		//alert(this.selectionStart);
@@ -89,12 +89,12 @@ addEvent(window, 'load', function () {
 		}
 	}
 	
-	//·ÇIEÑ¡¶¨ÎÄ±¾ÇÒÊÍ·ÅÊó±êºó´¥·¢selectÊÂ¼ş
-	//IEÊÇÖ»ÒªÑ¡¶¨ÁËÒ»¸ö×Ö·û£¬¾Í´¥·¢selectÊÂ¼ş£¬µ«ÄãµÄËÙ¶È±È½Ï¿ì£¬¾Í¿ÉÒÔÑ¡Ôñ¶à¸ö£¬µ«²»ÎÈ¶¨
+	//éIEé€‰å®šæ–‡æœ¬ä¸”é‡Šæ”¾é¼ æ ‡åè§¦å‘selectäº‹ä»¶
+	//IEæ˜¯åªè¦é€‰å®šäº†ä¸€ä¸ªå­—ç¬¦ï¼Œå°±è§¦å‘selectäº‹ä»¶ï¼Œä½†ä½ çš„é€Ÿåº¦æ¯”è¾ƒå¿«ï¼Œå°±å¯ä»¥é€‰æ‹©å¤šä¸ªï¼Œä½†ä¸ç¨³å®š
 	
-	//document.selection¶ÔÏó¿ÉÒÔÑ¡Ôñ
-	//document.selectionÓĞÒ»¸ö·½·¨¿ÉÒÔ´´½¨ÎÄ±¾·¶Î§¶ÔÏó£ºcreateRange();
-	//createRange()ÓĞÒ»¸öÊôĞÔÊÇtext£¬¿ÉÒÔµÃµ½ÄãÑ¡ÔñµÄÎÄ±¾
+	//document.selectionå¯¹è±¡å¯ä»¥é€‰æ‹©
+	//document.selectionæœ‰ä¸€ä¸ªæ–¹æ³•å¯ä»¥åˆ›å»ºæ–‡æœ¬èŒƒå›´å¯¹è±¡ï¼šcreateRange();
+	//createRange()æœ‰ä¸€ä¸ªå±æ€§æ˜¯textï¼Œå¯ä»¥å¾—åˆ°ä½ é€‰æ‹©çš„æ–‡æœ¬
 	
 });
 

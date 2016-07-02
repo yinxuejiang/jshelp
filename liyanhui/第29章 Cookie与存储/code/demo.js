@@ -3,63 +3,63 @@
 */
 
 /*
-	//Ïò±¾µØ´ÅÅÌĞ´Èëcookie
-	document.cookie = 'user=ÀîÑ×»Ö';
+	//å‘æœ¬åœ°ç£ç›˜å†™å…¥cookie
+	document.cookie = 'user=æç‚æ¢';
 	alert(document.cookie);
 */
 
 /*
-	//PS£º±¾µØ²»´æÔÚÓòÃû£¬ËùÒÔÓò¾ÍÎª¿Õ
+	//PSï¼šæœ¬åœ°ä¸å­˜åœ¨åŸŸåï¼Œæ‰€ä»¥åŸŸå°±ä¸ºç©º
 	
-	//±àÂë
-	document.cookie = 'user=' + encodeURIComponent('ÀîÑ×»Ö');		//Õâ¸öÒÑ¾­Ğ´Èë´ÅÅÌÁË£¬ËùÒÔ²»ÒªÕâ¾äÒ²¿ÉÒÔ»ñÈ¡cookie
+	//ç¼–ç 
+	document.cookie = 'user=' + encodeURIComponent('æç‚æ¢');		//è¿™ä¸ªå·²ç»å†™å…¥ç£ç›˜äº†ï¼Œæ‰€ä»¥ä¸è¦è¿™å¥ä¹Ÿå¯ä»¥è·å–cookie
 	alert(decodeURIComponent(document.cookie));
 */
 
 /*
-	¹ıÆÚÊ±¼ä£¬¾ÍÊÇµ½ÁËÕâ¸öÊ±¼äµã£¬¾Í»á×Ô¶¯ÇåÀícookie
-	ÔÚ»á»°½áÊøÊ±£¬¾ÍÊÇ¹Ø±Õä¯ÀÀÆ÷ºó¾Í×Ô¶¯ÇåÀícookieÁË
+	è¿‡æœŸæ—¶é—´ï¼Œå°±æ˜¯åˆ°äº†è¿™ä¸ªæ—¶é—´ç‚¹ï¼Œå°±ä¼šè‡ªåŠ¨æ¸…ç†cookie
+	åœ¨ä¼šè¯ç»“æŸæ—¶ï¼Œå°±æ˜¯å…³é—­æµè§ˆå™¨åå°±è‡ªåŠ¨æ¸…ç†cookieäº†
 	
-	µ±»ğºüä¯ÀÀÆ÷¹Ø±Õºó£¬»ğºüµÄcookie±»É¾³ıÁË£¬
-	µ«²»Ó°ÏìÆäËûä¯ÀÀÆ÷µÄcookie£¬ÒòÎªÃ¿¸öä¯ÀÀÆ÷¶¼¸÷×Ô±£´æÁË×Ô¼ºµÄcookie£¬²»Í¨ÓÃÒ»¸öcookie
+	å½“ç«ç‹æµè§ˆå™¨å…³é—­åï¼Œç«ç‹çš„cookieè¢«åˆ é™¤äº†ï¼Œ
+	ä½†ä¸å½±å“å…¶ä»–æµè§ˆå™¨çš„cookieï¼Œå› ä¸ºæ¯ä¸ªæµè§ˆå™¨éƒ½å„è‡ªä¿å­˜äº†è‡ªå·±çš„cookieï¼Œä¸é€šç”¨ä¸€ä¸ªcookie
 	
 	var date = new Date();
 	date.setDate((date.getDate() + 7));
-	document.cookie = 'user=' + encodeURIComponent('ÀîÑ×»Ö') + '; expires=' + date;	
-	µ±¹ıÁËÕâ¸öÊ±¼äµã£¬ÄÇÃ´cookie¾Í±»ÇåÀíÁË
-	ÉèÖÃÎªµ±Ç°Ê±¼äµÄÖ®Ç°Ê±¼ä£¬¼´¿ÉÊÖ¹¤ÇåÀí cookie
+	document.cookie = 'user=' + encodeURIComponent('æç‚æ¢') + '; expires=' + date;	
+	å½“è¿‡äº†è¿™ä¸ªæ—¶é—´ç‚¹ï¼Œé‚£ä¹ˆcookieå°±è¢«æ¸…ç†äº†
+	è®¾ç½®ä¸ºå½“å‰æ—¶é—´çš„ä¹‹å‰æ—¶é—´ï¼Œå³å¯æ‰‹å·¥æ¸…ç† cookie
 	
 	var date = new Date();
-	date.setDate((date.getDate() - 1));		//É¾³ıcookie·½·¨£¬ÕæÕıµÄÉ¾µôÁË
-	document.cookie = 'user=' + encodeURIComponent('ÀîÑ×»Ö') + '; expires=' + date;
+	date.setDate((date.getDate() - 1));		//åˆ é™¤cookieæ–¹æ³•ï¼ŒçœŸæ­£çš„åˆ æ‰äº†
+	document.cookie = 'user=' + encodeURIComponent('æç‚æ¢') + '; expires=' + date;
 	
 	alert(new Date(0));
-	document.cookie = 'user=' + encodeURIComponent('ÀîÑ×»Ö') + '; expires=' + new Date(0);
+	document.cookie = 'user=' + encodeURIComponent('æç‚æ¢') + '; expires=' + new Date(0);
 */
 
 /*
 	
-	path Â·¾¶ÏŞÖÆ£¬¿ÉÒÔÏŞÖÆ·ÃÎÊcookieµÄÄ¿Â¼
+	path è·¯å¾„é™åˆ¶ï¼Œå¯ä»¥é™åˆ¶è®¿é—®cookieçš„ç›®å½•
 	var path = '/E:/%E5%A4%87%E8%AF%BE%E7%AC%94%E8%AE%B0/JS1/29/demo';
-	document.cookie = 'user=' + encodeURIComponent('ÀîÑ×»Ö') + '; path=' + path;
+	document.cookie = 'user=' + encodeURIComponent('æç‚æ¢') + '; path=' + path;
 	alert(decodeURIComponent(document.cookie));
-	//Èç¹û²»Ïò´ÅÅÌĞ´Èëcookie£¬ÎÒÃÇ»¹ÊÇ¿ÉÒÔ»ñÈ¡cookieµÄ
+	//å¦‚æœä¸å‘ç£ç›˜å†™å…¥cookieï¼Œæˆ‘ä»¬è¿˜æ˜¯å¯ä»¥è·å–cookieçš„
 */
 
 /*
-	domain ÏŞÖÆÓòÃû·ÃÎÊ
+	domain é™åˆ¶åŸŸåè®¿é—®
 	
-	secure Ö¸¶¨±ØĞëÍ¨¹ıhttpsÀ´Í¨ĞÅ·ÃÎÊ
-	½öÏŞ¼ÓÃÜÁ¬½Ó£¬°²È«ĞÔ¸üºÃ£¬ÈÎÒâÀàĞÍµÄÁ¬½Ó
+	secure æŒ‡å®šå¿…é¡»é€šè¿‡httpsæ¥é€šä¿¡è®¿é—®
+	ä»…é™åŠ å¯†è¿æ¥ï¼Œå®‰å…¨æ€§æ›´å¥½ï¼Œä»»æ„ç±»å‹çš„è¿æ¥
 */
 
 /*
-	ÍêÕûĞÎÊ½
-	document.cookie = 'user=Öµ; [expires=Ê§Ğ§Ê±¼ä; path=Â·¾¶·ÃÎÊ; domain=ÓòÃû·ÃÎÊ; secure=°²È«µÄhttpsÏŞÖÆÍ¨ĞÅ]'
+	å®Œæ•´å½¢å¼
+	document.cookie = 'user=å€¼; [expires=å¤±æ•ˆæ—¶é—´; path=è·¯å¾„è®¿é—®; domain=åŸŸåè®¿é—®; secure=å®‰å…¨çš„httpsé™åˆ¶é€šä¿¡]'
 */
 
 /*
-	document.cookie = 'user=' + encodeURIComponent('ÀîÑ×»Ö');
+	document.cookie = 'user=' + encodeURIComponent('æç‚æ¢');
 	alert(decodeURIComponent(document.cookie));
 */
 

@@ -1,19 +1,19 @@
 /*
 var box = 'Mr. Lee';
-//alert(box.toLowerCase());		//Ğ¡Ğ´
-//alert(box.toUpperCase());		//´óĞ´
+//alert(box.toLowerCase());		//å°å†™
+//alert(box.toUpperCase());		//å¤§å†™
 alert(box.toLocaleLowerCase());
 alert(box.toLocaleUpperCase());
 */
 
 /*
 //var box = 'Mr. Lee';
-//alert(box.match('L'));		//ÕÒµ½L¼´·µ»ØL
-//alert(box.match(','));			//Ã»ÕÒµ½null
-//alert(box.search('L'));		//ÕÒµ½LµÄÎ»ÖÃ
-//alert(box.replace('L', 'Q'));	//Ìæ»»
-//alert(box.split(' '));		//·Ö¸î³ÉÊı×é
-//alert(String.fromCharCode(76));	//·ÅÒ»¸öasciiÂë
+//alert(box.match('L'));		//æ‰¾åˆ°Lå³è¿”å›L
+//alert(box.match(','));			//æ²¡æ‰¾åˆ°null
+//alert(box.search('L'));		//æ‰¾åˆ°Lçš„ä½ç½®
+//alert(box.replace('L', 'Q'));	//æ›¿æ¢
+//alert(box.split(' '));		//åˆ†å‰²æˆæ•°ç»„
+//alert(String.fromCharCode(76));	//æ”¾ä¸€ä¸ªasciiç 
 */
 
 /*
@@ -22,12 +22,12 @@ alert(box.toLocaleUpperCase());
 //alert(box.localeCompare('Aee'));		//1
 //alert(box.localeCompare('Zee'));		//-1
 //alert(box.localeCompare('6576'));
-//alert(box.localeCompare('°¥'));
-//alert(box.localeCompare('ÖÜ'));
+//alert(box.localeCompare('å“'));
+//alert(box.localeCompare('å‘¨'));
 */
 
 /*
-var box = '°Ù¶È';
+var box = 'ç™¾åº¦';
 alert(box.link('http://www.baidu.com'));
 alert(box.bold());
 */

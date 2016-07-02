@@ -4,35 +4,35 @@
 
 
 /*
-	ÄÚÁªÄ£ÐÍ£¬onclickÊÇÊÂ¼þ´¦Àíº¯Êý
-	<input type="button" value="°´Å¥" onclick="alert('Lee');"  />
-	<input type="button" value="°´Å¥" onclick="box();"  />
+	å†…è”æ¨¡åž‹ï¼Œonclickæ˜¯äº‹ä»¶å¤„ç†å‡½æ•°
+	<input type="button" value="æŒ‰é’®" onclick="alert('Lee');"  />
+	<input type="button" value="æŒ‰é’®" onclick="box();"  />
 	
-	function box() {		//Èç¹û·ÅÔÚÒ»¸öÄäÃûº¯ÊýÀïÃæ£¬¾Í¿´²»µ½ÁË
+	function box() {		//å¦‚æžœæ”¾åœ¨ä¸€ä¸ªåŒ¿åå‡½æ•°é‡Œé¢ï¼Œå°±çœ‹ä¸åˆ°äº†
 		alert('Lee');
 	};
 	
-	//½Å±¾Ä£ÐÍ
+	//è„šæœ¬æ¨¡åž‹
 	
-	//¶ÔÏó.ÊÂ¼þ´¦Àíº¯Êý = º¯ÊýÃû»òÕßÄäÃûº¯Êý
+	//å¯¹è±¡.äº‹ä»¶å¤„ç†å‡½æ•° = å‡½æ•°åæˆ–è€…åŒ¿åå‡½æ•°
 	input.onclick = function () {
 		alert('Lee');
 	};
 	
-	PS£ºÈÃÊÂ¼þ´¦Àíº¯ÊýÖ´ÐÐÒ»¸öº¯ÊýµÄÊ±ºò£¬Í¨¹ý¸³Öµ·½Ê½£¬ÄÇÃ´Ö±½Ó½«º¯ÊýÃû¸³Öµ¸øÊÂ¼þ´¦Àíº¯Êý¼´¿É¡£
-	PS£ºÒ²¾ÍÊÇËµinput.onclick = box; Èç¹û¼ÓÉÏÁËÀ¨ºÅ¾Í×Ô¶¯×ÔÐÐÁË£¬Ã»ÓÐÍê³É¸³Öµ input.onclick = box();
+	PSï¼šè®©äº‹ä»¶å¤„ç†å‡½æ•°æ‰§è¡Œä¸€ä¸ªå‡½æ•°çš„æ—¶å€™ï¼Œé€šè¿‡èµ‹å€¼æ–¹å¼ï¼Œé‚£ä¹ˆç›´æŽ¥å°†å‡½æ•°åèµ‹å€¼ç»™äº‹ä»¶å¤„ç†å‡½æ•°å³å¯ã€‚
+	PSï¼šä¹Ÿå°±æ˜¯è¯´input.onclick = box; å¦‚æžœåŠ ä¸Šäº†æ‹¬å·å°±è‡ªåŠ¨è‡ªè¡Œäº†ï¼Œæ²¡æœ‰å®Œæˆèµ‹å€¼ input.onclick = box();
 	
-	input.onclick = box;		//¸³Öµ²»ÄÜ¼ÓÀ¨ºÅ
+	input.onclick = box;		//èµ‹å€¼ä¸èƒ½åŠ æ‹¬å·
 	function box() {
 		alert('Lee');
 	};
 	
-	PS£º¿ÉÒÔ·ÅÔÚÍâÃæ£¬Ò²¿ÉÒÔºÍinputÍ¬¼¶
+	PSï¼šå¯ä»¥æ”¾åœ¨å¤–é¢ï¼Œä¹Ÿå¯ä»¥å’ŒinputåŒçº§
 	
 	
-	Êó±êÊÂ¼þ
+	é¼ æ ‡äº‹ä»¶
 	
-	µ¥»÷
+	å•å‡»
 	input.onclick = function () {
 		alert('Lee');
 	};

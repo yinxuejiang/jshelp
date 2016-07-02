@@ -4,7 +4,7 @@
 
 
 
-//¿çä¯ÀÀÆ÷·µ»ØXML DOM¶ÔÏó
+//è·¨æµè§ˆå™¨è¿”å›XML DOMå¯¹è±¡
 function getXMLDOM(xmlStr) {
 	var xmlDom = null;
 	
@@ -12,7 +12,7 @@ function getXMLDOM(xmlStr) {
 		xmlDom = (new DOMParser).parseFromString(xmlStr, 'text/xml');
 		var errors = xmlDom.getElementsByTagName('parsererror');
 		if (errors.length > 0) {
-			throw new Error('´íÎóĞÅÏ¢£º' + errors[0].textContent);
+			throw new Error('é”™è¯¯ä¿¡æ¯ï¼š' + errors[0].textContent);
 		}
 	} else if (typeof window.ActiveXObject != 'undefined') {
 		var version = [
@@ -25,23 +25,23 @@ function getXMLDOM(xmlStr) {
 			try {
 				var xmlDom = new ActiveXObject(version[i]);
 			} catch (e) {
-				//Ìø¹ı
+				//è·³è¿‡
 			}
 		}
 		xmlDom.loadXML(xmlStr);
 		if (xmlDom.parseError != 0) {
-				throw new Error('´íÎóĞÅÏ¢£º' + xmlDom.parseError.reason);
+				throw new Error('é”™è¯¯ä¿¡æ¯ï¼š' + xmlDom.parseError.reason);
 		}
 		return xmlDom;
 	} else {
-		throw new Error('ÄúµÄÏµÍ³»òä¯ÀÀÆ÷²»Ö§³ÖXML DOM¶ÔÏó£¡');
+		throw new Error('æ‚¨çš„ç³»ç»Ÿæˆ–æµè§ˆå™¨ä¸æ”¯æŒXML DOMå¯¹è±¡ï¼');
 	}
 	
 	return xmlDom;
 }
 
 
-//ĞòÁĞ»¯XML
+//åºåˆ—åŒ–XML
 function serializerXML(xmlDom) {
 	var xml = '';
 	
@@ -60,49 +60,49 @@ var xmlStr = '<root><user id="5">Lee</user><user id="6">Koko</user></root>';
 var xmlDom = getXMLDOM(xmlStr);
 //alert(serializerXML(xmlDom));
 
-//IEÖĞµÄÁ½ÖÖ·½·¨£º1.selectSingleNode() »ñÈ¡µ¥Ò»½Úµã£¬2.selectNodes() »ñÈ¡½Úµã¼¯ºÏ
-//XPath²éÕÒÊÖ¶Î£¬¾ÍÊÇÂ·¾¶²éÕÒ£¬½á¹¹Ê÷²éÕÒ
+//IEä¸­çš„ä¸¤ç§æ–¹æ³•ï¼š1.selectSingleNode() è·å–å•ä¸€èŠ‚ç‚¹ï¼Œ2.selectNodes() è·å–èŠ‚ç‚¹é›†åˆ
+//XPathæŸ¥æ‰¾æ‰‹æ®µï¼Œå°±æ˜¯è·¯å¾„æŸ¥æ‰¾ï¼Œç»“æ„æ ‘æŸ¥æ‰¾
 
 
 //var node = xmlDom.selectSingleNode('root/user');
 //alert(node.xml);
 //alert(node.tagName);
-//alert(node.firstChild.nodeValue);		//ÕâÀï»ñÈ¡ÖµµÄÊ±ºò»¹ÊÇ±ê×¼DOM
+//alert(node.firstChild.nodeValue);		//è¿™é‡Œè·å–å€¼çš„æ—¶å€™è¿˜æ˜¯æ ‡å‡†DOM
 
-//PS£ºselectSingleNodeÊÇ»ñÈ¡µ¥Ò»½Úµã£¬Èç¹ûÓĞ¶à¸ö£¬ÄÇÃ´¾Í»á·µ»Ø²éÕÒµ½µÄµÚÒ»¸ö¡£
-//xmlDom¾ÍÊÇÉÏÏÂÎÄ½Úµã£¬ËüµÄÖ¸ÕëÖ¸ÏòµÄÊÇrootÖ®Ç°
+//PSï¼šselectSingleNodeæ˜¯è·å–å•ä¸€èŠ‚ç‚¹ï¼Œå¦‚æœæœ‰å¤šä¸ªï¼Œé‚£ä¹ˆå°±ä¼šè¿”å›æŸ¥æ‰¾åˆ°çš„ç¬¬ä¸€ä¸ªã€‚
+//xmlDomå°±æ˜¯ä¸Šä¸‹æ–‡èŠ‚ç‚¹ï¼Œå®ƒçš„æŒ‡é’ˆæŒ‡å‘çš„æ˜¯rootä¹‹å‰
 
 //var node = xmlDom.documentElement;
-//xmlDom.documentElement¾ÍÊÇrootÔªËØ£¬Õâ¸öÊ±ºòÖ¸Õë¾ÍÔÚrootÖ®ºó£¬userÖ®Ç°
-//var node = xmlDom.documentElement.selectSingleNode('root/user');		//´íÎóµÄ
-//var node = xmlDom.documentElement.selectSingleNode('user');			//ÕıÈ·µÄ
+//xmlDom.documentElementå°±æ˜¯rootå…ƒç´ ï¼Œè¿™ä¸ªæ—¶å€™æŒ‡é’ˆå°±åœ¨rootä¹‹åï¼Œuserä¹‹å‰
+//var node = xmlDom.documentElement.selectSingleNode('root/user');		//é”™è¯¯çš„
+//var node = xmlDom.documentElement.selectSingleNode('user');			//æ­£ç¡®çš„
 //alert(node.xml);
-//xmlDom.documentElementÕâ¸öÒ²ÊÇÉÏÏÂÎÄ½Úµã¶ÔÏó
+//xmlDom.documentElementè¿™ä¸ªä¹Ÿæ˜¯ä¸Šä¸‹æ–‡èŠ‚ç‚¹å¯¹è±¡
 
-//var node = xmlDom.selectSingleNode('user');			//´íÎóÁË
+//var node = xmlDom.selectSingleNode('user');			//é”™è¯¯äº†
 //alert(node.xml);
 
 
-//PS£º×Ü½áÉÏÏÂÎÄ½Úµã£¬ÉÏÏÂÎÄ½Úµã¶ÔÏó±ØĞëºÍXPathÂ·¾¶ÅäºÏºÃ£¬·½ÄÜ³É¹¦¡£µ«Ò»°ãÀ´Ëµ£¬Ö±½ÓÓÃ¸ù½Úµã¼´¿É£¬xmlDom£¬·ÀÖ¹»ìÏı
+//PSï¼šæ€»ç»“ä¸Šä¸‹æ–‡èŠ‚ç‚¹ï¼Œä¸Šä¸‹æ–‡èŠ‚ç‚¹å¯¹è±¡å¿…é¡»å’ŒXPathè·¯å¾„é…åˆå¥½ï¼Œæ–¹èƒ½æˆåŠŸã€‚ä½†ä¸€èˆ¬æ¥è¯´ï¼Œç›´æ¥ç”¨æ ¹èŠ‚ç‚¹å³å¯ï¼ŒxmlDomï¼Œé˜²æ­¢æ··æ·†
 
- //XPath¹æ¶¨Ä¬ÈÏ´Ó1¿ªÊ¼£¬µ«IEÊÇ´Ó0¿ªÊ¼µÄ£¬JSÊı×éÒ²ÊÇ´Ó0¿ªÊ¼µÄ£¬ËùÒÔ£¬ÎÒÃÇ¶¼´Ó0¿ªÊ¼×îºÃ
+ //XPathè§„å®šé»˜è®¤ä»1å¼€å§‹ï¼Œä½†IEæ˜¯ä»0å¼€å§‹çš„ï¼ŒJSæ•°ç»„ä¹Ÿæ˜¯ä»0å¼€å§‹çš„ï¼Œæ‰€ä»¥ï¼Œæˆ‘ä»¬éƒ½ä»0å¼€å§‹æœ€å¥½
 //var node = xmlDom.selectSingleNode('root/user[1]');
 //alert(node.xml);
 
 
-//var node = xmlDom.selectSingleNode('root/user/text()');			//text()¿ÉÒÔ»ñÈ¡½ÚµãÄÚµÄÖµ
+//var node = xmlDom.selectSingleNode('root/user/text()');			//text()å¯ä»¥è·å–èŠ‚ç‚¹å†…çš„å€¼
 //alert(node.nodeValue);
 //alert(node.xml);
 
 
-//var node = xmlDom.selectSingleNode('//user[1]');			//Ë«Ğ±¸Ü¿ÉÒÔ»ñÈ¡²»¹ØĞÄ²ã´ÎµÄµÚÒ»¸öuser
+//var node = xmlDom.selectSingleNode('//user[1]');			//åŒæ–œæ å¯ä»¥è·å–ä¸å…³å¿ƒå±‚æ¬¡çš„ç¬¬ä¸€ä¸ªuser
 //alert(node.xml);
 
-//var node = xmlDom.selectSingleNode('root//user');			//root//user±íÊ¾ÔÚroot·¶Î§ÄÚÕÒµ½²»¹ØĞÄÈÎºÎ²ã´ÎµÄuser
+//var node = xmlDom.selectSingleNode('root//user');			//root//userè¡¨ç¤ºåœ¨rootèŒƒå›´å†…æ‰¾åˆ°ä¸å…³å¿ƒä»»ä½•å±‚æ¬¡çš„user
 //alert(node.xml);
 
 
-//var node = xmlDom.selectSingleNode('root/user[@id=6]');				//Í¨¹ıÎ¨Ò»µÄÊôĞÔÕÒµ½user½Úµã
+//var node = xmlDom.selectSingleNode('root/user[@id=6]');				//é€šè¿‡å”¯ä¸€çš„å±æ€§æ‰¾åˆ°userèŠ‚ç‚¹
 //alert(node.xml);
 
 var nodes = xmlDom.selectNodes('root[0]/user');

@@ -9,21 +9,21 @@ alert(Math.max(2,5,8,4,9,2,0,1));
 */
 
 /*
-//ÏòÉÏÉáÈë
+//å‘ä¸Šèˆå…¥
 alert(Math.ceil(25.9));
 alert(Math.ceil(25.5));
 alert(Math.ceil(25.1));
 */
 
 /*
-//ÏòÏÂÉáÈë
+//å‘ä¸‹èˆå…¥
 alert(Math.floor(25.9));
 alert(Math.floor(25.5));
 alert(Math.floor(25.1));
 */
 
 /*
-//ËÄÉáÎåÈë
+//å››èˆäº”å…¥
 alert(Math.round(25.9));
 alert(Math.round(25.5));
 alert(Math.round(25.1));
@@ -42,20 +42,20 @@ for (var i=0;i<10;i++) {
 
 /*
 for (var i=0;i<10;i++) {
-	document.write(Math.floor(Math.random() * 10 + 1));		//·¶Î§1-10
+	document.write(Math.floor(Math.random() * 10 + 1));		//èŒƒå›´1-10
 	document.write('<br />');
 }
 */
 
 /*
 for (var i=0;i<10;i++) {
-	document.write(Math.floor(Math.random() * 10 + 5));		//·¶Î§5-14Ö®¼ä  	10+5-1=14 (5-14)
+	document.write(Math.floor(Math.random() * 10 + 5));		//èŒƒå›´5-14ä¹‹é—´  	10+5-1=14 (5-14)
 	document.write('<br />');
 }
 */
 
 /*
-//ÎÒÈç¹ûÏë5-10Ö®¼ä£¬£¬£¬10 - 5 + 1 = 6
+//æˆ‘å¦‚æœæƒ³5-10ä¹‹é—´ï¼Œï¼Œï¼Œ10 - 5 + 1 = 6
 
 for (var i=0;i<10;i++) {
 	document.write(Math.floor(Math.random() * 6 + 5));			//5-10   6 + 5 - 1 = 10  (5-10)
@@ -71,7 +71,7 @@ function select(start, end) {
 
 
 for (var i=0;i<10;i++) {
-	document.write(select(1, 3));			//·¶Î§5-10	
+	document.write(select(1, 3));			//èŒƒå›´5-10	
 	document.write('<br />');
 }
 */

@@ -1,7 +1,7 @@
 function Person(name){
 	this.name = name;
 	this.SayHello = function () {
-		alert (this.name + '˵��Һã�');
+		alert (this.name + '说大家好！');
 	};
 }
 
